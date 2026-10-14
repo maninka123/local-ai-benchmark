@@ -136,12 +136,22 @@ def plot_all(payload):
         finish(fig,ax,filename,title,note)
 
     # One final score per task; earlier failed prompts have no awarded score.
-    matrix=np.array([[lookup[(m,task)]['final_score'] for task in TASKS] for m in order])
-    fig,ax=plt.subplots(figsize=(8.3,6.8));ax.imshow(matrix,cmap='Blues',vmin=0,vmax=100,aspect='auto')
-    ax.set_yticks(range(len(order)),[LABELS[m]+(' [W]' if lookup.get((m,'detective'),{}).get('track')=='text_only_detective' else ' [V]') for m in order]);ax.set_xticks(range(3),['Data','Racing','Detective']);ax.tick_params(length=0)
-    for i in range(len(order)):
-        for j in range(3):ax.text(j,i,f'{matrix[i,j]:.1f}',ha='center',va='center',color='white' if matrix[i,j]>60 else '#172033')
-    finish(fig,ax,'quality-progress.svg','Final score by task','One final awarded score per result; Detective case means. Visual/written evidence differs; earlier failures have no score.')
+    totals={m:sum(lookup[(m,task)]['final_score'] for task in TASKS) for m in order}
+    ranked=sorted(order,key=lambda m:(-totals[m],LABELS[m]))
+    matrix=np.array([[lookup[(m,task)]['final_score'] for task in TASKS]+[totals[m]] for m in ranked])
+    fig,ax=plt.subplots(figsize=(9.5,7.2));ax.imshow(matrix,cmap='Blues',vmin=0,vmax=100,aspect='auto')
+    ranks=[1+sum(round(totals[x],1)>round(totals[m],1) for x in ranked) for m in ranked]
+    ax.set_yticks(range(len(ranked)),[f'#{ranks[i]}  '+LABELS[m]+(' [W]' if lookup.get((m,'detective'),{}).get('track')=='text_only_detective' else ' [V]') for i,m in enumerate(ranked)])
+    ax.set_xticks(range(4),['Data /100','Racing /100','Detective /100','Total /300']);ax.tick_params(length=0)
+    for i,tick in enumerate(ax.get_yticklabels()):
+        if ranks[i]<=3:tick.set_color({1:'#9a6700',2:'#58616f',3:'#a15c38'}[ranks[i]]);tick.set_fontweight('bold')
+    for i in range(len(ranked)):
+        for j in range(4):ax.text(j,i,f'{matrix[i,j]:.1f}',ha='center',va='center',color='white' if matrix[i,j]>60 else '#172033',fontweight='bold' if j==3 else 'normal')
+    ax.axvline(2.5,color='white',linewidth=3)
+    finish(fig,ax,'quality-progress.svg','Final task scores · ranked total','Descriptive mixed-input comparison, not a universal leaderboard. Detective cases averaged; equal totals share rank.')
+    import shutil
+    shutil.copyfile(OUT/'quality-progress.svg',OUT/'final-score-ranking.svg')
+    shutil.copyfile(OUT/'quality-progress.png',OUT/'final-score-ranking.png')
 
     fig,ax=plt.subplots(figsize=(8.3,6.8))
     for i,m in enumerate(order):

@@ -26,17 +26,17 @@ Includes the software, prompts, scores and saved outputs. **Model weights are ex
 
 ## Results at a glance
 
-Full-width figures use the dashboard's sans-serif font. Exact values and interactive comparisons are in the [dashboard](https://maninka123.github.io/local-ai-benchmark/); [chart data](docs/publication/chart-data.json) records the sources.
+Compare task scores and speed below. Explore exact values in the [interactive dashboard](https://maninka123.github.io/local-ai-benchmark/).
 
 ### Final scores by task
 
-![Final scores by task](docs/assets/quality-progress.svg)
+![Ranked task scores and total](docs/assets/final-score-ranking.png)
 
-One awarded score per result. Detective values are case means; **[V] visual / [W] written** inputs remain distinct.
+**Total = Data + Racing + Detective case mean, out of 300.** Ranks follow that sum; ties share a rank. **[V] visual / [W] written** inputs differ, so this is a descriptive comparison.
 
 ### Recorded generation speed
 
-![Initial generation speed](docs/assets/token-speed.svg)
+![Initial generation speed](docs/assets/token-speed.png)
 
 Initial output tokens/s on the tested desktop. Speed is separate from task quality.
 
@@ -45,19 +45,19 @@ Initial output tokens/s on the tested desktop. Speed is separate from task quali
 
 ### Data analysis
 
-![Data analysis final scores](docs/assets/quality-data_analysis.svg)
+![Data analysis final scores](docs/assets/quality-data_analysis.png)
 
 ### Racing game
 
-![Racing game final scores](docs/assets/quality-racing_game.svg)
+![Racing game final scores](docs/assets/quality-racing_game.png)
 
 ### Detective investigations
 
-![Detective final scores](docs/assets/quality-detective.svg)
+![Detective final scores](docs/assets/quality-detective.png)
 
 ### Completion-aware score comparison
 
-![Final task scores](docs/assets/review-scores.svg)
+![Final task scores](docs/assets/review-scores.png)
 
 </details>
 
@@ -66,23 +66,23 @@ Initial output tokens/s on the tested desktop. Speed is separate from task quali
 
 ### Installed model storage
 
-![Installed model storage](docs/assets/model-storage.svg)
+![Installed model storage](docs/assets/model-storage.png)
 
 ### Total and calculated active parameters
 
-![Total and active parameters](docs/assets/model-parameters.svg)
+![Total and active parameters](docs/assets/model-parameters.png)
 
 Structural estimates, not measured routing or memory use. Unavailable values are omitted.
 
 ### Total time invested
 
-![Total time](docs/assets/total-time.svg)
+![Total time](docs/assets/total-time.png)
 
 Initial work + saved updates + evaluations; Detective shown per case.
 
 ### Capacity and final task score
 
-![Final scores versus storage](docs/assets/quality-vs-storage.svg)
+![Final scores versus storage](docs/assets/quality-vs-storage.png)
 
 One-PC pilot; model quantization and Detective input tracks differ. [Definitions and limits](docs/publication/METHODOLOGY.md).
 

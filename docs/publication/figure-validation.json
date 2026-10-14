@@ -1,5 +1,6 @@
 {
   "figures": [
+    "final-score-ranking.svg",
     "model-parameters.svg",
     "model-storage.svg",
     "quality-data_analysis.svg",
