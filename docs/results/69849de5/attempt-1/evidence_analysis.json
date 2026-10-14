@@ -1,0 +1,39 @@
+{
+  "evidence_analysis": [
+    {
+      "exhibit_id": "V02",
+      "description": "LAB camera at 18:00 shows the prototype (black triangle) on a brown surface.",
+      "interpretation": "The prototype is present in the lab at the start of the window."
+    },
+    {
+      "exhibit_id": "V03",
+      "description": "EAST CORRIDOR camera at 18:10 shows a person in a teal coat.",
+      "interpretation": "Matches Nora Vale's entry into the corridor."
+    },
+    {
+      "exhibit_id": "V04",
+      "description": "EAST EXIT camera at 18:14 shows a person in a teal coat and the prototype in a grey box.",
+      "interpretation": "Directly links the teal-coated individual (Nora Vale) to the prototype at the exit."
+    },
+    {
+      "exhibit_id": "V05",
+      "description": "LAB camera at 18:18 shows the brown surface is empty.",
+      "interpretation": "Confirms the prototype is no longer in the lab."
+    },
+    {
+      "exhibit_id": "V06",
+      "description": "CAFETERIA camera at 18:12 shows a person in a blue coat.",
+      "interpretation": "Matches Theo Park's presence in the cafeteria."
+    },
+    {
+      "exhibit_id": "V07",
+      "description": "RECEPTION camera at 18:13 shows a person in a red coat.",
+      "interpretation": "Matches Ada Finch's presence at reception."
+    },
+    {
+      "exhibit_id": "V08",
+      "description": "LOADING BAY camera at 18:11 shows a person in a purple coat with a box.",
+      "interpretation": "Matches Maya Reed's activity with the supply box."
+    }
+  ]
+}

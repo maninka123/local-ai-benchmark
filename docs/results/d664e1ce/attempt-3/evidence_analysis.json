@@ -1,0 +1,59 @@
+{
+  "evidence_analysis": [
+    {
+      "id": "V01",
+      "description": "Facility Schematic",
+      "relevance": "Shows spatial layout and connections between Lab, East Corridor, and East Exit."
+    },
+    {
+      "id": "V02",
+      "description": "Lab Camera 18:00",
+      "relevance": "Establishes prototype presence at start of window."
+    },
+    {
+      "id": "V03",
+      "description": "East Corridor Camera 18:10",
+      "relevance": "Shows Nora Vale (Teal) with a box in the corridor adjacent to the Lab."
+    },
+    {
+      "id": "V04",
+      "description": "East Exit Camera 18:14",
+      "relevance": "Shows Nora Vale (Teal) exiting with a box, likely containing the prototype."
+    },
+    {
+      "id": "V05",
+      "description": "Lab Camera 18:18",
+      "relevance": "Confirms prototype is missing."
+    },
+    {
+      "id": "V06",
+      "description": "Cafeteria Camera 18:12",
+      "relevance": "Shows Maya Reed in the cafeteria; note D01 shows Theo Park entering at this time."
+    },
+    {
+      "id": "V07",
+      "description": "Reception Camera 18:13",
+      "relevance": "Places Ada Finch at reception."
+    },
+    {
+      "id": "V08",
+      "description": "Loading Bay Camera 18:11",
+      "relevance": "Shows Maya Reed moving a box, consistent with D03."
+    },
+    {
+      "id": "D01",
+      "description": "Access Logs",
+      "relevance": "Confirms entry/exit times for Nora, Theo, and Ada."
+    },
+    {
+      "id": "D02",
+      "description": "Witness Statements",
+      "relevance": "Nora's statement is contradicted by V04."
+    },
+    {
+      "id": "D03",
+      "description": "Internal Messages",
+      "relevance": "Explains Maya's movement of the box."
+    }
+  ]
+}

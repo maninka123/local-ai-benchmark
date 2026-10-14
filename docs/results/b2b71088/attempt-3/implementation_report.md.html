@@ -1,0 +1,24 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Implementation Report</h1>
+<h2>Overview</h2>
+<p>The game is built with Vite + Three.js and runs in a modern desktop browser. It includes a car selection menu, keyboard driving, three camera views, NPC opponents, collision detection, lap timing, and a HUD. The race consists of three laps with a starting countdown and supports restart and pause.</p>
+<h2>Implemented Features</h2>
+<ul>
+<li><strong>Car Selection</strong>: Three distinct cars with unique speed, acceleration, braking, and handling characteristics.</li>
+<li><strong>Controls</strong>: W/S accelerate/reverse, A/D steer, C toggle camera, P/Esc pause, R restart.</li>
+<li><strong>NPC Opponents</strong>: Four AI cars that follow the track, navigate corners, adjust speed, attempt overtaking, handle collisions, and recover from blocks.</li>
+<li><strong>Collision Detection</strong>: Vehicles and barriers produce arcade‑style responses; cars cannot pass through obstacles and are prevented from getting permanently stuck.</li>
+<li><strong>Camera System</strong>: Chase, hood, and overhead views are available and can be switched at runtime without clipping.</li>
+<li><strong>Race Mechanics</strong>: Starting countdown, three‑lap races, checkpoint validation, lap timing, position tracking, finish detection, and final standings.</li>
+<li><strong>UI</strong>: Main menu, car selection, in‑race HUD (speed, lap, position, timer, camera indicator), pause menu, and results screen.</li>
+<li><strong>Visuals</strong>: Procedural 3D car models, textured road, barriers, scenery, lighting, shadows, and road markings.</li>
+</ul>
+<h2>Verification</h2>
+<p>The project builds successfully with <code>npm run build</code> after installing vite. A browser session launched by the <code>browser</code> tool confirmed functional menu navigation, car selection, driving with friction and speed‑dependent handling, camera switching among three views, NPC cars completing laps (including overtaking and recovery), collision responses, and live HUD updates. Screenshots captured after the session (menu.png, race_chase.png, race_hood.png, race_overhead.png) are present in <code>/output/screenshots/</code> and contain non‑empty images, confirming visual output. All core functionalities requested in the specification are operational.</p>
+<h2>Known Limitations</h2>
+<ul>
+<li>Visuals are procedurally generated; no high‑resolution assets are used.</li>
+<li>NPC overtaking logic can be challenged by dense traffic.</li>
+<li>Rapid camera changes may cause brief jitter.</li>
+<li>Build and preview require manual npm scripts rather than automated deployment.</li>
+</ul>
+<p>The implementation satisfies all requested functional requirements within the given constraints.</p>

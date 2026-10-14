@@ -1,0 +1,538 @@
+{
+  "run_id": "2026-10-10T124926-094083+0000--9b70fa88",
+  "model": "qwen3-next:80b-a3b-thinking-q4_K_M",
+  "task": "racing_game",
+  "case": null,
+  "track": "text_and_tools",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 5,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Runnable application and complete game flow",
+            "max_points": 10,
+            "points": 3,
+            "reason": "Real renderer/light/ground startup runs; no playable racing gameflow."
+          },
+          {
+            "name": "Circuit, scenery and environmental presentation",
+            "max_points": 12,
+            "points": 2,
+            "reason": "One shaded gray ground plane is visible; unused cylinder/scene sketches do not create a complete racing circuit or scenery."
+          },
+          {
+            "name": "Differentiated selectable vehicles",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No player or selectable cars connected to main; added Car outline is unused and its update is a future-work placeholder."
+          },
+          {
+            "name": "Keyboard driving and handling",
+            "max_points": 12,
+            "points": 0,
+            "reason": "No driving inputs or handling."
+          },
+          {
+            "name": "Independent interacting NPC opponents",
+            "max_points": 14,
+            "points": 0,
+            "reason": "No opponents."
+          },
+          {
+            "name": "Vehicle, barrier and obstacle collisions",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No collisions."
+          },
+          {
+            "name": "Three usable race cameras",
+            "max_points": 8,
+            "points": 0,
+            "reason": "Only fixed camera; no switchable race views."
+          },
+          {
+            "name": "Validated laps, timing, positions and finish",
+            "max_points": 14,
+            "points": 0,
+            "reason": "No race progression or management."
+          },
+          {
+            "name": "Menus, HUD, instructions and interface hierarchy",
+            "max_points": 5,
+            "points": 0,
+            "reason": "No interface."
+          },
+          {
+            "name": "Truthful deliverables and verification evidence",
+            "max_points": 5,
+            "points": 0,
+            "reason": "Four captures show identical empty ground; absent or later inaccurate report does not supply required gameplay verification."
+          }
+        ],
+        "summary": "Direct screenshot and main-source inspection demonstrate a renderer-only ground scene; build success and canvas presence do not establish task completion.",
+        "evidence_files": [
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/game/src/main.js",
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/game/src/scene.js",
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/game/src/Track.js",
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/game/index.html",
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/game/package.json",
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/game/vite.config.js",
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/browser_validation.json",
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/screenshots/menu.png",
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/screenshots/race_chase.png",
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/screenshots/race_hood.png",
+          "models/qwen3-next-80b-a3b-thinking-q4_K_M--b2ebb986e4e9/02_racing_game/2026-10-10T124926-094083+0000--9b70fa88/artifacts/screenshots/race_overhead.png",
+          "results/improvement_campaign/racing_reviews.json"
+        ],
+        "limitations": [
+          "Output-only review against public benchmark/prompts/racing_game_prompt.md A-K; elapsed time, tokens, model identity, automatic scores and GPT-assisted repairs do not contribute.",
+          "Direct saved-source inspection and reusable independent isolated build/browser evidence; no candidate code executed on host.",
+          "Limited partial credit recognizes concrete source implementation; disconnected outlines and claims do not establish usable gameplay. Completion requires the requested end-to-end playable race.",
+          "Attempt 1 uses immutable original baseline artifacts; attempts 2 and 3 use the first and second completion-pass evaluated snapshots. Manual setup updates and stale/inherited captures are excluded as gameplay proof."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "browser_validation.json",
+          "url": "./results/9b70fa88/attempt-1/browser_validation.json",
+          "bytes": 1074
+        },
+        {
+          "name": "game/index.html",
+          "url": "./results/9b70fa88/attempt-1/game/index.html",
+          "bytes": 176
+        },
+        {
+          "name": "game/package.json",
+          "url": "./results/9b70fa88/attempt-1/game/package.json",
+          "bytes": 400
+        },
+        {
+          "name": "game/README.md",
+          "url": "./results/9b70fa88/attempt-1/game/README.md",
+          "bytes": 109,
+          "preview_url": "./results/9b70fa88/attempt-1/game/README.md.html"
+        },
+        {
+          "name": "game/vite.config.js",
+          "url": "./results/9b70fa88/attempt-1/game/vite.config.js",
+          "bytes": 157
+        },
+        {
+          "name": "game/dist/index.html",
+          "url": "./results/9b70fa88/attempt-1/game/dist/index.html",
+          "bytes": 205
+        },
+        {
+          "name": "game/dist/assets/index-P6li0wMN.js",
+          "url": "./results/9b70fa88/attempt-1/game/dist/assets/index-P6li0wMN.js",
+          "bytes": 498518
+        },
+        {
+          "name": "game/src/main.js",
+          "url": "./results/9b70fa88/attempt-1/game/src/main.js",
+          "bytes": 1071
+        },
+        {
+          "name": "game/src/scene.js",
+          "url": "./results/9b70fa88/attempt-1/game/src/scene.js",
+          "bytes": 587
+        },
+        {
+          "name": "game/src/Track.js",
+          "url": "./results/9b70fa88/attempt-1/game/src/Track.js",
+          "bytes": 470
+        },
+        {
+          "name": "screenshots/menu.png",
+          "url": "./results/9b70fa88/attempt-1/screenshots/menu.png",
+          "bytes": 6659
+        },
+        {
+          "name": "screenshots/race_chase.png",
+          "url": "./results/9b70fa88/attempt-1/screenshots/race_chase.png",
+          "bytes": 6659
+        },
+        {
+          "name": "screenshots/race_hood.png",
+          "url": "./results/9b70fa88/attempt-1/screenshots/race_hood.png",
+          "bytes": 6659
+        },
+        {
+          "name": "screenshots/race_overhead.png",
+          "url": "./results/9b70fa88/attempt-1/screenshots/race_overhead.png",
+          "bytes": 6659
+        }
+      ],
+      "game_url": "./results/9b70fa88/attempt-1/game/dist/index.html",
+      "readiness": "Saved scene can be previewed",
+      "prompt_url": "./results/9b70fa88/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 5,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Runnable application and complete game flow",
+            "max_points": 10,
+            "points": 3,
+            "reason": "Real renderer/light/ground startup runs; no playable racing gameflow."
+          },
+          {
+            "name": "Circuit, scenery and environmental presentation",
+            "max_points": 12,
+            "points": 2,
+            "reason": "One shaded gray ground plane is visible; unused cylinder/scene sketches do not create a complete racing circuit or scenery."
+          },
+          {
+            "name": "Differentiated selectable vehicles",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No player or selectable cars connected to main; added Car outline is unused and its update is a future-work placeholder."
+          },
+          {
+            "name": "Keyboard driving and handling",
+            "max_points": 12,
+            "points": 0,
+            "reason": "No driving inputs or handling."
+          },
+          {
+            "name": "Independent interacting NPC opponents",
+            "max_points": 14,
+            "points": 0,
+            "reason": "No opponents."
+          },
+          {
+            "name": "Vehicle, barrier and obstacle collisions",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No collisions."
+          },
+          {
+            "name": "Three usable race cameras",
+            "max_points": 8,
+            "points": 0,
+            "reason": "Only fixed camera; no switchable race views."
+          },
+          {
+            "name": "Validated laps, timing, positions and finish",
+            "max_points": 14,
+            "points": 0,
+            "reason": "No race progression or management."
+          },
+          {
+            "name": "Menus, HUD, instructions and interface hierarchy",
+            "max_points": 5,
+            "points": 0,
+            "reason": "No interface."
+          },
+          {
+            "name": "Truthful deliverables and verification evidence",
+            "max_points": 5,
+            "points": 0,
+            "reason": "Four captures show identical empty ground; absent or later inaccurate report does not supply required gameplay verification."
+          }
+        ],
+        "summary": "Incomplete after the resumed single completion prompt: the latest immutable evaluated entry still renders only a grey ground plane with lights and a fixed camera. A separate small Car outline is not imported into the application; no playable racing experience or report is delivered.",
+        "evidence_files": [
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/game/src/Car.js",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/game/src/main.js",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/game/src/scene.js",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/game/src/Track.js",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/game/index.html",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/game/package.json",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/game/vite.config.js",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/browser_validation.json",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/screenshots/menu.png",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/screenshots/race_chase.png",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/screenshots/race_hood.png",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-3787d53ea9/artifacts/screenshots/race_overhead.png",
+          "results/improvement_campaign/racing_after_reviews.json"
+        ],
+        "limitations": [
+          "Output-only review against public benchmark/prompts/racing_game_prompt.md A-K; elapsed time, tokens, model identity, automatic scores and GPT-assisted repairs do not contribute.",
+          "Direct saved-source inspection and reusable independent isolated build/browser evidence; no candidate code executed on host.",
+          "Limited partial credit recognizes concrete source implementation; disconnected outlines and claims do not establish usable gameplay. Completion requires the requested end-to-end playable race.",
+          "Attempt 1 uses immutable original baseline artifacts; attempts 2 and 3 use the first and second completion-pass evaluated snapshots. Manual setup updates and stale/inherited captures are excluded as gameplay proof.",
+          "Same functionality scores intentionally retained where source/runtime outcomes are unchanged; no artificial variation or assumed improvement."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "browser_validation.json",
+          "url": "./results/9b70fa88/attempt-2/browser_validation.json",
+          "bytes": 1074
+        },
+        {
+          "name": "game/index.html",
+          "url": "./results/9b70fa88/attempt-2/game/index.html",
+          "bytes": 176
+        },
+        {
+          "name": "game/package.json",
+          "url": "./results/9b70fa88/attempt-2/game/package.json",
+          "bytes": 400
+        },
+        {
+          "name": "game/README.md",
+          "url": "./results/9b70fa88/attempt-2/game/README.md",
+          "bytes": 109,
+          "preview_url": "./results/9b70fa88/attempt-2/game/README.md.html"
+        },
+        {
+          "name": "game/vite.config.js",
+          "url": "./results/9b70fa88/attempt-2/game/vite.config.js",
+          "bytes": 157
+        },
+        {
+          "name": "game/dist/index.html",
+          "url": "./results/9b70fa88/attempt-2/game/dist/index.html",
+          "bytes": 205
+        },
+        {
+          "name": "game/dist/assets/index-P6li0wMN.js",
+          "url": "./results/9b70fa88/attempt-2/game/dist/assets/index-P6li0wMN.js",
+          "bytes": 498518
+        },
+        {
+          "name": "game/src/Car.js",
+          "url": "./results/9b70fa88/attempt-2/game/src/Car.js",
+          "bytes": 377
+        },
+        {
+          "name": "game/src/main.js",
+          "url": "./results/9b70fa88/attempt-2/game/src/main.js",
+          "bytes": 1071
+        },
+        {
+          "name": "game/src/scene.js",
+          "url": "./results/9b70fa88/attempt-2/game/src/scene.js",
+          "bytes": 587
+        },
+        {
+          "name": "game/src/Track.js",
+          "url": "./results/9b70fa88/attempt-2/game/src/Track.js",
+          "bytes": 470
+        },
+        {
+          "name": "screenshots/menu.png",
+          "url": "./results/9b70fa88/attempt-2/screenshots/menu.png",
+          "bytes": 6659
+        },
+        {
+          "name": "screenshots/race_chase.png",
+          "url": "./results/9b70fa88/attempt-2/screenshots/race_chase.png",
+          "bytes": 6659
+        },
+        {
+          "name": "screenshots/race_hood.png",
+          "url": "./results/9b70fa88/attempt-2/screenshots/race_hood.png",
+          "bytes": 6659
+        },
+        {
+          "name": "screenshots/race_overhead.png",
+          "url": "./results/9b70fa88/attempt-2/screenshots/race_overhead.png",
+          "bytes": 6659
+        }
+      ],
+      "game_url": "./results/9b70fa88/attempt-2/game/dist/index.html",
+      "readiness": "Saved scene can be previewed",
+      "prompt_url": "./results/9b70fa88/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 5,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Runnable application and complete game flow",
+            "max_points": 10,
+            "points": 3,
+            "reason": "Real renderer/light/ground startup runs; no playable racing gameflow."
+          },
+          {
+            "name": "Circuit, scenery and environmental presentation",
+            "max_points": 12,
+            "points": 2,
+            "reason": "One shaded gray ground plane is visible; unused cylinder/scene sketches do not create a complete racing circuit or scenery."
+          },
+          {
+            "name": "Differentiated selectable vehicles",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No player or selectable cars connected to main; added Car outline is unused and its update is a future-work placeholder."
+          },
+          {
+            "name": "Keyboard driving and handling",
+            "max_points": 12,
+            "points": 0,
+            "reason": "No driving inputs or handling."
+          },
+          {
+            "name": "Independent interacting NPC opponents",
+            "max_points": 14,
+            "points": 0,
+            "reason": "No opponents."
+          },
+          {
+            "name": "Vehicle, barrier and obstacle collisions",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No collisions."
+          },
+          {
+            "name": "Three usable race cameras",
+            "max_points": 8,
+            "points": 0,
+            "reason": "Only fixed camera; no switchable race views."
+          },
+          {
+            "name": "Validated laps, timing, positions and finish",
+            "max_points": 14,
+            "points": 0,
+            "reason": "No race progression or management."
+          },
+          {
+            "name": "Menus, HUD, instructions and interface hierarchy",
+            "max_points": 5,
+            "points": 0,
+            "reason": "No interface."
+          },
+          {
+            "name": "Truthful deliverables and verification evidence",
+            "max_points": 5,
+            "points": 0,
+            "reason": "Four captures show identical empty ground; absent or later inaccurate report does not supply required gameplay verification."
+          }
+        ],
+        "summary": "Needs revision: the current entry file only renders a gray plane. It imports none of the vehicle/track outlines and contains no player controls, opponents, UI or race mechanics; all four screenshots show the same empty ground scene.",
+        "evidence_files": [
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/game/src/Car.js",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/game/src/main.js",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/game/src/scene.js",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/game/src/Track.js",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/game/index.html",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/game/package.json",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/game/vite.config.js",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/implementation_report.md",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/browser_validation.json",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/screenshots/menu.png",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/screenshots/race_chase.png",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/screenshots/race_hood.png",
+          "results/further-work/qwen3-next-80b-a3b-thinking-q4_K_M/racing_game/2026-10-10T124926-094083-0000--9b70fa88/evaluations/eval-d6bacea370/artifacts/screenshots/race_overhead.png",
+          "results/improvement_campaign/pass_2/racing_after_reviews.json"
+        ],
+        "limitations": [
+          "Output-only review against public benchmark/prompts/racing_game_prompt.md A-K; elapsed time, tokens, model identity, automatic scores and GPT-assisted repairs do not contribute.",
+          "Direct saved-source inspection and reusable independent isolated build/browser evidence; no candidate code executed on host.",
+          "Limited partial credit recognizes concrete source implementation; disconnected outlines and claims do not establish usable gameplay. Completion requires the requested end-to-end playable race.",
+          "Attempt 1 uses immutable original baseline artifacts; attempts 2 and 3 use the first and second completion-pass evaluated snapshots. Manual setup updates and stale/inherited captures are excluded as gameplay proof.",
+          "Same functionality scores intentionally retained where source/runtime outcomes are unchanged; no artificial variation or assumed improvement."
+        ],
+        "score": 1.5,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "browser_validation.json",
+          "url": "./results/9b70fa88/attempt-3/browser_validation.json",
+          "bytes": 1074
+        },
+        {
+          "name": "implementation_report.md",
+          "url": "./results/9b70fa88/attempt-3/implementation_report.md",
+          "bytes": 577,
+          "preview_url": "./results/9b70fa88/attempt-3/implementation_report.md.html"
+        },
+        {
+          "name": "game/index.html",
+          "url": "./results/9b70fa88/attempt-3/game/index.html",
+          "bytes": 176
+        },
+        {
+          "name": "game/package.json",
+          "url": "./results/9b70fa88/attempt-3/game/package.json",
+          "bytes": 400
+        },
+        {
+          "name": "game/README.md",
+          "url": "./results/9b70fa88/attempt-3/game/README.md",
+          "bytes": 109,
+          "preview_url": "./results/9b70fa88/attempt-3/game/README.md.html"
+        },
+        {
+          "name": "game/vite.config.js",
+          "url": "./results/9b70fa88/attempt-3/game/vite.config.js",
+          "bytes": 157
+        },
+        {
+          "name": "game/dist/index.html",
+          "url": "./results/9b70fa88/attempt-3/game/dist/index.html",
+          "bytes": 205
+        },
+        {
+          "name": "game/dist/assets/index-P6li0wMN.js",
+          "url": "./results/9b70fa88/attempt-3/game/dist/assets/index-P6li0wMN.js",
+          "bytes": 498518
+        },
+        {
+          "name": "game/src/Car.js",
+          "url": "./results/9b70fa88/attempt-3/game/src/Car.js",
+          "bytes": 377
+        },
+        {
+          "name": "game/src/main.js",
+          "url": "./results/9b70fa88/attempt-3/game/src/main.js",
+          "bytes": 1071
+        },
+        {
+          "name": "game/src/scene.js",
+          "url": "./results/9b70fa88/attempt-3/game/src/scene.js",
+          "bytes": 587
+        },
+        {
+          "name": "game/src/Track.js",
+          "url": "./results/9b70fa88/attempt-3/game/src/Track.js",
+          "bytes": 470
+        },
+        {
+          "name": "screenshots/menu.png",
+          "url": "./results/9b70fa88/attempt-3/screenshots/menu.png",
+          "bytes": 6659
+        },
+        {
+          "name": "screenshots/race_chase.png",
+          "url": "./results/9b70fa88/attempt-3/screenshots/race_chase.png",
+          "bytes": 6659
+        },
+        {
+          "name": "screenshots/race_hood.png",
+          "url": "./results/9b70fa88/attempt-3/screenshots/race_hood.png",
+          "bytes": 6659
+        },
+        {
+          "name": "screenshots/race_overhead.png",
+          "url": "./results/9b70fa88/attempt-3/screenshots/race_overhead.png",
+          "bytes": 6659
+        }
+      ],
+      "game_url": "./results/9b70fa88/attempt-3/game/dist/index.html",
+      "readiness": "Saved scene can be previewed",
+      "prompt_url": "./results/9b70fa88/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

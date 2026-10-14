@@ -1,0 +1,14 @@
+{
+  "evidence_inventory": [
+    {"id": "D01", "type": "Access log", "description": "Badge entries 18:10-18:14, two to SERVICE_DOOR", "source": "/input/D01_access.csv"},
+    {"id": "D02", "type": "Witness statements", "description": "Conflicting accounts, no timestamps", "source": "/input/D02_witnesses.md"},
+    {"id": "D03", "type": "Internal messages", "description": "Service corridor camera blind spot, badge logs not biometric", "source": "/input/D03_messages.md"}
+  ],
+  "observations": {
+    "badge_entries": 5,
+    "service_door_entries": 2,
+    "no_exit_records": true,
+    "camera_blind_spot": true
+  },
+  "limitations": "No visual evidence (V01-V10) available; witness statements unreliable; exit logs missing"
+}

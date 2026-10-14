@@ -1,0 +1,12 @@
+{
+  "responsible_person": "Eli Stone",
+  "confidence": 0.7,
+  "conclusion": "Eli Stone is the most likely individual responsible for the removal of the prototype. His entry via the Service Door at 18:14 (corrected time) provides unmonitored access to the Lab via the Service Corridor. His statement that he did not approach the lab after 18:00 is directly contradicted by badge logs and camera footage.",
+  "exhibits": [
+    "V01",
+    "V04",
+    "D01",
+    "D02",
+    "D03"
+  ]
+}

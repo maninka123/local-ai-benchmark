@@ -1,0 +1,6 @@
+{
+  "responsible_person": "Eli Stone",
+  "confidence": 0.6,
+  "conclusion": "Based on badge entry to the service door at 18:14, absence of an exit record, and the fact that the service corridor is a camera blind spot, Eli Stone is the most likely individual to have accessed the laboratory after the prototype was last confirmed. Maya Reed remains a possible secondary suspect due to simultaneous entry, but there is less direct evidence of her involvement. The witness statements are unreliable and conflict with the access logs. No definitive evidence identifies a single individual, but Eli Stone is the strongest candidate.",
+  "exhibits": ["D01", "D02", "D03"]
+}

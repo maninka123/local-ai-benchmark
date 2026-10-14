@@ -1,0 +1,60 @@
+{
+  "repair_id": "sol-6.1-small-fix-20261014",
+  "run_id": "2026-10-10T044258-172207+0000--b863a69c",
+  "source_update_id": "update-4749fc255c",
+  "source_evaluation_id": "eval-50097fb5b4",
+  "configured_model": "gpt-6.1-sol",
+  "source_changed_lines": 8,
+  "source_files": [
+    {
+      "path": "analysis.py",
+      "added": 4,
+      "removed": 4
+    }
+  ],
+  "source_hashes": {
+    "analysis.py": "23387a654e37794dd631ea24ae11a71296f96733f1d1c9001b54143c19600808"
+  },
+  "changes_summary": "Use actual regional name and inventory month fields, and correct existing segment-leader and stockout-peak finding labels.",
+  "status": "validated_partial",
+  "runnable": true,
+  "completion": false,
+  "limitations": [
+    "Saved isolated reproduction fails with KeyError for nonexistent regions.region_name at line 106. Later inventory logic also accesses nonexistent inventory.date, so the figures/findings cannot be fully regenerated.",
+    "The report says duplicates were removed, but analysis.py never removes them and retains 20 duplicate business keys; five AUD99,000 unit-price entries remain in financial totals without distinguishing errors from ten legitimate 200-unit orders.",
+    "Central report/findings numbers contradict independently calculated public values and the plots: P01/P02/P03 share is 12.10%, not 70%; R0/R3 revenue is AUD5.35M/AUD5.24M, not AUD7.2M/AUD1.1M; Enterprise share is 30.46%, not 55%.",
+    "Reported July 2024 revenue AUD2.12M and February 2025 AUD1.05M contradict public-rule values AUD0.947M/AUD0.620M and the plotted data; the rule peak is July 2025 at AUD1.300M. January 2024 stockouts are 65, not 1,200; peak is August 2024 at 84, not a monotonic decline.",
+    "operational_events.csv is omitted entirely; report invents product selling_price, inventory region_id/date and regions region_name columns. Table relationships/data types and operational-event investigation are incomplete.",
+    "Findings mostly substitute nonnumerical or incorrect narrative for required per-finding quantitative evidence/business meaning; asserted flagship launch, missing 5?10% monthly logs, 4% lost sales and 3?5% profitability gain lack source calculations. Correlation does not establish discount effectiveness.",
+    "The approximately 1510-word report references files in a table but contains zero Markdown image embeds despite claiming integration; supported charts are not integrated into the professional report.",
+    "Original benchmark scores and completeness are unchanged. This is an assisted partial preview, with original report claims retained and potentially inaccurate."
+  ],
+  "verification": [
+    {
+      "check": "git diff --no-index --numstat",
+      "source_changed_lines": 8,
+      "numstat": [
+        "4\t4\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\gpt-oss-20b\\\\data_analysis\\\\2026-10-10T044258-172207-0000--b863a69c\\\\evaluations\\\\eval-50097fb5b4\\\\artifacts\\\\analysis.py\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\gpt-oss-20b\\\\data_analysis\\\\2026-10-10T044258-172207-0000--b863a69c\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\analysis.py\""
+      ]
+    },
+    {
+      "check": "source SHA256 unchanged",
+      "passed": true
+    },
+    {
+      "check": "Docker network none isolated execution",
+      "exit_code": 0,
+      "runnable": true,
+      "log": "validation.log"
+    },
+    {
+      "check": "Six regenerated PNG figures and valid findings JSON",
+      "passed": true
+    }
+  ],
+  "artifacts_path": ".\\results\\further-work\\gpt-oss-20b\\data_analysis\\2026-10-10T044258-172207-0000--b863a69c\\repairs\\sol-6.1-small-fix-20261014\\artifacts",
+  "source_artifacts_path": ".\\results\\further-work\\gpt-oss-20b\\data_analysis\\2026-10-10T044258-172207-0000--b863a69c\\evaluations\\eval-50097fb5b4\\artifacts",
+  "model": "gpt-oss:20b",
+  "task": "data_analysis",
+  "generated_outputs_disclosure": "Existing analysis script may regenerate figures/findings/profiles; report prose is unchanged."
+}

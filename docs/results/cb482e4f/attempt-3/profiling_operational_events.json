@@ -1,0 +1,15 @@
+{
+  "file": "operational_events.csv",
+  "shape": [
+    3,
+    5
+  ],
+  "columns": [
+    "event_id",
+    "event_date",
+    "region_id",
+    "event_type",
+    "description"
+  ],
+  "dtypes": {
+    "event_id": 

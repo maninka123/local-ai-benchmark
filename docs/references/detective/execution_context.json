@@ -1,0 +1,39 @@
+{
+  "task": "detective",
+  "purpose": "Public-evidence reference authoring and self-validation; not a comparable local Ollama benchmark run or ground truth",
+  "requested_model": "gpt-6-astra",
+  "configured_model": "gpt-6-astra",
+  "requested_reasoning_effort": "high",
+  "configured_reasoning_effort": "high",
+  "model_configuration_provenance": "Parent task assignment explicitly specifies GPT-6 Astra High; no independent runtime model-attestation API was available to this author",
+  "assignment_count": 1,
+  "supplied_case_variants": [
+    "case_01",
+    "case_02",
+    "case_03"
+  ],
+  "original_system_prompt": "system_prompt.md",
+  "original_task_prompt": "prompt.md",
+  "original_prompts_preserved_byte_for_byte": true,
+  "correction_prompts": [],
+  "tools_used": [
+    "exec_command for public text reads, artifact creation, and validation",
+    "view_image for all 30 public images",
+    "apply_patch for reference-authoring code",
+    "clock.curr_time for timing",
+    "collaboration.send_message for progress to parent",
+    "Python jsonschema for local output-schema validation",
+    "Python Playwright with installed headless Google Chrome for desktop/mobile and sandbox rendering checks"
+  ],
+  "forbidden_sources_read": false,
+  "private_or_candidate_material_used": false,
+  "ollama_invoked": false,
+  "authoring_started_utc": "2026-10-13T06:26:09+00:00",
+  "wall_time_seconds": 761.413,
+  "token_usage": null,
+  "token_usage_status": "unknown; not reported by available execution tools",
+  "output_entrypoint": "output/index.html",
+  "schema_note": "The original prompt supplies filenames and exhibit-reference requirements, not a formal schema; output_schemas.json is a reference-authored structural validation schema.",
+  "authoring_finished_utc": "2026-10-13T06:38:50.412976+00:00",
+  "wall_time_measurement_scope": "Elapsed from first recorded UTC clock reading after initial prompt/path inspection through final verification. Not a benchmark response-time measurement."
+}

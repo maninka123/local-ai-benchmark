@@ -1,0 +1,15 @@
+[
+  {"timestamp": "17:00", "event": "Eli Stone expresses need for the prototype.", "type": "communication", "exhibit_id": "D03"},
+  {"timestamp": "17:10", "event": "Maya Reed is requested to move the cardboard consumables box to the loading bay.", "type": "communication", "exhibit_id": "D03"},
+  {"timestamp": "17:20", "event": "Security notes that the service corridor is a camera blind spot.", "type": "communication", "exhibit_id": "D03"},
+  {"timestamp": "18:00", "event": "Prototype is confirmed to be in the LAB.", "type": "observation", "exhibit_id": "V02"},
+  {"timestamp": "18:10", "event": "Nora Vale enters the EAST CORRIDOR.", "type": "access_log", "exhibit_id": "D01"},
+  {"timestamp": "18:11", "event": "Maya Reed is observed at the LOADING BAY with a cardboard box.", "type": "observation", "exhibit_id": "V08"},
+  {"timestamp": "18:12", "event": "Theo Park enters the CAFETERIA.", "type": "access_log", "exhibit_id": "D01"},
+  {"timestamp": "18:12", "event": "Theo Park is observed in the CAFETERIA.", "type": "observation", "exhibit_id": "V06"},
+  {"timestamp": "18:13", "event": "Ada Finch enters RECEPTION.", "type": "access_log", "exhibit_id": "D01"},
+  {"timestamp": "18:13", "event": "Ada Finch is observed at RECEPTION.", "type": "observation", "exhibit_id": "V07"},
+  {"timestamp": "18:14", "event": "Nora Vale exits via the EAST EXIT.", "type": "access_log", "exhibit "exhibit_id": "D01"},
+  {"timestamp": "18:14", "event": "The prototype is observed at the EAST EXIT with a person in a teal coat.", "type": "observation", "exhibit_id": "V04"},
+  {"timestamp": "18:18", "event": "The prototype is discovered missing from the LAB.", "type": "observation", "exhibit_id": "V05"}
+]

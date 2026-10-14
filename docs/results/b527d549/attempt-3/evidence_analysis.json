@@ -1,0 +1,95 @@
+{
+  "exhibits": [
+    {
+      "id": "V01",
+      "type": "visual",
+      "description": "Floor plan schematic showing facility layout with LAB, EAST CORRIDOR, EAST EXIT (top row), SERVICE CORRIDOR and CAFETERIA (bottom row). Teal line shows corridor connection between east corridor and exit. Orange vertical line shows unmonitored service corridor link to lab.",
+      "timestamp": null,
+      "interpretation": "Establishes facility layout and access routes. Service corridor provides unmonitored access to lab."
+    },
+    {
+      "id": "V02",
+      "type": "visual",
+      "description": "Lab camera at 18:00 - prototype confirmed on workbench.",
+      "timestamp": "18:00",
+      "interpretation": "Direct observation of prototype in lab at baseline time."
+    },
+    {
+      "id": "V03",
+      "type": "visual",
+      "description": "East corridor camera at 18:10 - Nora Vale (teal coat) entering corridor.",
+      "timestamp": "18:10",
+      "interpretation": "Nora Vale documented in east corridor at 18:10."
+    },
+    {
+      "id": "V04",
+      "type": "visual",
+      "description": "Service corridor camera showing Eli Stone (orange coat) with prototype, timestamp 18:19.",
+      "timestamp": "18:19_displayed",
+      "interpretation": "Eli Stone observed with prototype in service corridor. Actual time is 18:14 due to +5 min offset."
+    },
+    {
+      "id": "V05",
+      "type": "visual",
+      "description": "Lab camera at 18:18 - workbench empty, prototype missing.",
+      "timestamp": "18:18",
+      "interpretation": "Prototype confirmed missing from lab by 18:18."
+    },
+    {
+      "id": "V06",
+      "type": "visual",
+      "description": "Cafeteria camera at 18:12 - Theo Park (blue coat) present.",
+      "timestamp": "18:12",
+      "interpretation": "Theo Park documented in cafeteria at 18:12."
+    },
+    {
+      "id": "V07",
+      "type": "visual",
+      "description": "Reception camera at 18:13 - Ada Finch (red coat) present.",
+      "timestamp": "18:13",
+      "interpretation": "Ada Finch documented in reception at 18:13."
+    },
+    {
+      "id": "V08",
+      "type": "visual",
+      "description": "Loading bay showing Maya Reed (purple coat) with cardboard box.",
+      "timestamp": "18:11",
+      "interpretation": "Maya Reed documented in loading bay at 18:11 with cardboard box."
+    },
+    {
+      "id": "V09",
+      "type": "visual",
+      "description": "Object detail camera reference exhibit - shows object on workbench, no person visible.",
+      "timestamp": null,
+      "interpretation": "Reference exhibit showing object detail. Not an east-exit camera as previously misidentified."
+    },
+    {
+      "id": "V10",
+      "type": "visual",
+      "description": "Service corridor alternate view - reinforces V04 observation and contains clock maintenance notice about +5 minute offset.",
+      "timestamp": "18:19_displayed",
+      "interpretation": "Alternate service corridor view. Contains clock maintenance notice confirming +5 min offset."
+    },
+    {
+      "id": "D01",
+      "type": "documentary",
+      "description": "Access log with entry times and badge credentials for all five staff members.",
+      "timestamp": null,
+      "interpretation": "Establishes credential-based access timing. Badge credentials do not verify biometric identity per D03_messages."
+    },
+    {
+      "id": "D02",
+      "type": "documentary",
+      "description": "Witness statements from all five staff members.",
+      "timestamp": null,
+      "interpretation": "Unverified witness statements. Eli Stone claims no approach to lab after 18:00, contradicted by V04/V10 visual evidence."
+    },
+    {
+      "id": "D03",
+      "type": "documentary",
+      "description": "Internal messages including Eli's 17:00 request, Maya's 17:10 box move instruction, security note on identity verification limitations and camera offset.",
+      "timestamp": null,
+      "interpretation": "Documents motive (Eli's 17:00 request), box move instruction (Maya at 17:10), identity verification limitations (coat color is appearance not biometric), and camera offset (+5 min for service camera)."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "exhibits": [
+    {
+      "id": "V01",
+      "description": "Synthetic Schematic",
+      "observations": "Shows the layout of the facility. The Lab is connected to the East Corridor and the Service Corridor. The Service Corridor is explicitly labeled as an 'UNMONITORED LINK TO LAB'.",
+      "significance": "Identifies the path used to access the Lab without being caught on camera."
+    },
+    {
+      "id": "V02",
+      "description": "Lab Camera 18:00",
+      "observations": "Shows the prototype (a triangular object on a pedestal) present in the Lab at 18:00.",
+      "significance": "Establishes the baseline state of the prototype."
+    },
+    {
+      "id": "V03",
+      "description": "East Corridor",
+      "observations": "Shows Nora Vale (teal coat) walking towards the East Exit.",
+      "significance": "Places Nora Vale in the East Corridor."
+    },
+    {
+      "id": "V04",
+      "description": "Cafeteria",
+      "observations": "Shows Theo Park (blue coat) sitting at a table.",
+      "significance": "Places Theo Park in the Cafeteria."
+    },
+    {
+      "id": "V05",
+      "description": "Reception",
+      "observations": "Shows Ada Finch (red coat) at the reception desk.",
+      "significance": "Places Ada Finch at Reception."
+    },
+    {
+      "id": "V06",
+      "description": "Service Corridor",
+      "observations": "Shows Eli Stone (orange coat) and Maya Reed (purple coat) carrying a cardboard box.",
+      "significance": "Places both suspects in the unmonitored link to the Lab."
+    },
+    {
+      "id": "V07",
+      "description": "Lab",
+      "observations": "Shows Maya Reed (purple coat) inside the Lab carrying a cardboard box.",
+      "significance": "Direct evidence of Maya Reed entering the Lab with a container."
+    },
+    {
+      "id": "V08",
+      "description": "East Corridor",
+      "observations": "Shows Nora Vale (teal coat) exiting.",
+      "significance": "Confirms Nora Vale's movement."
+    },
+    {
+      "id": "V09",
+      "description": "Service Corridor",
+      "observations": "Shows Eli Stone (orange coat) moving towards the Service Door.",
+      "significance": "Confirms Eli Stone's presence in the blind spot."
+    },
+    {
+      "id": "V10",
+      "description": "Lab",
+      "observations": "Shows the pedestal in the Lab is empty.",
+      "significance": "Confirms the prototype is missing."
+    },
+    {
+      "id": "D01",
+      "description": "Access Logs",
+      "observations": "Records entry times: Nora (18:10), Theo (18:12), Ada (18:13), Eli (18:14), Maya (18:14).",
+      "significance": "Provides the timeline for when suspects entered the facility."
+    },
+    {
+      "id": "D02",
+      "description": "Witness Statements",
+      "observations": "Maya claims to have a box at 18:11. Eli claims he didn't approach the lab. Nora and Theo claim to be in specific areas.",
+      "significance": "Provides subjective accounts that can be cross-referenced with visual evidence."
+    },
+    {
+      "id": "D03",
+      "description": "Internal Messages",
+      "observations": "Eli expresses need for prototype (17:00). Maya mentions moving a box (17:10). Security notes the Service Corridor is a blind spot (17:20).",
+      "significance": "Establishes motive for Eli and the existence of the box Maya used."
+    }
+  ]
+}

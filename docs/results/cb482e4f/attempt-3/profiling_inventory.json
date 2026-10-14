@@ -1,0 +1,14 @@
+{
+  "file": "inventory.csv",
+  "shape": [
+    480,
+    4
+  ],
+  "columns": [
+    "month",
+    "product_id",
+    "stock_units",
+    "stockouts"
+  ],
+  "dtypes": {
+    "month": 

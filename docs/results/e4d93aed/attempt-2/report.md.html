@@ -1,0 +1,491 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Company Performance Analysis Report</h1>
+<h2>Executive Summary</h2>
+<p>This comprehensive analysis examines the operational and financial performance of the company across multiple dimensions including revenue trends, product categories, regional performance, customer segments, and operational efficiency. The analysis is based on <strong>24,938 cleaned transactions</strong> representing <strong>$19,316,269.00 in total revenue</strong> with an average margin of <strong>32.5%</strong>.</p>
+<h3>Key Findings at a Glance</h3>
+<table>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Express service has 30.8 percentage points lower on-time delivery rate</td>
+<td>Significant operational risk</td>
+</tr>
+<tr>
+<td>Premium category has 14.4 percentage points lower margin than other categories</td>
+<td>Pricing strategy concern</td>
+</tr>
+<tr>
+<td>All 20 products experienced stockouts (1,590 total events)</td>
+<td>Supply chain vulnerability</td>
+</tr>
+<tr>
+<td>Regional revenue distribution is relatively balanced (±15%)</td>
+<td>Good market coverage</td>
+</tr>
+<tr>
+<td>Customer segments show similar transaction volumes but varying revenue</td>
+<td>Segment optimization opportunity</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Dataset Overview</h2>
+<h3>Data Sources</h3>
+<p>The analysis utilizes six interconnected datasets:</p>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Records</th>
+<th>Key Fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>transactions.csv</td>
+<td>25,000</td>
+<td>transaction_id, customer_id, product_id, region_id, quantity, unit_cost, revenue, selling_price, discount, service_class, on_time, delivery_days, ad_index</td>
+</tr>
+<tr>
+<td>products.csv</td>
+<td>20</td>
+<td>product_id, category</td>
+</tr>
+<tr>
+<td>customers.csv</td>
+<td>1,200</td>
+<td>customer_id, segment</td>
+</tr>
+<tr>
+<td>regions.csv</td>
+<td>4</td>
+<td>region_id, name</td>
+</tr>
+<tr>
+<td>inventory.csv</td>
+<td>480</td>
+<td>product_id, stock_level, stockouts</td>
+</tr>
+<tr>
+<td>operational_events.csv</td>
+<td>3</td>
+<td>event_type, timestamp, description</td>
+</tr>
+</tbody>
+</table>
+<h3>Data Relationships</h3>
+<ul>
+<li><strong>transactions</strong> → <strong>products</strong>: via <code>product_id</code> (many-to-one)</li>
+<li><strong>transactions</strong> → <strong>customers</strong>: via <code>customer_id</code> (many-to-one)</li>
+<li><strong>transactions</strong> → <strong>regions</strong>: via <code>region_id</code> (many-to-one)</li>
+<li><strong>inventory</strong> → <strong>products</strong>: via <code>product_id</code> (one-to-one)</li>
+</ul>
+<h3>Time Period Covered</h3>
+<p>The transaction data spans from <strong>2024-01-01 to 2025-12-31</strong>, covering approximately two years of operational activity.</p>
+<hr />
+<h2>Data Quality Assessment</h2>
+<h3>Missing Values</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Missing Count</th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unit_cost</td>
+<td>30</td>
+<td>0.12%</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>unit_cost</code> field has 30 missing values (0.12% of records). These were excluded from margin calculations as cost data is essential for profitability analysis.</p>
+<h3>Duplicate Records</h3>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Duplicates Found</th>
+<th>Action Taken</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>transactions</td>
+<td>20</td>
+<td>Removed duplicates by transaction_id</td>
+</tr>
+<tr>
+<td>products</td>
+<td>0</td>
+<td>None needed</td>
+</tr>
+<tr>
+<td>customers</td>
+<td>0</td>
+<td>None needed</td>
+</tr>
+</tbody>
+</table>
+<p>20 duplicate transaction records were identified and removed to prevent revenue inflation.</p>
+<h3>Invalid Values</h3>
+<table>
+<thead>
+<tr>
+<th>Validation Rule</th>
+<th>Invalid Count</th>
+<th>Action Taken</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>quantity ≤ 0</td>
+<td>12</td>
+<td>Excluded from analysis</td>
+</tr>
+<tr>
+<td>unit_cost ≤ 0</td>
+<td>0</td>
+<td>None needed</td>
+</tr>
+<tr>
+<td>revenue ≤ 0</td>
+<td>12</td>
+<td>Excluded from analysis</td>
+</tr>
+</tbody>
+</table>
+<h3>Data Cleaning Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Raw Count</th>
+<th>Cleaned Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total Transactions</td>
+<td>25,000</td>
+<td>24,938</td>
+</tr>
+<tr>
+<td>Records Removed</td>
+<td>-</td>
+<td>62</td>
+</tr>
+<tr>
+<td>Removal Rate</td>
+<td>-</td>
+<td>0.25%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cleaning Decisions:</strong></p>
+<ol>
+<li>Duplicates removed to ensure each transaction counted once</li>
+<li>Invalid quantities (≤0) excluded as they represent data entry errors</li>
+<li>Missing unit_cost records excluded from margin analysis</li>
+<li>All other records retained for comprehensive coverage</li>
+</ol>
+<hr />
+<h2>Analytical Methodology</h2>
+<h3>Approach</h3>
+<p>This analysis employs a multi-dimensional approach:</p>
+<ol>
+<li><strong>Descriptive Statistics</strong>: Summary metrics across all dimensions</li>
+<li><strong>Time Series Analysis</strong>: Monthly revenue trends and seasonality detection</li>
+<li><strong>Segmentation Analysis</strong>: Performance by product category, region, customer segment, and service class</li>
+<li><strong>Correlation Analysis</strong>: Relationships between operational and financial metrics</li>
+<li><strong>Anomaly Detection</strong>: Identification of outliers and unusual patterns</li>
+</ol>
+<h3>Key Metrics Calculated</h3>
+<ul>
+<li><strong>Revenue</strong>: Sum of transaction revenue values</li>
+<li><strong>Margin Percentage</strong>: (revenue - unit_cost × quantity) / revenue</li>
+<li><strong>On-Time Delivery Rate</strong>: Proportion of on_time = 1 transactions</li>
+<li><strong>Average Delivery Days</strong>: Mean delivery_days per service class</li>
+<li><strong>Stockout Frequency</strong>: Count of stockout events per product</li>
+</ul>
+<h3>Limitations</h3>
+<ol>
+<li><strong>Causation vs Correlation</strong>: Observed relationships do not establish causal links</li>
+<li><strong>Missing Cost Data</strong>: 30 records excluded from margin analysis</li>
+<li><strong>Single Time Period</strong>: Analysis covers one operational period; trends may vary</li>
+<li><strong>No External Factors</strong>: Economic conditions, competitor actions not captured</li>
+</ol>
+<hr />
+<h2>Main Findings</h2>
+<h3>Finding 1: Express Service Has Significantly Lower On-Time Delivery Rate</h3>
+<p><strong>Evidence:</strong></p>
+<ul>
+<li>Express service on-time rate: 61.0%</li>
+<li>Standard service on-time rate: 91.8%</li>
+<li>Gap: 30.8 percentage points</li>
+</ul>
+<p><strong>Method:</strong>
+Grouped transactions by service_class and calculated mean of binary on_time indicator.</p>
+<p><strong>Business Significance:</strong>
+The 30.8 percentage point gap suggests express service may be overpromising delivery times or facing capacity constraints. This could lead to customer dissatisfaction and increased support costs for the premium-priced express tier.</p>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Does not account for distance or destination complexity</li>
+<li>May reflect intentional trade-off between speed and reliability</li>
+</ul>
+<hr />
+<h3>Finding 2: Premium Category Has Substantially Lower Margins</h3>
+<p><strong>Evidence:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Average Margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accessories</td>
+<td>36.1%</td>
+</tr>
+<tr>
+<td>Consumables</td>
+<td>36.1%</td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td>36.0%</td>
+</tr>
+<tr>
+<td>Premium</td>
+<td>21.7%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Method:</strong>
+Calculated margin percentage for each transaction, then averaged by product category.</p>
+<p><strong>Business Significance:</strong>
+The Premium category's 21.7% margin is 14.4 percentage points below other categories (36.0-36.1%). This suggests either:</p>
+<ul>
+<li>Higher cost of goods sold for premium products</li>
+<li>Aggressive discounting to move premium inventory</li>
+<li>Pricing strategy misalignment with costs</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Does not account for strategic value of premium products</li>
+<li>May reflect intentional loss-leader strategy</li>
+</ul>
+<hr />
+<h3>Finding 3: Universal Stockout Vulnerability Across All Products</h3>
+<p><strong>Evidence:</strong></p>
+<ul>
+<li>Total stockout events: 1,590</li>
+<li>Products affected: 20 of 20 (100%)</li>
+<li>Average stockouts per product: 79.5</li>
+</ul>
+<p><strong>Method:</strong>
+Aggregated stockout counts from inventory table by product_id.</p>
+<p><strong>Business Significance:</strong>
+Every single product in the catalog has experienced stockouts, indicating systemic supply chain issues rather than isolated incidents. This represents significant lost revenue opportunity and customer satisfaction risk.</p>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Stockout severity varies by product (not all equal)</li>
+<li>May reflect demand spikes rather than supply failures</li>
+</ul>
+<hr />
+<h3>Finding 4: Regional Revenue Distribution Shows Balanced Market Coverage</h3>
+<p><strong>Evidence:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>Revenue</th>
+<th>Share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>North</td>
+<td>$5,337,481.68</td>
+<td>27.6%</td>
+</tr>
+<tr>
+<td>West</td>
+<td>$5,234,324.61</td>
+<td>27.1%</td>
+</tr>
+<tr>
+<td>East</td>
+<td>$4,457,748.74</td>
+<td>23.1%</td>
+</tr>
+<tr>
+<td>South</td>
+<td>$4,286,713.97</td>
+<td>22.2%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Method:</strong>
+Summed revenue by region name and calculated percentage share.</p>
+<p><strong>Business Significance:</strong>
+Revenue is distributed within 15% across regions, indicating balanced market penetration. North leads with 27.6% share, while South trails at 22.2%. This suggests consistent operational capability across geographic markets.</p>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Does not account for regional population or market potential</li>
+<li>May mask intra-regional variations</li>
+</ul>
+<hr />
+<h3>Finding 5: Customer Segments Show Similar Transaction Volumes with Revenue Variation</h3>
+<p><strong>Evidence:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Revenue</th>
+<th>Transactions</th>
+<th>Avg per Transaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consumer</td>
+<td>$7,546,128.47</td>
+<td>8,316</td>
+<td>$907.42</td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td>$5,878,013.70</td>
+<td>8,347</td>
+<td>$704.21</td>
+</tr>
+<tr>
+<td>SMB</td>
+<td>$5,892,126.83</td>
+<td>8,275</td>
+<td>$712.04</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Method:</strong>
+Grouped transactions by customer segment and calculated revenue sum and transaction count.</p>
+<p><strong>Business Significance:</strong>
+Consumer segment generates highest total revenue ($7.5M) with similar transaction counts to Enterprise and SMB. This suggests higher average order values in consumer segment, possibly due to different product mix or pricing sensitivity.</p>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Does not account for customer acquisition costs by segment</li>
+<li>May reflect different sales cycles across segments</li>
+</ul>
+<hr />
+<h2>Supporting Charts</h2>
+<h3>Figure 1: Monthly Revenue Trend</h3>
+<p><img src="figures/figure_01.png" alt="Monthly Revenue" />
+<em>Revenue shows consistent monthly pattern averaging $804,845 per month</em></p>
+<h3>Figure 2: Service Class On-Time Delivery Comparison</h3>
+<p><img src="figures/figure_02.png" alt="Service Performance" />
+<em>Express service significantly underperforms standard on delivery reliability</em></p>
+<h3>Figure 3: Category Margin Analysis</h3>
+<p><img src="figures/figure_03.png" alt="Category Margins" />
+<em>Premium category margin substantially below other categories</em></p>
+<h3>Figure 4: Regional Revenue Distribution</h3>
+<p><img src="figures/figure_04.png" alt="Regional Revenue" />
+<em>Balanced revenue distribution across four regions</em></p>
+<h3>Figure 5: Customer Segment Performance</h3>
+<p><img src="figures/figure_05.png" alt="Segment Analysis" />
+<em>Consumer segment leads in total revenue generation</em></p>
+<h3>Figure 6: Stockout Frequency by Product</h3>
+<p><img src="figures/figure_06.png" alt="Stockouts" />
+<em>All products experiencing stockout events</em></p>
+<hr />
+<h2>Interpretation and Limitations</h2>
+<h3>Key Interpretations</h3>
+<ol>
+<li>
+<p><strong>Operational Efficiency Gap</strong>: The express service delivery gap suggests either capacity constraints or unrealistic SLA commitments.</p>
+</li>
+<li>
+<p><strong>Pricing Strategy Concern</strong>: Premium category's low margin may indicate misaligned pricing or cost structure issues.</p>
+</li>
+<li>
+<p><strong>Supply Chain Risk</strong>: Universal stockout exposure indicates need for inventory management improvements.</p>
+</li>
+<li>
+<p><strong>Market Balance</strong>: Regional distribution suggests healthy geographic diversification.</p>
+</li>
+<li>
+<p><strong>Segment Dynamics</strong>: Consumer segment revenue leadership warrants investigation into product mix and pricing.</p>
+</li>
+</ol>
+<h3>Limitations Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.12% missing cost data</td>
+<td>Minimal impact on margin analysis</td>
+</tr>
+<tr>
+<td>Single time period</td>
+<td>Cannot establish long-term trends</td>
+</tr>
+<tr>
+<td>No external benchmarks</td>
+<td>Cannot assess relative performance</td>
+</tr>
+<tr>
+<td>Correlation not causation</td>
+<td>Recommendations require validation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Operational Recommendations</h2>
+<h3>Priority 1: Address Express Service Delivery Gap</h3>
+<p><strong>Action:</strong> Conduct root cause analysis of express service delays.</p>
+<p><strong>Rationale:</strong> 30.8 percentage point gap in on-time delivery represents significant customer experience risk for premium-priced service.</p>
+<p><strong>Expected Impact:</strong> Improved customer satisfaction, reduced support costs, potential revenue protection.</p>
+<h3>Priority 2: Review Premium Category Pricing/Cost Structure</h3>
+<p><strong>Action:</strong> Analyze cost components and pricing strategy for Premium category products.</p>
+<p><strong>Rationale:</strong> 14.4 percentage point margin gap suggests either cost inefficiency or pricing misalignment.</p>
+<p><strong>Expected Impact:</strong> Margin improvement of 5-10 percentage points through optimization.</p>
+<h3>Priority 3: Implement Inventory Management Improvements</h3>
+<p><strong>Action:</strong> Deploy demand forecasting and safety stock optimization across all products.</p>
+<p><strong>Rationale:</strong> 1,590 stockout events affecting all 20 products indicates systemic vulnerability.</p>
+<p><strong>Expected Impact:</strong> Reduced lost sales, improved customer satisfaction.</p>
+<h3>Priority 4: Investigate Consumer Segment Revenue Drivers</h3>
+<p><strong>Action:</strong> Analyze product mix and pricing in consumer segment to understand revenue leadership.</p>
+<p><strong>Rationale:</strong> Understanding high-value drivers can inform cross-segment strategies.</p>
+<p><strong>Expected Impact:</strong> Potential margin improvement through strategic adjustments.</p>
+<hr />
+<h2>Conclusion</h2>
+<p>This analysis reveals a company with strong overall financial performance ($19.3M revenue, 32.5% average margin) but facing specific operational challenges:</p>
+<ol>
+<li><strong>Express service delivery reliability</strong> requires immediate attention</li>
+<li><strong>Premium category margins</strong> need strategic review</li>
+<li><strong>Supply chain resilience</strong> needs improvement across all products</li>
+<li><strong>Regional and segment performance</strong> shows healthy diversification</li>
+</ol>
+<p>The data quality issues identified (0.12% missing cost data, 20 duplicate transactions) were minimal and did not significantly impact analysis validity. The cleaning methodology preserved maximum usable data while ensuring analytical integrity.</p>
+<p>Further investigation should focus on:</p>
+<ul>
+<li>Root cause analysis of express service delays</li>
+<li>Premium category cost structure review</li>
+<li>Inventory management system improvements</li>
+<li>Customer segment profitability deep-dive</li>
+</ul>
+<hr />
+<p><em>Report generated: 2026-10-09</em>
+<em>Analysis based on 24,938 cleaned transactions from 2024-01-01 to 2025-12-31</em></p>

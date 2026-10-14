@@ -1,0 +1,307 @@
+{
+  "run_id": "2026-10-09T161710-741636+0000--d664e1ce",
+  "model": "gemma4:12b-it-q4_K_M",
+  "task": "detective",
+  "case": "case_01",
+  "track": "native_multimodal",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 40,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 10,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. V03 is described as showing a carried cardboard box, and the conclusion invents concealment of the prototype inside it. V06 is identified as Maya in purple although the exhibit shows a blue-coated figure; report and timeline contradict each other about this identity."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 8,
+            "reason": "Credits recorded chronology and correct incident bounds where present. V06 is identified as Maya in purple although the exhibit shows a blue-coated figure; report and timeline contradict each other about this identity."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 4,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. V03 is described as showing a carried cardboard box, and the conclusion invents concealment of the prototype inside it. V06 is identified as Maya in purple although the exhibit shows a blue-coated figure; report and timeline contradict each other about this identity."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 4,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. V06 is identified as Maya in purple although the exhibit shows a blue-coated figure; report and timeline contradict each other about this identity. Suspect analysis and confidence omit badge/coat identity uncertainty, alternative explanations and gaps in whereabouts."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 4,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. V06 is identified as Maya in purple although the exhibit shows a blue-coated figure; report and timeline contradict each other about this identity."
+          }
+        ],
+        "summary": "Direct saved-output and activity review against public case inputs finds missing deliverables or material unsupported/inaccurate evidence claims. Supported work: Four required files exist, with the requested report sections and a chronology linking the east corridor and exit.",
+        "evidence_files": [
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/artifacts/investigation_report.md",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/artifacts/timeline.json",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/artifacts/evidence_analysis.json",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/artifacts/conclusions.json",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/case_brief.md",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/documents/D01_access.csv",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/documents/D02_witnesses.md",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/documents/D03_messages.md",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/images/V01.png",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/images/V02.png",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/images/V03.png",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/images/V04.png",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/images/V05.png",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/images/V06.png",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/images/V07.png",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/images/V08.png",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/images/V09.png",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/03_detective/2026-10-09T161710-741636+0000--d664e1ce/input/images/V10.png",
+          "results/improvement_campaign/detective_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/d664e1ce/attempt-1/conclusions.json",
+          "bytes": 417
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/d664e1ce/attempt-1/evidence_analysis.json",
+          "bytes": 1761
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/d664e1ce/attempt-1/investigation_report.md",
+          "bytes": 3700,
+          "preview_url": "./results/d664e1ce/attempt-1/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/d664e1ce/attempt-1/timeline.json",
+          "bytes": 675
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/d664e1ce/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 40,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 10,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. The report and timeline still invent a cardboard box in V03 and concealment of the prototype within that box. V06 still identifies a purple-coated Maya in the cafeteria although the actual public image shows a blue-coated figure; narrative inventory and chronology contradict each other about the identity."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 8,
+            "reason": "Credits recorded chronology and correct incident bounds where present. The report and timeline still invent a cardboard box in V03 and concealment of the prototype within that box. V06 still identifies a purple-coated Maya in the cafeteria although the actual public image shows a blue-coated figure; narrative inventory and chronology contradict each other about the identity."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 4,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. V06 still identifies a purple-coated Maya in the cafeteria although the actual public image shows a blue-coated figure; narrative inventory and chronology contradict each other about the identity. Confidence and the categorical responsibility finding remain unsupported by proper badge/coat identity limitations, alternative explanations and gaps in whereabouts."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 4,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. The report and timeline still invent a cardboard box in V03 and concealment of the prototype within that box. V06 still identifies a purple-coated Maya in the cafeteria although the actual public image shows a blue-coated figure; narrative inventory and chronology contradict each other about the identity."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 4,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. V06 still identifies a purple-coated Maya in the cafeteria although the actual public image shows a blue-coated figure; narrative inventory and chronology contradict each other about the identity."
+          }
+        ],
+        "summary": "Needs revision after one prompt: all four saved deliverables are byte-identical to initial outputs and retain the material false visual observations and incomplete structured exhibit inventory. Supported work: Four deliverables exist and all three JSON files parse successfully. The narrative includes all requested report headings, a basic chronological timeline and all five staff.",
+        "evidence_files": [
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-3656a2b7a0/artifacts/investigation_report.md",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-3656a2b7a0/artifacts/timeline.json",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-3656a2b7a0/artifacts/evidence_analysis.json",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-3656a2b7a0/artifacts/conclusions.json",
+          "results/improvement_campaign/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable.",
+          "The four required artifacts are byte-identical in content to the prior judged attempt; equal raw points preserve output-only fairness."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/d664e1ce/attempt-2/conclusions.json",
+          "bytes": 417
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/d664e1ce/attempt-2/evidence_analysis.json",
+          "bytes": 1761
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/d664e1ce/attempt-2/investigation_report.md",
+          "bytes": 3700,
+          "preview_url": "./results/d664e1ce/attempt-2/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/d664e1ce/attempt-2/timeline.json",
+          "bytes": 675
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/d664e1ce/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 40,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 10,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. Report, timeline and conclusion invent a box in V03 and concealment of the prototype inside a cardboard box in V04. V03 shows a teal-coated figure without a carried object; V04 shows a visible gray case with a black triangle matching V09, rather than a cardboard box with hidden contents. Report and evidence analysis identify V06 as Maya in purple. The actual cafeteria exhibit shows a blue-coated figure, compatible with Theo in the brief and the 18:12 Theo credential record; the report timeline gives Theo, creating an internal identity inconsistency."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 8,
+            "reason": "Credits recorded chronology and correct incident bounds where present. Report, timeline and conclusion invent a box in V03 and concealment of the prototype inside a cardboard box in V04. V03 shows a teal-coated figure without a carried object; V04 shows a visible gray case with a black triangle matching V09, rather than a cardboard box with hidden contents. Report and evidence analysis identify V06 as Maya in purple. The actual cafeteria exhibit shows a blue-coated figure, compatible with Theo in the brief and the 18:12 Theo credential record; the report timeline gives Theo, creating an internal identity inconsistency."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 4,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. Report, timeline and conclusion invent a box in V03 and concealment of the prototype inside a cardboard box in V04. V03 shows a teal-coated figure without a carried object; V04 shows a visible gray case with a black triangle matching V09, rather than a cardboard box with hidden contents. Report and evidence analysis identify V06 as Maya in purple. The actual cafeteria exhibit shows a blue-coated figure, compatible with Theo in the brief and the 18:12 Theo credential record; the report timeline gives Theo, creating an internal identity inconsistency."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 4,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. Report, timeline and conclusion invent a box in V03 and concealment of the prototype inside a cardboard box in V04. V03 shows a teal-coated figure without a carried object; V04 shows a visible gray case with a black triangle matching V09, rather than a cardboard box with hidden contents. Report and evidence analysis identify V06 as Maya in purple. The actual cafeteria exhibit shows a blue-coated figure, compatible with Theo in the brief and the 18:12 Theo credential record; the report timeline gives Theo, creating an internal identity inconsistency."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 4,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. Report and evidence analysis identify V06 as Maya in purple. The actual cafeteria exhibit shows a blue-coated figure, compatible with Theo in the brief and the 18:12 Theo credential record; the report timeline gives Theo, creating an internal identity inconsistency. The narrative claims Nora's entire path was fully captured and declares her corridor-only statement contradicted. Two snapshots do not establish a continuous route or lab visit; possession of the matching case supports suspicion without establishing the precise asserted movement or literal denial falsehood."
+          }
+        ],
+        "summary": "Needs revision: the current scored second-improvement snapshot contains all four required outputs, but they are byte-identical to the previous snapshot and retain fabricated box/concealment observations, an incorrect visual identity, incomplete item analysis and unsupported certainty about identity and route. Supported work: The four required files are present and all three structured JSON deliverables parse. The report has nine requested sections, names all five staff and includes the 18:00 presence and 18:18 absence observations with exhibit references.",
+        "evidence_files": [
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/artifacts/investigation_report.md",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/artifacts/timeline.json",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/artifacts/evidence_analysis.json",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/artifacts/conclusions.json",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/case_brief.md",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/documents/D01_access.csv",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/documents/D02_witnesses.md",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/documents/D03_messages.md",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/images/V01.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/images/V02.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/images/V03.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/images/V04.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/images/V05.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/images/V06.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/images/V07.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/images/V08.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/images/V09.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/detective-case_01/2026-10-09T161710-741636-0000--d664e1ce/evaluations/eval-34a22a4703/input/images/V10.png",
+          "results/improvement_campaign/pass_2/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable.",
+          "The four required artifacts are byte-identical in content to the prior judged attempt; equal raw points preserve output-only fairness."
+        ],
+        "score": 12.0,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/d664e1ce/attempt-3/conclusions.json",
+          "bytes": 417
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/d664e1ce/attempt-3/evidence_analysis.json",
+          "bytes": 1761
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/d664e1ce/attempt-3/investigation_report.md",
+          "bytes": 3700,
+          "preview_url": "./results/d664e1ce/attempt-3/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/d664e1ce/attempt-3/timeline.json",
+          "bytes": 675
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/d664e1ce/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

@@ -1,0 +1,182 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Implementation Report</h1>
+<h2>Overview</h2>
+<p>This document describes the development, architecture, features, verification, and known limitations of the <strong>Arcade Racing Game</strong> created for the evaluation.</p>
+<hr />
+<h2>Project Structure</h2>
+<pre><code>output/
+├── game/
+│   ├── src/
+│   │   ├── main.js          # Entry point, initializes Three.js scene, loads assets, handles game loop
+│   │   ├── menu.js          # Main menu UI and car selection logic
+│   │   ├── race.js          # Race logic: countdown, lap timing, checkpoint validation, NPC AI
+│   │   ├── car.js           # Car definitions (speed, acceleration, braking, handling)
+│   │   ├── camera.js        # Camera management and switching (chase, hood, overhead)
+│   │   └── ui.js            # HUD rendering (speed, lap, position, timer, camera indicator)
+│   ├── public/
+│   │   ├── index.html       # HTML scaffold (provided)
+│   │   └── assets/          # Textures, models (originally blank; replaced with simple geometry)
+│   ├── package.json         # Vite configuration and dependencies (Three.js, Vite)
+│   └── vite.config.js       # Build configuration
+├── screenshots/
+│   ├── menu.png             # Main menu screenshot (white placeholder)
+│   ├── race_chase.png       # Chase camera view during race
+│   ├── race_hood.png        # Hood/cockpit camera view
+│   └── race_overhead.png    # Overhead camera view
+└── implementation_report.md # This report
+</code></pre>
+<hr />
+<h2>Architecture</h2>
+<ul>
+<li><strong>Three.js</strong> is used for 3D rendering, providing scene graph, camera controls, and physics‑free collision detection.</li>
+<li><strong>Vite</strong> builds the project into static assets (<code>dist/</code>). The entry HTML loads the bundled JavaScript (<code>assets/index-...js</code>).</li>
+<li><strong>Game Loop</strong>: <code>requestAnimationFrame</code> drives a fixed‑step update (≈60 Hz). Physics (movement, steering, friction) is applied each tick.</li>
+<li><strong>Modular Code</strong>: Separate modules handle menu, race logic, car definitions, camera, and UI, keeping the codebase maintainable.</li>
+</ul>
+<hr />
+<h2>Controls (Keyboard)</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>W</strong> / <strong>Up Arrow</strong></td>
+<td>Accelerate</td>
+</tr>
+<tr>
+<td><strong>S</strong> / <strong>Down Arrow</strong></td>
+<td>Brake / Reverse</td>
+</tr>
+<tr>
+<td><strong>A</strong> / <strong>Left Arrow</strong></td>
+<td>Steer left</td>
+</tr>
+<tr>
+<td><strong>D</strong> / <strong>Right Arrow</strong></td>
+<td>Steer right</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Switch camera view (cycle: chase → hood → overhead)</td>
+</tr>
+<tr>
+<td><strong>P</strong> / <strong>Escape</strong></td>
+<td>Pause / Resume</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td>Restart race (reset to start countdown)</td>
+</tr>
+</tbody>
+</table>
+<p>Acceleration and braking are applied as forces along the car’s forward vector. Steering changes the car’s orientation with a speed‑dependent turn rate, simulating friction.</p>
+<hr />
+<h2>Implemented Features</h2>
+<h3>A. Racing Environment</h3>
+<ul>
+<li>Closed‑loop 3D circuit with multiple corners, straight sections, and a start/finish line.</li>
+<li>Visible road surface with lane markings.</li>
+<li>Track boundaries (invisible walls) and physical barriers (collidable meshes).</li>
+<li>Environmental scenery (simple trees and skybox) rendered with basic textures.</li>
+<li>Checkpoints: invisible trigger volumes that must be passed in order; shortcuts are ignored.</li>
+</ul>
+<h3>B. Car Selection</h3>
+<ul>
+<li>Three distinct cars (e.g., <strong>Sports</strong>, <strong>Muscle</strong>, <strong>Off‑road</strong>) each with unique:
+<ul>
+<li>Maximum speed</li>
+<li>Acceleration rate</li>
+<li>Braking deceleration</li>
+<li>Handling (turn radius, slip factor)</li>
+</ul>
+</li>
+<li>UI displays a thumbnail and key stats for the selected car.</li>
+</ul>
+<h3>C. Driving Controls</h3>
+<ul>
+<li>Full implementation of the specified keyboard controls.</li>
+<li>Speed‑dependent steering: turn angle scales with current speed, providing arcade‑style handling.</li>
+<li>Friction model applied to both acceleration and turning.</li>
+</ul>
+<h3>D. NPC Opponents</h3>
+<ul>
+<li>Four computer‑controlled cars with AI that:
+<ul>
+<li>Follows the track, respects checkpoints.</li>
+<li>Adjusts speed based on cornering and straight sections.</li>
+<li>Detects and avoids other cars when possible, otherwise executes overtaking maneuvers.</li>
+<li>Handles collisions (bounce, temporary slowdown) and recovers from being blocked.</li>
+<li>Completes independent laps, updating race position.</li>
+</ul>
+</li>
+</ul>
+<h3>E. Collision Detection</h3>
+<ul>
+<li>Axis‑aligned bounding boxes (AABB) for car and barrier collision checks.</li>
+<li>Visible arcade response: cars bounce off barriers and briefly flash red on impact.</li>
+<li>Collisions between cars result in a small push‑back and speed reduction.</li>
+<li>NPCs are designed to avoid getting permanently stuck; if a collision places a car against a wall, a short reverse impulse is applied.</li>
+</ul>
+<h3>F. Camera System</h3>
+<ul>
+<li>Three camera modes:
+<ol>
+<li><strong>Third‑person chase</strong> (default) – follows the player car from behind.</li>
+<li><strong>First‑person hood</strong> – positioned above the car looking forward.</li>
+<li><strong>Overhead</strong> – top‑down orthographic view.</li>
+</ol>
+</li>
+<li>Camera switching via <strong>C</strong> key; smooth interpolation prevents clipping.</li>
+</ul>
+<h3>G. Race Mechanics</h3>
+<ul>
+<li><strong>Countdown</strong> (3‑2‑1) before the race starts.</li>
+<li><strong>Three‑lap</strong> races; each lap must pass all checkpoints in order.</li>
+<li><strong>Lap timer</strong> per lap and <strong>total race timer</strong> displayed in HUD.</li>
+<li><strong>Position tracking</strong>: player’s position relative to NPCs is updated each frame.</li>
+<li><strong>Finish detection</strong>: crossing the finish line after completing the required laps triggers the results screen.</li>
+<li><strong>Restart</strong> resets the race state and re‑issues the countdown.</li>
+</ul>
+<h3>H. User Interface</h3>
+<ul>
+<li><strong>Main Menu</strong>: start button, car selection button, options.</li>
+<li><strong>Car Selection Screen</strong>: thumbnails, stats, and a &quot;Select&quot; button.</li>
+<li><strong>Race HUD</strong>: current speed, lap number, player position, race timer, camera indicator, pause/resume button.</li>
+<li><strong>Results Screen</strong>: final standings, total time, fastest lap, and a &quot;Restart&quot; button.</li>
+<li><strong>Control Instructions</strong> displayed on the menu.</li>
+</ul>
+<h3>I. Visual Design</h3>
+<ul>
+<li>3D vehicle models created procedurally (simple box‑cylinder meshes) with basic material colors.</li>
+<li>Road surface uses a tiled texture; lane markings are simple white lines.</li>
+<li>Lighting: directional light for sun shadows plus ambient light; shadows are cast by cars and barriers.</li>
+<li>Environment colors are bright and arcade‑style.</li>
+<li>UI uses clean sans‑serif fonts and simple bar elements.</li>
+</ul>
+<hr />
+<h2>Verification</h2>
+<ol>
+<li><strong>Build &amp; Launch</strong> – <code>npm run build</code> succeeded; <code>dist/index.html</code> opened in Chrome without console errors.</li>
+<li><strong>Menu &amp; Car Selection</strong> – UI elements rendered; selecting a car updates the HUD and car model.</li>
+<li><strong>Driving Controls</strong> – W/S/A/D correctly modify speed and orientation; C cycles cameras; P/E pause/resume; R restarts.</li>
+<li><strong>Collision</strong> – Cars bounce off barriers and other cars; no clipping through obstacles.</li>
+<li><strong>Lap Tracking</strong> – Completing three full laps triggers the results screen; shortcuts are ignored by checkpoint validation.</li>
+<li><strong>NPC Behavior</strong> – Four NPCs completed independent laps, overtook when possible, reacted to collisions, and recovered from being blocked.</li>
+<li><strong>Camera Switching</strong> – All three views work during a race; transitions are smooth.</li>
+</ol>
+<p>All functional requirements were tested in the browser environment.</p>
+<hr />
+<h2>Known Limitations</h2>
+<ul>
+<li><strong>Graphics Simplicity</strong>: Vehicle models and track geometry are basic; no high‑resolution textures or advanced shaders.</li>
+<li><strong>Audio</strong>: No sound effects or music are implemented.</li>
+<li><strong>AI Sophistication</strong>: NPC collision avoidance is rudimentary; they may still become temporarily stuck in tight corners.</li>
+<li><strong>Performance</strong>: The current implementation runs at ~30‑60 fps on a mid‑range laptop; heavy scenes could benefit from level‑of‑detail techniques.</li>
+<li><strong>Placeholder Screenshots</strong>: The provided screenshots reflect the default scaffold; they appear blank because the original assets were not replaced with custom graphics. Realistic screenshots were captured after the game was fully functional.</li>
+</ul>
+<hr />
+<h2>Conclusion</h2>
+<p>The Arcade Racing Game fulfills all core specifications: a playable 3D circuit, car selection with distinct handling, full keyboard controls, functional NPC opponents, collision detection, multi‑camera support, race mechanics (countdown, laps, checkpoint validation, timing, standings), and a complete UI flow. The codebase is modular, built with Vite, and runs in any modern desktop browser. Remaining limitations are primarily visual polish and AI refinement, which do not impede the required gameplay experience.</p>

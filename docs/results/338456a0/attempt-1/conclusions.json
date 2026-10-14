@@ -1,0 +1,14 @@
+{
+  "responsible_person": "Eli Stone",
+  "confidence": 0.95,
+  "conclusion": "Eli Stone stole the prototype. He entered the Service Door at 18:14 (D01), which provides access to the Lab via an unmonitored corridor (V01). He was captured on camera at the Service Door at 18:14 (actual time, corrected from 18:19 in V04 using V10) carrying a small box that matches the prototype's description. His statement that he did not approach the lab after 18:00 is directly contradicted by the access logs and camera footage. Maya Reed's presence at the Loading Bay with a box at 18:11 is consistent with her assigned task and does not place her near the Lab at the time of the theft.",
+  "exhibits": [
+    "V01",
+    "V02",
+    "V04",
+    "V05",
+    "V10",
+    "D01",
+    "D03"
+  ]
+}

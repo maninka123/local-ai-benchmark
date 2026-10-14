@@ -1,0 +1,29 @@
+{
+  "file": "operational_events.csv",
+  "shape": [
+    3,
+    5
+  ],
+  "columns": [
+    "event_id",
+    "event_date",
+    "region_id",
+    "event_type",
+    "description"
+  ],
+  "dtypes": {
+    "event_id": "object",
+    "event_date": "object",
+    "region_id": "object",
+    "event_type": "object",
+    "description": "object"
+  },
+  "missing_counts": {
+    "event_id": 0,
+    "event_date": 0,
+    "region_id": 0,
+    "event_type": 0,
+    "description": 0
+  },
+  "duplicate_count": 0
+}

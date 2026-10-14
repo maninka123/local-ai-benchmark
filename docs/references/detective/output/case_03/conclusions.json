@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.0",
+  "case_id": "case_03",
+  "most_likely_account": "The prototype is present at 18:00 and absent at 18:18. At 18:14, credentials for Eli and Maya are recorded entering the service door while a frame shows two indistinguishable gray figures with no visible prototype. This creates investigative leads for both but does not identify either figure, show object custody, or connect a person to removal. The defensible reconstruction ends with an unobserved movement of the prototype sometime after 18:00 and by 18:18; neither Eli, Maya, nor another person can be conclusively selected.",
+  "exhibit_ids": [
+    "V01",
+    "V02",
+    "V04",
+    "V05",
+    "V09",
+    "V10",
+    "D01",
+    "D03"
+  ],
+  "leading_suspect": null,
+  "responsible_individual_definitively_identified": false,
+  "confidence": {
+    "overall": "High that the supplied evidence is insufficient for a definitive individual attribution.",
+    "observed_change": "High: the prototype’s shown location changes from occupied at 18:00 to empty at 18:18.",
+    "service_route_use_for_removal": "Low: opportunity is documented, removal by that route is not.",
+    "individual_identity": "Low: Eli/Maya credentials do not identify the gray figures or the remover.",
+    "intent_or_authorisation": "Undetermined; even the manner and authorisation of the object movement remain unknown."
+  },
+  "alternatives": [
+    {
+      "text": "Eli alone or Maya alone could have used the service link; the other credential holder may have been uninvolved. Neither alternative has a visible prototype-custody link.",
+      "exhibit_ids": [
+        "V01",
+        "V04",
+        "V10",
+        "D01"
+      ]
+    },
+    {
+      "text": "Joint action is possible but is not established merely by two figures or same-minute entries.",
+      "exhibit_ids": [
+        "V04",
+        "D01"
+      ]
+    },
+    {
+      "text": "Nora or another individual could have used the east or unmonitored service route during an uncovered interval; the present exhibits do not exclude this.",
+      "exhibit_ids": [
+        "V01",
+        "V03",
+        "V10",
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "text": "The prototype could have been legitimately moved or relocated within the lab. The empty bench establishes absence there, not motive or final destination.",
+      "exhibit_ids": [
+        "V02",
+        "V05"
+      ]
+    }
+  ],
+  "limitations": [
+    {
+      "text": "Synthetic schematics simplify persons, objects, and locations. They support only visible features, not faces, fingerprints, serial numbers, precise distances, or hidden contents.",
+      "exhibit_ids": [
+        "V01",
+        "V02",
+        "V03",
+        "V04",
+        "V05",
+        "V06",
+        "V07",
+        "V08",
+        "V09"
+      ]
+    },
+    {
+      "text": "Badge credentials and coat assignments are identity proxies; sharing, misuse, or reassignment is not ruled out or positively demonstrated.",
+      "exhibit_ids": [
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "text": "No uninterrupted removal footage, complete access history, authorisation record, recovery evidence, or full-window alibi is supplied.",
+      "exhibit_ids": [
+        "V01",
+        "V02",
+        "V05",
+        "V10",
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "text": "Confidence labels are qualitative judgments, not calibrated probabilities or findings of legal guilt.",
+      "exhibit_ids": [
+        "V02",
+        "V04",
+        "V05",
+        "D01",
+        "D03"
+      ]
+    }
+  ],
+  "recommended_next_steps": [
+    {
+      "text": "Find lab-facing footage, witnesses, or physical custody records showing who touched or carried the prototype during 18:00–18:18; this is the most discriminating missing link.",
+      "exhibit_ids": [
+        "V01",
+        "V02",
+        "V04",
+        "V05",
+        "V10"
+      ]
+    },
+    {
+      "text": "Authenticate both service-door credential users and identify the gray figures using original footage, badge custody, independent witnesses, and more precise access events.",
+      "exhibit_ids": [
+        "V04",
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "text": "Reconstruct Eli’s and Maya’s separate movements before and after 18:14; clarify Eli’s denial and Maya’s supply-box route, contents, and later service visit.",
+      "exhibit_ids": [
+        "V04",
+        "V08",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "text": "Recover and identify the prototype, check authorisation/transfer records, and extend Nora’s, Theo’s, and Ada’s movement coverage before narrowing responsibility.",
+      "exhibit_ids": [
+        "V02",
+        "V03",
+        "V05",
+        "V06",
+        "V07",
+        "V09",
+        "D01",
+        "D02"
+      ]
+    }
+  ],
+  "suspects": [
+    {
+      "name": "Nora Vale",
+      "assessment": "Possible opportunity, but no direct prototype-possession evidence.",
+      "opportunity": "East corridor connects to the lab and is observed at 18:10.",
+      "access": "Nora’s credential logs east-corridor ENTRY at 18:10; no subsequent exit is logged in the supplied rows.",
+      "timeline_consistency": "The 18:10 observation is consistent with visiting the corridor. Her claimed departure and subsequent whereabouts are unverified.",
+      "supporting_evidence": "Proximity to the lab via the east corridor creates opportunity.",
+      "exculpatory_evidence": "No object is drawn with the teal figure at 18:10; no image shows Nora entering the lab or removing the prototype.",
+      "uncertainty": "Proximity alone does not establish removal. A sparse log cannot prove absence from the lab.",
+      "exhibit_ids": [
+        "V01",
+        "V03",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "name": "Eli Stone",
+      "assessment": "Priority investigative lead alongside Maya; attribution unresolved.",
+      "opportunity": "The service corridor links to the lab; two gray figures are seen at the service door at 18:14.",
+      "access": "Eli’s credential logs service-door ENTRY at 18:14.",
+      "timeline_consistency": "The credential event near the lab challenges his denial, conditional on credential use and what he means by “approach.” The gray figures cannot independently identify him.",
+      "supporting_evidence": "Stated need for the prototype tomorrow; service-door credential event.",
+      "exculpatory_evidence": "No direct lab-removal image exists. No prototype is drawn with either service-door figure.",
+      "uncertainty": "Need is not proof of misconduct; badge sharing and coat reassignment remain possible. No evidence supports a conclusive personal attribution.",
+      "exhibit_ids": [
+        "V01",
+        "V04",
+        "V10",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "name": "Maya Reed",
+      "assessment": "Priority investigative lead alongside Eli; attribution unresolved.",
+      "opportunity": "At 18:11 a purple figure is at the loading bay; Maya’s credential also appears at the service door at 18:14.",
+      "access": "Maya’s credential logs service-door ENTRY at 18:14.",
+      "timeline_consistency": "The brown-box image and request support her 18:11 statement. The 18:14 service-door entry is an additional unexplained movement, not a direct contradiction of that limited statement; travel feasibility is unquantified.",
+      "supporting_evidence": "A service-door credential gives a potential lab approach in the removal window.",
+      "exculpatory_evidence": "The brown box lacks the prototype’s visible gray exterior and triangle. The consumables request provides a coherent innocent explanation.",
+      "uncertainty": "Contents of the brown box are unknown. The two gray figures cannot identify her or establish possession, removal, or joint action.",
+      "exhibit_ids": [
+        "V01",
+        "V04",
+        "V08",
+        "V09",
+        "V10",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "name": "Theo Park",
+      "assessment": "Limited implication; partial corroboration, not a complete alibi.",
+      "opportunity": "The full period before 18:12 and movements after the single cafeteria frame remain unobserved.",
+      "access": "Theo’s credential logs cafeteria ENTRY at 18:12; no lab entry is supplied.",
+      "timeline_consistency": "The blue figure and badge event support being at the cafeteria at 18:12, but not remaining there continuously.",
+      "supporting_evidence": "No specific evidence links Theo to the prototype or its removal.",
+      "exculpatory_evidence": "Cafeteria appearance and credential align with the start of his account.",
+      "uncertainty": "Identity and continuous presence are unverified. Incomplete records cannot exclude later access.",
+      "exhibit_ids": [
+        "V01",
+        "V06",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "name": "Ada Finch",
+      "assessment": "Limited implication; partial corroboration, not a complete alibi.",
+      "opportunity": "Her location before and after the 18:13 reception frame is not continuously documented.",
+      "access": "Ada’s credential logs reception ENTRY at 18:13; no lab entry is supplied.",
+      "timeline_consistency": "The red figure and badge event support reception presence at one moment, consistent with her broad statement.",
+      "supporting_evidence": "No specific evidence links Ada to the prototype or its removal.",
+      "exculpatory_evidence": "Reception appearance and credential corroborate part of her account.",
+      "uncertainty": "The statement supplies no shift interval. Identity and full-window whereabouts are not established.",
+      "exhibit_ids": [
+        "V07",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    }
+  ],
+  "key_deductions": [
+    {
+      "text": "The absence/presence pair establishes a change in the lab, but no supplied image shows any person carrying the triangle-marked prototype during the incident.",
+      "exhibit_ids": [
+        "V02",
+        "V03",
+        "V04",
+        "V05",
+        "V06",
+        "V07",
+        "V08",
+        "V09"
+      ]
+    },
+    {
+      "text": "Two credential entries and two gray figures are compatible observations, not a biometric mapping. Minute-level records do not show which figure is which or prove a joint action.",
+      "exhibit_ids": [
+        "V04",
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "text": "Both Eli and Maya warrant follow-up because their credentials occur at a route connected to the lab. Eli’s motive does not resolve the shared opportunity.",
+      "exhibit_ids": [
+        "V01",
+        "V04",
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "text": "Maya’s 18:11 box account has a visible and documentary supply explanation; her 18:14 credential event is a separate opportunity lead and cannot retroactively identify the box as the prototype.",
+      "exhibit_ids": [
+        "V08",
+        "V09",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    }
+  ],
+  "contradictions": [
+    {
+      "text": "Eli’s denial is challenged by his service-door credential, conditional on him using it and that route constituting an approach to the lab. Gray figures do not independently identify him.",
+      "exhibit_ids": [
+        "V01",
+        "V04",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "text": "Maya’s 18:14 credential event is not a direct contradiction of her 18:11 box statement; the latter does not claim continuous presence at the loading bay. No travel duration is supplied.",
+      "exhibit_ids": [
+        "V01",
+        "V08",
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "text": "The two gray figures cannot be assigned the shift colours orange/purple from appearance. Badge names alone do not resolve that ambiguity.",
+      "exhibit_ids": [
+        "V04",
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "text": "The service-door image does not contradict the service-corridor blind spot; the unmonitored link to the lab remains a gap.",
+      "exhibit_ids": [
+        "V01",
+        "V04",
+        "V10",
+        "D03"
+      ]
+    }
+  ]
+}

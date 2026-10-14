@@ -1,0 +1,9 @@
+{
+  "build": false,
+  "loads": false,
+  "errors": [],
+  "checks": {},
+  "states": [],
+  "notes": [],
+  "build_log": "vite v7.3.7 building client environment for production...\ntransforming...\n✓ 8 modules transformed.\n✗ Build failed in 95ms\nerror during build:\nsrc/camera.js (1:31): Expected unicode escape\nfile: /output/game/src/camera.js:1:31\n\n1: import * as THREE from 'three';\\n\\n// Minimal camera wrapper to avoid ReferenceError\\n\\nexport default {\\n  scene: nu...\n                                  ^\n\n    at getRollupError (file:///opt/lab/node_modules/rollup/dist/es/shared/parseAst.js:319:41)\n    at ParseError.initialise (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:15274:28)\n    at convertNode (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:17253:10)\n    at convertProgram (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:16489:12)\n    at Module.setSource (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:18234:24)\n    at async ModuleLoader.addModuleSource (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:22434:9)\n"
+}

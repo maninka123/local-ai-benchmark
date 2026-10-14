@@ -1,0 +1,315 @@
+{
+  "run_id": "2026-10-09T182347-157955+0000--fe17cc26",
+  "model": "qwen3.5:27b-q4_K_M",
+  "task": "detective",
+  "case": "case_03",
+  "track": "native_multimodal",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 65,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 19,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. The report identifies a named responsible person and alleges deliberate disguise/badge misuse without adequate evidence of either identity or intent. Badge use is simultaneously acknowledged as uncertain and treated as proof a named person lied or personally entered."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 12,
+            "reason": "Credits recorded chronology and correct incident bounds where present. A specific removal route and narrowed removal window are asserted without a witnessed removal."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 10,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. The report identifies a named responsible person and alleges deliberate disguise/badge misuse without adequate evidence of either identity or intent. A specific removal route and narrowed removal window are asserted without a witnessed removal."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 8,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. The report identifies a named responsible person and alleges deliberate disguise/badge misuse without adequate evidence of either identity or intent. A brief location snapshot is used to exonerate other suspects or to excuse one of the simultaneous badge entries."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 6,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. A brief location snapshot is used to exonerate other suspects or to excuse one of the simultaneous badge entries."
+          }
+        ],
+        "summary": "Direct review of the saved deliverables against public documents and visually inspected exhibits found missing required analysis, invalid structured output or material unsupported claims. Supported work: All four detailed deliverables exist with complete exhibit coverage and five-suspect analysis. The report notices the unidentified figures, blind spot, badge limitations and alternative hypotheses.",
+        "evidence_files": [
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/artifacts/investigation_report.md",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/artifacts/timeline.json",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/artifacts/evidence_analysis.json",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/artifacts/conclusions.json",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/case_brief.md",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/documents/D01_access.csv",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/documents/D02_witnesses.md",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/documents/D03_messages.md",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/images/V01.png",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/images/V02.png",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/images/V03.png",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/images/V04.png",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/images/V05.png",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/images/V06.png",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/images/V07.png",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/images/V08.png",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/images/V09.png",
+          "models/qwen3.5-27b-q4_K_M--64ae5b1d651f/03_detective/2026-10-09T182347-157955+0000--fe17cc26/input/images/V10.png",
+          "results/improvement_campaign/detective_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/fe17cc26/attempt-1/conclusions.json",
+          "bytes": 7323
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/fe17cc26/attempt-1/evidence_analysis.json",
+          "bytes": 7391
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/fe17cc26/attempt-1/investigation_report.md",
+          "bytes": 11695,
+          "preview_url": "./results/fe17cc26/attempt-1/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/fe17cc26/attempt-1/timeline.json",
+          "bytes": 4269
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/fe17cc26/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 75,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 22,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. The revised conclusion still states that removal occurred via the service corridor as fact, although no public image shows removal, the prototype in V04, or the actual route. It also lists earlier removal via another route as an alternative. Blind-spot information establishes an observation limit and possible route, not a confirmed journey. The rewritten structured findings and suspect assessment still describe badge use at the service door as a contradiction proving the lab-approach statement false. Given the explicitly unresolved identity and unobserved lab approach, this is a concern to investigate rather than an established contradiction. The report additionally labels two persons with two badge events a contradiction even though those facts are mutually compatible."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 15,
+            "reason": "Credits recorded chronology and correct incident bounds where present. The report is byte-identical to the initial report and still identifies Eli as responsible with 75% confidence, says he lied, asserts a service-corridor removal at 18:14-18:18 and exonerates others. The new conclusion says no definitive identification can be made and gives confidence 0.25. The four outputs do not agree on the outcome or evidentiary strength. The report narrows the removal period to 18:14-18:18 without a lab observation establishing continued presence at 18:14. The available lab observations bound the incident by 18:00 and18:18. Structured conclusions also treat absent service-door records for Nora, Theo and Ada as no access, and infer low opportunity from isolated location observations despite unobserved intervals."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 15,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. The report is byte-identical to the initial report and still identifies Eli as responsible with 75% confidence, says he lied, asserts a service-corridor removal at 18:14-18:18 and exonerates others. The new conclusion says no definitive identification can be made and gives confidence 0.25. The four outputs do not agree on the outcome or evidentiary strength. The revised conclusion still states that removal occurred via the service corridor as fact, although no public image shows removal, the prototype in V04, or the actual route. It also lists earlier removal via another route as an alternative. Blind-spot information establishes an observation limit and possible route, not a confirmed journey."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 8,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. The report is byte-identical to the initial report and still identifies Eli as responsible with 75% confidence, says he lied, asserts a service-corridor removal at 18:14-18:18 and exonerates others. The new conclusion says no definitive identification can be made and gives confidence 0.25. The four outputs do not agree on the outcome or evidentiary strength. The rewritten structured findings and suspect assessment still describe badge use at the service door as a contradiction proving the lab-approach statement false. Given the explicitly unresolved identity and unobserved lab approach, this is a concern to investigate rather than an established contradiction. The report additionally labels two persons with two badge events a contradiction even though those facts are mutually compatible."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 5,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. The report is byte-identical to the initial report and still identifies Eli as responsible with 75% confidence, says he lied, asserts a service-corridor removal at 18:14-18:18 and exonerates others. The new conclusion says no definitive identification can be made and gives confidence 0.25. The four outputs do not agree on the outcome or evidentiary strength. The rewritten structured findings and suspect assessment still describe badge use at the service door as a contradiction proving the lab-approach statement false. Given the explicitly unresolved identity and unobserved lab approach, this is a concern to investigate rather than an established contradiction. The report additionally labels two persons with two badge events a contradiction even though those facts are mutually compatible."
+          }
+        ],
+        "summary": "All four required outputs are saved and the three rewritten JSON files parse, but the unchanged narrative accuses a person with 75% confidence while the new conclusion abstains with confidence 0.25. Important route, timing and witness-contradiction claims remain unsupported or inconsistent with the public evidence. Automatic structural completion does not establish substantive completion. Supported work: Revised the three structured deliverables and preserved all required saved files, with all thirteen exhibits inventoried and all five staff assessed. Correctly identifies V04 as two unidentified gray-coated figures at 18:14, records Eli and Maya badge events separately, and recognizes coat colors and credentials cannot confirm individual identity.",
+        "evidence_files": [
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/artifacts/investigation_report.md",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/artifacts/timeline.json",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/artifacts/evidence_analysis.json",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/artifacts/conclusions.json",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/input/case_brief.md",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/input/documents/D01_access.csv",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/input/documents/D02_witnesses.md",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/input/documents/D03_messages.md",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/input/images/V01.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/input/images/V02.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/input/images/V04.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/input/images/V05.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/input/images/V08.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-42de1b2659/input/images/V10.png",
+          "results/improvement_campaign/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/fe17cc26/attempt-2/conclusions.json",
+          "bytes": 8099
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/fe17cc26/attempt-2/evidence_analysis.json",
+          "bytes": 8915
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/fe17cc26/attempt-2/investigation_report.md",
+          "bytes": 11695,
+          "preview_url": "./results/fe17cc26/attempt-2/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/fe17cc26/attempt-2/timeline.json",
+          "bytes": 6192
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/fe17cc26/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 90,
+        "completed": true,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 23,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. A local Eli assessment says the no-lab-approach statement is contradicted IF Eli personally used the service-door badge. Even personal use would establish a service-door event rather than a lab approach; this should be described as an unresolved concern. The main conclusion does not rely on a proved contradiction or accuse Eli. Specific orange/purple assignments in a V04 timeline note are attributed to D03 rather than the case brief. D03 explains assignment origin and credential limits, while the individual mapping is in the brief. All thirteen exhibits are examined; gray figures remain unnamed and static references are distinguished from camera events."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 18,
+            "reason": "Credits recorded chronology and correct incident bounds where present. Specific orange/purple assignments in a V04 timeline note are attributed to D03 rather than the case brief. D03 explains assignment origin and credential limits, while the individual mapping is in the brief. The structured unobserved-interval list omits a separate 18:10-18:14 lab/acquisition-gap entry, although the report gives individual gaps and the full 18:00-18:18 removal window stays explicit. Some report gap end-times are arbitrary and should be phrased as no further supplied observation. The full 18:00?18:18 bounds and pre-incident messages are retained, with credential and visual rows separated."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 18,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. A local Eli assessment says the no-lab-approach statement is contradicted IF Eli personally used the service-door badge. Even personal use would establish a service-door event rather than a lab approach; this should be described as an unresolved concern. The main conclusion does not rely on a proved contradiction or accuse Eli. Facial-recognition analysis of the supplied V04 schematic cannot identify its featureless gray heads. The proposed identity follow-up should instead request genuine original footage or independent identity evidence. Other proposed interviews and badge-custody checks are feasible. Consistent abstention is supported; local theft wording and facial-recognition follow-up overstate what schematic disappearance establishes."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 13,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. A local Eli assessment says the no-lab-approach statement is contradicted IF Eli personally used the service-door badge. Even personal use would establish a service-door event rather than a lab approach; this should be described as an unresolved concern. The main conclusion does not rely on a proved contradiction or accuse Eli. Specific orange/purple assignments in a V04 timeline note are attributed to D03 rather than the case brief. D03 explains assignment origin and credential limits, while the individual mapping is in the brief. All five staff retain unobserved opportunity; local conditional lab-approach contradiction and record-absence exculpation remain caveats."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 8,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. A local Eli assessment says the no-lab-approach statement is contradicted IF Eli personally used the service-door badge. Even personal use would establish a service-door event rather than a lab approach; this should be described as an unresolved concern. The main conclusion does not rely on a proved contradiction or accuse Eli. Specific orange/purple assignments in a V04 timeline note are attributed to D03 rather than the case brief. D03 explains assignment origin and credential limits, while the individual mapping is in the brief. All nine sections and valid structured files align on abstention; a few local source/gap expressions need refinement."
+          }
+        ],
+        "summary": "Ready within reviewed scope with limited caveats: the recovered current snapshot rewrites all four deliverables into a consistent, evidence-grounded abstention. It removes the earlier Eli accusation and asserted service-route/removal window, separates badge records from appearances, examines all thirteen exhibits, reconstructs the public chronology, assesses all five staff with whereabouts gaps and compares plausible identity/route alternatives. Residual local wording/citation and follow-up feasibility issues do not overturn the supported main conclusion. Supported work: All four required deliverables changed and all three JSON files parse. The report covers nine requested sections and all five staff. Report and conclusion agree on no definitive responsible individual and 0.25 identification confidence; earlier categorical Eli responsibility, 18:14-18:18 theft window and asserted service-corridor removal are removed.",
+        "evidence_files": [
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/artifacts/investigation_report.md",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/artifacts/timeline.json",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/artifacts/evidence_analysis.json",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/artifacts/conclusions.json",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/case_brief.md",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/documents/D01_access.csv",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/documents/D02_witnesses.md",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/documents/D03_messages.md",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/images/V01.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/images/V02.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/images/V03.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/images/V04.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/images/V05.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/images/V06.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/images/V07.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/images/V08.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/images/V09.png",
+          "results/further-work/qwen3.5-27b-q4_K_M/detective-case_03/2026-10-09T182347-157955-0000--fe17cc26/evaluations/eval-fdf5c4f5ee/input/images/V10.png",
+          "results/improvement_campaign/pass_2/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable."
+        ],
+        "score": 30,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/fe17cc26/attempt-3/conclusions.json",
+          "bytes": 6982
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/fe17cc26/attempt-3/evidence_analysis.json",
+          "bytes": 6014
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/fe17cc26/attempt-3/investigation_report.md",
+          "bytes": 13903,
+          "preview_url": "./results/fe17cc26/attempt-3/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/fe17cc26/attempt-3/timeline.json",
+          "bytes": 5019
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/fe17cc26/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

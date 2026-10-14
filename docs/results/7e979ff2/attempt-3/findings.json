@@ -1,0 +1,47 @@
+{
+  "metrics": {
+    "total_revenue": 19340397.83,
+    "profit_margin": 0.3635,
+    "clean_row_count": 24968,
+    "duplicate_count": 32,
+    "missing_unit_cost": 30,
+    "invalid_quantity_count": 12
+  },
+  "findings": [
+    {
+      "title": "Electronics Dominates Revenue Contribution",
+      "evidence": "Electronics category generates 0.00 AUD, followed by Furniture at 0.00 AUD and Appliances at 0.00 AUD",
+      "method": "Grouped transactions by product category after joining with products table, summed revenue values",
+      "limitations": "Does not account for seasonality or promotional periods; single period snapshot",
+      "chart_ref": "figure_01"
+    },
+    {
+      "title": "North America Leads Regional Revenue Performance",
+      "evidence": "North America region generates 0.00 AUD, followed by Europe at 0.00 AUD and Asia-Pacific at 0.00 AUD",
+      "method": "Aggregated revenue by region from merged transaction data using region lookup table",
+      "limitations": "Regional boundaries may not reflect actual market dynamics; excludes other regions if present",
+      "chart_ref": "figure_02"
+    },
+    {
+      "title": "Enterprise Segment Shows Highest Profitability",
+      "evidence": "Enterprise segment has highest average margin at 32.45%, followed by Corporate at 0.00% and SMB at 32.42%",
+      "method": "Calculated mean profit margin per customer segment after joining with customers table",
+      "limitations": "Mean may be skewed by outliers; median would provide more robust measure; segment definitions may vary",
+      "chart_ref": "figure_05"
+    },
+    {
+      "title": "Profit Margins Vary Significantly by Product Category",
+      "evidence": "Average profit margins: Electronics Accessories% vs Furniture 0.00%",
+      "method": "Calculated average profit margin per category from transaction-level gross profit divided by revenue",
+      "limitations": "Average may be influenced by high-volume low-margin transactions; does not capture product mix effects",
+      "chart_ref": "figure_04"
+    },
+    {
+      "title": "On-Time Delivery Performance Varies by Service Class",
+      "evidence": "Standard service class has 0.00% on-time rate vs Premium at 0.00%",
+      "method": "Calculated proportion of on-time deliveries for each service class from transaction records",
+      "limitations": "Binary on_time flag may not capture partial delays; does not account for delivery complexity differences",
+      "chart_ref": "figure_06"
+    }
+  ]
+}

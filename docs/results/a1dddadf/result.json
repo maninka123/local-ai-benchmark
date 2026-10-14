@@ -1,0 +1,304 @@
+{
+  "run_id": "2026-10-10T045106-679823+0000--a1dddadf",
+  "model": "gpt-oss:20b",
+  "task": "detective",
+  "case": "case_03",
+  "track": "text_only_detective",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 48,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 12,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. The 18:18 missing-prototype fact is attributed to D01 although it comes from the case brief; the timeline omits the 18:00 baseline and earlier written context. D02 is described as having no timestamps despite explicit times in statements; the report also wrongly treats all witness statements as conflicting."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 6,
+            "reason": "Credits recorded chronology and correct incident bounds where present. The 18:18 missing-prototype fact is attributed to D01 although it comes from the case brief; the timeline omits the 18:00 baseline and earlier written context. D02 is described as having no timestamps despite explicit times in statements; the report also wrongly treats all witness statements as conflicting."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 9,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. The narrative says no definitive person can be identified, but conclusions.json still names a responsible person with a confidence score; supported suspicion and identification need distinction."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 6,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. The 18:18 missing-prototype fact is attributed to D01 although it comes from the case brief; the timeline omits the 18:00 baseline and earlier written context. The additional suspect_analysis.json is malformed and cannot be consumed as JSON."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 5,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. The 18:18 missing-prototype fact is attributed to D01 although it comes from the case brief; the timeline omits the 18:00 baseline and earlier written context. D02 is described as having no timestamps despite explicit times in statements; the report also wrongly treats all witness statements as conflicting."
+          }
+        ],
+        "summary": "Direct review of the saved deliverables against public documents and visually inspected exhibits found missing required analysis, invalid structured output or material unsupported claims. Supported work: All four required deliverables exist plus a separate suspect-analysis file. The report explicitly identifies this as written-only and does not claim image examination.",
+        "evidence_files": [
+          "models/gpt-oss-20b--f38aa0c53da5/03_detective/2026-10-10T045106-679823+0000--a1dddadf/artifacts/investigation_report.md",
+          "models/gpt-oss-20b--f38aa0c53da5/03_detective/2026-10-10T045106-679823+0000--a1dddadf/artifacts/timeline.json",
+          "models/gpt-oss-20b--f38aa0c53da5/03_detective/2026-10-10T045106-679823+0000--a1dddadf/artifacts/evidence_analysis.json",
+          "models/gpt-oss-20b--f38aa0c53da5/03_detective/2026-10-10T045106-679823+0000--a1dddadf/artifacts/conclusions.json",
+          "models/gpt-oss-20b--f38aa0c53da5/03_detective/2026-10-10T045106-679823+0000--a1dddadf/input/case_brief.md",
+          "models/gpt-oss-20b--f38aa0c53da5/03_detective/2026-10-10T045106-679823+0000--a1dddadf/input/documents/D01_access.csv",
+          "models/gpt-oss-20b--f38aa0c53da5/03_detective/2026-10-10T045106-679823+0000--a1dddadf/input/documents/D02_witnesses.md",
+          "models/gpt-oss-20b--f38aa0c53da5/03_detective/2026-10-10T045106-679823+0000--a1dddadf/input/documents/D03_messages.md",
+          "results/improvement_campaign/detective_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Written-only track: no images or floor plan were supplied. Evidence coverage is judged against case_brief/D01?D03 only; inability to identify a culprit or inspect unavailable images is not a deduction. Scores are comparable within this track, not directly with native multimodal cases."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/a1dddadf/attempt-1/conclusions.json",
+          "bytes": 674
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/a1dddadf/attempt-1/evidence_analysis.json",
+          "bytes": 1763
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/a1dddadf/attempt-1/investigation_report.md",
+          "bytes": 4982,
+          "preview_url": "./results/a1dddadf/attempt-1/investigation_report.md.html"
+        },
+        {
+          "name": "suspect_analysis.json",
+          "url": "./results/a1dddadf/attempt-1/suspect_analysis.json",
+          "bytes": 2413
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/a1dddadf/attempt-1/timeline.json",
+          "bytes": 795
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/a1dddadf/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 54,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 12,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. Key deduction says badge logs confirm Eli and Maya physically present in the service corridor, and timeline rows identify owners as entrants. D03 explicitly records credentials rather than biometric identity; neither service-door badge use nor a blind spot establishes a corridor or lab journey. This distinction is acknowledged in inventory but not applied to the central argument. Absence of exit entries is repeatedly treated as evidence for removal after 18:14, probable service-door exit or increased responsibility. The provided CSV is not documented as an exhaustive movement trace, and no exit row establishes when the prototype moved or who left. The 18:00-18:18 incident window cannot be narrowed from that absence alone."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 6,
+            "reason": "Credits recorded chronology and correct incident bounds where present. Key deduction says badge logs confirm Eli and Maya physically present in the service corridor, and timeline rows identify owners as entrants. D03 explicitly records credentials rather than biometric identity; neither service-door badge use nor a blind spot establishes a corridor or lab journey. This distinction is acknowledged in inventory but not applied to the central argument. Absence of exit entries is repeatedly treated as evidence for removal after 18:14, probable service-door exit or increased responsibility. The provided CSV is not documented as an exhaustive movement trace, and no exit row establishes when the prototype moved or who left. The 18:00-18:18 incident window cannot be narrowed from that absence alone."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 14,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. Key deduction says badge logs confirm Eli and Maya physically present in the service corridor, and timeline rows identify owners as entrants. D03 explicitly records credentials rather than biometric identity; neither service-door badge use nor a blind spot establishes a corridor or lab journey. This distinction is acknowledged in inventory but not applied to the central argument. Absence of exit entries is repeatedly treated as evidence for removal after 18:14, probable service-door exit or increased responsibility. The provided CSV is not documented as an exhaustive movement trace, and no exit row establishes when the prototype moved or who left. The 18:00-18:18 incident window cannot be narrowed from that absence alone."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 7,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. Key deduction says badge logs confirm Eli and Maya physically present in the service corridor, and timeline rows identify owners as entrants. D03 explicitly records credentials rather than biometric identity; neither service-door badge use nor a blind spot establishes a corridor or lab journey. This distinction is acknowledged in inventory but not applied to the central argument. D02 is described as containing no timestamps, although its statements mention 18:00,18:11 and 18:12. Statements are collectively deemed conflicting and unreliable, even while the suspect table finds no contradiction for four staff. Eli's credential at the service door is not proof that his lab-approach claim is false."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 5,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. Key deduction says badge logs confirm Eli and Maya physically present in the service corridor, and timeline rows identify owners as entrants. D03 explicitly records credentials rather than biometric identity; neither service-door badge use nor a blind spot establishes a corridor or lab journey. This distinction is acknowledged in inventory but not applied to the central argument. D02 is described as containing no timestamps, although its statements mention 18:00,18:11 and 18:12. Statements are collectively deemed conflicting and unreliable, even while the suspect table finds no contradiction for four staff. Eli's credential at the service door is not proof that his lab-approach claim is false."
+          }
+        ],
+        "summary": "All four required deliverables were rewritten and their JSON parses, and the written-only track is correctly identified. However, the reasoning still treats badge credentials as confirmed personal presence and missing exit rows as positive removal evidence, mislabels witness evidence, and omits key public chronology. A cautious final confidence does not resolve those substantive defects. Supported work: Saved the nine-section report and all four required deliverables, with valid required JSON and references to D01-D03. Correctly keeps visual exhibits unavailable in this written-only case, counts five badge rows including two service-door credentials and recognizes the documented service-corridor blind spot.",
+        "evidence_files": [
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-f6aceef802/artifacts/investigation_report.md",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-f6aceef802/artifacts/timeline.json",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-f6aceef802/artifacts/evidence_analysis.json",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-f6aceef802/artifacts/conclusions.json",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-f6aceef802/input/case_brief.md",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-f6aceef802/input/documents/D01_access.csv",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-f6aceef802/input/documents/D02_witnesses.md",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-f6aceef802/input/documents/D03_messages.md",
+          "results/improvement_campaign/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Written-only track: no images or floor plan were supplied. Evidence coverage is judged against case_brief/D01?D03 only; inability to identify a culprit or inspect unavailable images is not a deduction. Scores are comparable within this track, not directly with native multimodal cases."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/a1dddadf/attempt-2/conclusions.json",
+          "bytes": 465
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/a1dddadf/attempt-2/evidence_analysis.json",
+          "bytes": 739
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/a1dddadf/attempt-2/investigation_report.md",
+          "bytes": 4878,
+          "preview_url": "./results/a1dddadf/attempt-2/investigation_report.md.html"
+        },
+        {
+          "name": "suspect_analysis.json",
+          "url": "./results/a1dddadf/attempt-2/suspect_analysis.json",
+          "bytes": 2413
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/a1dddadf/attempt-2/timeline.json",
+          "bytes": 636
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/a1dddadf/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 57,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 12,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. Report deductions state that badges confirm Eli and Maya presence in the service corridor and timeline marks named-person movements confirmed. D01 confirms credential use at SERVICE_DOOR, not corridor traversal or personal identity; the later global caveat does not qualify these actual claims. Eli denial of approaching the lab is repeatedly called contradicted by service-door use. The public written evidence neither establishes that badge owner used it nor records a lab approach; that is a hypothesis requiring further evidence, not a proven contradiction. Other D02 statements are collectively called conflicting/unreliable without identifying actual mutually incompatible claims."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 7,
+            "reason": "Credits recorded chronology and correct incident bounds where present. Report deductions state that badges confirm Eli and Maya presence in the service corridor and timeline marks named-person movements confirmed. D01 confirms credential use at SERVICE_DOOR, not corridor traversal or personal identity; the later global caveat does not qualify these actual claims. The chronology omits the 17:00, 17:10 and 17:20 messages and 18:00 presence baseline. It limits the main missing interval to 18:14-18:18 despite no observation throughout the full 18:00-18:18 interval; 18:18 discovery is incorrectly attributed to D01 instead of case_brief. Missing exit entries do not independently establish a probable exit or removal after 18:14."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 14,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. Eli denial of approaching the lab is repeatedly called contradicted by service-door use. The public written evidence neither establishes that badge owner used it nor records a lab approach; that is a hypothesis requiring further evidence, not a proven contradiction. Other D02 statements are collectively called conflicting/unreliable without identifying actual mutually incompatible claims. The five staff table understates unknown opportunity outside isolated door events and unverified statements. The favored service-route removal and limited Eli/Maya alternatives need a stated assumption and comparison with earlier removal after 18:00, other/unknown actor, credential misuse and authorized relocation; no actual route or complete occupancy record is supplied."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 8,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. Report deductions state that badges confirm Eli and Maya presence in the service corridor and timeline marks named-person movements confirmed. D01 confirms credential use at SERVICE_DOOR, not corridor traversal or personal identity; the later global caveat does not qualify these actual claims. Eli denial of approaching the lab is repeatedly called contradicted by service-door use. The public written evidence neither establishes that badge owner used it nor records a lab approach; that is a hypothesis requiring further evidence, not a proven contradiction. Other D02 statements are collectively called conflicting/unreliable without identifying actual mutually incompatible claims."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 6,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. Eli denial of approaching the lab is repeatedly called contradicted by service-door use. The public written evidence neither establishes that badge owner used it nor records a lab approach; that is a hypothesis requiring further evidence, not a proven contradiction. Other D02 statements are collectively called conflicting/unreliable without identifying actual mutually incompatible claims. The chronology omits the 17:00, 17:10 and 17:20 messages and 18:00 presence baseline. It limits the main missing interval to 18:14-18:18 despite no observation throughout the full 18:00-18:18 interval; 18:18 discovery is incorrectly attributed to D01 instead of case_brief. Missing exit entries do not independently establish a probable exit or removal after 18:14."
+          }
+        ],
+        "summary": "Needs revision: all four required files are saved and structured outputs parse, but the investigation invents a direct lab-approach contradiction, treats credential use as confirmed personal presence, narrows the missing interval without evidence and omits substantive item-level examination. Low-confidence abstention does not repair these material public-source errors. Supported work: All four required deliverables are saved, three required JSON files parse and the report has all nine requested sections plus five individual staff assessments. The written-only scope, five actual badge entries, two service-door credentials and security identity/blind-spot limitations are recognized.",
+        "evidence_files": [
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-b46d5edb50/artifacts/investigation_report.md",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-b46d5edb50/artifacts/timeline.json",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-b46d5edb50/artifacts/evidence_analysis.json",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-b46d5edb50/artifacts/conclusions.json",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-b46d5edb50/input/case_brief.md",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-b46d5edb50/input/documents/D01_access.csv",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-b46d5edb50/input/documents/D02_witnesses.md",
+          "results/further-work/gpt-oss-20b/detective-case_03/2026-10-10T045106-679823-0000--a1dddadf/evaluations/eval-b46d5edb50/input/documents/D03_messages.md",
+          "results/improvement_campaign/pass_2/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Written-only track: no images or floor plan were supplied. Evidence coverage is judged against case_brief/D01?D03 only; inability to identify a culprit or inspect unavailable images is not a deduction. Scores are comparable within this track, not directly with native multimodal cases."
+        ],
+        "score": 17.1,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/a1dddadf/attempt-3/conclusions.json",
+          "bytes": 465
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/a1dddadf/attempt-3/evidence_analysis.json",
+          "bytes": 739
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/a1dddadf/attempt-3/investigation_report.md",
+          "bytes": 5481,
+          "preview_url": "./results/a1dddadf/attempt-3/investigation_report.md.html"
+        },
+        {
+          "name": "suspect_analysis.json",
+          "url": "./results/a1dddadf/attempt-3/suspect_analysis.json",
+          "bytes": 2465
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/a1dddadf/attempt-3/timeline.json",
+          "bytes": 1041
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/a1dddadf/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

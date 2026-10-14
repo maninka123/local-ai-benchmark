@@ -1,0 +1,44 @@
+{
+  "reference_type": "self-authored tool-assisted reference",
+  "task": "data_analysis",
+  "requested_model": "gpt-6-astra",
+  "configured_model": "gpt-6-astra",
+  "requested_reasoning_effort": "high",
+  "configured_reasoning_effort": "high",
+  "configuration_basis": "Explicit model/reasoning assignment supplied by the parent task; this file is not a provider-side usage attestation.",
+  "execution_mode": "Single assigned task with tool-assisted implementation and verification; multiple tool iterations within the original assignment.",
+  "original_prompts": {
+    "system": "system_prompt.md",
+    "task": "prompt.md",
+    "byte_identical_to_originals": true
+  },
+  "subsequent_user_correction_prompts": [],
+  "parent_delivery_guidance": "One delivery-integration message about dashboard endpoint and CSP; not an analytical correction prompt.",
+  "source_restriction": "Only datasets/data_analysis for analytical evidence; evaluation_private, candidate results, scoring answers and prior analyses were not read.",
+  "tools_used": [
+    "PowerShell and provided Python environment",
+    "pandas/numpy/matplotlib/Pillow",
+    "standard-library csv/Decimal independent verification",
+    "Chrome via cua_repl for rendered inspection"
+  ],
+  "local_gpu_or_ollama_used": false,
+  "other_models_or_subagents_called": false,
+  "local_model_campaign_modified_or_resumed": false,
+  "python_executable": "D:/LocalLLM/benchmark-env/Scripts/python.exe",
+  "timing": {
+    "kind": "measured wall-clock interval only",
+    "measurement_started_utc": "2026-10-13T06:26:13+00:00",
+    "measurement_finished_utc": "2026-10-13T06:43:00.388221+00:00",
+    "elapsed_wall_seconds": 1007.388,
+    "scope": "Clock interval from after initial prompt/skill inspection through final artifact persistence; excludes earlier setup and is not a single model-response latency.",
+    "comparable_to_ollama_benchmark": false
+  },
+  "tokens": {
+    "input": null,
+    "output": null,
+    "total": null,
+    "status": "unknown; not measured"
+  },
+  "benchmark_score": null,
+  "not_ground_truth": true
+}

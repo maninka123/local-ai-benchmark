@@ -1,0 +1,82 @@
+{
+  "evidence_analysis": [
+    {
+      "id": "V01",
+      "description": "Synthetic schematic of the facility.",
+      "observations": "Shows the Lab connected to the East Corridor (teal line) and the Service Corridor (orange line). The Service Corridor is explicitly labeled as an 'UNMONITORED LINK TO LAB'.",
+      "relevance": "Identifies a covert path to the Lab."
+    },
+    {
+      "id": "V02",
+      "description": "Lab camera at 18:00.",
+      "observations": "The prototype is visible on a table in the Lab.",
+      "relevance": "Establishes the baseline state of the prototype."
+    },
+    {
+      "id": "V03",
+      "description": "East Corridor camera at 18:10.",
+      "observations": "A person in a teal coat (Nora Vale) is seen in the corridor.",
+      "relevance": "Corroborates Nora's presence in the East Corridor."
+    },
+    {
+      "id": "V04",
+      "description": "Service Door camera at 18:19.",
+      "observations": "A person in an orange coat (Eli Stone) is seen at the Service Door carrying a small box.",
+      "relevance": "Key evidence of Eli Stone's movement with a container."
+    },
+    {
+      "id": "V05",
+      "description": "Lab camera at 18:18.",
+      "observations": "The prototype is no longer on the table.",
+      "relevance": "Confirms the time of the theft."
+    },
+    {
+      "id": "V06",
+      "description": "Cafeteria camera at 18:12.",
+      "observations": "A person in a blue coat (Theo Park) is seen in the cafeteria.",
+      "relevance": "Corroborates Theo's alibi."
+    },
+    {
+      "id": "V07",
+      "description": "Reception camera at 18:13.",
+      "observations": "A person in a red coat (Ada Finch) is seen at reception.",
+      "relevance": "Corroborates Ada's alibi."
+    },
+    {
+      "id": "V08",
+      "description": "Loading Bay camera at 18:11.",
+      "observations": "A person in a purple coat (Maya Reed) is seen with a cardboard box.",
+      "relevance": "Corroborates Maya's statement about moving a box."
+    },
+    {
+      "id": "V09",
+      "description": "Object Detail.",
+      "observations": "Shows the prototype's appearance.",
+      "relevance": "Used to identify the stolen object."
+    },
+    {
+      "id": "V10",
+      "description": "Service Camera Maintenance.",
+      "observations": "Indicates a +5 minute clock offset for the service camera.",
+      "relevance": "Crucial for correcting the timestamp on V04."
+    },
+    {
+      "id": "D01",
+      "description": "Access Logs.",
+      "observations": "Records entry times for Nora (18:10), Theo (18:12), Ada (18:13), and Eli (18:14).",
+      "relevance": "Provides the timeline of movement."
+    },
+    {
+      "id": "D02",
+      "description": "Witness Statements.",
+      "observations": "Eli claims he did not approach the lab. Maya claims she moved a box at 18:11.",
+      "relevance": "Provides subjective accounts to be cross-referenced with logs."
+    },
+    {
+      "id": "D03",
+      "description": "Internal Messages.",
+      "observations": "Eli expressed a need for the prototype at 17:00. Maya was tasked to move a box at 17:10.",
+      "relevance": "Establishes motive and context for Maya's actions."
+    }
+  ]
+}

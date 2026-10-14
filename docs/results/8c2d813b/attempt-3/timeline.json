@@ -1,0 +1,117 @@
+{
+  "case_id": "CASE_01",
+  "incident_window": "18:00-18:18",
+  "events": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone requests prototype for tomorrow",
+      "source": "D03_messages.md",
+      "person": "Eli Stone (appearance-based)",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed requests cardboard box move to loading bay",
+      "source": "D03_messages.md",
+      "person": "Maya Reed (appearance-based)",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed present in lab",
+      "source": "V02",
+      "person": "N/A",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:10",
+      "event": "Person in teal coat enters EAST_CORRIDOR via badge credential",
+      "source": "D01_access.csv + V03",
+      "person": "Nora Vale (appearance-based)",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:10-18:14",
+      "event": "Person in teal coat takes prototype from lab",
+      "source": "V03 + V04 + D01",
+      "person": "Nora Vale (appearance-based)",
+      "confidence": "probable"
+    },
+    {
+      "time": "18:11",
+      "event": "Maya Reed at loading bay with cardboard box",
+      "source": "V08 + D03",
+      "person": "Maya Reed (appearance-based)",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:12",
+      "event": "Person in blue coat enters CAFETERIA via badge credential",
+      "source": "D01_access.csv + V06",
+      "person": "Theo Park (appearance-based)",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:12",
+      "event": "Person in blue coat claims remained in cafeteria from 18:12",
+      "source": "D02_witnesses.md + V06",
+      "person": "Theo Park (appearance-based)",
+      "confidence": "unverified"
+    },
+    {
+      "time": "18:13",
+      "event": "Person in red coat enters RECEPTION via badge credential",
+      "source": "D01_access.csv + V07",
+      "person": "Ada Finch (appearance-based)",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:13",
+      "event": "Person in red coat claims staffed reception",
+      "source": "D02_witnesses.md + V07",
+      "person": "Ada Finch (appearance-based)",
+      "confidence": "unverified"
+    },
+    {
+      "time": "18:14",
+      "event": "Person in teal coat exits EAST_EXIT carrying prototype visible in camera",
+      "source": "D01_access.csv + V04",
+      "person": "Nora Vale (appearance-based)",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:14-18:18",
+      "event": "Prototype transported from east exit to unknown location by person in teal coat",
+      "source": "V04 + V05",
+      "person": "Nora Vale (appearance-based)",
+      "confidence": "probable"
+    },
+    {
+      "time": "18:18",
+      "event": "Lab empty except for brown object (no prototype), prototype confirmed missing",
+      "source": "V05",
+      "person": "N/A",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype discovered missing from lab",
+      "source": "Case brief",
+      "person": "N/A",
+      "confidence": "discovery"
+    }
+  ],
+  "assumptions": [
+    "Person in teal coat entered the LAB from EAST_CORRIDOR after entering at 18:10",
+    "The prototype was taken during person in teal coat's visit between 18:10-18:14",
+    "No one else entered the lab area via monitored routes during this timeframe based on access logs",
+    "Service corridor blind spot (V10) does NOT prove absence of use - cannot rule out unauthorized entry via this route"
+  ],
+  "missing_intervals": [
+    "18:14-18:18: Time between person in teal coat exiting east exit with prototype and discovery of missing prototype in lab. Prototype was already out of lab by 18:14, so theft occurred before this time.",
+    "Service corridor access: No camera coverage for service corridor (V10 blind spot). Cannot rule out unauthorized entry via service corridor without additional evidence."
+  ],
+  "contradictory_timestamps": [
+    "Nora Vale witness statement claims 'only visited east corridor and left' but V04 shows person in teal coat exiting east exit at 18:14 carrying prototype. Visual evidence contradicts witness statement - person in teal coat did take the prototype."
+  ]
+}

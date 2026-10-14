@@ -1,0 +1,91 @@
+{
+  "rubric": {
+    "build_execution": 15,
+    "driving": 15,
+    "npc_intelligence": 20,
+    "collisions": 15,
+    "camera_ui": 10,
+    "race_mechanics": 10,
+    "visual_quality": 10,
+    "code_robustness": 5
+  },
+  "categories": {
+    "build_execution": 0,
+    "driving": null,
+    "npc_intelligence": null,
+    "collisions": null,
+    "camera_ui": null,
+    "race_mechanics": null,
+    "visual_quality": null,
+    "code_robustness": 0
+  },
+  "verified_points": 0,
+  "pending_points": 80,
+  "quality_score": null,
+  "complete": false,
+  "evidence": {
+    "browser": {
+      "build": true,
+      "loads": true,
+      "errors": [],
+      "checks": {
+        "canvas": false,
+        "selection": false,
+        "movement": false,
+        "timer": false,
+        "hud": false,
+        "camera": false,
+        "pause": false,
+        "npc_laps": false,
+        "restart": false
+      },
+      "states": [
+        {
+          "label": "menu",
+          "value": null
+        },
+        {
+          "label": "race",
+          "value": null
+        },
+        {
+          "label": "moved",
+          "value": null
+        },
+        {
+          "label": "simulation",
+          "value": null
+        }
+      ],
+      "notes": [
+        "Hooks are candidate supplied. Snapshot claims alone do not prove collisions, valid checkpoints, or NPC intelligence; these require manual review. No credit awarded for hooks alone."
+      ],
+      "build_log": "vite v7.3.7 building client environment for production...\ntransforming...\n✓ 3 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                0.20 kB │ gzip: 0.17 kB\ndist/assets/index-B5Qt9EMX.js  0.71 kB │ gzip: 0.40 kB\n✓ built in 74ms\n",
+      "menu_text": "",
+      "npc_observations": null
+    },
+    "implementation_report_present": false,
+    "build_success": false,
+    "browser_started": true,
+    "implementation_present": false,
+    "runtime_error_count": 0,
+    "candidate_hook_checks_unverified": {
+      "canvas": false,
+      "selection": false,
+      "movement": false,
+      "timer": false,
+      "hud": false,
+      "camera": false,
+      "pause": false,
+      "npc_laps": false,
+      "restart": false
+    }
+  },
+  "limitations": [
+    "Playwright validates build, page loads, error collection and screenshot capture. Candidate-supplied hooks are diagnostic only; driving/collision/checkpoint/NPC claims require independent manual review. Completion stays unverified until reviewed."
+  ],
+  "review_status": "pending",
+  "scoring_version": "1.0.0",
+  "judge": "deterministic independent artifact/ground-truth checks; no model judge",
+  "scoring_seconds": 15.284289100003662
+}

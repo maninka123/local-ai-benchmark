@@ -1,0 +1,56 @@
+{
+  "exhibits": [
+    {
+      "id": "V01",
+      "description": "Floor plan showing layout and unmonitored service corridor link to LAB"
+    },
+    {
+      "id": "V02",
+      "description": "Lab camera 18:00: Prototype present"
+    },
+    {
+      "id": "V03",
+      "description": "East Corridor camera 18:10: Person in teal coat observed"
+    },
+    {
+      "id": "V04",
+      "description": "East Exit camera 18:14: Person in teal coat with prototype observed"
+    },
+    {
+      "id": "V05",
+      "description": "Lab camera 18:18: Prototype missing"
+    },
+    {
+      "id": "V06",
+      "description": "Cafeteria camera 18:12: Person in blue coat observed"
+    },
+    {
+      "id": "V07",
+      "description": "Reception camera 18:13: Person in red coat observed"
+    },
+    {
+      "id": "V08",
+      "description": "Loading Bay camera 18:11: Person in purple coat with box observed"
+    },
+    {
+      "id": "V09",
+      "description": "Object Detail: Reference for prototype appearance"
+    },
+    {
+      "id": "V10",
+      "description": "Service Camera: Conferms blind spot in service corridor"
+    },
+    {
+      "id": "D01",
+      "description": "Access Logs: Records badge usage for Nora Vale, Theo Park, and Ada Finch"
+    },
+    {
+      "id": "D02",
+      "description": "Witness Statements: Unverified statements from staff members"
+    },
+    {
+      "id": "D03",
+      "description": "Internal Messages: Establishes motive for Eli Stone and tasking for Maya Reed"
+    }
+  ]
+}

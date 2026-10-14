@@ -1,0 +1,230 @@
+{
+  "run_id": "2026-10-12T120027-575384+0000--19ff8faf",
+  "model": "laguna-xs.2:q4_K_M",
+  "task": "detective",
+  "case": "case_03",
+  "track": "text_only_detective",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 0,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          }
+        ],
+        "summary": "No required deliverables were saved despite conversational claims of success; all 24 logged actions failed argument validation. Public-written-evidence inspection cannot validate an unsaved investigation. Supported work: The public written case brief and D01-D03 were supplied to the model. The conversation includes a short case summary, suggested suspect and some acknowledged limitations, but no final deliverable was saved.",
+        "evidence_files": [
+          "models/laguna-xs.2-q4_K_M--1c7a5990bd7a/03_detective/2026-10-12T120027-575384+0000--19ff8faf/artifacts",
+          "models/laguna-xs.2-q4_K_M--1c7a5990bd7a/03_detective/2026-10-12T120027-575384+0000--19ff8faf/input/case_brief.md",
+          "models/laguna-xs.2-q4_K_M--1c7a5990bd7a/03_detective/2026-10-12T120027-575384+0000--19ff8faf/input/documents/D01_access.csv",
+          "models/laguna-xs.2-q4_K_M--1c7a5990bd7a/03_detective/2026-10-12T120027-575384+0000--19ff8faf/input/documents/D02_witnesses.md",
+          "models/laguna-xs.2-q4_K_M--1c7a5990bd7a/03_detective/2026-10-12T120027-575384+0000--19ff8faf/input/documents/D03_messages.md",
+          "results/improvement_campaign/detective_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Written-only track: no images or floor plan were supplied. Evidence coverage is judged against case_brief/D01?D03 only; inability to identify a culprit or inspect unavailable images is not a deduction. Scores are comparable within this track, not directly with native multimodal cases.",
+          "A zero is a judgment of absent delivered output, not an inference about latent model capability or the cause of failure."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/19ff8faf/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 43,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 11,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. The report labels a box-carrying claim at 18:11 and a later badge entry at 18:14 contradictory even though both events can occur; that false contradiction is used in suspect analysis. Spatial claims that the east corridor is far from the lab and separate from service/lab areas are unsupported by the written inputs; visual floor-plan exhibits are unavailable."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 10,
+            "reason": "Credits recorded chronology and correct incident bounds where present. The three required structured deliverables timeline.json, evidence_analysis.json and conclusions.json are still missing. The report labels a box-carrying claim at 18:11 and a later badge entry at 18:14 contradictory even though both events can occur; that false contradiction is used in suspect analysis."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 12,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. The three required structured deliverables timeline.json, evidence_analysis.json and conclusions.json are still missing. The report labels a box-carrying claim at 18:11 and a later badge entry at 18:14 contradictory even though both events can occur; that false contradiction is used in suspect analysis."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 5,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. The three required structured deliverables timeline.json, evidence_analysis.json and conclusions.json are still missing. The report labels a box-carrying claim at 18:11 and a later badge entry at 18:14 contradictory even though both events can occur; that false contradiction is used in suspect analysis."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 2,
+            "reason": "1/4 required artifacts present; all required JSON parses. Missing: timeline.json, evidence_analysis.json, conclusions.json."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 3,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. The report labels a box-carrying claim at 18:11 and a later badge entry at 18:14 contradictory even though both events can occur; that false contradiction is used in suspect analysis. The report repeatedly changes the service-corridor blind spot into a Service Door blind spot and mixes the security note into the D01 inventory."
+          }
+        ],
+        "summary": "Needs revision after one prompt: a report is newly saved, but timeline.json/evidence_analysis.json/conclusions.json are absent. The report contains false contradictions and unsupported layout/access claims, and generation ended with a native tool-argument parse error. Supported work: investigation_report.md is now actually saved, replacing the initial empty output folder. The report has all requested headings, lists available written exhibits, discusses five staff and abstains from identifying a responsible individual.",
+        "evidence_files": [
+          "results/further-work/laguna-xs.2-q4_K_M/detective-case_03/2026-10-12T120027-575384-0000--19ff8faf/evaluations/eval-373c9a6948/artifacts/investigation_report.md",
+          "results/further-work/laguna-xs.2-q4_K_M/detective-case_03/2026-10-12T120027-575384-0000--19ff8faf/evaluations/eval-373c9a6948/input/case_brief.md",
+          "results/further-work/laguna-xs.2-q4_K_M/detective-case_03/2026-10-12T120027-575384-0000--19ff8faf/evaluations/eval-373c9a6948/input/documents/D01_access.csv",
+          "results/further-work/laguna-xs.2-q4_K_M/detective-case_03/2026-10-12T120027-575384-0000--19ff8faf/evaluations/eval-373c9a6948/input/documents/D02_witnesses.md",
+          "results/further-work/laguna-xs.2-q4_K_M/detective-case_03/2026-10-12T120027-575384-0000--19ff8faf/evaluations/eval-373c9a6948/input/documents/D03_messages.md",
+          "results/improvement_campaign/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Written-only track: no images or floor plan were supplied. Evidence coverage is judged against case_brief/D01?D03 only; inability to identify a culprit or inspect unavailable images is not a deduction. Scores are comparable within this track, not directly with native multimodal cases."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "investigation_report.md",
+          "url": "./results/19ff8faf/attempt-2/investigation_report.md",
+          "bytes": 4716,
+          "preview_url": "./results/19ff8faf/attempt-2/investigation_report.md.html"
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/19ff8faf/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 43,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 11,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. Report says five staff entered the building, but D01 records internal door credentials, not facility arrival or confirmed personal movement. It asserts Nora east corridor is far from lab and separate from service/lab areas and assumes cafeteria/reception lack lab access; no layout is supplied in this written-only case to establish those locations or restrictions. D01 inventory and deductions misattribute the blind spot to SERVICE_DOOR; D03 identifies SERVICE_CORRIDOR as blind. The report assumes a service-door-to-lab route from unavailable spatial evidence."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 10,
+            "reason": "Credits recorded chronology and correct incident bounds where present. timeline.json, evidence_analysis.json and conclusions.json are absent from the exact current snapshot. The report alone does not satisfy the four-deliverable requirement. The 18:11 box claim and 18:14 service-door credential are temporally compatible, not a contradiction or evidence of a cover story. Eli service-door credential similarly does not prove lab approach after 18:00 or contradict his denial without identity/route assumptions. Missing logs and the security credential notice are limitations, not mutually conflicting evidence."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 12,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. timeline.json, evidence_analysis.json and conclusions.json are absent from the exact current snapshot. The report alone does not satisfy the four-deliverable requirement. The 18:11 box claim and 18:14 service-door credential are temporally compatible, not a contradiction or evidence of a cover story. Eli service-door credential similarly does not prove lab approach after 18:00 or contradict his denial without identity/route assumptions. Missing logs and the security credential notice are limitations, not mutually conflicting evidence."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 5,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. timeline.json, evidence_analysis.json and conclusions.json are absent from the exact current snapshot. The report alone does not satisfy the four-deliverable requirement. Report says five staff entered the building, but D01 records internal door credentials, not facility arrival or confirmed personal movement. It asserts Nora east corridor is far from lab and separate from service/lab areas and assumes cafeteria/reception lack lab access; no layout is supplied in this written-only case to establish those locations or restrictions."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 2,
+            "reason": "1/4 required artifacts present; all required JSON parses. Missing: timeline.json, evidence_analysis.json, conclusions.json."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 3,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. The 18:11 box claim and 18:14 service-door credential are temporally compatible, not a contradiction or evidence of a cover story. Eli service-door credential similarly does not prove lab approach after 18:00 or contradict his denial without identity/route assumptions. Missing logs and the security credential notice are limitations, not mutually conflicting evidence. D01 inventory and deductions misattribute the blind spot to SERVICE_DOOR; D03 identifies SERVICE_CORRIDOR as blind. The report assumes a service-door-to-lab route from unavailable spatial evidence."
+          }
+        ],
+        "summary": "Needs revision: only the report is saved; all three required structured outputs remain absent. The report also invents spatial access restrictions, calls compatible box timing a contradiction and applies credential caveats inconsistently. Supported work: A report is saved with nine requested headings, five named staff assessments, written-only scope and a qualified inconclusive conclusion. The report includes the three pre-incident messages and the brief 18:00/18:18 baseline, recognizes credential identity limitations and lists unknown/unlogged-actor alternatives.",
+        "evidence_files": [
+          "results/further-work/laguna-xs.2-q4_K_M/detective-case_03/2026-10-12T120027-575384-0000--19ff8faf/evaluations/eval-59747929c0/artifacts/investigation_report.md",
+          "results/further-work/laguna-xs.2-q4_K_M/detective-case_03/2026-10-12T120027-575384-0000--19ff8faf/evaluations/eval-59747929c0/input/case_brief.md",
+          "results/further-work/laguna-xs.2-q4_K_M/detective-case_03/2026-10-12T120027-575384-0000--19ff8faf/evaluations/eval-59747929c0/input/documents/D01_access.csv",
+          "results/further-work/laguna-xs.2-q4_K_M/detective-case_03/2026-10-12T120027-575384-0000--19ff8faf/evaluations/eval-59747929c0/input/documents/D02_witnesses.md",
+          "results/further-work/laguna-xs.2-q4_K_M/detective-case_03/2026-10-12T120027-575384-0000--19ff8faf/evaluations/eval-59747929c0/input/documents/D03_messages.md",
+          "results/improvement_campaign/pass_2/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Written-only track: no images or floor plan were supplied. Evidence coverage is judged against case_brief/D01?D03 only; inability to identify a culprit or inspect unavailable images is not a deduction. Scores are comparable within this track, not directly with native multimodal cases.",
+          "The four required artifacts are byte-identical in content to the prior judged attempt; equal raw points preserve output-only fairness."
+        ],
+        "score": 12.9,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "investigation_report.md",
+          "url": "./results/19ff8faf/attempt-3/investigation_report.md",
+          "bytes": 4716,
+          "preview_url": "./results/19ff8faf/attempt-3/investigation_report.md.html"
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/19ff8faf/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

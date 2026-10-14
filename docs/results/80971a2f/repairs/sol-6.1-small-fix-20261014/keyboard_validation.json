@@ -1,0 +1,45 @@
+{
+  "model": "nemotron3",
+  "errors": [],
+  "instrumentation": "Validation-only response instrumentation exposes existing local state; candidate source is unchanged.",
+  "viewport": {
+    "left": 0,
+    "top": 0,
+    "right": 1280,
+    "bottom": 720,
+    "width": 1280,
+    "height": 720,
+    "scrollWidth": 1280,
+    "scrollHeight": 720
+  },
+  "canvas_fits": true,
+  "before": {
+    "position": [
+      0,
+      0.5,
+      0
+    ],
+    "direction": 0,
+    "speed": 0
+  },
+  "accelerated": {
+    "position": [
+      0,
+      0.5,
+      -100.81498434692519
+    ],
+    "direction": 0,
+    "speed": 3.359256923466505
+  },
+  "steered": {
+    "position": [
+      -30.1747734654,
+      0.5,
+      -257.22644923566554
+    ],
+    "direction": 0.36646678303656793,
+    "speed": 3.748876789105161
+  },
+  "movement": true,
+  "steering": true
+}

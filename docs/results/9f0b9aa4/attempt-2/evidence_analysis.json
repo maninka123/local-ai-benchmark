@@ -1,0 +1,49 @@
+{
+  "findings": [
+    {
+      "title": "Prototype Status",
+      "evidence": [
+        "V02",
+        "V05"
+      ],
+      "method": "Visual comparison of Lab camera feeds.",
+      "limitations": "Cannot determine *how* it was removed, only that it was gone by 18:18."
+    },
+    {
+      "title": "Service Door Discrepancy",
+      "evidence": [
+        "V04",
+        "D01"
+      ],
+      "method": "Comparing badge logs (Eli/Maya) with visual evidence (Grey coats).",
+      "limitations": "Coat color is not biometric ID. Could be impersonation, swapping, or camera artifact."
+    },
+    {
+      "title": "Blind Spot Exploitation",
+      "evidence": [
+        "V10",
+        "D03"
+      ],
+      "method": "Reviewing maintenance logs and schematic.",
+      "limitations": "Confirms lack of visual evidence for Service Corridor movements."
+    },
+    {
+      "title": "Nora Vale's Proximity",
+      "evidence": [
+        "V03",
+        "D01"
+      ],
+      "method": "Tracking Nora's location relative to Lab.",
+      "limitations": "No direct evidence she entered the Lab, only that she was in the adjacent East Corridor."
+    },
+    {
+      "title": "Maya Reed's Box",
+      "evidence": [
+        "V08",
+        "D03"
+      ],
+      "method": "Correlating Maya's statement with visual of box at Loading Bay.",
+      "limitations": "Box contents unknown. Could be prototype, but not confirmed."
+    }
+  ]
+}

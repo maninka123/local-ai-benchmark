@@ -1,0 +1,144 @@
+{
+  "case_id": "CASE_01",
+  "incident_type": "Missing laboratory prototype",
+  "confirmed_events": [
+    {
+      "time": "18:00",
+      "event": "Prototype visible in Lab on brown surface",
+      "evidence": [
+        "V02",
+        "V09"
+      ],
+      "certainty": "confirmed_visual"
+    },
+    {
+      "time": "18:10",
+      "event": "Teal-coated person visible in East Corridor (no prototype visible in frame)",
+      "evidence": [
+        "V03"
+      ],
+      "certainty": "confirmed_visual"
+    },
+    {
+      "time": "18:10",
+      "event": "Nora Vale badge credential used to enter East Corridor",
+      "evidence": [
+        "D01"
+      ],
+      "certainty": "confirmed_badge_record"
+    },
+    {
+      "time": "18:11",
+      "event": "Purple-coated person with cardboard box at Loading Bay",
+      "evidence": [
+        "V08"
+      ],
+      "certainty": "confirmed_visual"
+    },
+    {
+      "time": "18:12",
+      "event": "Blue-coated person visible in Cafeteria",
+      "evidence": [
+        "V06"
+      ],
+      "certainty": "confirmed_visual"
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park badge credential used to enter Cafeteria",
+      "evidence": [
+        "D01"
+      ],
+      "certainty": "confirmed_badge_record"
+    },
+    {
+      "time": "18:13",
+      "event": "Red-coated person visible at Reception",
+      "evidence": [
+        "V07"
+      ],
+      "certainty": "confirmed_visual"
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch badge credential used to enter Reception",
+      "evidence": [
+        "D01"
+      ],
+      "certainty": "confirmed_badge_record"
+    },
+    {
+      "time": "18:14",
+      "event": "Teal-coated person WITH PROTOTYPE visible at East Exit",
+      "evidence": [
+        "V04"
+      ],
+      "certainty": "confirmed_visual"
+    },
+    {
+      "time": "18:14",
+      "event": "Nora Vale badge credential used to exit via East Exit",
+      "evidence": [
+        "D01"
+      ],
+      "certainty": "confirmed_badge_record"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype discovered missing from Lab",
+      "evidence": [
+        "V05"
+      ],
+      "certainty": "confirmed_visual"
+    }
+  ],
+  "probable_events": [
+    {
+      "time_range": "18:00-18:14",
+      "event": "Prototype removed from Lab (exact time not captured)",
+      "evidence": [
+        "V02",
+        "V05"
+      ],
+      "certainty": "inferred_from_absence"
+    },
+    {
+      "time_range": "18:10-18:14",
+      "event": "Teal-coated person acquired prototype and moved to East Exit",
+      "evidence": [
+        "V03",
+        "V04"
+      ],
+      "certainty": "inferred_from_sequence"
+    }
+  ],
+  "unobserved_intervals": [
+    {
+      "interval": "18:00-18:10",
+      "description": "No camera coverage of Lab interior between snapshots",
+      "implications": "Theft could have occurred anytime in this window"
+    },
+    {
+      "interval": "18:10-18:14",
+      "description": "Movement from East Corridor to East Exit not fully captured",
+      "implications": "Cannot determine exact path or acquisition timing"
+    },
+    {
+      "interval": "Service Corridor (all times)",
+      "description": "Camera blind spot per V10, D03",
+      "implications": "Unobserved movement route cannot be ruled out"
+    }
+  ],
+  "theft_window": {
+    "earliest_confirmed_presence": "18:00 (V02)",
+    "latest_confirmed_absence": "18:18 (V05)",
+    "first_observed_possession": "18:14 (V04 - teal-coated person with prototype at East Exit)",
+    "inferred_removal_window": "18:00-18:14"
+  },
+  "assumptions": [
+    "Badge records in D01 are accurate and complete for the incident window",
+    "Coat color assignments from case brief are accurate",
+    "Camera timestamps are synchronized across locations",
+    "Visual snapshots represent actual conditions at stated times"
+  ]
+}

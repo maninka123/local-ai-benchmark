@@ -1,0 +1,14 @@
+{
+  "responsible_person": null,
+  "confidence": 0.35,
+  "conclusion": "The prototype was removed from the LAB between 18:00 and 18:14. A person wearing a teal coat was observed carrying it at the EAST EXIT at 18:14 (V04). However, badge credentials and coat color do not definitively identify the individual as Nora Vale or any other specific staff member (D03). The SERVICE CORRIDOR provides an unmonitored route from the LAB (V01, V10), allowing for movement without direct visual confirmation. No responsible individual can be identified with confidence.",
+  "exhibits": [
+    "V01",
+    "V02",
+    "V04",
+    "V05",
+    "V10",
+    "D01",
+    "D03"
+  ]
+}

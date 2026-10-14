@@ -1,0 +1,52 @@
+[
+    {
+        "time": "17:00",
+        "event": "Eli Stone expresses interest in the prototype via message.",
+        "exhibit_id": "Messages"
+    },
+    {
+        "time": "17:10",
+        "event": "Maya Reed instructed to move cardboard consumables box to loading bay.",
+        "exhibit_id": "Messages"
+    },
+    {
+        "time": "17:20",
+        "event": "Security note confirms service corridor is a camera blind spot.",
+        "exhibit_id": "Messages"
+    },
+    {
+        "time": "18:00",
+        "event": "Prototype confirmed present in LAB.",
+        "exhibit_id": "V02"
+    },
+    {
+        "time": "18:10",
+        "event": "Nora Vale enters EAST_CORRIDOR.",
+        "exhibit_id": "D01, V03"
+    },
+    {
+        "time": "18:11",
+        "event": "Maya Reed seen in LOADING BAY with a box.",
+        "exhibit_id": "V08"
+    },
+    {
+        "time": "18:12",
+        "event": "Theo Park enters CAFETARIA.",
+        "exhibit_id": "D02, V06"
+    },
+    {
+        "time": "18:13",
+        "event": "Ada Finch enters RECEPTION.",
+        "exhibit_id": "D03, V07"
+    },
+    {
+        "time": "18:14",
+        "event": "Eli Stone and Maya Reed enter via SERVICE_DOOR.",
+        "exhibit_id": "D04, D05, V04"
+    },
+    {
+        "time": "18:18",
+        "event": "Prototype confirmed missing from LAB.",
+        "exhibit_id": "V05"
+    }
+]

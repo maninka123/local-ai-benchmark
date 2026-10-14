@@ -1,0 +1,117 @@
+{
+  "case_id": "CASE_03",
+  "incident_type": "Missing laboratory prototype",
+  "timeline": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone messages about needing prototype tomorrow",
+      "source": "D03_messages.md",
+      "type": "confirmed",
+      "notes": "Establishes Eli's interest in the prototype"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed messages about moving cardboard consumables box to loading bay",
+      "source": "D03_messages.md",
+      "type": "confirmed",
+      "notes": "Establishes Maya's legitimate reason for handling boxes"
+    },
+    {
+      "time": "17:20",
+      "event": "Security note about coat descriptions and service corridor blind spot",
+      "source": "D03_messages.md",
+      "type": "confirmed",
+      "notes": "Critical: Service corridor is unmonitored; doors log badges not biometric identity"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype last confirmed in lab on brown table",
+      "source": "V02.png",
+      "type": "confirmed",
+      "notes": "Black triangle object in gray box visible"
+    },
+    {
+      "time": "18:10",
+      "event": "Nora Vale enters East Corridor (teal coat)",
+      "source": "D01_access.csv, V03.png",
+      "type": "confirmed",
+      "notes": "Visual evidence matches access log and coat color assignment"
+    },
+    {
+      "time": "18:11",
+      "event": "Maya Reed at Loading Bay with cardboard box (purple coat)",
+      "source": "V08.png, D02_witnesses.md",
+      "type": "confirmed",
+      "notes": "Matches her statement about carrying cardboard supply box"
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park enters Cafeteria (blue coat)",
+      "source": "D01_access.csv, V06.png",
+      "type": "confirmed",
+      "notes": "Visual evidence matches access log and coat color assignment"
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch enters Reception (red coat)",
+      "source": "D01_access.csv, V07.png",
+      "type": "confirmed",
+      "notes": "Visual evidence matches access log and coat color assignment"
+    },
+    {
+      "time": "18:14",
+      "event": "Eli Stone badge used at Service Door",
+      "source": "D01_access.csv, V04.png",
+      "type": "confirmed",
+      "notes": "CRITICAL: Access log shows Eli, but V04 shows gray coat not orange. Badge may have been misused."
+    },
+    {
+      "time": "18:14",
+      "event": "Maya Reed badge used at Service Door",
+      "source": "D01_access.csv, V04.png",
+      "type": "confirmed",
+      "notes": "CRITICAL: Access log shows Maya, but V04 shows gray coat not purple. Badge may have been misused."
+    },
+    {
+      "time": "18:14-18:18",
+      "event": "THEFT WINDOW - Service corridor access to lab unmonitored",
+      "source": "V01.png, V10.png, D03_messages.md",
+      "type": "probable",
+      "notes": "Service corridor is camera blind spot with direct link to lab"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype discovered missing from lab",
+      "source": "V05.png",
+      "type": "confirmed",
+      "notes": "Brown table visible, prototype (black triangle in gray box) absent"
+    }
+  ],
+  "contradictions": [
+    {
+      "description": "Eli Stone states he did not approach lab after 18:00, but his badge was used at Service Door at 18:14",
+      "severity": "high",
+      "sources": ["D02_witnesses.md", "D01_access.csv"]
+    },
+    {
+      "description": "V04 shows gray coats at Service Door, but Eli should wear orange and Maya should wear purple per D03",
+      "severity": "high",
+      "sources": ["V04.png", "D03_messages.md"]
+    }
+  ],
+  "missing_intervals": [
+    {
+      "time_range": "18:00-18:10",
+      "description": "No camera coverage of lab or service corridor during this period"
+    },
+    {
+      "time_range": "18:14-18:18",
+      "description": "Service corridor is unmonitored blind spot (V10, D03)"
+    }
+  ],
+  "assumptions": [
+    "Coat colors in visual exhibits represent assigned work coats per D03",
+    "Access logs record badge use, not necessarily the badge owner's physical presence (D03)",
+    "Service corridor provides direct access to lab without camera coverage"
+  ]
+}

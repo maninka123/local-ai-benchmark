@@ -1,0 +1,49 @@
+{
+  "rubric": {
+    "build_execution": 15,
+    "driving": 15,
+    "npc_intelligence": 20,
+    "collisions": 15,
+    "camera_ui": 10,
+    "race_mechanics": 10,
+    "visual_quality": 10,
+    "code_robustness": 5
+  },
+  "categories": {
+    "build_execution": 0,
+    "driving": 0,
+    "npc_intelligence": 0,
+    "collisions": 0,
+    "camera_ui": 0,
+    "race_mechanics": 0,
+    "visual_quality": 0,
+    "code_robustness": 0
+  },
+  "verified_points": 0,
+  "pending_points": 0,
+  "quality_score": 0,
+  "complete": false,
+  "evidence": {
+    "browser": {
+      "build": false,
+      "loads": false,
+      "errors": [],
+      "checks": {},
+      "states": [],
+      "notes": [],
+      "build_log": "failed to load config from /output/game/vite.config.js\nerror during build:\nReferenceError: __dirname is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/output/game/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///output/game/vite.config.js?t=1791918707939:10:22\n    at ModuleJob.run (node:internal/modules/esm/module_job:413:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26)\n    at async nativeImportConfigFile (file:///opt/lab/node_modules/vite/dist/node/chunks/config.js:36040:18)\n    at async loadConfigFromFile (file:///opt/lab/node_modules/vite/dist/node/chunks/config.js:36022:42)\n    at async resolveConfig (file:///opt/lab/node_modules/vite/dist/node/chunks/config.js:35671:22)\n    at async createBuilder (file:///opt/lab/node_modules/vite/dist/node/chunks/config.js:34126:19)\n    at async CAC.<anonymous> (file:///opt/lab/node_modules/vite/dist/node/cli.js:629:10)\n"
+    },
+    "implementation_report_present": false,
+    "build_success": false,
+    "browser_started": false,
+    "implementation_present": true,
+    "runtime_error_count": 0,
+    "candidate_hook_checks_unverified": {}
+  },
+  "limitations": [
+    "Playwright validates build, page loads, error collection and screenshot capture. Candidate-supplied hooks are diagnostic only; driving/collision/checkpoint/NPC claims require independent manual review. Completion stays unverified until reviewed."
+  ],
+  "review_status": "automatic",
+  "scoring_version": "1.0.0",
+  "judge": "deterministic independent artifact/ground-truth checks; no model judge"
+}

@@ -1,0 +1,188 @@
+{
+  "exhibits": [
+    {
+      "id": "D01",
+      "type": "document",
+      "name": "Access Log CSV",
+      "description": "Badge swipe records at building doors",
+      "observations": [
+        "Nora Vale entered EAST_CORRIDOR at 18:10",
+        "Theo Park entered CAFETERIA at 18:12",
+        "Ada Finch entered RECEPTION at 18:13",
+        "Nora Vale exited EAST_EXIT at 18:14"
+      ],
+      "significance": "Corroborates visual evidence timing; shows Nora's movement pattern during theft window",
+      "limitations": "Logs badge credentials not biometric identity (per D03)"
+    },
+    {
+      "id": "D02",
+      "type": "document",
+      "name": "Witness Statements",
+      "description": "Unverified statements from five staff members",
+      "observations": [
+        "Nora: 'I only visited the east corridor and left'",
+        "Eli: 'I did not approach the lab after 18:00'",
+        "Maya: 'I carried a cardboard supply box at 18:11'",
+        "Theo: 'I remained in the cafeteria from 18:12'",
+        "Ada: 'I staffed reception'"
+      ],
+      "significance": "Nora's statement contradicted by V04; others corroborated by visual evidence",
+      "limitations": "Unverified statements - must be tested against objective evidence"
+    },
+    {
+      "id": "D03",
+      "type": "document",
+      "name": "Internal Messages",
+      "description": "Communications including security notes",
+      "observations": [
+        "17:00 Eli: 'My project needs that prototype tomorrow' - establishes motive",
+        "17:10 Maya: Message about cardboard consumables box to loading bay",
+        "17:20 Security: Coat descriptions from shift assignments; doors log badge not biometric; Service corridor is camera blind spot"
+      ],
+      "significance": "Critical security vulnerability documented; explains how theft was possible",
+      "limitations": "None - objective security documentation"
+    },
+    {
+      "id": "V01",
+      "type": "visual",
+      "name": "Synthetic Schematic Floor Plan",
+      "description": "Building layout showing rooms and connections",
+      "observations": [
+        "LAB connected to EAST CORRIDOR via teal line",
+        "EAST CORRIDOR connects to EAST EXIT",
+        "SERVICE CORRIDOR has orange link to LAB labeled 'UNMONITORED LINK TO LAB'",
+        "CAFETERIA is separate area"
+      ],
+      "significance": "Shows Service Corridor provides unmonitored access to Lab - critical for theft method",
+      "limitations": "Schematic only - no real-time data"
+    },
+    {
+      "id": "V02",
+      "type": "visual",
+      "name": "Lab Camera 18:00",
+      "description": "Laboratory view at 18:00 showing prototype present",
+      "observations": [
+        "Prototype (gray box with black triangle) visible on brown table",
+        "No person visible in frame",
+        "Timestamp confirms 18:00"
+      ],
+      "significance": "Last confirmed presence of prototype before theft",
+      "limitations": "Single timestamp - cannot show when exactly it was removed"
+    },
+    {
+      "id": "V03",
+      "type": "visual",
+      "name": "East Corridor Camera 18:10",
+      "description": "East Corridor view at 18:10",
+      "observations": [
+        "Person in teal coat visible (matches Nora Vale's assigned color)",
+        "No prototype visible in person's possession yet",
+        "Brown table visible but empty"
+      ],
+      "significance": "Confirms Nora Vale in East Corridor at 18:10 - after theft, before exit",
+      "limitations": "Does not show how she acquired the prototype"
+    },
+    {
+      "id": "V04",
+      "type": "visual",
+      "name": "East Exit Camera 18:14",
+      "description": "East Exit view at 18:14 - CRITICAL EVIDENCE",
+      "observations": [
+        "Person in teal coat visible (Nora Vale)",
+        "PROTOTYPE (gray box with black triangle) clearly visible next to person",
+        "Brown table also visible"
+      ],
+      "significance": "DIRECT EVIDENCE - shows Nora Vale leaving with stolen prototype",
+      "limitations": "None - this is conclusive visual evidence of theft"
+    },
+    {
+      "id": "V05",
+      "type": "visual",
+      "name": "Lab Camera 18:18",
+      "description": "Laboratory view at 18:18 showing prototype missing",
+      "observations": [
+        "Brown table visible but EMPTY - no prototype",
+        "No person visible in frame"
+      ],
+      "significance": "Confirms theft completed; establishes discovery time",
+      "limitations": "Does not show who took it - only confirms absence"
+    },
+    {
+      "id": "V06",
+      "type": "visual",
+      "name": "Cafeteria Camera 18:12",
+      "description": "Cafeteria view at 18:12",
+      "observations": [
+        "Person in blue coat visible (matches Theo Park's assigned color)",
+        "No prototype visible"
+      ],
+      "significance": "Alibi for Theo Park - not near lab during theft window",
+      "limitations": "None - clear alibi evidence"
+    },
+    {
+      "id": "V07",
+      "type": "visual",
+      "name": "Reception Camera 18:13",
+      "description": "Reception view at 18:13",
+      "observations": [
+        "Person in red coat visible (matches Ada Finch's assigned color)",
+        "No prototype visible"
+      ],
+      "significance": "Alibi for Ada Finch - not near lab during theft window",
+      "limitations": "None - clear alibi evidence"
+    },
+    {
+      "id": "V08",
+      "type": "visual",
+      "name": "Loading Bay Camera 18:11",
+      "description": "Loading Bay view at 18:11",
+      "observations": [
+        "Person in purple coat visible (matches Maya Reed's assigned color)",
+        "Cardboard box visible next to person (brown rectangle)",
+        "No prototype visible"
+      ],
+      "significance": "Alibi for Maya Reed - confirms her statement about cardboard box; not near lab",
+      "limitations": "None - clear alibi evidence"
+    },
+    {
+      "id": "V09",
+      "type": "visual",
+      "name": "Object Detail Camera Reference",
+      "description": "Reference image of prototype object",
+      "observations": [
+        "Prototype shown as gray box with black triangle on brown table"
+      ],
+      "significance": "Reference for identifying prototype in other images",
+      "limitations": "Static reference only"
+    },
+    {
+      "id": "V10",
+      "type": "visual",
+      "name": "Service Camera Maintenance",
+      "description": "Service corridor camera status",
+      "observations": [
+        "Text reads 'BLIND SPOT: SERVICE CORRIDOR'",
+        "No visual data available for this area"
+      ],
+      "significance": "Confirms Service Corridor is unmonitored - explains how theft occurred without being seen entering lab",
+      "limitations": "Creates evidence gap for exact theft moment"
+    }
+  ],
+  "cross_reference_summary": {
+    "nora_vale_evidence_chain": [
+      "D01: Badge swipes at 18:10 (East Corridor entry) and 18:14 (East Exit)",
+      "V03: Teal coat person in East Corridor at 18:10",
+      "V04: Teal coat person CARRYING PROTOTYPE at East Exit 18:14",
+      "D02: False statement claiming only visited east corridor"
+    ],
+    "cleared_suspects": {
+      "maya_reed": ["V08: Purple coat at Loading Bay 18:11 with cardboard box", "D02: Statement corroborated"],
+      "theo_park": ["V06: Blue coat in Cafeteria 18:12", "D01: Badge entry 18:12", "D02: Statement corroborated"],
+      "ada_finch": ["V07: Red coat at Reception 18:13", "D01: Badge entry 18:13", "D02: Statement corroborated"]
+    },
+    "eli_stone": {
+      "motive": "D03: Message about needing prototype tomorrow",
+      "opportunity": "No evidence - no access logs or visual evidence during theft window"
+    }
+  }
+}

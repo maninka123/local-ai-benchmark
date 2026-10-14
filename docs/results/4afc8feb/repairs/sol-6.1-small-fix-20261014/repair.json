@@ -1,0 +1,59 @@
+{
+  "repair_id": "sol-6.1-small-fix-20261014",
+  "run_id": "2026-10-09T193239-887529+0000--4afc8feb",
+  "source_update_id": "update-ff128adac0",
+  "source_evaluation_id": "eval-e3918ed7c9",
+  "configured_model": "gpt-6.1-sol",
+  "source_changed_lines": 12,
+  "source_files": [
+    {
+      "path": "analysis.py",
+      "added": 6,
+      "removed": 6
+    }
+  ],
+  "source_hashes": {
+    "analysis.py": "dd10fd4ac7970202eb03681e0f2426cab40592942ec54cf3ee0b1351ea61f4dc"
+  },
+  "changes_summary": "Restrict product/customer joins to required columns and preserve distinct regional names so existing six-plot/findings generation runs.",
+  "status": "validated_partial",
+  "runnable": true,
+  "completion": false,
+  "limitations": [
+    "No report.md exists, and the saved script has no report-generation logic; the requested professional report, nine sections and integrated charts are missing.",
+    "No findings.json or PNG figures are saved. Planned findings and plotting definitions in a script do not satisfy the required actual deliverables.",
+    "Recorded isolated reproduction fails with KeyError region_id. Full customer merge includes region_id from both transactions and customers and gives them suffixes; the next region join requests an unavailable unsuffixed key.",
+    "operational_events.csv is never loaded or investigated; the source-understanding and operational investigation do not cover all six public tables.",
+    "The saved cleaning does not investigate isolated extreme selling prices or distinguish coherent large orders from erroneous price entries. Proposed quality counts are calculated after filtering or conflate all removed rows with duplicates, losing the original issue denominators.",
+    "Intended findings in the script do not include source columns or chart references, and headline profit_margin uses an unweighted mean of row ratios rather than the dictionary financial profit/revenue ratio. These are additional unfinished requirements beyond the decisive execution/output failures.",
+    "Original benchmark scores and completeness are unchanged. This is an assisted partial preview, with original report claims retained and potentially inaccurate."
+  ],
+  "verification": [
+    {
+      "check": "git diff --no-index --numstat",
+      "source_changed_lines": 12,
+      "numstat": [
+        "6\t6\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\glm-4.7-flash-q4_K_M\\\\data_analysis\\\\2026-10-09T193239-887529-0000--4afc8feb\\\\evaluations\\\\eval-e3918ed7c9\\\\artifacts\\\\analysis.py\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\glm-4.7-flash-q4_K_M\\\\data_analysis\\\\2026-10-09T193239-887529-0000--4afc8feb\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\analysis.py\""
+      ]
+    },
+    {
+      "check": "source SHA256 unchanged",
+      "passed": true
+    },
+    {
+      "check": "Docker network none isolated execution",
+      "exit_code": 0,
+      "runnable": true,
+      "log": "validation.log"
+    },
+    {
+      "check": "Six regenerated PNG figures and valid findings JSON",
+      "passed": true
+    }
+  ],
+  "artifacts_path": ".\\results\\further-work\\glm-4.7-flash-q4_K_M\\data_analysis\\2026-10-09T193239-887529-0000--4afc8feb\\repairs\\sol-6.1-small-fix-20261014\\artifacts",
+  "source_artifacts_path": ".\\results\\further-work\\glm-4.7-flash-q4_K_M\\data_analysis\\2026-10-09T193239-887529-0000--4afc8feb\\evaluations\\eval-e3918ed7c9\\artifacts",
+  "model": "glm-4.7-flash:q4_K_M",
+  "task": "data_analysis",
+  "generated_outputs_disclosure": "Existing analysis script may regenerate figures/findings/profiles; report prose is unchanged."
+}

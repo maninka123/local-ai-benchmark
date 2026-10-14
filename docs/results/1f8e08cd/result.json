@@ -1,0 +1,295 @@
+{
+  "run_id": "2026-10-09T160001-315989+0000--1f8e08cd",
+  "model": "gemma4:12b-it-q4_K_M",
+  "task": "data_analysis",
+  "case": null,
+  "track": "text_and_tools",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 10,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 5,
+            "reason": "Intermediate enriched master joins product/customer/region and removes duplicate/nonpositive keys; supposedly cleaned table retains 20 duplicate keys, 12 invalid quantities and 30 missing costs; no documented rationale or six-table understanding."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 5,
+            "reason": "Master financial columns are usable preparation and complete for its 24968-row population; no saved original-input regeneration, anomaly investigation or verified conclusions."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No documented substantive findings; row-level enriched tables alone do not establish a business investigation."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No figures."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No report."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No recommendations."
+          }
+        ],
+        "summary": "Needs revision: The file named cleaned_transactions still contains duplicate transaction identifiers and missing costs/financial values.; No report, executable analysis script, structured findings or charts.; Cleaning provenance, exceptional-order treatment and quantitative conclusions are not reproducible from the saved tables.",
+        "evidence_files": [
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/01_data_analysis/2026-10-09T160001-315989+0000--1f8e08cd/artifacts/cleaned_transactions.csv",
+          "models/gemma4-12b-it-q4_K_M--6114515d63c1/01_data_analysis/2026-10-09T160001-315989+0000--1f8e08cd/artifacts/master_data.csv",
+          "results/improvement_campaign/data_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "models/gemma4-12b-it-q4_K_M--6114515d63c1/01_data_analysis/2026-10-09T160001-315989+0000--1f8e08cd/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "cleaned_transactions.csv",
+          "url": "./results/1f8e08cd/attempt-1/cleaned_transactions.csv",
+          "bytes": 3099644
+        },
+        {
+          "name": "master_data.csv",
+          "url": "./results/1f8e08cd/attempt-1/master_data.csv",
+          "bytes": 4268951
+        }
+      ],
+      "game_url": null,
+      "readiness": "Analysis did not reproduce successfully",
+      "prompt_url": "./results/1f8e08cd/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 10,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 5,
+            "reason": "Intermediate enriched master joins product/customer/region and removes duplicate/nonpositive keys; supposedly cleaned table retains 20 duplicate keys, 12 invalid quantities and 30 missing costs; no documented rationale or six-table understanding."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 5,
+            "reason": "Master financial columns are usable preparation and complete for its 24968-row population; no saved original-input regeneration, anomaly investigation or verified conclusions."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No documented substantive findings; row-level enriched tables alone do not establish a business investigation."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No figures."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No report."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No recommendations."
+          }
+        ],
+        "summary": "Incomplete after improvement iteration 1: no required final analytical deliverables were saved; only unchanged initial intermediate tables exist.",
+        "evidence_files": [
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-8477b2c573/artifacts/cleaned_transactions.csv",
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-8477b2c573/artifacts/master_data.csv",
+          "results/improvement_campaign/data_after_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-8477b2c573/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "cleaned_transactions.csv",
+          "url": "./results/1f8e08cd/attempt-2/cleaned_transactions.csv",
+          "bytes": 3099644
+        },
+        {
+          "name": "master_data.csv",
+          "url": "./results/1f8e08cd/attempt-2/master_data.csv",
+          "bytes": 4268951
+        }
+      ],
+      "game_url": null,
+      "readiness": "Analysis did not reproduce successfully",
+      "prompt_url": "./results/1f8e08cd/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 27,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 5,
+            "reason": "Same inconsistent intermediate tables and undocumented preparation remain; script loads final_data.csv rather than six original datasets, omits inventory/events and anomaly decisions."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 8,
+            "reason": "Script calculates aggregate financial margin, monthly/category/segment and correlation metrics from saved master and generates plots; cannot reproduce master cleaning from sources and retains exceptional prices."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 5,
+            "reason": "Charts show monthly variation, category profit, segments and delivery differences; no five written findings with numerical evidence, business significance, limitations or structured findings.json."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 9,
+            "reason": "Six panels visually inspected: titles and AUD/fraction/day labels readable; arbitrary region numeric colourbar, extreme-scale scatter compression and joined categorical lines reduce analytical clarity."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No report.md."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No supported operational recommendations."
+          }
+        ],
+        "summary": "Incomplete after improvement iteration 2: Required deliverable is missing or empty: findings.json",
+        "evidence_files": [
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts/analysis.py",
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts/cleaned_transactions.csv",
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts/final_data.csv",
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts/master_data.csv",
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts/figures/figure_01.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts/figures/figure_02.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts/figures/figure_03.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts/figures/figure_04.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts/figures/figure_05.png",
+          "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts/figures/figure_06.png",
+          "results/improvement_campaign/pass_2/data_after_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "results/further-work/gemma4-12b-it-q4_K_M/data_analysis/2026-10-09T160001-315989-0000--1f8e08cd/evaluations/eval-b160b0e1ca/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": 8.1,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "analysis.py",
+          "url": "./results/1f8e08cd/attempt-3/analysis.py",
+          "bytes": 4342
+        },
+        {
+          "name": "cleaned_transactions.csv",
+          "url": "./results/1f8e08cd/attempt-3/cleaned_transactions.csv",
+          "bytes": 3099644
+        },
+        {
+          "name": "final_data.csv",
+          "url": "./results/1f8e08cd/attempt-3/final_data.csv",
+          "bytes": 4268951
+        },
+        {
+          "name": "master_data.csv",
+          "url": "./results/1f8e08cd/attempt-3/master_data.csv",
+          "bytes": 4268951
+        },
+        {
+          "name": "figures/figure_01.png",
+          "url": "./results/1f8e08cd/attempt-3/figures/figure_01.png",
+          "bytes": 53768
+        },
+        {
+          "name": "figures/figure_02.png",
+          "url": "./results/1f8e08cd/attempt-3/figures/figure_02.png",
+          "bytes": 31006
+        },
+        {
+          "name": "figures/figure_03.png",
+          "url": "./results/1f8e08cd/attempt-3/figures/figure_03.png",
+          "bytes": 47586
+        },
+        {
+          "name": "figures/figure_04.png",
+          "url": "./results/1f8e08cd/attempt-3/figures/figure_04.png",
+          "bytes": 24357
+        },
+        {
+          "name": "figures/figure_05.png",
+          "url": "./results/1f8e08cd/attempt-3/figures/figure_05.png",
+          "bytes": 32831
+        },
+        {
+          "name": "figures/figure_06.png",
+          "url": "./results/1f8e08cd/attempt-3/figures/figure_06.png",
+          "bytes": 42806
+        }
+      ],
+      "game_url": null,
+      "readiness": "Analysis script runs",
+      "prompt_url": "./results/1f8e08cd/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

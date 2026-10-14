@@ -1,0 +1,49 @@
+{
+  "rubric": {
+    "build_execution": 15,
+    "driving": 15,
+    "npc_intelligence": 20,
+    "collisions": 15,
+    "camera_ui": 10,
+    "race_mechanics": 10,
+    "visual_quality": 10,
+    "code_robustness": 5
+  },
+  "categories": {
+    "build_execution": 0,
+    "driving": 0,
+    "npc_intelligence": 0,
+    "collisions": 0,
+    "camera_ui": 0,
+    "race_mechanics": 0,
+    "visual_quality": 0,
+    "code_robustness": 0
+  },
+  "verified_points": 0,
+  "pending_points": 0,
+  "quality_score": 0,
+  "complete": false,
+  "evidence": {
+    "browser": {
+      "build": false,
+      "loads": false,
+      "errors": [],
+      "checks": {},
+      "states": [],
+      "notes": [],
+      "build_log": "vite v7.3.7 building client environment for production...\ntransforming...\n✓ 8 modules transformed.\n✗ Build failed in 68ms\nerror during build:\nsrc/camera.js (1:31): Expected unicode escape\nfile: /output/game/src/camera.js:1:31\n\n1: import * as THREE from 'three';\\n\\n// Minimal camera wrapper to avoid ReferenceError\\n\\nexport default {\\n  scene: nu...\n                                  ^\n\n    at getRollupError (file:///opt/lab/node_modules/rollup/dist/es/shared/parseAst.js:319:41)\n    at ParseError.initialise (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:15274:28)\n    at convertNode (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:17253:10)\n    at convertProgram (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:16489:12)\n    at Module.setSource (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:18234:24)\n    at async ModuleLoader.addModuleSource (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:22434:9)\n"
+    },
+    "implementation_report_present": true,
+    "build_success": false,
+    "browser_started": false,
+    "implementation_present": true,
+    "runtime_error_count": 0,
+    "candidate_hook_checks_unverified": {}
+  },
+  "limitations": [
+    "Playwright validates build, page loads, error collection and screenshot capture. Candidate-supplied hooks are diagnostic only; driving/collision/checkpoint/NPC claims require independent manual review. Completion stays unverified until reviewed."
+  ],
+  "review_status": "automatic",
+  "scoring_version": "1.0.0",
+  "judge": "deterministic independent artifact/ground-truth checks; no model judge"
+}

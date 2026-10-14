@@ -1,0 +1,25 @@
+{
+  "file": "transactions.csv",
+  "shape": [
+    25000,
+    15
+  ],
+  "columns": [
+    "transaction_id",
+    "customer_id",
+    "product_id",
+    "transaction_date",
+    "quantity",
+    "selling_price",
+    "discount",
+    "unit_cost",
+    "revenue",
+    "region_id",
+    "supplier_id",
+    "service_class",
+    "delivery_days",
+    "on_time",
+    "ad_index"
+  ],
+  "dtypes": {
+    "transaction_id": 

@@ -1,0 +1,6 @@
+{
+  "responsible_person": "Nora Vale",
+  "confidence": 0.95,
+  "conclusion": "Nora Vale entered the East Corridor at 18:10 with a box and exited the facility at 18:14 with the box. The prototype was confirmed present at 18:00 and missing at 18:18. Her statement that she only visited the corridor is contradicted by the exit camera showing her leaving with the box.",
+  "exhibits": ["V03", "V04", "D01", "D02"]
+}

@@ -1,0 +1,25 @@
+benchmark:
+  version: 1.0.0
+  provider: ollama
+  base_url: http://127.0.0.1:11434
+  execution: sequential
+  temperature: 0
+  context_window: 32768
+  max_output_tokens_per_call: 4096
+  max_calls: 24
+  task_timeout_seconds: 3600
+  repetitions: 1
+  final_repetitions: 3
+  seed: 421337
+  hardware_monitoring: true
+  logging: detailed
+  tasks: {data_analysis: true, racing_game: true, detective: true}
+  selected_models: []
+  excluded_models: ['*deepseek*ocr*']
+sandbox:
+  image: local-llm-benchmark:1.0
+  memory: 6g
+  cpus: 4
+  pids: 256
+  command_timeout_seconds: 120
+dashboard: {host: 127.0.0.1, port: 8765}

@@ -1,0 +1,255 @@
+import {test,expect} from '@playwright/test';
+import {modelLabel} from '../src/modelNames';
+test('local dashboard renders real runs, filters, charts and artifacts',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(String(e)));
+ await page.goto('/');await expect(page.getByRole('heading',{name:/Your models/})).toBeVisible({timeout:15000});
+ await expect(page.getByText('Installed models')).toBeVisible();await expect(page.locator('.chart [role=img]')).toHaveCount(11);
+ await expect(page.getByRole('button',{name:'Calculated active parameters'})).toBeVisible();
+ await expect(page.locator('.parameter-summary').first()).toContainText('Calculated active:');
+ await expect(page.locator('.parameter-summary').first()).toContainText('Share of total:');
+ const parameters=page.locator('.parameter-summary').first();
+ await expect(parameters.locator('.active-storage')).toHaveText(/Estimated active size: \d+\.\d GB/);
+ expect(await parameters.locator('.active-storage').evaluate(el=>parseFloat(getComputedStyle(el).marginTop))).toBeGreaterThanOrEqual(8);
+ await expect(parameters.locator('details')).not.toHaveAttribute('open','');
+ await parameters.locator('summary').click();
+ await expect(parameters.getByText(/Structural estimates/)).toBeVisible();
+ await expect(parameters.getByText(/Active GB = model-file GB/)).toBeVisible();
+ await expect(parameters.getByText(/Quantization and file overhead/)).toBeVisible();
+ await parameters.locator('summary').click();
+ await expect(page.locator('.model-size').first()).toContainText('Model parameters:');
+ await expect(page.locator('.model-size').first().locator('span').nth(1)).toContainText('Active parameters:');
+ await expect(page.locator('.model-size').first().locator('span').nth(2)).toContainText('Model size:');
+ await expect(page.locator('.model-size').first()).not.toContainText('active model size');
+ await expect(page.getByRole('progressbar')).toHaveCount(2);
+ await expect(page.getByRole('progressbar',{name:'Overall progress',exact:true})).toBeVisible();
+ await expect(page.getByRole('progressbar',{name:'Current task time budget',exact:true})).toBeVisible();
+ expect(await page.locator('body').evaluate(el=>parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(18);
+ const smallFonts=await page.locator('label, td small, .progress-note, .chart h3').evaluateAll(elements=>elements.map(el=>parseFloat(getComputedStyle(el).fontSize)));
+ expect(smallFonts.every(size=>size>=16)).toBeTruthy();
+ const model=page.getByRole('combobox',{name:'Model',exact:true});await model.selectOption({index:1});
+ await expect(page.locator('table')).toBeVisible();
+ await expect(page.getByRole('button',{name:'Initial results',exact:true})).toHaveAttribute('aria-pressed','true');
+ await page.getByRole('button',{name:'After updates',exact:true}).click();
+ await expect(page.getByRole('button',{name:'After updates',exact:true})).toHaveAttribute('aria-pressed','true');
+ await page.getByRole('button',{name:'Initial results',exact:true}).click();
+ const advanced=page.locator('.advanced-filters summary');
+ await expect(page.getByRole('combobox',{name:'Quantization',exact:true})).toBeHidden();
+ await advanced.click();await expect(page.getByRole('combobox',{name:'Quantization',exact:true})).toBeVisible();
+ await page.getByRole('combobox',{name:'Vision',exact:true}).selectOption('true');
+ await expect(advanced).toHaveText('Advanced filters · 1 active');
+ await advanced.click();await expect(page.getByRole('combobox',{name:'Vision',exact:true})).toBeHidden();
+ await advanced.focus();await page.keyboard.press('Enter');
+ await expect(page.getByRole('combobox',{name:'Vision',exact:true})).toHaveValue('true');
+ await page.getByRole('button',{name:'Clear filters'}).click();
+ await expect(advanced).toHaveText('Advanced filters');await advanced.click();
+ await page.getByRole('button',{name:'One model',exact:true}).click();
+ const figureModel=page.getByRole('combobox',{name:'Model for figures',exact:true});
+ await figureModel.selectOption('qwen3.5:9b-q4_K_M');
+ await expect(page.locator('.figure-controls .scope-hint')).toContainText('All available tasks for this model.');
+ await expect(page.locator('.model-legend > span')).toHaveCount(1);
+ await page.getByRole('button',{name:'One task',exact:true}).click();
+ await page.getByRole('combobox',{name:'Task for figures',exact:true}).selectOption('racing_game');
+ await expect(page.locator('.figure-controls .scope-hint')).toContainText('Every model with results for this task.');
+ const summary=await (await page.request.get('/api/summary')).json();
+ const campaignIds=new Set(summary.campaign.run_ids);
+ const racingModels=new Set(summary.runs.filter((r:{run_id:string;task:string;model:{name:string}})=>campaignIds.has(r.run_id)&&r.task==='racing_game').map((r:{model:{name:string}})=>r.model.name));
+ await expect(page.locator('.model-legend > span')).toHaveCount(racingModels.size);
+ await page.getByRole('button',{name:'All results',exact:true}).click();
+ await expect(page.locator('.chart [role=img]')).toHaveCount(11);
+ await page.locator('.filters').screenshot({path:'../../results/reports/dashboard-filters.png'});
+ await page.locator('.figure-controls').screenshot({path:'../../results/reports/dashboard-figure-controls.png'});
+ const row=page.locator('.model-link');if(await row.count()){
+  await row.first().click();await expect(page.getByRole('heading',{name:'Original automatic score'})).toBeVisible();
+  await expect(page.getByText('Final score: Not available yet').first()).toBeVisible();
+  await expect(page.getByRole('button',{name:'Reveal evaluator ground truth'})).toBeVisible();await page.getByRole('button',{name:'Close attempt'}).click();
+ }
+ await page.screenshot({path:'../../results/reports/dashboard.png',fullPage:true});expect(errors).toEqual([]);
+});
+
+test('output tab exposes initial artifacts, rubric, separate timing and fixed live viewer',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(String(e)));
+ await page.goto('/');await page.getByRole('button',{name:'Model outputs',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'Model results'})).toBeVisible();
+ await page.getByRole('combobox',{name:'Model',exact:true}).selectOption('qwen3.5:9b-q4_K_M');
+ await expect(page.getByRole('heading',{name:'Original automatic score'})).toBeVisible();
+ await expect(page.getByText('Initial task time', {exact:true})).toBeVisible();
+ await expect(page.getByText('Further work + re-evaluations')).toBeVisible();
+ await page.locator('.manual-review>summary').click();await expect(page.getByText('Where to inspect:')).toBeVisible();
+ await page.getByText('How to rate this task',{exact:true}).click();
+ await expect(page.getByText(/Data understanding\/cleaning \(15\)/)).toBeVisible();
+ const pending=page.locator('.manual-review input[type=number]');expect(await pending.count()).toBe(6);
+ await expect(page.getByRole('button',{name:'Save separate manual review'})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'Output files',exact:true})).toBeVisible();
+ await expect(page.getByRole('button',{name:'Open initial folder',exact:true})).toBeVisible();
+ await expect(page.getByRole('button',{name:'Open further work folder',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Further work',exact:true}).click();
+ await expect(page.getByRole('textbox',{name:'Your update prompt'})).toBeVisible();
+ const layout=await page.locator('.further-update-grid').evaluate(el=>{const activity=el.children[0].getBoundingClientRect(),composer=el.children[1].getBoundingClientRect();return {sameColumn:Math.abs(activity.left-composer.left)<2,gap:composer.top-activity.bottom};});expect(layout.sameColumn).toBeTruthy();expect(layout.gap).toBeLessThan(5);
+ const window=page.getByRole('complementary',{name:'Live model activity'});await expect(window).toBeVisible();
+ await window.getByRole('button',{name:'Thinking',exact:true}).click();
+ await expect(window.getByLabel('thinking stream')).toBeVisible();
+ expect(await window.locator('pre').evaluate(el=>el.getBoundingClientRect().height)).toBe(480);
+ await page.screenshot({path:'../../results/reports/dashboard-model-outputs.png',fullPage:true});
+ await page.getByRole('region',{name:'Model improvement terminal'}).screenshot({path:'../../results/reports/dashboard-editor-desktop.png'});
+ await page.setViewportSize({width:390,height:844});
+ await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
+ await expect(page.getByRole('button',{name:/Run update|Processing paused/})).toBeVisible();
+ await page.getByRole('button',{name:'Comparison',exact:true}).click();
+ await expect(page.locator('.chart [role=img]')).toHaveCount(11);expect(errors).toEqual([]);
+});
+
+test('light model terminal identifies the working folder and colours streamed conversation',async({page})=>{
+ const summary=await (await page.request.get('/api/summary')).json();
+ const run=summary.runs.filter((r:any)=>r.model.name==='qwen3.5:9b-q4_K_M'&&r.task==='racing_game'&&summary.campaign.run_ids.includes(r.run_id)).at(-1);
+ const workspace=await (await page.request.get(`/api/workspaces/${encodeURIComponent(run.run_id)}`)).json();
+ const revision={revision_id:'rev-aabbccddeeff',name:'Further work',prompt:'Improve the steering.',base_run_id:run.run_id,created:'2026-10-12T00:00:00+00:00',model:run.model,task:'racing_game',case:null,status:'finished',generation_seconds:12,original_seconds:run.task_seconds,original_scores:run.scores,evaluations:[],workspace_mode:true,prompts:[{update_id:'update-example',name:'Better steering',prompt:'Improve the steering.',created:'2026-10-12T00:00:00+00:00',status:'finished',seconds:12}]};
+ const events=[{kind:'thinking',text:'I will inspect the current steering code.\n',timestamp:'2026-10-12T00:00:01+00:00'},{kind:'status',text:'Reading saved game files.\n',timestamp:'2026-10-12T00:00:02+00:00'},{kind:'output',text:'Steering changes saved in the working copy.\n',timestamp:'2026-10-12T00:00:03+00:00'}];
+ await page.route('**/api/workspaces/*',route=>route.fulfill({json:{...workspace,revision}}));
+ await page.route('**/api/modifications/rev-aabbccddeeff?*',route=>route.fulfill({json:{revision,files:[],events:new URL(route.request().url()).searchParams.get('after')==='0'?events:[],next_cursor:3,tools:[],active_seconds:0}}));
+ await page.goto('/');await page.getByRole('button',{name:'Model outputs',exact:true}).click();
+ await page.getByRole('combobox',{name:'Model',exact:true}).selectOption('qwen3.5:9b-q4_K_M');
+ await page.getByRole('combobox',{name:'Task',exact:true}).selectOption('racing_game');
+ await page.getByRole('button',{name:'Further work',exact:true}).click();
+ const terminal=page.getByRole('region',{name:'Model improvement terminal'});
+ await expect(terminal.getByRole('heading',{name:modelLabel(run.model.name),exact:true})).toBeVisible();
+ await expect(terminal.locator('.terminal-directory code')).toHaveText(workspace.further_folder);
+ const stream=terminal.getByLabel('conversation stream');
+ await expect(stream).toContainText('Improve the steering.');await expect(stream).toContainText(events[0].text.trim());await expect(stream).toContainText(events[2].text.trim());
+ const colours=await stream.locator('.terminal-message').evaluateAll(elements=>elements.map(el=>getComputedStyle(el).color));expect(new Set(colours).size).toBe(4);
+ expect(await stream.evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(255, 255, 255)');
+ expect(await stream.evaluate(el=>parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(18);
+ await terminal.screenshot({path:'../../results/reports/dashboard-light-model-terminal.png'});
+ await page.setViewportSize({width:390,height:844});await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
+ await expect(terminal.getByRole('textbox',{name:'Your update prompt'})).toBeVisible();
+});
+
+test('task board tracks the real one-prompt campaign and opens its saved further work',async({page})=>{
+ const response=page.waitForResponse(r=>r.url().includes('/api/completion-pass?')&&r.status()===200);
+ await page.goto('/');await page.getByRole('button',{name:'Task progress',exact:true}).click();
+ const state=await (await response).json();
+ await expect(page.getByRole('heading',{name:new RegExp(`Task progress.*improvement ${state.round}`)})).toBeVisible();
+ await expect(page.getByRole('progressbar',{name:'Overall improvements',exact:true})).toHaveAttribute('max',String(Math.max(1,state.progress.total)));
+ await expect(page.locator('.task-board-table tbody tr')).toHaveCount(13);
+ await page.getByRole('combobox',{name:'Show model',exact:true}).selectOption('qwen3.5:9b-q4_K_M');
+ await expect(page.locator('.task-board-table tbody tr')).toHaveCount(1);
+ await page.locator('.board-result details').filter({has:page.locator('summary',{hasText:'Review and saved prompt'})}).first().locator('summary').click();
+ await expect(page.getByRole('heading',{name:'Already done',exact:true})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'One improvement prompt',exact:true})).toBeVisible();
+ await page.screenshot({path:'../../results/reports/dashboard-task-progress.png',fullPage:true});
+ await page.getByRole('button',{name:'View work',exact:true}).first().click();
+ await expect(page.getByRole('region',{name:'Model improvement terminal'})).toBeVisible();
+});
+
+test('task board distinguishes initial completion, first-pass completion and incomplete work',async({page})=>{
+ const state=await (await page.request.get('/api/completion-pass')).json();
+ const entries=state.entries.filter((e:any)=>e.model==='qwen3.5:9b-q4_K_M').map((e:any)=>({...e,status:e.task==='data_analysis'?'completed_initial':e.task==='racing_game'?'completed_first_pass':'incomplete_after_first_pass'}));
+ await page.route('**/api/completion-pass*',route=>route.fulfill({json:{...state,round:1,entries,progress:{...state.progress,current:null,completed_initial:1,completed_first_pass:1}}}));
+ await page.goto('/');await page.getByRole('button',{name:'Task progress',exact:true}).click();
+ await page.getByRole('combobox',{name:'Show model',exact:true}).selectOption('qwen3.5:9b-q4_K_M');
+ await expect(page.locator('.board-status').filter({hasText:'Completed initially'})).toHaveCount(1);
+ await expect(page.locator('.board-status').filter({hasText:'Completed after improvement 1'})).toHaveCount(1);
+ await expect(page.locator('.board-status').filter({hasText:'Incomplete after improvement 1'})).toHaveCount(3);
+});
+
+test('short game source stays compact and clearing selection removes the previous preview',async({page})=>{
+ await page.goto('/');await page.getByRole('button',{name:'Model outputs',exact:true}).click();
+ await page.getByRole('combobox',{name:'Model',exact:true}).selectOption('qwen3-vl:30b-a3b-instruct');
+ await page.getByRole('combobox',{name:'Task',exact:true}).selectOption('racing_game');
+ const output=page.getByRole('combobox',{name:'Output file',exact:true});
+ await output.selectOption('game/index.html');
+ const preview=page.getByLabel('Output file contents', {exact:true});
+ await expect(preview).toContainText('<!doctype html>');
+ expect(await preview.evaluate(el=>el.getBoundingClientRect().height)).toBeLessThan(160);
+ await page.locator('.output-files').screenshot({path:'../../results/reports/dashboard-compact-output.png'});
+ await output.selectOption('');
+ await expect(preview).toHaveCount(0);
+ await expect(page.getByText('Select a file to preview its contents.',{exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Comparison',exact:true}).click();
+ const row=page.locator('tbody tr').filter({hasText:modelLabel('qwen3-vl:30b-a3b-instruct')}).filter({hasText:'Racing game'}).first();
+ await row.locator('.model-link').click();
+ const modal=page.locator('.modal');
+ await modal.getByRole('combobox',{name:'Output file',exact:true}).selectOption('game/index.html');
+ await expect(modal.getByLabel('Output file contents',{exact:true})).toContainText('<!doctype html>');
+ const layout=await modal.locator('.detail-grid').evaluate(el=>{const output=el.children[0].getBoundingClientRect(),reference=el.children[1].getBoundingClientRect();return {sameColumn:Math.abs(output.left-reference.left)<2,below:reference.top>=output.bottom,outputHeight:output.height};});
+ expect(layout.sameColumn).toBeTruthy();expect(layout.below).toBeTruthy();expect(layout.outputHeight).toBeLessThan(500);
+});
+
+test('live progress counters match the API and large type fits narrow screens',async({page})=>{
+ const response=page.waitForResponse(r=>r.url().endsWith('/api/summary')&&r.status()===200);
+ await page.goto('/');const snapshot=await (await response).json();
+ const overall=page.getByRole('progressbar',{name:'Overall progress',exact:true});
+ await expect(overall).toHaveAttribute('value',String(snapshot.progress.finished));
+ await expect(overall).toHaveAttribute('max',String(Math.max(1,snapshot.progress.total)));
+ await page.screenshot({path:'../../results/reports/dashboard-progress.png',fullPage:false});
+ await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'reduce'});
+ await expect(page.getByRole('heading',{name:'Overall progress',exact:true})).toBeVisible();
+ await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBeTruthy();
+ expect(await page.locator('.progress-note').first().evaluate(el=>parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(16);
+ await page.screenshot({path:'../../results/reports/dashboard-mobile.png',fullPage:false});
+});
+
+test('columns can be hidden and restored while model and task filters combine',async({page})=>{
+ await page.goto('/');await expect(page.locator('thead th')).toHaveCount(10);
+ const columns=page.locator('.column-controls');await columns.locator('summary').click();
+ await columns.getByRole('checkbox',{name:'Token speed',exact:true}).uncheck();
+ await expect(page.locator('thead .column-speed')).toHaveCount(0);
+ await expect(page.locator('tbody .column-speed')).toHaveCount(0);
+ await expect(page.locator('thead th')).toHaveCount(9);
+ await page.getByRole('combobox',{name:'Model',exact:true}).selectOption('qwen3.5:9b-q4_K_M');
+ await page.getByRole('combobox',{name:'Task',exact:true}).selectOption('racing_game');
+ const count=await page.locator('tbody tr').count();expect(count).toBeGreaterThan(0);
+ for(const row of await page.locator('tbody tr').all()){
+  await expect(row.locator('.model-link')).toHaveText(modelLabel('qwen3.5:9b-q4_K_M'));
+  await expect(row.locator('.task-info>b')).toHaveText('Racing game');
+ }
+ await expect(page.locator('.comparison-controls>p')).toHaveText(`${count} matching attempts`);
+ await page.reload();await expect(page.locator('thead th')).toHaveCount(9);
+ await page.locator('.column-controls summary').click();
+ await page.getByRole('button',{name:'Essential columns',exact:true}).click();
+ await expect(page.locator('thead th')).toHaveCount(3);
+ await expect(page.getByRole('checkbox',{name:'Model (always visible)',exact:true})).toBeChecked();
+ await expect(page.getByRole('checkbox',{name:'Model (always visible)',exact:true})).toBeDisabled();
+ await page.getByRole('button',{name:'Show all columns',exact:true}).click();
+ await expect(page.locator('thead th')).toHaveCount(10);
+ await page.getByRole('combobox',{name:'Task',exact:true}).selectOption('data_analysis');
+ await expect(page.getByRole('button',{name:'Clear Model / Task',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Clear Model / Task',exact:true}).click();
+ await expect(page.getByRole('combobox',{name:'Model',exact:true})).toHaveValue('');
+ await expect(page.getByRole('combobox',{name:'Task',exact:true})).toHaveValue('');
+});
+
+test('initial and after-update comparisons show their own scores and open the correct workspace',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('combobox',{name:'Model',exact:true}).selectOption('qwen3.5:9b-q4_K_M');
+ await page.getByRole('combobox',{name:'Task',exact:true}).selectOption('data_analysis');
+ const initialTime=await page.locator('tbody .column-time').first().innerText();
+ await page.getByRole('button',{name:'After updates',exact:true}).click();
+ await expect(page.locator('tbody tr')).toHaveCount(1);
+ await expect(page.locator('tbody .column-time')).toContainText('Initial:');
+ await expect(page.locator('tbody .column-time')).toContainText('Further:');
+ await expect(page.locator('tbody .task-info')).toContainText(/Updated|running|queued|reevaluating/);
+ await page.locator('tbody .model-link').click();
+ await expect(page.getByRole('button',{name:'Further work',exact:true})).toHaveAttribute('aria-pressed','true');
+ await expect(page.getByRole('combobox',{name:'Model',exact:true})).toHaveValue('qwen3.5:9b-q4_K_M');
+ await expect(page.getByRole('heading',{name:'Initial score · preserved',exact:true})).toBeVisible();
+ await expect(page.getByRole('textbox',{name:'Your update prompt'})).toBeVisible();
+ await page.getByRole('button',{name:'Comparison',exact:true}).click();
+ await page.getByRole('button',{name:'Initial results',exact:true}).click();
+ await expect(page.locator('tbody .column-time').first()).toHaveText(initialTime,{useInnerText:true});
+});
+
+
+test('input icons precede model names and distinguish vision from text-only models',async({page})=>{
+ await page.goto('/');
+ const model=page.getByRole('combobox',{name:'Model',exact:true});
+ await model.selectOption('qwen3.5:9b-q4_K_M');
+ const first=page.locator('.model-name-line').first();
+ await expect(first.getByRole('img',{name:'Text input',exact:true})).toBeVisible();
+ await expect(first.getByRole('img',{name:'Image input',exact:true})).toBeVisible();
+ await expect(first.getByRole('img',{name:/Video understanding/})).toHaveAttribute('title',/frame extraction/);
+ const icons=await first.locator('.input-icons').boundingBox(),name=await first.locator('.model-link').boundingBox();
+ expect(icons!.x+icons!.width).toBeLessThan(name!.x);
+ await first.screenshot({path:'../../results/reports/model-input-icons.png'});
+ await model.selectOption('glm-4.7-flash:q4_K_M');
+ await expect(page.locator('.model-name-line').first().getByRole('img')).toHaveCount(1);
+});

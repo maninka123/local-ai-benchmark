@@ -1,0 +1,32 @@
+[
+    {
+        "event": "Prototype last seen in LAB",
+        "timestamp": "18:00",
+        "source": "V02"
+    },
+    {
+        "event": "Nora Vale enters EAST_CORRIDOR",
+        "timestamp": "18:10",
+        "source": "D01"
+    },
+    {
+        "event": "Nora Vale exits EAST_EXIT",
+        "timestamp": "18:14",
+        "source": "D01"
+    },
+    {
+        "event": "Theo Park enters CAFETERIA",
+        "timestamp": "18:12",
+        "source": "D01"
+    },
+    {
+        "event": "Ada Finch enters RECEPTION",
+        "timestamp": "18:13",
+        "source": "D01"
+    },
+    {
+        "event": "Prototype missing",
+        "timestamp": "18:18",
+        "source": "Case Brief"
+    }
+]

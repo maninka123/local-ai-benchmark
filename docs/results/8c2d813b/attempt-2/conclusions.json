@@ -1,0 +1,42 @@
+{
+  "responsible_person": "Nora Vale (appearance-based identification)",
+  "confidence": 0.65,
+  "conclusion": "Based on visual evidence from camera feeds V03 and V04, a person wearing a teal coat entered the east corridor at 18:10 and exited the east exit at 18:14 carrying an object matching the prototype description. This person matches the appearance description of Nora Vale (teal work coat). However, without biometric verification or continuous tracking, definitive identification cannot be made. The service corridor blind spot (V10) does not prove absence of use during the incident window.",
+  "exhibits": [
+    {
+      "id": "V02",
+      "type": "visual",
+      "finding": "Prototype confirmed present in lab at 18:00"
+    },
+    {
+      "id": "V03",
+      "type": "visual",
+      "finding": "Person in teal coat enters east corridor at 18:10 without visible object"
+    },
+    {
+      "id": "V04",
+      "type": "visual",
+      "finding": "Person in teal coat exits east exit at 18:14 carrying prototype"
+    },
+    {
+      "id": "V05",
+      "type": "visual",
+      "finding": "Prototype confirmed missing from lab at 18:18"
+    },
+    {
+      "id": "V09",
+      "type": "visual",
+      "finding": "Prototype visual reference (grey rectangle with black triangle)"
+    },
+    {
+      "id": "V10",
+      "type": "visual",
+      "finding": "Service corridor blind spot noted - absence of footage does not prove absence of use"
+    },
+    {
+      "id": "D01_access.csv",
+      "type": "documentary",
+      "finding": "Badge credential timestamps align with visual evidence but do not confirm biometric identity"
+    }
+  ]
+}

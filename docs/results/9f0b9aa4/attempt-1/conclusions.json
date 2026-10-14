@@ -1,0 +1,31 @@
+{
+  "responsible_person": "Eli Stone",
+  "confidence": 0.75,
+  "conclusion": "Eli Stone most likely took the prototype from the lab between 18:14 and 18:18. He had a documented motive (D03) and badge access to the unmonitored service corridor at the critical time (D01). Maya Reed was also present at the service door, suggesting possible coordination, but lacks clear motive. The grey coats in V04 contradict their assigned colors, indicating potential impersonation or coat swapping to evade visual identification.",
+  "exhibits": [
+    {
+      "id": "D03",
+      "relevance": "Establishes Eli Stone's motive for needing the prototype."
+    },
+    {
+      "id": "D01",
+      "relevance": "Confirms Eli Stone and Maya Reed entered the unmonitored service door at 18:14."
+    },
+    {
+      "id": "V04",
+      "relevance": "Shows two figures in grey coats at the service door, contradicting assigned colors for Eli (orange) and Maya (purple)."
+    },
+    {
+      "id": "V10",
+      "relevance": "Confirms the service corridor is a camera blind spot, allowing unmonitored movement."
+    },
+    {
+      "id": "V02",
+      "relevance": "Establishes prototype presence at 18:00."
+    },
+    {
+      "id": "V05",
+      "relevance": "Establishes prototype absence at 18:18."
+    }
+  ]
+}

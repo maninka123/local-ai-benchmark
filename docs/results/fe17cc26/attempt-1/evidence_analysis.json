@@ -1,0 +1,186 @@
+{
+  "case_id": "CASE_03",
+  "evidence_inventory": [
+    {
+      "exhibit_id": "D01_access.csv",
+      "type": "access_log",
+      "description": "Badge access records for five staff members",
+      "observations": [
+        "Nora Vale entered EAST_CORRIDOR at 18:10",
+        "Theo Park entered CAFETERIA at 18:12",
+        "Ada Finch entered RECEPTION at 18:13",
+        "Eli Stone entered SERVICE_DOOR at 18:14",
+        "Maya Reed entered SERVICE_DOOR at 18:14"
+      ],
+      "limitations": "Logs badge credentials, not biometric identity (per D03)"
+    },
+    {
+      "exhibit_id": "D02_witnesses.md",
+      "type": "witness_statements",
+      "description": "Unverified statements from five staff members",
+      "observations": [
+        "Nora: claims only visited east corridor and left",
+        "Eli: claims did not approach lab after 18:00",
+        "Maya: claims carried cardboard supply box at 18:11",
+        "Theo: claims remained in cafeteria from 18:12",
+        "Ada: claims staffed reception"
+      ],
+      "limitations": "Statements unverified, subject to credibility assessment"
+    },
+    {
+      "exhibit_id": "D03_messages.md",
+      "type": "internal_communications",
+      "description": "Internal messages establishing context",
+      "observations": [
+        "17:00 Eli states project needs prototype tomorrow (motive indicator)",
+        "17:10 Maya requests moving cardboard consumables box to loading bay",
+        "17:20 Security note: coat descriptions from shift assignments, doors log badges not biometric identity, service corridor is camera blind spot"
+      ],
+      "limitations": "Messages do not prove actions taken"
+    },
+    {
+      "exhibit_id": "V01.png",
+      "type": "floor_plan",
+      "description": "Synthetic schematic showing facility layout",
+      "observations": [
+        "LAB connected to EAST CORRIDOR (teal line)",
+        "LAB connected to SERVICE CORRIDOR (orange line)",
+        "SERVICE CORRIDOR labeled as UNMONITORED LINK TO LAB",
+        "EAST EXIT and CAFETERIA also shown"
+      ],
+      "limitations": "Schematic only, no real-time data"
+    },
+    {
+      "exhibit_id": "V02.png",
+      "type": "camera_capture",
+      "description": "Lab camera at 18:00 showing prototype present",
+      "observations": [
+        "Black triangle object in gray box visible on brown table",
+        "This is the last confirmed sighting of the prototype"
+      ],
+      "limitations": "Single timestamp, no movement captured"
+    },
+    {
+      "exhibit_id": "V03.png",
+      "type": "camera_capture",
+      "description": "East Corridor camera at 18:10",
+      "observations": [
+        "Person in teal coat visible (matches Nora Vale per D03)",
+        "No prototype or suspicious items visible"
+      ],
+      "limitations": "Does not show lab interior"
+    },
+    {
+      "exhibit_id": "V04.png",
+      "type": "camera_capture",
+      "description": "Service Door camera at 18:14",
+      "observations": [
+        "TWO persons visible, BOTH wearing GRAY coats",
+        "Access log shows Eli Stone (should be orange) and Maya Reed (should be purple)",
+        "CRITICAL DISCREPANCY: coat colors do not match assigned colors"
+      ],
+      "limitations": "Gray coats suggest badge misuse or unauthorized persons"
+    },
+    {
+      "exhibit_id": "V05.png",
+      "type": "camera_capture",
+      "description": "Lab camera at 18:18 showing prototype missing",
+      "observations": [
+        "Brown table visible but empty",
+        "Black triangle object in gray box absent",
+        "Prototype discovered missing"
+      ],
+      "limitations": "Does not show who removed it"
+    },
+    {
+      "exhibit_id": "V06.png",
+      "type": "camera_capture",
+      "description": "Cafeteria camera at 18:12",
+      "observations": [
+        "Person in blue coat visible (matches Theo Park per D03)",
+        "No suspicious activity observed"
+      ],
+      "limitations": "Theo's alibi supported by visual evidence"
+    },
+    {
+      "exhibit_id": "V07.png",
+      "type": "camera_capture",
+      "description": "Reception camera at 18:13",
+      "observations": [
+        "Person in red coat visible (matches Ada Finch per D03)",
+        "No suspicious activity observed"
+      ],
+      "limitations": "Ada's alibi supported by visual evidence"
+    },
+    {
+      "exhibit_id": "V08.png",
+      "type": "camera_capture",
+      "description": "Loading Bay camera at 18:11",
+      "observations": [
+        "Person in purple coat visible (matches Maya Reed per D03)",
+        "Cardboard box present (matches her statement and D03 message)",
+        "Maya's alibi for 18:11 supported"
+      ],
+      "limitations": "Does not account for her 18:14 Service Door entry"
+    },
+    {
+      "exhibit_id": "V09.png",
+      "type": "reference_image",
+      "description": "Object detail showing prototype appearance",
+      "observations": [
+        "Black triangle in gray box on brown table",
+        "Reference for identifying the missing item"
+      ],
+      "limitations": "Static reference only"
+    },
+    {
+      "exhibit_id": "V10.png",
+      "type": "camera_status",
+      "description": "Service camera showing maintenance/blind spot",
+      "observations": [
+        "Text states BLIND SPOT: SERVICE CORRIDOR",
+        "Confirms service corridor has no camera coverage"
+      ],
+      "limitations": "Creates opportunity for unmonitored access to lab"
+    }
+  ],
+  "key_findings": [
+    {
+      "finding": "Service Door coat color discrepancy",
+      "evidence": ["V04.png", "D01_access.csv", "D03_messages.md"],
+      "significance": "HIGH - Gray coats at Service Door do not match Eli's orange or Maya's purple assignment, suggesting badge misuse"
+    },
+    {
+      "finding": "Eli Stone's contradictory statement",
+      "evidence": ["D02_witnesses.md", "D01_access.csv"],
+      "significance": "HIGH - Eli claims no lab approach after 18:00, but his badge was used at Service Door (direct lab access) at 18:14"
+    },
+    {
+      "finding": "Service corridor is unmonitored",
+      "evidence": ["V01.png", "V10.png", "D03_messages.md"],
+      "significance": "HIGH - Provides opportunity for theft without camera detection"
+    },
+    {
+      "finding": "Maya Reed has alibi at 18:11 but badge used at 18:14",
+      "evidence": ["V08.png", "D01_access.csv", "V04.png"],
+      "significance": "MEDIUM - Maya was legitimately at Loading Bay at 18:11, but her badge was used at Service Door at 18:14 with wrong coat color"
+    },
+    {
+      "finding": "Nora, Theo, Ada have consistent alibis",
+      "evidence": ["V03.png", "V06.png", "V07.png", "D01_access.csv"],
+      "significance": "MEDIUM - Their visual evidence matches access logs and coat color assignments"
+    }
+  ],
+  "contradictions_identified": [
+    {
+      "contradiction": "Eli's statement vs. access log",
+      "description": "Eli states he did not approach lab after 18:00, but his badge was used at Service Door at 18:14",
+      "severity": "HIGH"
+    },
+    {
+      "contradiction": "Coat colors at Service Door",
+      "description": "V04 shows gray coats, but Eli should wear orange and Maya should wear purple per D03 assignments",
+      "severity": "HIGH"
+    }
+  ]
+}

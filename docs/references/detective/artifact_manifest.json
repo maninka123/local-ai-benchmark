@@ -1,0 +1,67 @@
+[
+  {
+    "path": "output/index.html",
+    "bytes": 776225,
+    "sha256": "093b587a46c0fc48901aa11a307f64aa26a3ca8aebe71a152867e2b47179d08b"
+  },
+  {
+    "path": "output/case_01/investigation_report.md",
+    "bytes": 19783,
+    "sha256": "6cd562df89c37add389de13495c34367a970116f9b5b8253a4e4b8a7ede30ab0"
+  },
+  {
+    "path": "output/case_01/timeline.json",
+    "bytes": 5406,
+    "sha256": "c8e5f32147e7014320c28375f93f1ace001207c147e1185f77e09ca477f32737"
+  },
+  {
+    "path": "output/case_01/evidence_analysis.json",
+    "bytes": 8423,
+    "sha256": "1207bf56c04cf2ba51edff2e800567ff9e140f29132623050d4cc78644894fce"
+  },
+  {
+    "path": "output/case_01/conclusions.json",
+    "bytes": 11605,
+    "sha256": "4418b7d1547de2713b8183baca42a0e0f5ceaa97a6ddc0edf6b1d37618e81d0b"
+  },
+  {
+    "path": "output/case_02/investigation_report.md",
+    "bytes": 20722,
+    "sha256": "3e05d767f44865869d5548718b99d4daa29d5a3e56f28a18ba1820933dad6213"
+  },
+  {
+    "path": "output/case_02/timeline.json",
+    "bytes": 5697,
+    "sha256": "9e6695f9c0aa383d279dd583689f2fb1ddf3e73394e4e749818afcc237af44e3"
+  },
+  {
+    "path": "output/case_02/evidence_analysis.json",
+    "bytes": 8685,
+    "sha256": "c368c9ad2a9a4234f2d17da6464e4e8e4ff806a4a8dc90e7591bc897dae2102e"
+  },
+  {
+    "path": "output/case_02/conclusions.json",
+    "bytes": 12276,
+    "sha256": "9b48d23fa58a243d6855b110ec60dbd4bd451561fc5e4fd30881d1f4bc8e49d2"
+  },
+  {
+    "path": "output/case_03/investigation_report.md",
+    "bytes": 20406,
+    "sha256": "42fbae2f30d3a077ee20fe072bc66a414d00fe805a7e486410d0e59b9dc0fcc5"
+  },
+  {
+    "path": "output/case_03/timeline.json",
+    "bytes": 5330,
+    "sha256": "a84a7750e0c4347eae61e37b035c6c7c164e4a984dd5c23d599d480c8264e1b7"
+  },
+  {
+    "path": "output/case_03/evidence_analysis.json",
+    "bytes": 8554,
+    "sha256": "4c79d0d793fc9f00339dc4310e8cfcb1583a35b055e522babfba27122506d9de"
+  },
+  {
+    "path": "output/case_03/conclusions.json",
+    "bytes": 12560,
+    "sha256": "acafc09715623edcca403291680d9b0f82713b708cbe4ae895d55c17f19f3a83"
+  }
+]

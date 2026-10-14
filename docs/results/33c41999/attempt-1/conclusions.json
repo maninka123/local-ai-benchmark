@@ -1,0 +1,6 @@
+{
+  "responsible_person": "Eli Stone",
+  "confidence": 0.92,
+  "conclusion": "Eli Stone removed the prototype from the laboratory between approximately 18:14 and 18:18. He entered via the SERVICE_DOOR at 18:14 (D01), which connects to the LAB through an unmonitored service corridor (V01). Visual evidence (V04) shows him with the prototype at the service door at actual time 18:14 (camera timestamp 18:19 corrected for +5 min offset per V10/D03). His statement that he did not approach the lab after 18:00 is contradicted by this evidence. He had motive, as shown in his message at 17:00 stating he needed the prototype for his project.",
+  "exhibits": ["V01", "V02", "V04", "V05", "V10", "D01", "D02", "D03"]
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "case_id": "case_01",
+  "context_source": "case_brief.md",
+  "context_observations": "Fictional synthetic schematic case. Prototype last confirmed 18:00 and missing 18:18. Shift assignments: Nora teal, Eli orange, Maya purple, Theo blue, Ada red. Coat colour is not biometric identity.",
+  "exhibits": [
+    {
+      "exhibit_id": "V01",
+      "title": "Floor plan",
+      "source_path": "images/V01.png",
+      "timestamp": null,
+      "direct_observation": "The schematic connects the lab through the east corridor to the east exit. A second link joins the lab and service corridor, labelled UNMONITORED LINK TO LAB. A cafeteria is drawn separately.",
+      "interpretation": "Both the east route and service link provide possible approaches to the lab.",
+      "uncertainty": "No scale, travel times, door permissions, or complete loading-bay/reception connections are given. The drawing does not establish that anyone used either route."
+    },
+    {
+      "exhibit_id": "V02",
+      "title": "Prototype last visible",
+      "source_path": "images/V02.png",
+      "timestamp": "18:00",
+      "direct_observation": "The LAB frame labelled CAMERA 18:00 shows a gray rectangular case/object with a black triangular marking on the brown bench.",
+      "interpretation": "With the case brief and V09, this is the prototype reference appearance and last confirmed presence.",
+      "uncertainty": "The schematic shows exterior appearance, not a serial number or contents."
+    },
+    {
+      "exhibit_id": "V03",
+      "title": "East corridor",
+      "source_path": "images/V03.png",
+      "timestamp": "18:10",
+      "direct_observation": "The EAST CORRIDOR frame labelled CAMERA 18:10 shows one teal-coated figure, with no carried object drawn.",
+      "interpretation": "Appearance is consistent with Nora’s assigned coat; D01 records Nora’s credential entering this corridor at the same minute.",
+      "uncertainty": "Coat and badge correspondence is not biometric identification. One still does not show the figure’s subsequent route or hidden possessions."
+    },
+    {
+      "exhibit_id": "V04",
+      "title": "East-exit object",
+      "source_path": "images/V04.png",
+      "timestamp": "18:14",
+      "direct_observation": "The EAST EXIT frame labelled CAMERA 18:14 shows a teal-coated figure beside a gray rectangular case with a black triangle, positioned as a carried object.",
+      "interpretation": "Its appearance matches V02/V09; paired with Nora’s exit credential, this is the strongest association between a named suspect and the missing prototype.",
+      "uncertainty": "The still does not establish identity, unique object identity, movement direction, or the earlier removal act."
+    },
+    {
+      "exhibit_id": "V05",
+      "title": "Prototype missing",
+      "source_path": "images/V05.png",
+      "timestamp": "18:18",
+      "direct_observation": "The LAB frame labelled CAMERA 18:18 shows the bench without the gray triangle-marked object seen in V02.",
+      "interpretation": "The prototype is absent from its shown location by 18:18, consistent with the brief.",
+      "uncertainty": "The image does not show the removal or exclude relocation elsewhere in the lab."
+    },
+    {
+      "exhibit_id": "V06",
+      "title": "Cafeteria",
+      "source_path": "images/V06.png",
+      "timestamp": "18:12",
+      "direct_observation": "The CAFETERIA frame labelled CAMERA 18:12 shows one blue-coated figure and no carried object drawn.",
+      "interpretation": "Consistent with Theo’s assigned coat and the cafeteria entry under Theo’s credential in D01.",
+      "uncertainty": "It corroborates one moment, not Theo’s claim of remaining there continuously."
+    },
+    {
+      "exhibit_id": "V07",
+      "title": "Reception",
+      "source_path": "images/V07.png",
+      "timestamp": "18:13",
+      "direct_observation": "The RECEPTION frame labelled CAMERA 18:13 shows one red-coated figure and no carried object drawn.",
+      "interpretation": "Consistent with Ada’s assigned coat and the reception entry under Ada’s credential in D01.",
+      "uncertainty": "A still and entry record cannot establish Ada’s location throughout the 18-minute window."
+    },
+    {
+      "exhibit_id": "V08",
+      "title": "Loading bay box",
+      "source_path": "images/V08.png",
+      "timestamp": "18:11",
+      "direct_observation": "The LOADING BAY frame labelled CAMERA 18:11 shows one purple-coated figure beside a plain brown rectangular box. No triangle marking is drawn on the box.",
+      "interpretation": "Consistent with Maya carrying a cardboard supply box as stated in D02 and with the consumables-box request in D03. The visible object differs from V02/V09.",
+      "uncertainty": "Material and contents cannot be established from a schematic; the box could conceal something, but no supplied evidence shows that it does. Coat colour does not prove identity."
+    },
+    {
+      "exhibit_id": "V09",
+      "title": "Object reference",
+      "source_path": "images/V09.png",
+      "timestamp": null,
+      "direct_observation": "The OBJECT DETAIL / CAMERA REFERENCE image shows a gray rectangular case/object with a black triangle on the bench; no event time is given.",
+      "interpretation": "The distinctive exterior supports comparing the prototype in V02 with a visually matching object elsewhere.",
+      "uncertainty": "A matching exterior is not unique identification or proof of contents."
+    },
+    {
+      "exhibit_id": "V10",
+      "title": "Service-camera coverage notice",
+      "source_path": "images/V10.png",
+      "timestamp": null,
+      "direct_observation": "The SERVICE CAMERA / CAMERA MAINTENANCE exhibit reads BLIND SPOT: SERVICE CORRIDOR.",
+      "interpretation": "Together with V01 and D03 this leaves a possible service approach unobserved.",
+      "uncertainty": "It does not prove use of the route. A view of the service door, if supplied, would not eliminate the corridor blind spot."
+    },
+    {
+      "exhibit_id": "D01",
+      "title": "Access records",
+      "source_path": "documents/D01_access.csv",
+      "timestamp": "18:10–18:14",
+      "direct_observation": "Four rows: 18:10 Nora Vale / EAST_CORRIDOR / ENTRY; 18:12 Theo Park / CAFETERIA / ENTRY; 18:13 Ada Finch / RECEPTION / ENTRY; 18:14 Nora Vale / EAST_EXIT / EXIT.",
+      "interpretation": "Nora’s credential and teal appearance align at both east-route locations; the exit direction supports leaving via the east exit.",
+      "uncertainty": "D03 says these are badge credentials, not biometric identities. Completeness, unlogged passage, badge sharing, and time synchronisation are not established."
+    },
+    {
+      "exhibit_id": "D02",
+      "title": "Witness statements",
+      "source_path": "documents/D02_witnesses.md",
+      "timestamp": null,
+      "direct_observation": "Five explicitly unverified statements: Nora says she only visited the east corridor and left; Eli says he did not approach the lab after 18:00; Maya says she carried a cardboard supply box at 18:11; Theo says he remained in the cafeteria from 18:12; Ada says she staffed reception.",
+      "interpretation": "Statements supply claims to test against the images and access records, rather than established alibis.",
+      "uncertainty": "No interview times, independent identity authentication, full movement accounts, or corroboration of continuous presence are supplied."
+    },
+    {
+      "exhibit_id": "D03",
+      "title": "Internal messages",
+      "source_path": "documents/D03_messages.md",
+      "timestamp": "17:00; 17:10; 17:20",
+      "direct_observation": "17:00 Eli says his project needs the prototype tomorrow. 17:10 Maya requests moving the cardboard consumables box to the loading bay. 17:20 Security says coat descriptions come from shift assignments and doors log badge credentials, not biometric identity. Service corridor is a camera blind spot.",
+      "interpretation": "Eli’s message establishes a stated need, not theft. Maya’s request supports a routine-box explanation. Security limits identity attribution and clarifies coverage or timing.",
+      "uncertainty": "Messages do not prove intent, compliance with the box request, custody of badges/coats, or the actual removal sequence."
+    }
+  ]
+}

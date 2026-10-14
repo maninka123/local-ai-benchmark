@@ -1,0 +1,81 @@
+{
+  "repair_id": "sol-6.1-small-fix-20261014",
+  "run_id": "2026-10-09T154702-060434+0000--db803285",
+  "source_update_id": "update-1805864e66",
+  "source_evaluation_id": "eval-7cd4539c87",
+  "configured_model": "gpt-6.1-sol",
+  "source_changed_lines": 20,
+  "source_files": [
+    {
+      "path": "game/src/track.js",
+      "added": 7,
+      "removed": 10
+    },
+    {
+      "path": "game/src/main.js",
+      "added": 1,
+      "removed": 0
+    },
+    {
+      "path": "game/index.html",
+      "added": 1,
+      "removed": 1
+    }
+  ],
+  "source_hashes": {
+    "game/src/track.js": "6883d631ae38e1bf5742fc2c1117361a2e9ebc21185d9b7dd8847507a250ceda",
+    "game/src/main.js": "4573f43b18372d145432cd9aebb584e5094ba6e169acf16cd0b5ae7feb30ed1b",
+    "game/index.html": "1a09a6e66430109246e482ae7f0d96e07df8e127a0323db76535b4fec5f0d430"
+  },
+  "changes_summary": "Convert CatmullRom control points to Vector3, use the closed-curve boolean, and render the existing static scene while in menu state. Static preview only; driving remains unavailable. Remove default page margins and fit the canvas to the iframe viewport.",
+  "status": "validated_partial",
+  "runnable": true,
+  "completion": false,
+  "limitations": [
+    "Saved isolated browser startup fails with TypeError: p0.distanceToSquared is not a function, during track creation.",
+    "The game remains in menu state with no car-selection/start interface to enter racing; created player/NPC meshes are never added to the scene.",
+    "Driving changes vertical velocity rather than a driveable road direction, mesh/body positions are not consistently updated, and curve/collision interfaces contain further unsupported or inconsistent operations.",
+    "No valid lap count initialization/finish detection, per-car lap progress, proper standings, countdown, opponent traffic interaction/overtaking/recovery, working barrier collision or complete results experience is delivered.",
+    "Actual menu and all race-view captures are blank, and required implementation_report.md is absent.",
+    "Original benchmark scores and completeness are unchanged. This is an assisted partial preview, with original report claims retained and potentially inaccurate."
+  ],
+  "verification": [
+    {
+      "check": "git diff --no-index --numstat",
+      "source_changed_lines": 20,
+      "numstat": [
+        "7\t10\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3.5-9b-q4_K_M\\\\racing_game\\\\2026-10-09T154702-060434-0000--db803285\\\\evaluations\\\\eval-7cd4539c87\\\\artifacts\\\\game\\\\src\\\\track.js\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3.5-9b-q4_K_M\\\\racing_game\\\\2026-10-09T154702-060434-0000--db803285\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\game\\\\src\\\\track.js\"",
+        "1\t0\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3.5-9b-q4_K_M\\\\racing_game\\\\2026-10-09T154702-060434-0000--db803285\\\\evaluations\\\\eval-7cd4539c87\\\\artifacts\\\\game\\\\src\\\\main.js\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3.5-9b-q4_K_M\\\\racing_game\\\\2026-10-09T154702-060434-0000--db803285\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\game\\\\src\\\\main.js\"",
+        "1\t1\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3.5-9b-q4_K_M\\\\racing_game\\\\2026-10-09T154702-060434-0000--db803285\\\\evaluations\\\\eval-7cd4539c87\\\\artifacts\\\\game\\\\index.html\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3.5-9b-q4_K_M\\\\racing_game\\\\2026-10-09T154702-060434-0000--db803285\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\game\\\\index.html\""
+      ]
+    },
+    {
+      "check": "source SHA256 unchanged",
+      "passed": true
+    },
+    {
+      "check": "Docker network none isolated execution",
+      "exit_code": 0,
+      "runnable": true,
+      "log": "validation.log"
+    },
+    {
+      "check": "Isolated real WASD movement and steering",
+      "passed": false,
+      "evidence": "artifacts/keyboard_validation.json",
+      "validation_only_instrumentation": true
+    },
+    {
+      "check": "Canvas fits browser viewport without page overflow",
+      "passed": true,
+      "evidence": "artifacts/keyboard_validation.json"
+    }
+  ],
+  "artifacts_path": ".\\results\\further-work\\qwen3.5-9b-q4_K_M\\racing_game\\2026-10-09T154702-060434-0000--db803285\\repairs\\sol-6.1-small-fix-20261014\\artifacts",
+  "source_artifacts_path": ".\\results\\further-work\\qwen3.5-9b-q4_K_M\\racing_game\\2026-10-09T154702-060434-0000--db803285\\evaluations\\eval-7cd4539c87\\artifacts",
+  "model": "qwen3.5:9b-q4_K_M",
+  "task": "racing_game",
+  "generated_outputs_disclosure": "Existing analysis script may regenerate figures/findings/profiles; report prose is unchanged.",
+  "keyboard_movement_verified": false,
+  "keyboard_steering_verified": false
+}

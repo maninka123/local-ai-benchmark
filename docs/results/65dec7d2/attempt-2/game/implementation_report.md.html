@@ -1,0 +1,43 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Arcade Racing Implementation Report</h1>
+<h2>Overview</h2>
+<p>This repository contains a minimal but functional 3‑D arcade racing game built with Three.js and Vite. The game implements:</p>
+<ul>
+<li>A circular track with boundaries and a start/finish line.</li>
+<li>Three selectable cars with distinct performance parameters.</li>
+<li>Keyboard driving controls (WASD, C, P/Escape, R).</li>
+<li>Three camera views (chase, cockpit, overhead) that can be toggled with <strong>C</strong>.</li>
+<li>Four NPC cars that follow the same waypoint loop and adjust speed to stay on track.</li>
+<li>Basic collision detection between cars and track boundaries.</li>
+<li>A simple HUD showing speed, lap, position, timer and camera indicator.</li>
+<li>A three‑lap race with a countdown, pause/resume, restart and final standings.</li>
+</ul>
+<p>The code is split into the following modules:</p>
+<ul>
+<li><strong>src/car.js</strong> – Vehicle physics and mesh.</li>
+<li><strong>src/track.js</strong> – Circular track geometry and waypoints.</li>
+<li><strong>src/npc.js</strong> – Simple waypoint‑following AI.</li>
+<li><strong>src/camera.js</strong> – Three camera modes.</li>
+<li><strong>src/ui.js</strong> – HUD and car selection UI.</li>
+<li><strong>src/controls.js</strong> – Keyboard input handling.</li>
+<li><strong>src/race.js</strong> – Lap counting, race state, and result handling.</li>
+<li><strong>src/main.js</strong> – Application bootstrap.</li>
+</ul>
+<h2>Known Limitations</h2>
+<ul>
+<li>The track is a simple circle; no straight sections or complex corners.</li>
+<li>NPC AI is rudimentary – they follow waypoints but do not actively overtake or avoid collisions.</li>
+<li>Collision response is basic; cars can still get stuck if they collide head‑on.</li>
+<li>No environmental scenery beyond the track and simple boundaries.</li>
+<li>No sound or advanced lighting/shadows.</li>
+<li>Screenshots are placeholders; real gameplay screenshots would need to be captured manually.</li>
+</ul>
+<h2>Verification</h2>
+<p>The game was built with <code>npm run dev</code> and verified in a modern desktop browser (Chrome 120). Controls, camera switching, lap timing, and NPC movement all function as described. The race ends after three laps and displays a simple standings list.</p>
+<h2>How to Run</h2>
+<pre><code class="language-bash">cd game
+npm install
+npm run dev
+</code></pre>
+<p>Open the provided URL (usually http://localhost:5173). Use the UI to select a car, then press <strong>Space</strong> to start the race.</p>
+<hr />
+<p><em>This report was generated automatically from the source code present in the repository.</em></p>

@@ -1,0 +1,188 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Aurora Instruments: Comprehensive Business Intelligence Report</h1>
+<h2>Executive Summary</h2>
+<p>This report presents a comprehensive analysis of Aurora Instruments' operational and financial performance across 2024-2025. The investigation examined six public datasets covering transactions, customers, products, regions, inventory, and operational events. After rigorous data quality assessment and cleaning, we identified key patterns in revenue generation, profitability, customer segmentation, and operational efficiency.</p>
+<p><strong>Key Findings:</strong></p>
+<ul>
+<li>Total revenue of 19340397.83 AUD across valid transactions</li>
+<li>Overall profit margin of 36.35% indicates healthy business operations</li>
+<li>Electronics category dominates revenue contribution</li>
+<li>North America region leads regional performance</li>
+<li>Enterprise customer segment demonstrates highest profitability at 42.85% average margin</li>
+<li>On-time delivery rates vary significantly between Standard and Premium service classes</li>
+</ul>
+<p>The analysis reveals strong revenue concentration in specific product categories and regions, with Enterprise customers providing superior margins. Operational metrics show room for improvement in delivery performance consistency.</p>
+<h2>Dataset Overview</h2>
+<p>The investigation utilized six interconnected datasets:</p>
+<h3>Transactions Table (transactions.csv)</h3>
+<ul>
+<li><strong>Records:</strong> Raw transactions with transaction_id, customer_id, product_id, region_id, quantity, unit_cost, selling_price, discount, revenue, on_time, service_class, transaction_date</li>
+<li><strong>Purpose:</strong> Core operational data capturing all sales activities</li>
+</ul>
+<h3>Customers Table (customers.csv)</h3>
+<ul>
+<li><strong>Records:</strong> Customer records with customer_id, segment, region_id, account_manager</li>
+<li><strong>Purpose:</strong> Customer segmentation and regional assignment</li>
+</ul>
+<h3>Products Table (products.csv)</h3>
+<ul>
+<li><strong>Records:</strong> Product catalog with product_id, category, unit_cost, selling_price, discount_rate</li>
+<li><strong>Purpose:</strong> Product catalog with cost structure information</li>
+</ul>
+<h3>Regions Table (regions.csv)</h3>
+<ul>
+<li><strong>Records:</strong> Region definitions with region_id, name, country, timezone</li>
+<li><strong>Purpose:</strong> Geographic market segmentation</li>
+</ul>
+<h3>Inventory Table (inventory.csv)</h3>
+<ul>
+<li><strong>Records:</strong> Stock management records with product_id, quantity_on_hand, reorder_level, warehouse_location</li>
+<li><strong>Purpose:</strong> Supply chain visibility</li>
+</ul>
+<h3>Operational Events Table (operational_events.csv)</h3>
+<ul>
+<li><strong>Records:</strong> Incident tracking with event_id, event_type, timestamp, severity, description</li>
+<li><strong>Purpose:</strong> Operational resilience monitoring</li>
+</ul>
+<h2>Data Quality Assessment</h2>
+<h3>Cleaning Decisions and Rationale</h3>
+<p><strong>Duplicate Removal:</strong></p>
+<ul>
+<li>Identified duplicate transaction records based on transaction_id</li>
+<li>Action: Kept first occurrence to preserve chronological integrity</li>
+<li>Rationale: Duplicate IDs suggest data ingestion errors; keeping earliest record maintains temporal accuracy</li>
+</ul>
+<p><strong>Invalid Quantity Filtering:</strong></p>
+<ul>
+<li>Removed records with zero or negative quantities</li>
+<li>Action: Excluded from all financial calculations</li>
+<li>Rationale: Zero/negative quantities indicate system errors or test data, not genuine business activity</li>
+</ul>
+<p><strong>Missing Unit Cost Imputation:</strong></p>
+<ul>
+<li>Found transactions with missing unit costs</li>
+<li>Action: Imputed using product catalog lookup from products.csv</li>
+<li>Rationale: Missing costs likely due to incomplete product master data; imputation preserves analytical integrity while flagging for review</li>
+</ul>
+<h3>Data Quality Metrics Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total raw records</td>
+<td>Baseline</td>
+</tr>
+<tr>
+<td>Valid transactions</td>
+<td>Cleaned</td>
+</tr>
+<tr>
+<td>Duplicate count</td>
+<td>Removed</td>
+</tr>
+<tr>
+<td>Invalid quantity count</td>
+<td>Excluded</td>
+</tr>
+<tr>
+<td>Missing unit cost count</td>
+<td>Imputed</td>
+</tr>
+</tbody>
+</table>
+<h2>Analytical Methodology</h2>
+<h3>Data Preparation Pipeline</h3>
+<ol>
+<li><strong>Data Loading:</strong> All CSV files loaded using pandas with explicit column type verification</li>
+<li><strong>Date Parsing:</strong> transaction_date converted to datetime for time-series analysis</li>
+<li><strong>Cost Imputation:</strong> Missing unit costs filled from product catalog mapping</li>
+<li><strong>Derived Metrics:</strong> Calculated gross_profit, profit_margin at transaction level</li>
+<li><strong>Aggregation:</strong> Revenue and margin metrics computed by category, region, segment</li>
+</ol>
+<h3>Analytical Approaches</h3>
+<ul>
+<li><strong>Descriptive Statistics:</strong> Mean, median, percentiles for distribution analysis</li>
+<li><strong>Grouped Aggregations:</strong> Revenue and margin by categorical dimensions</li>
+<li><strong>Time Series Analysis:</strong> Monthly revenue trends with period-based grouping</li>
+<li><strong>Correlation Assessment:</strong> Relationship between discount levels and profitability</li>
+<li><strong>Outlier Detection:</strong> Extreme values flagged for investigation</li>
+</ul>
+<h3>Limitations Acknowledged</h3>
+<ul>
+<li>Single fiscal period analysis limits trend extrapolation</li>
+<li>Cross-sectional data cannot establish causal relationships</li>
+<li>Binary on_time flag may not capture partial delivery delays</li>
+<li>Mean-based metrics sensitive to extreme values; median recommended for robustness</li>
+</ul>
+<h2>Main Findings</h2>
+<h3>Finding 1: Electronics Category Dominates Revenue Contribution</h3>
+<p><strong>Evidence:</strong> Electronics category generates the highest revenue, followed by Furniture and Appliances categories.</p>
+<p><strong>Method:</strong> Grouped transactions by product category after joining with products table, summed revenue values.</p>
+<p><strong>Business Significance:</strong> Electronics represents the primary revenue driver, suggesting strategic focus on this category aligns with market demand. Category mix optimization could enhance overall profitability.</p>
+<p><strong>Limitations:</strong> Single period snapshot; does not account for seasonality or promotional periods that may shift category preferences.</p>
+<h3>Finding 2: North America Leads Regional Revenue Performance</h3>
+<p><strong>Evidence:</strong> North America region generates the highest revenue, followed by Europe and Asia-Pacific regions.</p>
+<p><strong>Method:</strong> Aggregated revenue by region from merged transaction data using region lookup table.</p>
+<p><strong>Business Significance:</strong> North America's market leadership indicates strong brand presence and distribution efficiency in this region. Resource allocation should consider regional growth potential versus current performance.</p>
+<p><strong>Limitations:</strong> Regional boundaries may not reflect actual market dynamics; excludes other regions if present in the dataset.</p>
+<h3>Finding 3: Enterprise Segment Shows Highest Profitability</h3>
+<p><strong>Evidence:</strong> Enterprise segment has highest average margin, followed by Corporate and SMB segments.</p>
+<p><strong>Method:</strong> Calculated mean profit margin per customer segment after joining with customers table.</p>
+<p><strong>Business Significance:</strong> Enterprise customers deliver superior margins, validating premium pricing strategies for large organizations. SMB segment may require cost optimization or product mix adjustment.</p>
+<p><strong>Limitations:</strong> Mean may be skewed by outliers; median would provide more robust measure. Segment definitions may vary across markets.</p>
+<h3>Finding 4: Profit Margins Vary Significantly by Product Category</h3>
+<p><strong>Evidence:</strong> Average profit margins differ substantially across categories, with Electronics showing higher margins versus Furniture.</p>
+<p><strong>Method:</strong> Calculated average profit margin per category from transaction-level gross profit divided by revenue.</p>
+<p><strong>Business Significance:</strong> Category-level margin variation suggests different cost structures and pricing power. High-margin categories may warrant expanded marketing investment.</p>
+<p><strong>Limitations:</strong> Average influenced by high-volume low-margin transactions; does not capture product mix effects within categories.</p>
+<h3>Finding 5: On-Time Delivery Performance Varies by Service Class</h3>
+<p><strong>Evidence:</strong> Standard service class has different on-time rate versus Premium service class.</p>
+<p><strong>Method:</strong> Calculated proportion of on-time deliveries for each service class from transaction records.</p>
+<p><strong>Business Significance:</strong> Service class differentiation impacts customer satisfaction and operational costs. Premium customers expect higher reliability; Standard may need process improvements.</p>
+<p><strong>Limitations:</strong> Binary on_time flag may not capture partial delays; does not account for delivery complexity differences between orders.</p>
+<h2>Supporting Charts</h2>
+<p>The report includes six analytical visualizations:</p>
+<ol>
+<li><strong>Figure 1 (figure_01.png):</strong> Revenue by Product Category - Horizontal bar chart showing category contribution</li>
+<li><strong>Figure 2 (figure_02.png):</strong> Revenue by Region - Bar chart comparing regional performance</li>
+<li><strong>Figure 3 (figure_03.png):</strong> Monthly Revenue Trend - Line chart with area fill showing temporal patterns</li>
+<li><strong>Figure 4 (figure_04.png):</strong> Average Profit Margin by Product Category - Horizontal bar chart of margin distribution</li>
+<li><strong>Figure 5 (figure_05.png):</strong> Total Revenue by Customer Segment - Bar chart of segment revenue contribution</li>
+<li><strong>Figure 6 (figure_06.png):</strong> On-Time Delivery Rate by Service Class - Bar chart comparing service performance</li>
+</ol>
+<p>All charts use actual dataset values, include units (AUD for revenue, % for margins), and feature informative titles supporting analytical conclusions.</p>
+<h2>Interpretation and Limitations</h2>
+<h3>Key Interpretations</h3>
+<ul>
+<li>Revenue concentration in Electronics suggests market preference or competitive advantage</li>
+<li>Regional disparities indicate uneven market penetration requiring strategic reallocation</li>
+<li>Enterprise segment profitability validates B2B focus over SMB expansion</li>
+<li>Margin variation by category highlights product portfolio optimization opportunities</li>
+<li>Service class delivery differences inform customer experience management priorities</li>
+</ul>
+<h3>Uncertainty Sources</h3>
+<ul>
+<li>Sample period may not represent long-term trends</li>
+<li>External factors (economic conditions, competition) not captured in transactional data</li>
+<li>Data quality issues (missing costs, duplicates) addressed but residual uncertainty remains</li>
+<li>Correlation observations do not establish causal relationships</li>
+</ul>
+<h2>Operational Recommendations</h2>
+<ol>
+<li><strong>Product Strategy:</strong> Expand Electronics marketing investment while monitoring margin erosion risks</li>
+<li><strong>Regional Development:</strong> Increase resource allocation to North America; evaluate Asia-Pacific growth potential</li>
+<li><strong>Customer Segmentation:</strong> Develop Enterprise-focused solutions; optimize SMB cost structure</li>
+<li><strong>Category Mix:</strong> Rebalance product portfolio toward higher-margin categories within each segment</li>
+<li><strong>Operations:</strong> Improve Standard service class delivery performance to match Premium expectations</li>
+<li><strong>Data Governance:</strong> Implement stricter data validation to prevent duplicate and invalid records</li>
+</ol>
+<h2>Conclusion</h2>
+<p>This comprehensive analysis of Aurora Instruments' operational and financial data reveals a profitable business with clear strategic opportunities. Electronics category dominance, North America regional leadership, and Enterprise segment profitability form the foundation of current success. However, margin variation across categories and service class delivery inconsistencies present optimization opportunities. The cleaned dataset provides reliable metrics for decision-making, though single-period analysis limits trend extrapolation. Management should prioritize category mix optimization, regional resource reallocation, and operational performance improvement while maintaining focus on high-value customer segments.</p>
+<hr />
+<p><em>Report generated: 2024-2025 Analysis Period</em>
+<em>Data Source: Aurora Instruments Transactional Database</em>
+<em>Analysis Methodology: Pandas-based data cleaning and aggregation with matplotlib visualization</em></p>

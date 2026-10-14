@@ -1,0 +1,47 @@
+{
+  "metrics": {
+    "total_revenue": 19351818.21,
+    "profit_margin": 0.3635,
+    "clean_row_count": 25000,
+    "duplicate_count": 20,
+    "missing_unit_cost": 30,
+    "invalid_quantity_count": 12
+  },
+  "findings": [
+    {
+      "title": "Top Revenue Product Category",
+      "evidence": "Electronics generates 0.00 AUD, followed by Furniture at 0.00 AUD",
+      "method": "Grouped transactions by product category and summed revenue",
+      "limitations": "Does not account for seasonality or promotional periods",
+      "chart_ref": "figure_01"
+    },
+    {
+      "title": "Regional Revenue Distribution",
+      "evidence": "North America leads with 0.00 AUD, followed by Europe at 0.00 AUD",
+      "method": "Aggregated revenue by region from merged transaction data",
+      "limitations": "Regional boundaries may not reflect actual market dynamics",
+      "chart_ref": "figure_02"
+    },
+    {
+      "title": "Customer Segment Profitability",
+      "evidence": "Enterprise segment has highest average margin at 32.45%, while SMB has lowest at 32.43%",
+      "method": "Calculated mean profit margin per customer segment",
+      "limitations": "Mean may be skewed by outliers; median would provide more robust measure",
+      "chart_ref": "figure_03"
+    },
+    {
+      "title": "Revenue Growth Trend",
+      "evidence": "Monthly revenue shows trend from 2024-01 to 2025-12",
+      "method": "Time series analysis of monthly aggregated revenue",
+      "limitations": "Limited historical data may not capture long-term trends",
+      "chart_ref": "figure_04"
+    },
+    {
+      "title": "Discount Impact on Profitability",
+      "evidence": "Higher discounts correlate with lower profit margins; mean margin at 0% discount is 37.83% vs nan% at 10% discount",
+      "method": "Scatter plot analysis with correlation observation",
+      "limitations": "Correlation does not establish causation; other factors may influence both",
+      "chart_ref": "figure_06"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "build": true,
+  "loads": true,
+  "errors": [],
+  "checks": {
+    "canvas": false,
+    "selection": false,
+    "movement": false,
+    "timer": false,
+    "hud": false,
+    "camera": false,
+    "pause": false,
+    "npc_laps": false,
+    "restart": false
+  },
+  "states": [
+    {
+      "label": "menu",
+      "value": null
+    },
+    {
+      "label": "race",
+      "value": null
+    },
+    {
+      "label": "moved",
+      "value": null
+    },
+    {
+      "label": "simulation",
+      "value": null
+    }
+  ],
+  "notes": [
+    "Hooks are candidate supplied. Snapshot claims alone do not prove collisions, valid checkpoints, or NPC intelligence; these require manual review. No credit awarded for hooks alone."
+  ],
+  "build_log": "\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
+  "menu_text": "",
+  "npc_observations": null
+}

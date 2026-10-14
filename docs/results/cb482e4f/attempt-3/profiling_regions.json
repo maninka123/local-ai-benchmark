@@ -1,0 +1,14 @@
+{
+  "file": "regions.csv",
+  "shape": [
+    4,
+    4
+  ],
+  "columns": [
+    "region_id",
+    "name",
+    "timezone",
+    "shipping_distance_km"
+  ],
+  "dtypes": {
+    "region_id": 

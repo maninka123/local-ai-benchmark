@@ -1,0 +1,11 @@
+PASS Menu renders
+PASS All three selection buttons change the actual player vehicle
+PASS Countdown releases race
+PASS Arrow acceleration moves selected Swift RS
+PASS Three camera views switch and render
+PASS P pauses exact timer; Escape resumes
+PASS S brakes and reverses
+PASS R resets the race
+PASS W/D steering causes real barrier collision
+PASS Space recovery aligns car without awarding lap
+RACE 0.0 laps 0,0,0,0,0,0 player speed 0.0

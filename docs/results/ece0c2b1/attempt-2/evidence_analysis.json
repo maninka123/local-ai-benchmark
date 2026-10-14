@@ -1,0 +1,293 @@
+{
+  "case_id": "CASE_01",
+  "visual_evidence": [
+    {
+      "id": "V01",
+      "type": "floor_plan",
+      "description": "Synthetic schematic showing LAB, EAST CORRIDOR, EAST EXIT, CAFETERIA, SERVICE CORRIDOR. Orange line indicates unmonitored link between LAB and SERVICE CORRIDOR. Teal line connects EAST CORRIDOR to EAST EXIT.",
+      "key_observations": [
+        "SERVICE CORRIDOR provides direct unmonitored access from LAB to EAST CORRIDOR",
+        "EAST CORRIDOR connects to EAST EXIT",
+        "No camera coverage shown for SERVICE CORRIDOR"
+      ],
+      "limitations": "Schematic only; does not show all rooms (e.g., RECEPTION appears in V07 but not V01)"
+    },
+    {
+      "id": "V02",
+      "type": "camera_snapshot",
+      "description": "LAB at 18:00. Prototype (grey box with black triangle) visible on brown table.",
+      "key_observations": [
+        "Prototype confirmed present in LAB at 18:00"
+      ],
+      "limitations": "Single snapshot; does not show entire room continuously"
+    },
+    {
+      "id": "V03",
+      "type": "camera_snapshot",
+      "description": "EAST CORRIDOR at 18:10. Person in teal coat visible.",
+      "key_observations": [
+        "Person wearing teal work coat observed in EAST CORRIDOR"
+      ],
+      "limitations": "Coat color indicates appearance, not biometric identity (per D03)"
+    },
+    {
+      "id": "V04",
+      "type": "camera_snapshot",
+      "description": "EAST EXIT at 18:14. Person in teal coat carrying prototype (grey box with black triangle).",
+      "key_observations": [
+        "Prototype first seen outside LAB at 18:14",
+        "Person in teal coat is holding the prototype"
+      ],
+      "limitations": "Does not confirm identity of person; does not show how prototype was obtained"
+    },
+    {
+      "id": "V05",
+      "type": "camera_snapshot",
+      "description": "LAB at 18:18. Brown table visible, no prototype.",
+      "key_observations": [
+        "Prototype confirmed missing from LAB at 18:18"
+      ],
+      "limitations": "Single snapshot; confirms absence but not when removal occurred"
+    },
+    {
+      "id": "V06",
+      "type": "camera_snapshot",
+      "description": "CAFETERIA at 18:12. Person in blue coat visible.",
+      "key_observations": [
+        "Person wearing blue work coat observed in CAFETERIA"
+      ],
+      "limitations": "Coat color indicates appearance, not biometric identity"
+    },
+    {
+      "id": "V07",
+      "type": "camera_snapshot",
+      "description": "RECEPTION at 18:13. Person in red coat visible.",
+      "key_observations": [
+        "Person wearing red work coat observed at RECEPTION"
+      ],
+      "limitations": "RECEPTION not shown on floor plan V01; identity unconfirmed"
+    },
+    {
+      "id": "V08",
+      "type": "camera_snapshot",
+      "description": "LOADING BAY at 18:11. Person in purple coat with cardboard box.",
+      "key_observations": [
+        "Person wearing purple work coat observed with cardboard box at LOADING BAY"
+      ],
+      "limitations": "Coat color indicates appearance, not biometric identity; box contents unconfirmed"
+    },
+    {
+      "id": "V09",
+      "type": "object_reference",
+      "description": "Close-up of prototype: grey box with black triangle on brown table.",
+      "key_observations": [
+        "Prototype is a grey rectangular box with a black triangular marking"
+      ],
+      "limitations": "Reference image only; does not show movement or context"
+    },
+    {
+      "id": "V10",
+      "type": "camera_maintenance_record",
+      "description": "SERVICE CAMERA shows BLIND SPOT: SERVICE CORRIDOR.",
+      "key_observations": [
+        "Service corridor is confirmed camera blind spot"
+      ],
+      "limitations": "Does not identify which cameras are affected beyond service corridor"
+    }
+  ],
+  "document_evidence": [
+    {
+      "id": "D01",
+      "type": "access_log",
+      "description": "Badge credential log showing:",
+      "entries": [
+        {
+          "time": "18:10",
+          "credential": "Nora Vale",
+          "door": "EAST_CORRIDOR",
+          "direction": "ENTRY"
+        },
+        {
+          "time": "18:12",
+          "credential": "Theo Park",
+          "door": "CAFETERIA",
+          "direction": "ENTRY"
+        },
+        {
+          "time": "18:13",
+          "credential": "Ada Finch",
+          "door": "RECEPTION",
+          "direction": "ENTRY"
+        },
+        {
+          "time": "18:14",
+          "credential": "Nora Vale",
+          "door": "EAST_EXIT",
+          "direction": "EXIT"
+        }
+      ],
+      "key_observations": [
+        "Badge credential 'Nora Vale' used at EAST_CORRIDOR and EAST_EXIT",
+        "Other credentials used at CAFETERIA, RECEPTION"
+      ],
+      "limitations": "Per D03: doors log badge credentials, not biometric identity. Credential use does not prove identity of user."
+    },
+    {
+      "id": "D02",
+      "type": "witness_statements",
+      "description": "Unverified witness statements:",
+      "entries": [
+        {
+          "name": "Nora Vale",
+          "statement": "I only visited the east corridor and left."
+        },
+        {
+          "name": "Eli Stone",
+          "statement": "I did not approach the lab after 18:00."
+        },
+        {
+          "name": "Maya Reed",
+          "statement": "I carried a cardboard supply box at 18:11."
+        },
+        {
+          "name": "Theo Park",
+          "statement": "I remained in the cafeteria from 18:12."
+        },
+        {
+          "name": "Ada Finch",
+          "statement": "I staffed reception."
+        }
+      ],
+      "key_observations": [
+        "Statements are unverified and self-reported",
+        "Nora's statement is consistent with badge log but does not confirm identity"
+      ],
+      "limitations": "Per task instructions: do not assume witness statements are automatically accurate. Statements cannot be independently verified from available evidence."
+    },
+    {
+      "id": "D03",
+      "type": "internal_messages",
+      "description": "Internal communications:",
+      "entries": [
+        {
+          "time": "17:00",
+          "sender": "Eli Stone",
+          "content": "My project needs that prototype tomorrow."
+        },
+        {
+          "time": "17:10",
+          "sender": "Maya Reed",
+          "content": "Please move the cardboard consumables box to the loading bay."
+        },
+        {
+          "time": "17:20",
+          "sender": "Security",
+          "content": "Coat descriptions are from shift assignments; doors log badge credentials, not biometric identity. Service corridor is a camera blind spot."
+        }
+      ],
+      "key_observations": [
+        "Eli Stone has motive (project need)",
+        "Maya Reed's box request may relate to V08",
+        "Security explicitly warns about credential/identity distinction and service corridor blind spot"
+      ],
+      "limitations": "Messages establish context but do not prove any individual's actions during the incident window."
+    }
+  ],
+  "suspect_assessments": [
+    {
+      "name": "Nora Vale",
+      "coat_color": "teal",
+      "opportunity": "Badge credential 'Nora Vale' used at EAST_CORRIDOR (18:10) and EAST_EXIT (18:14). Person in teal coat seen with prototype at EAST EXIT (V04).",
+      "access": "Credential access to EAST_CORRIDOR and EAST_EXIT confirmed.",
+      "timeline_consistency": "Badge log consistent with statement. However, credential use does not prove identity per D03.",
+      "contradictions": "None identified in available evidence.",
+      "supporting_evidence": [
+        "V03",
+        "V04",
+        "D01"
+      ],
+      "exculpatory_evidence": [
+        "Credential may have been used by someone other than Nora Vale",
+        "Coat color indicates appearance, not identity (D03)",
+        "Service corridor provides alternative route for prototype removal"
+      ],
+      "uncertainty": "Cannot confirm that the person using 'Nora Vale' credential is actually Nora Vale. Cannot confirm she removed the prototype.",
+      "assessment": "Person of interest due to credential use and coat color match, but identity unconfirmed."
+    },
+    {
+      "name": "Eli Stone",
+      "coat_color": "orange",
+      "opportunity": "No visual evidence placing Eli in any camera view during incident window. No badge events recorded.",
+      "access": "Unknown. No access log entries for Eli Stone.",
+      "timeline_consistency": "Statement 'I did not approach the lab after 18:00' is unverified.",
+      "contradictions": "None identified in available evidence.",
+      "supporting_evidence": [
+        "D03 (motive)"
+      ],
+      "exculpatory_evidence": [
+        "No visual presence in any camera view",
+        "No badge credential usage recorded",
+        "Orange coat not observed in any image"
+      ],
+      "uncertainty": "Could have used unmonitored service corridor. No evidence confirms or refutes presence.",
+      "assessment": "Has motive but no corroborating evidence of presence during incident window."
+    },
+    {
+      "name": "Maya Reed",
+      "coat_color": "purple",
+      "opportunity": "Person in purple coat observed at LOADING BAY with cardboard box at 18:11 (V08). Statement consistent with V08.",
+      "access": "Unknown. No badge events recorded for Maya Reed.",
+      "timeline_consistency": "Statement 'I carried a cardboard supply box at 18:11' is consistent with V08.",
+      "contradictions": "None identified in available evidence.",
+      "supporting_evidence": [
+        "V08",
+        "D02 (statement)"
+      ],
+      "exculpatory_evidence": [
+        "Observed at LOADING BAY, not near LAB or EAST CORRIDOR",
+        "No badge credential usage recorded",
+        "Purple coat not observed elsewhere"
+      ],
+      "uncertainty": "Could have moved through unmonitored areas. No evidence places her near prototype.",
+      "assessment": "Observed at LOADING BAY with box consistent with statement. No direct link to prototype."
+    },
+    {
+      "name": "Theo Park",
+      "coat_color": "blue",
+      "opportunity": "Badge credential 'Theo Park' used at CAFETERIA (18:12). Person in blue coat observed in CAFETERIA (V06).",
+      "access": "Credential access to CAFETERIA confirmed.",
+      "timeline_consistency": "Statement 'I remained in the cafeteria from 18:12' is consistent with V06 and D01.",
+      "contradictions": "None identified in available evidence.",
+      "supporting_evidence": [
+        "V06",
+        "D01",
+        "D02 (statement)"
+      ],
+      "exculpatory_evidence": [
+        "Credential and visual presence both place him at CAFETERIA",
+        "No badge usage near LAB or EAST CORRIDOR"
+      ],
+      "uncertainty": "Could have left CAFETERIA after 18:12. No evidence places him elsewhere.",
+      "assessment": "Credential and visual evidence consistent with statement. Limited opportunity for prototype removal."
+    },
+    {
+      "name": "Ada Finch",
+      "coat_color": "red",
+      "opportunity": "Badge credential 'Ada Finch' used at RECEPTION (18:13). Person in red coat observed at RECEPTION (V07).",
+      "access": "Credential access to RECEPTION confirmed.",
+      "timeline_consistency": "Statement 'I staffed reception' is consistent with V07 and D01.",
+      "contradictions": "None identified in available evidence.",
+      "supporting_evidence": [
+        "V07",
+        "D01",
+        "D02 (statement)"
+      ],
+      "exculpatory_evidence": [
+        "Credential and visual presence both place her at RECEPTION",
+        "No badge usage near LAB or EAST CORRIDOR"
+      ],
+      "uncertainty": "Could have left RECEPTION after 18:13. No evidence places her elsewhere.",
+      "assessment": "Credential and visual evidence consistent with statement. Limited opportunity for prototype removal."
+    }
+  ]
+}

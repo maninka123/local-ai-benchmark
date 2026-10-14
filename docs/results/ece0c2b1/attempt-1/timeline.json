@@ -1,0 +1,68 @@
+{
+  "timeline": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone sends message stating he needs the prototype for his project tomorrow.",
+      "source": "D03_messages.md",
+      "type": "Confirmed"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed sends message asking to move cardboard consumables box to loading bay.",
+      "source": "D03_messages.md",
+      "type": "Confirmed"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed present in LAB on brown table (grey box with black triangle).",
+      "source": "V02.png",
+      "type": "Confirmed"
+    },
+    {
+      "time": "18:10",
+      "event": "Nora Vale (teal coat) enters EAST_CORRIDOR. Person in teal coat seen in East Corridor camera.",
+      "source": "D01_access.csv, V03.png",
+      "type": "Confirmed"
+    },
+    {
+      "time": "18:11",
+      "event": "Maya Reed (purple coat) seen at LOADING BAY carrying a cardboard box.",
+      "source": "V08.png",
+      "type": "Confirmed"
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park (blue coat) enters CAFETERIA. Person in blue coat seen in Cafeteria camera.",
+      "source": "D01_access.csv, V06.png",
+      "type": "Confirmed"
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch (red coat) enters RECEPTION. Person in red coat seen in Reception camera.",
+      "source": "D01_access.csv, V07.png",
+      "type": "Confirmed"
+    },
+    {
+      "time": "18:14",
+      "event": "Nora Vale (teal coat) exits EAST_EXIT carrying the prototype (grey box with black triangle).",
+      "source": "D01_access.csv, V04.png",
+      "type": "Confirmed"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype discovered missing from LAB. Only the brown table remains.",
+      "source": "V05.png",
+      "type": "Confirmed"
+    }
+  ],
+  "gaps_and_assumptions": [
+    {
+      "gap": "18:00-18:10",
+      "description": "No camera footage or access logs for the LAB interior between 18:00 and 18:18. The prototype could have been removed at any point in this interval, but Nora's presence in the adjacent East Corridor at 18:10 makes her the primary suspect."
+    },
+    {
+      "gap": "Service Corridor",
+      "description": "The Service Corridor is a blind spot (V10). No one is logged entering or exiting it, but it provides an unmonitored path to the Lab."
+    }
+  ]
+}

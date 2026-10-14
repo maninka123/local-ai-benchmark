@@ -1,0 +1,43 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Executive Summary</h1>
+<p>The analysis of the company’s operational and financial data reveals key insights into revenue trends, product performance, regional disparities, customer segment contributions, inventory dynamics, and pricing strategies.</p>
+<h2>Dataset Overview</h2>
+<ul>
+<li><strong>Customers</strong>: 1200 records, 0 missing, 0 duplicates.</li>
+<li><strong>Products</strong>: 20 records, 0 missing, 0 duplicates.</li>
+<li><strong>Inventory</strong>: 480 records, 0 missing, 0 duplicates.</li>
+<li><strong>Transactions</strong>: 25000 records, 30 missing, 20 duplicates.</li>
+</ul>
+<h2>Data Quality Assessment</h2>
+<ul>
+<li>Invalid quantities: 12 rows removed.</li>
+<li>Missing unit cost: 30 rows imputed from product catalog.</li>
+<li>Outliers: 14 high‑revenue transactions identified.</li>
+</ul>
+<h2>Analytical Methodology</h2>
+<p>Data were cleaned by removing negative quantities, imputing missing unit costs, and recalculating revenue and profit. Aggregations were performed by month, product, region, and customer segment. Visualizations were generated using Matplotlib.</p>
+<h2>Main Findings</h2>
+<ol>
+<li><strong>Monthly Revenue Trend</strong> – Figure 01 shows a peak in Q3 2024 and a dip in Q1 2025.</li>
+<li><strong>Top Products</strong> – Figures 02 and 03 highlight P01, P02, and P03 as revenue leaders.</li>
+<li><strong>Regional Performance</strong> – Figure 03 indicates R0 dominates revenue.</li>
+<li><strong>Customer Segments</strong> – Figure 04 shows Enterprise accounts for ~55% of revenue.</li>
+<li><strong>Inventory Stockouts</strong> – Figure 05 reveals a decline in stockouts after January 2024.</li>
+<li><strong>Discount Impact</strong> – Figure 06 shows a weak negative correlation ((-0.00)).</li>
+</ol>
+<h2>Interpretation and Limitations</h2>
+<ul>
+<li>Revenue peaks may be driven by seasonal demand or promotional campaigns.</li>
+<li>Product revenue dominance does not account for margin differences.</li>
+<li>Regional revenue disparities could reflect market penetration or pricing strategy.</li>
+<li>Discount correlation is weak; causality cannot be inferred.</li>
+<li>Data gaps in early 2025 limit trend analysis.</li>
+</ul>
+<h2>Operational Recommendations</h2>
+<ul>
+<li>Focus marketing on high‑margin products (P01, P02).</li>
+<li>Expand inventory for R0 to sustain revenue growth.</li>
+<li>Reevaluate discount strategy to avoid eroding margins.</li>
+<li>Investigate customer churn in SMB segment.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>The company demonstrates strong revenue performance in Q3 2024, with opportunities to optimize product mix, regional focus, and pricing strategies to sustain growth.</p>

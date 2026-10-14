@@ -1,0 +1,24 @@
+{
+  "figures": [
+    "model-parameters.svg",
+    "model-storage.svg",
+    "quality-data_analysis.svg",
+    "quality-detective.svg",
+    "quality-progress.svg",
+    "quality-racing_game.svg",
+    "quality-vs-storage.svg",
+    "review-scores.svg",
+    "token-speed.svg",
+    "total-time.svg"
+  ],
+  "reviewed_results": 53,
+  "models": 13,
+  "complete_results": 1,
+  "raw_scores_finite": true,
+  "all_figures_nonempty": true,
+  "notes": [
+    "No model weights, personal environment paths, process lists or private expected answers exported.",
+    "AI rubric judgments are distinct from human ratings and preserved automatic scores.",
+    "No throughput or time contribution to rubric scores; repaired outputs excluded."
+  ]
+}

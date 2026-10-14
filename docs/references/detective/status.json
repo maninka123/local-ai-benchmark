@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "completed": true,
+  "task": "detective",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "entrypoint": "output/index.html",
+  "output_entrypoint": "output/index.html",
+  "completion": "Three independently assessed public-evidence cases, each with a nine-part investigation report and three structured JSON outputs, combined in one self-contained light-theme HTML report.",
+  "reference_only": true,
+  "comparable_local_benchmark_run": false,
+  "ground_truth": false,
+  "cases": {
+    "case_01": "Nora is the probable lead; no definitive personal attribution.",
+    "case_02": "Eli is the probable lead after subtracting five minutes from the service-camera time; ENTRY-direction ambiguity remains.",
+    "case_03": "Responsible individual unresolved; Eli and Maya are opportunity leads without a possession link."
+  },
+  "required_files": [
+    "output/index.html",
+    "output/case_01/investigation_report.md",
+    "output/case_01/timeline.json",
+    "output/case_01/evidence_analysis.json",
+    "output/case_01/conclusions.json",
+    "output/case_02/investigation_report.md",
+    "output/case_02/timeline.json",
+    "output/case_02/evidence_analysis.json",
+    "output/case_02/conclusions.json",
+    "output/case_03/investigation_report.md",
+    "output/case_03/timeline.json",
+    "output/case_03/evidence_analysis.json",
+    "output/case_03/conclusions.json"
+  ],
+  "verification": "verification.json",
+  "verification_status": "passed_with_explicit_evidentiary_limitations",
+  "limitations": [
+    "Identity relies on coats and credentials rather than biometric evidence.",
+    "No removal act or authorisation record is supplied.",
+    "Case 03 remains unattributable.",
+    "Token usage is unknown; wall time is reference-authoring elapsed time.",
+    "Validation is self-review against public evidence and a reference-authored schema, not benchmark scoring."
+  ],
+  "finished_utc": "2026-10-13T06:38:50.412976+00:00",
+  "wall_time_seconds": 761.413,
+  "token_usage": null
+}

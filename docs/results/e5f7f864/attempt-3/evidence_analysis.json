@@ -1,0 +1,32 @@
+{
+  "exhibit_D01_access": {
+    "description": "Access log showing 5 badge entries between 18:10-18:14",
+    "key_findings": [
+      "Nora Vale entered EAST_CORRIDOR at 18:10",
+      "Theo Park entered CAFETERIA at 18:12",
+      "Ada Finch entered RECEPTION at 18:13",
+      "Two entries recorded at SERVICE_DOOR at 18:14 (direction: ENTRY)"
+    ],
+    "limitations": "No exit records; SERVICE_CORRIDOR is a camera blind spot per D03_messages; badge entries record credential use, not biometric identity (per D03_messages)"
+  },
+  "exhibit_D02_witnesses": {
+    "description": "Unverified witness statements",
+    "key_findings": [
+      "Nora claims only visited east corridor",
+      "Eli claims did not approach lab after 18:00",
+      "Maya claims carried cardboard box at 18:11",
+      "Theo claims remained in cafeteria from 18:12",
+      "Ada claims staffed reception"
+    ],
+    "limitations": "Statements are unverified and may be false; Maya's box statement at 18:11 and entry at 18:14 are temporally compatible, not contradictory"
+  },
+  "exhibit_D03_messages": {
+    "description": "Internal messages",
+    "key_findings": [
+      "Eli expressed need for prototype tomorrow (motive)",
+      "Maya was asked to move cardboard box to loading bay",
+      "Security notes: coat descriptions are from shift assignments, not biometric identity; SERVICE_CORRIDOR is a camera blind spot"
+    ],
+    "limitations": "Messages do not directly link to incident timing; no evidence Maya used the box as cover for prototype removal"
+  }
+}

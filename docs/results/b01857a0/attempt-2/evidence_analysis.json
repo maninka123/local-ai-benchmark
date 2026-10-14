@@ -1,0 +1,34 @@
+{
+  "evidence_analysis": [
+    {
+      "exhibit_id": "V01",
+      "observation": "Floor plan shows Lab is connected to East Corridor and Service Corridor. Service Corridor has an unmonitored link to the Lab.",
+      "interpretation": "The Service Corridor provides a way to enter the Lab without being caught on Lab cameras."
+    },
+    {
+      "exhibit_id": "V02",
+      "observation": "Prototype (black object) is visible on its base in the Lab at 18:00.",
+      "interpretation": "Establishes the start of the theft window."
+    },
+    {
+      "exhibit_id": "V04",
+      "observation": "Person in orange coat at Service Door at 18:19 (Actual time 18:14 due to +5m offset).",
+      "interpretation": "Places Eli Stone at the entrance to the unmonitored link to the Lab during the theft window."
+    },
+    {
+      "exhibit_id": "V05",
+      "observation": "Lab camera at 18:18 shows the base is empty.",
+      "interpretation": "Establishes the end of the theft window."
+    },
+    {
+      "exhibit_id": "V08",
+      "observation": "Person in purple coat (Maya Reed) in Loading Bay with a box at 18:11.",
+      "interpretation": "Provides a potential method for removing an object from the facility, though no direct link to the Lab is seen."
+    },
+    {
+      "exhibit_id": "V10",
+      "observation": "Service camera has a +5 minute clock offset.",
+      "interpretation": "Crucial for correcting the timestamp of Eli Stone's entry to 18:14."
+    }
+  ]
+}

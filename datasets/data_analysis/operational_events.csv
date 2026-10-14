@@ -1,0 +1,4 @@
+event_id,event_date,region_id,event_type,description
+E01,2025-07-01,ALL,dispatch_policy,New dispatch workflow introduced; monitor deliveries
+E02,2024-12-01,ALL,holiday_campaign,Year-end promotional campaign
+E03,2025-05-01,R2,brand_refresh,Brand palette updated; no logistics changes

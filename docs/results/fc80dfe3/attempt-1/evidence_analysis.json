@@ -1,0 +1,205 @@
+{
+  "case_id": "CASE_02",
+  "evidence_inventory": {
+    "documents": [
+      {
+        "id": "D01",
+        "type": "access_log",
+        "filename": "D01_access.csv",
+        "observations": "Badge entry records for four individuals during incident timeframe",
+        "entries": [
+          {"time": "18:10", "name": "Nora Vale", "door": "EAST_CORRIDOR", "direction": "ENTRY"},
+          {"time": "18:12", "name": "Theo Park", "door": "CAFETERIA", "direction": "ENTRY"},
+          {"time": "18:13", "name": "Ada Finch", "door": "RECEPTION", "direction": "ENTRY"},
+          {"time": "18:14", "name": "Eli Stone", "door": "SERVICE_DOOR", "direction": "ENTRY"}
+        ],
+        "key_findings": "Eli Stone entered Service Door at 18:14 - during theft window",
+        "limitations": "Logs badge credentials, not biometric identity (per D03)"
+      },
+      {
+        "id": "D02",
+        "type": "witness_statements",
+        "filename": "D02_witnesses.md",
+        "observations": "Five unverified statements from staff members",
+        "statements": [
+          {"person": "Nora Vale", "statement": "I only visited the east corridor and left", "verified": true, "evidence": "V03"},
+          {"person": "Eli Stone", "statement": "I did not approach the lab after 18:00", "verified": false, "evidence": "V04 contradicts"},
+          {"person": "Maya Reed", "statement": "I carried a cardboard supply box at 18:11", "verified": true, "evidence": "V08"},
+          {"person": "Theo Park", "statement": "I remained in the cafeteria from 18:12", "verified": true, "evidence": "V06"},
+          {"person": "Ada Finch", "statement": "I staffed reception", "verified": true, "evidence": "V07"}
+        ],
+        "key_findings": "Only Eli Stone's statement contradicted by visual evidence",
+        "limitations": "Statements unverified without cross-reference to camera footage"
+      },
+      {
+        "id": "D03",
+        "type": "internal_messages",
+        "filename": "D03_messages.md",
+        "observations": "Three critical messages providing context",
+        "messages": [
+          {"time": "17:00", "sender": "Eli Stone", "content": "My project needs that prototype tomorrow", "significance": "Establishes motive"},
+          {"time": "17:10", "sender": "Maya Reed", "content": "Please move the cardboard consumables box to the loading bay", "significance": "Explains Maya's activity"},
+          {"time": "17:20", "sender": "Security", "content": "Coat descriptions are from shift assignments; doors log badge credentials, not biometric identity. Service camera has a +5 minute clock offset.", "significance": "CRITICAL - explains identification method and timestamp correction needed"}
+        ],
+        "key_findings": "Service camera +5 min offset is critical for timeline reconstruction",
+        "limitations": "Messages are text-based, no sender verification"
+      }
+    ],
+    "visual_exhibits": [
+      {
+        "id": "V01",
+        "type": "floor_plan",
+        "title": "SYNTHETIC SCHEMATIC",
+        "observations": "Building layout showing Lab, East Corridor, East Exit, Service Corridor, Cafeteria",
+        "key_features": [
+          "Service Corridor labeled as 'UNMONITORED LINK TO LAB'",
+          "Teal line connecting Lab to East Corridor to East Exit",
+          "Orange line connecting Lab to Service Corridor"
+        ],
+        "significance": "Explains how theft could occur without triggering main cameras",
+        "limitations": "Schematic only, no real-time data"
+      },
+      {
+        "id": "V02",
+        "type": "camera_footage",
+        "location": "LAB",
+        "timestamp": "18:00",
+        "observations": "Prototype visible - black triangular object in gray rectangular container on brown surface",
+        "key_features": ["Prototype present and undisturbed"],
+        "significance": "Establishes last confirmed presence of prototype",
+        "limitations": "Single timestamp, no movement captured"
+      },
+      {
+        "id": "V03",
+        "type": "camera_footage",
+        "location": "EAST_CORRIDOR",
+        "timestamp": "18:10",
+        "observations": "Figure with teal coat (Nora Vale's assigned color) standing in corridor",
+        "key_features": ["Teal coat matches Nora Vale assignment", "No prototype visible"],
+        "significance": "Confirms Nora's statement, no theft evidence",
+        "limitations": "Coat color not biometric identification"
+      },
+      {
+        "id": "V04",
+        "type": "camera_footage",
+        "location": "SERVICE_DOOR",
+        "timestamp": "18:19 (camera time) / 18:14 (corrected)",
+        "observations": "Figure with orange coat (Eli Stone's assigned color) standing next to prototype (black triangle in gray container)",
+        "key_features": ["Orange coat matches Eli Stone assignment", "Prototype clearly visible next to figure", "Camera timestamp requires -5 min correction per D03/V10"],
+        "significance": "DIRECT EVIDENCE - shows suspect with stolen item during theft window",
+        "limitations": "Timestamp requires correction; coat color not biometric"
+      },
+      {
+        "id": "V05",
+        "type": "camera_footage",
+        "location": "LAB",
+        "timestamp": "18:18",
+        "observations": "Lab empty - prototype missing, only brown surface visible",
+        "key_features": ["Prototype absent", "No person visible"],
+        "significance": "Confirms theft completed by 18:18",
+        "limitations": "Does not show who took it"
+      },
+      {
+        "id": "V06",
+        "type": "camera_footage",
+        "location": "CAFETERIA",
+        "timestamp": "18:12",
+        "observations": "Figure with blue coat (Theo Park's assigned color) in cafeteria",
+        "key_features": ["Blue coat matches Theo Park assignment", "No prototype visible"],
+        "significance": "Confirms Theo's alibi statement",
+        "limitations": "Single timestamp"
+      },
+      {
+        "id": "V07",
+        "type": "camera_footage",
+        "location": "RECEPTION",
+        "timestamp": "18:13",
+        "observations": "Figure with red coat (Ada Finch's assigned color) at reception",
+        "key_features": ["Red coat matches Ada Finch assignment", "No prototype visible"],
+        "significance": "Confirms Ada's alibi statement",
+        "limitations": "Single timestamp"
+      },
+      {
+        "id": "V08",
+        "type": "camera_footage",
+        "location": "LOADING_BAY",
+        "timestamp": "18:11",
+        "observations": "Figure with purple coat (Maya Reed's assigned color) with brown cardboard box",
+        "key_features": ["Purple coat matches Maya Reed assignment", "Brown box visible (not prototype)", "Consistent with D03 message about moving consumables"],
+        "significance": "Confirms Maya's statement, box is not the prototype",
+        "limitations": "Box could theoretically contain prototype but visual shows different object"
+      },
+      {
+        "id": "V09",
+        "type": "reference_image",
+        "title": "OBJECT DETAIL | CAMERA REFERENCE",
+        "observations": "Reference image of prototype - black triangular object in gray rectangular container on brown surface",
+        "key_features": ["Clear view of stolen item for identification"],
+        "significance": "Establishes what the prototype looks like for comparison",
+        "limitations": "No timestamp, reference only"
+      },
+      {
+        "id": "V10",
+        "type": "system_notice",
+        "title": "SERVICE CAMERA | CAMERA MAINTENANCE",
+        "observations": "Text notice stating 'CLOCK OFFSET +5 MINUTES'",
+        "key_features": ["Confirms D03 message about service camera offset"],
+        "significance": "CRITICAL - validates timestamp correction for V04",
+        "limitations": "No other data provided"
+      }
+    ]
+  },
+  "cross_reference_analysis": {
+    "coat_color_mapping": {
+      "Nora Vale": "teal",
+      "Eli Stone": "orange",
+      "Maya Reed": "purple",
+      "Theo Park": "blue",
+      "Ada Finch": "red"
+    },
+    "timestamp_corrections": {
+      "V04_service_door": {
+        "displayed_time": "18:19",
+        "corrected_time": "18:14",
+        "correction_applied": "-5 minutes per D03 and V10"
+      }
+    },
+    "prototype_identification": {
+      "description": "Black triangular object in gray rectangular container",
+      "visible_in": ["V02", "V04", "V09"],
+      "missing_from": ["V05"]
+    }
+  },
+  "critical_evidence_chain": [
+    {
+      "step": 1,
+      "evidence": "V02",
+      "finding": "Prototype present at 18:00"
+    },
+    {
+      "step": 2,
+      "evidence": "D03",
+      "finding": "Eli expressed need for prototype at 17:00 (motive)"
+    },
+    {
+      "step": 3,
+      "evidence": "D01",
+      "finding": "Eli entered Service Door at 18:14"
+    },
+    {
+      "step": 4,
+      "evidence": "V01",
+      "finding": "Service Corridor provides unmonitored access to lab"
+    },
+    {
+      "step": 5,
+      "evidence": "V04 + V10 correction",
+      "finding": "Eli (orange coat) observed with prototype at Service Door, actual time 18:14"
+    },
+    {
+      "step": 6,
+      "evidence": "V05",
+      "finding": "Prototype missing from lab at 18:18"
+    }
+  ]
+}

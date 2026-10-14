@@ -1,0 +1,26 @@
+{
+  "file": "inventory.csv",
+  "shape": [
+    480,
+    4
+  ],
+  "columns": [
+    "month",
+    "product_id",
+    "stock_units",
+    "stockouts"
+  ],
+  "dtypes": {
+    "month": "object",
+    "product_id": "object",
+    "stock_units": "int64",
+    "stockouts": "int64"
+  },
+  "missing_counts": {
+    "month": 0,
+    "product_id": 0,
+    "stock_units": 0,
+    "stockouts": 0
+  },
+  "duplicate_count": 0
+}

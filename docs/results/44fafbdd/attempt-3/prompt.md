@@ -1,0 +1,15 @@
+Continue and finish your case_01 Detective investigation from the current Further work results. This is the native multimodal Detective case. The public case brief, D01-D03 and V01-V10 belong to this case and are available for an evidence-based investigation.
+
+What is already done:
+- All four required files were rewritten, and all three JSON outputs parse successfully.
+- The report covers all nine sections, all 13 exhibits, individual staff assessments and useful investigative next steps.
+- Confirmed badge records are now separated from visible coat observations and unobserved events in much of the chronology.
+- The outputs recognise credential/appearance limits, partial alibis, unknown removal route, authorisation uncertainty and plausible alternative identities, with confidence reduced to 75%.
+
+What remains missing, wrong or inconsistent in your saved work:
+- The report and timeline still propose 18:00-18:10 as the theft window, while other parts give 18:00-18:14 and acknowledge the prototype may not yet have been acquired in V03. The public snapshots do not establish a removal before 18:10; the precise interval and sequence remain inconsistent.
+- conclusions.json adds the witness claim that Nora visited the corridor without taking anything; the actual D02 statement only says she visited the east corridor and left. Possession in V04 does not alone disprove that exact stated route or establish the claimed denial.
+- The report repeatedly cites D03 as confirming Nora's specific teal assignment, but D03 contains only the general shift-assignment/credential warning; the specific colour mapping is in the case brief.
+- The most-likely sequence labels prototype presence as Before 18:00 even though the supplied baseline snapshot is at 18:00; the chronology needs faithful observational timing.
+
+The finished result needs all four deliverables: investigation_report.md, timeline.json, evidence_analysis.json and conclusions.json. They must present one consistent, defensible investigation of the public case, with valid structured outputs and traceable exhibit references. The report needs the requested nine sections; each public exhibit needs its important observations, timestamps, interpretation and uncertainty; each of the five staff needs an individual evidence-based assessment. The timeline needs the confirmed and probable sequence, unobserved intervals and remaining movement/identity uncertainties. The final conclusion must explain the most likely supported account, plausible alternatives, whether responsibility can be identified, the strength and limits of that conclusion, and what additional evidence would resolve the uncertainty. Preserve useful existing work while completing the missing analysis and correcting the factual inconsistencies. Do not turn an unseen movement, missing log entry, motive or appearance association into an observed fact. A qualified or inconclusive conclusion is appropriate when the supplied evidence cannot establish more.

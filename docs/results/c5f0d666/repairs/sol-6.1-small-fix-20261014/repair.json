@@ -1,0 +1,90 @@
+{
+  "repair_id": "sol-6.1-small-fix-20261014",
+  "run_id": "2026-10-10T142751-670489+0000--c5f0d666",
+  "source_update_id": "update-3276299e50",
+  "source_evaluation_id": "eval-e87c476318",
+  "configured_model": "gpt-6.1-sol",
+  "source_changed_lines": 23,
+  "source_files": [
+    {
+      "path": "game/src/main.js",
+      "added": 2,
+      "removed": 1
+    },
+    {
+      "path": "game/src/Car.js",
+      "added": 4,
+      "removed": 3
+    },
+    {
+      "path": "game/src/NPC.js",
+      "added": 7,
+      "removed": 4
+    },
+    {
+      "path": "game/index.html",
+      "added": 1,
+      "removed": 1
+    }
+  ],
+  "source_hashes": {
+    "game/src/main.js": "88707d784950eca33f9be89320c5064308f5d59cb623f1e1ab8c5e02ffb5cdc2",
+    "game/src/Car.js": "2e094aefa88697cf05791455369f8001c440913154047dd809b91e7dd08c114f",
+    "game/src/NPC.js": "833ee8878c326d7d7bd35d4e9aabc60ae1e22661ec992953cbe4896d272adfd5",
+    "game/index.html": "1a09a6e66430109246e482ae7f0d96e07df8e127a0323db76535b4fec5f0d430"
+  },
+  "changes_summary": "Repair Car/OrbitControls imports, retain vector positions, initialize acceleration/velocity, return NPC meshes, and connect existing steering to directional movement. Remove default page margins and fit the canvas to the iframe viewport.",
+  "status": "validated_partial",
+  "runnable": true,
+  "completion": false,
+  "limitations": [
+    "NPC.js constructs Car without importing it, matching the saved browser ReferenceError. main also constructs THREE.OrbitControls although OrbitControls is not exported from the Three.js namespace, as the recorded build warning notes.",
+    "Car.setupCar replaces its Vector3 position with number 0. NPC likewise assigns position=0 before using position.set, refers to nonexistent setCarPosition, never initializes velocity, and getCar returns a Car wrapper while main adds it as a scene object. Multiple independent runtime blockers remain.",
+    "The track consists of twelve separated narrow cylinders at radius 100, not a continuous drivable road with corners/straights, barriers and scenery; player starts at the origin away from these segments. No functional vehicle/barrier/obstacle collision detection exists.",
+    "There is only one fixed blue box player car and no selection of three differentiated models. AccelerationRate is not initialized in the Car constructor; acceleration only affects velocity.x, steering changes an unused acceleration property, and no meaningful speed-dependent directional handling is implemented.",
+    "NPC outlines do not implement functioning navigation, avoidance, overtaking, collisions or recovery; checkpointCount is never updated by spatial/ordered validation, so valid independent player/NPC laps cannot occur. Countdown, timing, positioning, results/standings and all requested UI/HUD are absent.",
+    "Input handling runs only while started and unpaused, so P/Escape cannot resume after pausing. Restart clears gameStarted without a UI path to start again, does not reset velocities/laps/checkpoints, and camera formulas do not establish a usable hood view.",
+    "All four required screenshots are byte-identical blank white pages, not genuine distinct game views. Additional screenshot-named artifacts and the report cannot establish successful gameplay; report/README claim complete verified features contradicted by source and isolated browser failure.",
+    "Original benchmark scores and completeness are unchanged. This is an assisted partial preview, with original report claims retained and potentially inaccurate."
+  ],
+  "verification": [
+    {
+      "check": "git diff --no-index --numstat",
+      "source_changed_lines": 23,
+      "numstat": [
+        "2\t1\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3-vl-30b-a3b-instruct\\\\racing_game\\\\2026-10-10T142751-670489-0000--c5f0d666\\\\evaluations\\\\eval-e87c476318\\\\artifacts\\\\game\\\\src\\\\main.js\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3-vl-30b-a3b-instruct\\\\racing_game\\\\2026-10-10T142751-670489-0000--c5f0d666\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\game\\\\src\\\\main.js\"",
+        "4\t3\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3-vl-30b-a3b-instruct\\\\racing_game\\\\2026-10-10T142751-670489-0000--c5f0d666\\\\evaluations\\\\eval-e87c476318\\\\artifacts\\\\game\\\\src\\\\Car.js\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3-vl-30b-a3b-instruct\\\\racing_game\\\\2026-10-10T142751-670489-0000--c5f0d666\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\game\\\\src\\\\Car.js\"",
+        "7\t4\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3-vl-30b-a3b-instruct\\\\racing_game\\\\2026-10-10T142751-670489-0000--c5f0d666\\\\evaluations\\\\eval-e87c476318\\\\artifacts\\\\game\\\\src\\\\NPC.js\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3-vl-30b-a3b-instruct\\\\racing_game\\\\2026-10-10T142751-670489-0000--c5f0d666\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\game\\\\src\\\\NPC.js\"",
+        "1\t1\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3-vl-30b-a3b-instruct\\\\racing_game\\\\2026-10-10T142751-670489-0000--c5f0d666\\\\evaluations\\\\eval-e87c476318\\\\artifacts\\\\game\\\\index.html\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\qwen3-vl-30b-a3b-instruct\\\\racing_game\\\\2026-10-10T142751-670489-0000--c5f0d666\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\game\\\\index.html\""
+      ]
+    },
+    {
+      "check": "source SHA256 unchanged",
+      "passed": true
+    },
+    {
+      "check": "Docker network none isolated execution",
+      "exit_code": 0,
+      "runnable": true,
+      "log": "validation.log"
+    },
+    {
+      "check": "Isolated real WASD movement and steering",
+      "passed": true,
+      "evidence": "artifacts/keyboard_validation.json",
+      "validation_only_instrumentation": true
+    },
+    {
+      "check": "Canvas fits browser viewport without page overflow",
+      "passed": true,
+      "evidence": "artifacts/keyboard_validation.json"
+    }
+  ],
+  "artifacts_path": ".\\results\\further-work\\qwen3-vl-30b-a3b-instruct\\racing_game\\2026-10-10T142751-670489-0000--c5f0d666\\repairs\\sol-6.1-small-fix-20261014\\artifacts",
+  "source_artifacts_path": ".\\results\\further-work\\qwen3-vl-30b-a3b-instruct\\racing_game\\2026-10-10T142751-670489-0000--c5f0d666\\evaluations\\eval-e87c476318\\artifacts",
+  "model": "qwen3-vl:30b-a3b-instruct",
+  "task": "racing_game",
+  "generated_outputs_disclosure": "Existing analysis script may regenerate figures/findings/profiles; report prose is unchanged.",
+  "keyboard_movement_verified": true,
+  "keyboard_steering_verified": true
+}

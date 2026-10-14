@@ -1,0 +1,9 @@
+{
+  "build": false,
+  "loads": false,
+  "errors": [],
+  "checks": {},
+  "states": [],
+  "notes": [],
+  "build_log": "vite v7.3.7 building client environment for production...\ntransforming...\n✓ 1 modules transformed.\n✗ Build failed in 63ms\nerror during build:\n[vite:build-html] src/main.js (576:0): Unexpected token `<eof>`. Expected identifier, string literal, numeric literal or [ for the computed key\nfile: /output/game/src/main.js:576:0 (/output/game/index.html)\n\n574:     }\n575:   }\n\n    at getRollupError (file:///opt/lab/node_modules/rollup/dist/es/shared/parseAst.js:319:41)\n    at ParseError.initialise (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:15274:28)\n    at convertNode (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:17253:10)\n    at convertProgram (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:16489:12)\n    at Module.setSource (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:18234:24)\n    at async ModuleLoader.addModuleSource (file:///opt/lab/node_modules/rollup/dist/es/shared/node-entry.js:22434:9)\n"
+}

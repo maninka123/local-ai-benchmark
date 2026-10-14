@@ -1,0 +1,27 @@
+{
+  "responsible_person": "Eli Stone",
+  "confidence": 0.85,
+  "conclusion": "Based on converging evidence including documented motive (17:00 prototype request), opportunity via unmonitored service corridor access, visual confirmation with prototype at actual time 18:14, and timeline consistency with discovery at 18:18, Eli Stone is the most likely responsible individual. Other staff were documented in separate locations during the critical window. However, evidence limitations prevent absolute certainty.",
+  "exhibits": [
+    {
+      "id": "V02",
+      "finding": "Prototype confirmed on workbench at 18:00"
+    },
+    {
+      "id": "V04",
+      "finding": "Eli Stone (orange coat) observed with prototype in service corridor at displayed time 18:19, actual time 18:14 due to +5 min offset"
+    },
+    {
+      "id": "V05",
+      "finding": "Prototype missing from workbench at 18:18"
+    },
+    {
+      "id": "V01",
+      "finding": "Service corridor provides unmonitored access link to lab"
+    },
+    {
+      "id": "D03",
+      "finding": "Eli Stone requested prototype at 17:00; service camera has +5 minute offset"
+    }
+  ]
+}

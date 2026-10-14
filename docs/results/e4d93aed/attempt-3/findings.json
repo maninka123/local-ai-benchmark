@@ -1,0 +1,76 @@
+{
+  "metrics": {
+    "total_revenue": 19316269.0,
+    "profit_margin": 0.3247,
+    "clean_row_count": 24938,
+    "duplicate_count": 20,
+    "missing_unit_cost": 30,
+    "invalid_quantity_count": 12,
+    "entry_outlier_count": 0
+  },
+  "findings": [
+    {
+      "title": "Express Service Has Significantly Lower On-Time Delivery Rate",
+      "evidence": {
+        "express_on_time_rate": 0.610,
+        "standard_on_time_rate": 0.918,
+        "gap_percentage_points": 30.8
+      },
+      "method": "Grouped transactions by service_class and calculated mean of binary on_time indicator",
+      "limitations": "Does not account for distance or destination complexity; may reflect intentional trade-off between speed and reliability",
+      "charts": ["figure_02.png"]
+    },
+    {
+      "title": "Premium Category Has Substantially Lower Margins Than Other Categories",
+      "evidence": {
+        "premium_margin": 0.217,
+        "accessories_margin": 0.361,
+        "consumables_margin": 0.361,
+        "hardware_margin": 0.360,
+        "margin_gap_percentage_points": 14.4
+      },
+      "method": "Calculated margin percentage for each transaction, then averaged by product category",
+      "limitations": "Does not account for strategic value of premium products; may reflect intentional loss-leader strategy",
+      "charts": ["figure_03.png"]
+    },
+    {
+      "title": "Universal Stockout Vulnerability Across All Products",
+      "evidence": {
+        "total_stockout_events": 1590,
+        "products_affected": 20,
+        "total_products": 20,
+        "percentage_affected": 1.0
+      },
+      "method": "Aggregated stockout counts from inventory table by product_id",
+      "limitations": "Stockout severity varies by product; may reflect demand spikes rather than supply failures",
+      "charts": ["figure_06.png"]
+    },
+    {
+      "title": "Regional Revenue Distribution Shows Balanced Market Coverage",
+      "evidence": {
+        "north_revenue": 5337481.68,
+        "west_revenue": 5234324.61,
+        "east_revenue": 4457748.74,
+        "south_revenue": 4286713.97,
+        "revenue_range_percentage": 0.15
+      },
+      "method": "Summed revenue by region name and calculated percentage share",
+      "limitations": "Does not account for regional population or market potential; may mask intra-regional variations",
+      "charts": ["figure_04.png"]
+    },
+    {
+      "title": "Customer Segments Show Similar Transaction Volumes with Revenue Variation",
+      "evidence": {
+        "consumer_revenue": 7546128.47,
+        "enterprise_revenue": 5878013.70,
+        "smb_revenue": 5892126.83,
+        "consumer_transactions": 8316,
+        "enterprise_transactions": 8347,
+        "smb_transactions": 8275
+      },
+      "method": "Grouped transactions by customer segment and calculated revenue sum and transaction count",
+      "limitations": "Does not account for customer acquisition costs by segment; may reflect different sales cycles across segments",
+      "charts": ["figure_05.png"]
+    }
+  ]
+}

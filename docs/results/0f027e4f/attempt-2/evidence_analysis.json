@@ -1,0 +1,7 @@
+{
+  "analysis": {
+    "D01_access.csv": "Provides entry timestamps for staff; used to reconstruct movements.",
+    "D02_witnesses.md": "Contains unverified statements; used for opportunity assessment.",
+    "D03_messages.md": "Shows prior interest in prototype and instructions about cardboard box."
+  }
+}

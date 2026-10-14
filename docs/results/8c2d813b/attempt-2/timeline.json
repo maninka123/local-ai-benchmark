@@ -1,0 +1,151 @@
+{
+  "events": [
+    {
+      "timestamp": "17:00",
+      "type": "confirmed",
+      "source": "D03_messages.md",
+      "description": "Eli Stone requests prototype for tomorrow's project",
+      "location": "Unknown",
+      "person_involved": "Eli Stone"
+    },
+    {
+      "timestamp": "17:10",
+      "type": "confirmed",
+      "source": "D03_messages.md",
+      "description": "Maya Reed requests cardboard consumables box be moved to loading bay",
+      "location": "Unknown",
+      "person_involved": "Maya Reed"
+    },
+    {
+      "timestamp": "18:00",
+      "type": "confirmed",
+      "source": "V02",
+      "description": "Prototype visible on table in lab, confirmed present",
+      "location": "LAB",
+      "person_involved": null
+    },
+    {
+      "timestamp": "18:10",
+      "type": "confirmed",
+      "source": "D01_access.csv + V03",
+      "description": "Nora Vale (teal coat) enters EAST_CORRIDOR via badge credential",
+      "location": "EAST CORRIDOR",
+      "person_involved": "Nora Vale"
+    },
+    {
+      "timestamp": "18:10-18:14",
+      "type": "probable",
+      "source": "V03 + V04 + D01_access.csv",
+      "description": "Nora Vale enters lab from east corridor, takes prototype, exits through east exit carrying it",
+      "location": "LAB/EAST CORRIDOR/EAST EXIT",
+      "person_involved": "Nora Vale"
+    },
+    {
+      "timestamp": "18:11",
+      "type": "confirmed",
+      "source": "V08 + D03_messages.md",
+      "description": "Maya Reed at loading bay with cardboard box (consistent with 17:10 request)",
+      "location": "LOADING BAY",
+      "person_involved": "Maya Reed"
+    },
+    {
+      "timestamp": "18:12",
+      "type": "confirmed",
+      "source": "D01_access.csv + V06",
+      "description": "Theo Park (blue coat) enters CAFETERIA via badge credential, visible in cafeteria camera",
+      "location": "CAFETERIA",
+      "person_involved": "Theo Park"
+    },
+    {
+      "timestamp": "18:12",
+      "type": "confirmed",
+      "source": "D02_witnesses.md + V06",
+      "description": "Theo Park claims remained in cafeteria from 18:12, confirmed by visual evidence",
+      "location": "CAFETERIA",
+      "person_involved": "Theo Park"
+    },
+    {
+      "timestamp": "18:13",
+      "type": "confirmed",
+      "source": "D01_access.csv + V07",
+      "description": "Ada Finch (red coat) enters RECEPTION via badge credential, visible in reception camera",
+      "location": "RECEPTION",
+      "person_involved": "Ada Finch"
+    },
+    {
+      "timestamp": "18:13",
+      "type": "confirmed",
+      "source": "D02_witnesses.md + V07",
+      "description": "Ada Finch claims staffed reception, confirmed by visual evidence",
+      "location": "RECEPTION",
+      "person_involved": "Ada Finch"
+    },
+    {
+      "timestamp": "18:14",
+      "type": "confirmed",
+      "source": "D01_access.csv + V04",
+      "description": "Nora Vale (teal coat) exits EAST_EXIT carrying prototype visible in camera",
+      "location": "EAST EXIT",
+      "person_involved": "Nora Vale"
+    },
+    {
+      "timestamp": "18:14-18:18",
+      "type": "probable",
+      "source": "V04 + V05",
+      "description": "Prototype transported from east exit to unknown location by Nora Vale",
+      "location": "Unknown",
+      "person_involved": "Nora Vale"
+    },
+    {
+      "timestamp": "18:18",
+      "type": "confirmed",
+      "source": "V05",
+      "description": "Lab empty except for brown object (no prototype), prototype confirmed missing",
+      "location": "LAB",
+      "person_involved": null
+    },
+    {
+      "timestamp": "18:18",
+      "type": "discovery",
+      "source": "Case brief",
+      "description": "Prototype discovered missing from lab",
+      "location": "LAB",
+      "person_involved": null
+    }
+  ],
+  "assumptions": [
+    "Nora Vale entered the LAB from EAST_CORRIDOR after entering at 18:10",
+    "The prototype was taken during Nora Vale's visit between 18:10-18:14",
+    "No one else entered the lab area during this timeframe based on access logs",
+    "Service corridor blind spot (V10) was not used - no evidence shows anyone entering via this route"
+  ],
+  "missing_intervals": [
+    {
+      "interval": "18:14-18:18",
+      "description": "Time between Nora Vale exiting east exit with prototype and discovery of missing prototype in lab",
+      "significance": "Prototype was already out of lab by 18:14, so theft occurred before this time"
+    },
+    {
+      "interval": "Service corridor access",
+      "description": "No camera coverage for service corridor (V10 blind spot)",
+      "significance": "Cannot rule out unauthorized entry via service corridor without additional evidence"
+    }
+  ],
+  "contradictory_timestamps": [
+    {
+      "source": "Nora Vale witness statement (D02_witnesses.md)",
+      "claim": "Only visited east corridor and left",
+      "contradicted_by": "V04 shows Nora Vale exiting east exit at 18:14 carrying prototype",
+      "resolution": "Visual evidence contradicts witness statement - she did take the prototype"
+    }
+  ],
+  "exhibit_references": {
+    "V02": "Prototype present in lab at 18:00",
+    "V03": "Nora Vale enters east corridor at 18:10",
+    "V04": "Nora Vale exits east exit at 18:14 with prototype",
+    "V05": "Prototype missing from lab at 18:18",
+    "D01_access.csv": "Access log timestamps for all personnel movements",
+    "D02_witnesses.md": "Witness statements including Nora's contradictory claim",
+    "D03_messages.md": "Messages establishing motive (Eli) and context (Maya's box move)"
+  }
+}

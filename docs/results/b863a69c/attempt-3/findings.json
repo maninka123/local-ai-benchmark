@@ -1,0 +1,73 @@
+{
+  "metrics": {
+    "customers_rows": 1200,
+    "customers_missing": 0,
+    "customers_duplicates": 0,
+    "products_rows": 20,
+    "products_missing": 0,
+    "products_duplicates": 0,
+    "inventory_rows": 480,
+    "inventory_missing": 0,
+    "inventory_duplicates": 0,
+    "transactions_rows": 25000,
+    "transactions_missing": 30,
+    "transactions_duplicates": 20,
+    "invalid_quantity_count": 12,
+    "missing_unit_cost": 30,
+    "total_revenue": 19355119.502,
+    "profit_margin": 0.3635030773782096,
+    "clean_row_count": 24988,
+    "duplicate_count": 20,
+    "entry_outlier_count": 14
+  },
+  "findings": [
+    {
+      "title": "Monthly Revenue Trend",
+      "evidence": "Monthly revenue shows a peak in Q3 2024 and a dip in Q1 2025.",
+      "method": "Time series aggregation of revenue by month.",
+      "limitations": "Missing data for some months due to incomplete transaction logs.",
+      "source_columns": ["transaction_date", "revenue"],
+      "charts": ["figure_01.png"]
+    },
+    {
+      "title": "Top 10 Products by Revenue",
+      "evidence": "Products P01, P02, and P03 dominate revenue.",
+      "method": "Aggregation of revenue per product.",
+      "limitations": "Does not account for profit margins per product.",
+      "source_columns": ["product_id", "revenue"],
+      "charts": ["figure_02.png"]
+    },
+    {
+      "title": "Revenue by Region",
+      "evidence": "Region R0 leads revenue, R3 lags.",
+      "method": "Group by region_id.",
+      "limitations": "Region mapping may be incomplete.",
+      "source_columns": ["region_id", "revenue"],
+      "charts": ["figure_03.png"]
+    },
+    {
+      "title": "Revenue Share by Customer Segment",
+      "evidence": "Enterprise segment accounts for ~55% of revenue.",
+      "method": "Merge and aggregate.",
+      "limitations": "Segment assignment may be outdated.",
+      "source_columns": ["segment", "revenue"],
+      "charts": ["figure_04.png"]
+    },
+    {
+      "title": "Monthly Stockouts Trend",
+      "evidence": "Stockouts peaked in January 2024 and declined thereafter.",
+      "method": "Aggregation of stockouts per month.",
+      "limitations": "Stockouts may not reflect actual demand.",
+      "source_columns": ["month", "stockouts"],
+      "charts": ["figure_05.png"]
+    },
+    {
+      "title": "Discount vs Revenue Correlation",
+      "evidence": "Correlation coefficient: -0.00",
+      "method": "Scatter plot and Pearson correlation.",
+      "limitations": "Correlation does not imply causation; other factors may influence revenue.",
+      "source_columns": ["discount", "revenue"],
+      "charts": ["figure_06.png"]
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "case_id": "CASE_03",
+  "responsible_person": null,
+  "confidence": 0.25,
+  "conclusion": "The prototype was removed from the lab between 18:00 and 18:18. At 18:14, Eli Stone and Maya Reed badges were used to access the Service Door, but visual evidence shows two persons in gray coats - neither matching Eli's orange coat nor Maya's purple coat. Badge logs record credential use, not biometric identity (D03). The service corridor is a camera blind spot (V10), preventing observation of any removal. No staff member can be definitively identified as responsible based on available evidence.",
+  "exhibits": [
+    "D01",
+    "D02",
+    "D03",
+    "V01",
+    "V02",
+    "V04",
+    "V05",
+    "V10"
+  ],
+  "key_evidence": [
+    {
+      "exhibit": "V02",
+      "finding": "Prototype confirmed present at 18:00"
+    },
+    {
+      "exhibit": "V05",
+      "finding": "Prototype missing by 18:18"
+    },
+    {
+      "exhibit": "D01",
+      "finding": "Eli Stone and Maya Reed badges used at Service Door 18:14"
+    },
+    {
+      "exhibit": "V04",
+      "finding": "Two persons in gray coats visible at Service Door - no match to badge holders assigned coat colors"
+    },
+    {
+      "exhibit": "D03",
+      "finding": "Badges log credentials not biometric identity; service corridor is blind spot"
+    }
+  ],
+  "alternative_explanations": [
+    {
+      "hypothesis": "Badge theft or unauthorized use by unknown individuals",
+      "supporting_evidence": [
+        "V04 gray coats do not match Eli (orange) or Maya (purple)"
+      ],
+      "plausibility": "high"
+    },
+    {
+      "hypothesis": "Eli Stone and/or Maya Reed changed coats before using badges",
+      "supporting_evidence": [
+        "D01 badge events at 18:14"
+      ],
+      "plausibility": "medium",
+      "limitations": "No evidence of coat change observed"
+    },
+    {
+      "hypothesis": "Badge lending between staff members",
+      "supporting_evidence": [
+        "D03 badges not biometric"
+      ],
+      "plausibility": "medium",
+      "limitations": "No evidence of coordination observed"
+    },
+    {
+      "hypothesis": "Removal occurred via different route before 18:14",
+      "supporting_evidence": [
+        "V01 shows multiple access points"
+      ],
+      "plausibility": "medium",
+      "limitations": "No visual evidence of removal observed"
+    }
+  ],
+  "suspect_assessments": [
+    {
+      "name": "Eli Stone",
+      "coat_color": "orange",
+      "badge_events": [
+        "18:14 Service Door ENTRY"
+      ],
+      "visual_appearances": [],
+      "statement": "I did not approach the lab after 18:00",
+      "motive": "Expressed need for prototype (D03)",
+      "contradictions": [
+        "Badge used at Service Door 18:14 but V04 shows gray coats, not orange"
+      ],
+      "exculpatory_evidence": [
+        "No visual appearance in orange coat during incident window",
+        "Gray coats at Service Door do not match assigned color"
+      ],
+      "assessment": "Badge used but visual evidence does not confirm personal presence. Coat mismatch prevents identification.",
+      "responsibility_likelihood": "low_to_medium"
+    },
+    {
+      "name": "Maya Reed",
+      "coat_color": "purple",
+      "badge_events": [
+        "18:14 Service Door ENTRY"
+      ],
+      "visual_appearances": [
+        {
+          "time": "18:11",
+          "location": "Loading Bay",
+          "description": "Purple coat with cardboard box (V08)"
+        }
+      ],
+      "statement": "I carried a cardboard supply box at 18:11",
+      "motive": null,
+      "contradictions": [
+        "Badge used at Service Door 18:14 but V04 shows gray coats, not purple"
+      ],
+      "exculpatory_evidence": [
+        "Visual appearance at Loading Bay 18:11 in purple coat consistent with statement",
+        "Gray coats at Service Door do not match assigned color"
+      ],
+      "assessment": "Badge used but visual evidence does not confirm personal presence. Coat mismatch prevents identification.",
+      "responsibility_likelihood": "low_to_medium"
+    },
+    {
+      "name": "Nora Vale",
+      "coat_color": "teal",
+      "badge_events": [
+        "18:10 East Corridor ENTRY"
+      ],
+      "visual_appearances": [
+        {
+          "time": "18:10",
+          "location": "East Corridor",
+          "description": "Teal coat (V03)"
+        }
+      ],
+      "statement": "I only visited the east corridor and left",
+      "motive": null,
+      "contradictions": [],
+      "exculpatory_evidence": [
+        "Visual appearance consistent with badge event and statement",
+        "No Service Door badge event"
+      ],
+      "assessment": "Statement consistent with visual evidence. No access to service corridor documented.",
+      "responsibility_likelihood": "low"
+    },
+    {
+      "name": "Theo Park",
+      "coat_color": "blue",
+      "badge_events": [
+        "18:12 Cafeteria ENTRY"
+      ],
+      "visual_appearances": [
+        {
+          "time": "18:12",
+          "location": "Cafeteria",
+          "description": "Blue coat (V06)"
+        }
+      ],
+      "statement": "I remained in the cafeteria from 18:12",
+      "motive": null,
+      "contradictions": [],
+      "exculpatory_evidence": [
+        "Visual appearance consistent with badge event and statement",
+        "No Service Door badge event"
+      ],
+      "assessment": "Statement consistent with visual evidence. No access to service corridor documented.",
+      "responsibility_likelihood": "low"
+    },
+    {
+      "name": "Ada Finch",
+      "coat_color": "red",
+      "badge_events": [
+        "18:13 Reception ENTRY"
+      ],
+      "visual_appearances": [
+        {
+          "time": "18:13",
+          "location": "Reception",
+          "description": "Red coat (V07)"
+        }
+      ],
+      "statement": "I staffed reception",
+      "motive": null,
+      "contradictions": [],
+      "exculpatory_evidence": [
+        "Visual appearance consistent with badge event and statement",
+        "No Service Door badge event"
+      ],
+      "assessment": "Statement consistent with visual evidence. No access to service corridor documented.",
+      "responsibility_likelihood": "low"
+    }
+  ],
+  "limitations": [
+    "Badge logs do not confirm biometric identity (D03)",
+    "Coat colors are shift assignments, not biometric identifiers (D03)",
+    "Service corridor blind spot prevents observation of removal (V10)",
+    "No visual evidence shows prototype being removed or carried",
+    "Multiple unobserved intervals during 18:00-18:18 window",
+    "Witness statements are unverified"
+  ],
+  "recommended_next_steps": [
+    "Interview Eli Stone and Maya Reed about badge use at 18:14",
+    "Determine if gray coats belong to any staff member or unknown individuals",
+    "Review badge custody records for Eli Stone and Maya Reed",
+    "Check for additional camera angles that may capture service corridor entry/exit",
+    "Interview all five staff about prototype removal timeline",
+    "Search facility for prototype recovery"
+  ]
+}

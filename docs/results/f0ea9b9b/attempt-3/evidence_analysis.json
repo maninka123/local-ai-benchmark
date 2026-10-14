@@ -1,0 +1,108 @@
+{
+  "exhibits": [
+    {
+      "id": "V01",
+      "type": "schematic",
+      "timestamp": "N/A",
+      "observations": "Floor plan showing Lab, East Corridor, Service Corridor (unmonitored link), Cafeteria, East Exit. Teal line indicates East Corridor to East Exit connection. Orange line indicates Service Corridor unmonitored link to Lab.",
+      "interpretations": "Service Corridor provides alternative access route to Lab; this area is not monitored by cameras.",
+      "limitations": "Static schematic; does not show actual conditions during incident."
+    },
+    {
+      "id": "V02",
+      "type": "camera_feed",
+      "timestamp": "18:00",
+      "observations": "Prototype visible in Lab with triangular marker on brown surface.",
+      "interpretations": "Prototype was present in Lab at 18:00.",
+      "limitations": "Snapshot only; does not show continuous monitoring."
+    },
+    {
+      "id": "V03",
+      "type": "camera_feed",
+      "timestamp": "18:10",
+      "observations": "Teal-coated figure in East Corridor; brown rectangular object visible.",
+      "interpretations": "Nora Vale (teal coat) present in East Corridor at 18:10.",
+      "limitations": "Snapshot only; coat color may not match shift assignment."
+    },
+    {
+      "id": "V04",
+      "type": "camera_feed",
+      "timestamp": "18:14",
+      "observations": "Two grey-coated figures at Service Door entrance; brown rectangular object visible.",
+      "interpretations": "Two individuals entered through Service Door at 18:14. Coat colors do not match expected wearers (Eli=orange, Maya=purple).",
+      "limitations": "Snapshot only; grey coats may indicate coat swapping or unreliable visual identification."
+    },
+    {
+      "id": "V05",
+      "type": "camera_feed",
+      "timestamp": "18:18",
+      "observations": "Prototype missing from Lab; only brown surface visible.",
+      "interpretations": "Prototype was removed between 18:00 and 18:18.",
+      "limitations": "Snapshot only; does not show removal process or route."
+    },
+    {
+      "id": "V06",
+      "type": "camera_feed",
+      "timestamp": "18:12",
+      "observations": "Blue-coated figure in Cafeteria; brown rectangular object visible.",
+      "interpretations": "Theo Park (blue coat) present in Cafeteria at 18:12.",
+      "limitations": "Snapshot only; does not establish continuous whereabouts."
+    },
+    {
+      "id": "V07",
+      "type": "camera_feed",
+      "timestamp": "18:13",
+      "observations": "Red-coated figure at Reception; brown rectangular object visible.",
+      "interpretations": "Ada Finch (red coat) present at Reception at 18:13.",
+      "limitations": "Snapshot only; does not establish continuous whereabouts."
+    },
+    {
+      "id": "V08",
+      "type": "camera_feed",
+      "timestamp": "18:11",
+      "observations": "Purple-coated figure with cardboard box in Loading Bay; brown rectangular object visible.",
+      "interpretations": "Maya Reed (purple coat) present in Loading Bay at 18:11 with cardboard box.",
+      "limitations": "Snapshot only; does not establish continuous whereabouts."
+    },
+    {
+      "id": "V09",
+      "type": "reference",
+      "timestamp": "N/A",
+      "observations": "Object detail showing prototype with triangular marker on brown surface.",
+      "interpretations": "Reference image for identifying the prototype in other exhibits.",
+      "limitations": "Static reference; does not show actual conditions."
+    },
+    {
+      "id": "V10",
+      "type": "reference",
+      "timestamp": "N/A",
+      "observations": "Text overlay: BLIND SPOT: SERVICE CORRIDOR.",
+      "interpretations": "Service Corridor has no camera coverage; critical blind spot for surveillance.",
+      "limitations": "Static reference; does not show actual conditions."
+    },
+    {
+      "id": "D01_access.csv",
+      "type": "documentary",
+      "timestamp": "N/A",
+      "observations": "Access log showing entry times and doors for all five staff members.",
+      "interpretations": "Records badge credential use, not biometric identity. Shows Service Door entries at 18:14.",
+      "limitations": "Badge credentials do not confirm biometric identity of badge owners."
+    },
+    {
+      "id": "D02_witnesses.md",
+      "type": "documentary",
+      "timestamp": "N/A",
+      "observations": "Unverified statements from Nora Vale, Eli Stone, Maya Reed, Theo Park, Ada Finch.",
+      "interpretations": "Witness statements claim various whereabouts during incident period.",
+      "limitations": "Statements are unverified and may be inaccurate."
+    },
+    {
+      "id": "D03_messages.md",
+      "type": "documentary",
+      "timestamp": "N/A",
+      "observations": "17:00 Eli message about needing prototype; 17:10 Maya message about cardboard box; 17:20 Security note on coat descriptions and blind spot.",
+      "interpretations": "Eli has documented motive. Maya was moving cardboard consumables box. Service corridor is blind spot. Coat descriptions are from shift assignments.",
+      "limitations": "Messages may not be complete; coat descriptions may not match actual wearers."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "analysis": [
+    {
+      "exhibit_id": "V01",
+      "observation": "Schematic shows the LAB is connected to the SERVICE CORRIDOR via an unmonitored link.",
+      "interpretation": "The service corridor provides a path to the lab that avoids camera surveillance."
+    },
+    {
+      "exhibit_id": "V02",
+      "observation": "Camera 18:00 shows the prototype is present in the LAB.",
+      "interpretation": "The theft must have occurred after 18:00."
+    },
+    {
+      "exhibit_id": "D01",
+      "observation": "Eli Stone and Maya Reed entered the SERVICE_DOOR at 18:14.",
+      ""interpretation": "Both individuals had access to the unmonitored route to the lab shortly before the theft was discovered."
+    },
+    {
+      "exhibit_id": "D02",
+      "observation": "Maya Reed was carrying a cardboard supply box at 18:11.",
+      "interpretation": "The box provides a means to conceal the prototype during transport."
+    },
+    {
+      "exhibit_id": "D03",
+      "observation": "Eli Stone expressed a need for the prototype at 17:00; Security confirmed the service corridor is a camera blind spot.",
+      "interpretation": "Eli had motive, and the service corridor provided the opportunity."
+    }
+  ]
+}

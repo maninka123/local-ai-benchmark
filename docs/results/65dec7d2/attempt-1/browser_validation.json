@@ -1,0 +1,9 @@
+{
+  "build": false,
+  "loads": false,
+  "errors": [],
+  "checks": {},
+  "states": [],
+  "notes": [],
+  "build_log": "failed to load config from /output/game/vite.config.js\nerror during build:\nReferenceError: __dirname is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/output/game/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///output/game/vite.config.js?t=1791607864270:10:22\n    at ModuleJob.run (node:internal/modules/esm/module_job:413:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26)\n    at async nativeImportConfigFile (file:///opt/lab/node_modules/vite/dist/node/chunks/config.js:36040:18)\n    at async loadConfigFromFile (file:///opt/lab/node_modules/vite/dist/node/chunks/config.js:36022:42)\n    at async resolveConfig (file:///opt/lab/node_modules/vite/dist/node/chunks/config.js:35671:22)\n    at async createBuilder (file:///opt/lab/node_modules/vite/dist/node/chunks/config.js:34126:19)\n    at async CAC.<anonymous> (file:///opt/lab/node_modules/vite/dist/node/cli.js:629:10)\n"
+}

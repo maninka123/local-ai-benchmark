@@ -1,0 +1,15 @@
+{
+  "file": "products.csv",
+  "shape": [
+    20,
+    5
+  ],
+  "columns": [
+    "product_id",
+    "name",
+    "category",
+    "unit_cost",
+    "list_price"
+  ],
+  "dtypes": {
+    "product_id": 

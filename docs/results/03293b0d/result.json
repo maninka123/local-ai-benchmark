@@ -1,0 +1,392 @@
+{
+  "run_id": "2026-10-09T194311-502895+0000--03293b0d",
+  "model": "glm-4.7-flash:q4_K_M",
+  "task": "racing_game",
+  "case": null,
+  "track": "text_and_tools",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 2,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Runnable application and complete game flow",
+            "max_points": 10,
+            "points": 0,
+            "reason": "Entry starts mid-expression and fails compilation; no complete Game exists."
+          },
+          {
+            "name": "Circuit, scenery and environmental presentation",
+            "max_points": 12,
+            "points": 0,
+            "reason": "Track coordinate constants alone do not implement an environment."
+          },
+          {
+            "name": "Differentiated selectable vehicles",
+            "max_points": 10,
+            "points": 1,
+            "reason": "Three speed/acceleration/braking/handling/color definitions exist, but no usable vehicles or selection."
+          },
+          {
+            "name": "Keyboard driving and handling",
+            "max_points": 12,
+            "points": 0,
+            "reason": "Input fragment calls missing game behaviors; no functioning movement."
+          },
+          {
+            "name": "Independent interacting NPC opponents",
+            "max_points": 14,
+            "points": 0,
+            "reason": "No complete opponents or independent racing."
+          },
+          {
+            "name": "Vehicle, barrier and obstacle collisions",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No functional collision system."
+          },
+          {
+            "name": "Three usable race cameras",
+            "max_points": 8,
+            "points": 0,
+            "reason": "Camera-mode key counter lacks usable view implementation."
+          },
+          {
+            "name": "Validated laps, timing, positions and finish",
+            "max_points": 14,
+            "points": 0,
+            "reason": "Truncated result/lap fragments cannot establish valid race progression."
+          },
+          {
+            "name": "Menus, HUD, instructions and interface hierarchy",
+            "max_points": 5,
+            "points": 1,
+            "reason": "Menu/results switching fragments exist but no complete UI startup."
+          },
+          {
+            "name": "Truthful deliverables and verification evidence",
+            "max_points": 5,
+            "points": 0,
+            "reason": "No report or genuine browser/menu/race captures."
+          }
+        ],
+        "summary": "Saved build reports an expression syntax error at the start of the game source; source inspection confirms incomplete fragments.",
+        "evidence_files": [
+          "models/glm-4.7-flash-q4_K_M--96b29057eca0/02_racing_game/2026-10-09T194311-502895+0000--03293b0d/artifacts/game/src/main.js",
+          "models/glm-4.7-flash-q4_K_M--96b29057eca0/02_racing_game/2026-10-09T194311-502895+0000--03293b0d/artifacts/game/index.html",
+          "models/glm-4.7-flash-q4_K_M--96b29057eca0/02_racing_game/2026-10-09T194311-502895+0000--03293b0d/artifacts/game/package.json",
+          "models/glm-4.7-flash-q4_K_M--96b29057eca0/02_racing_game/2026-10-09T194311-502895+0000--03293b0d/artifacts/game/vite.config.js",
+          "models/glm-4.7-flash-q4_K_M--96b29057eca0/02_racing_game/2026-10-09T194311-502895+0000--03293b0d/artifacts/browser_validation.json",
+          "results/improvement_campaign/racing_reviews.json"
+        ],
+        "limitations": [
+          "Output-only review against public benchmark/prompts/racing_game_prompt.md A-K; elapsed time, tokens, model identity, automatic scores and GPT-assisted repairs do not contribute.",
+          "Direct saved-source inspection and reusable independent isolated build/browser evidence; no candidate code executed on host.",
+          "Limited partial credit recognizes concrete source implementation; disconnected outlines and claims do not establish usable gameplay. Completion requires the requested end-to-end playable race.",
+          "Attempt 1 uses immutable original baseline artifacts; attempts 2 and 3 use the first and second completion-pass evaluated snapshots. Manual setup updates and stale/inherited captures are excluded as gameplay proof."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "browser_validation.json",
+          "url": "./results/03293b0d/attempt-1/browser_validation.json",
+          "bytes": 1250
+        },
+        {
+          "name": "game/index.html",
+          "url": "./results/03293b0d/attempt-1/game/index.html",
+          "bytes": 172
+        },
+        {
+          "name": "game/package.json",
+          "url": "./results/03293b0d/attempt-1/game/package.json",
+          "bytes": 400
+        },
+        {
+          "name": "game/README.md",
+          "url": "./results/03293b0d/attempt-1/game/README.md",
+          "bytes": 109,
+          "preview_url": "./results/03293b0d/attempt-1/game/README.md.html"
+        },
+        {
+          "name": "game/vite.config.js",
+          "url": "./results/03293b0d/attempt-1/game/vite.config.js",
+          "bytes": 157
+        },
+        {
+          "name": "game/src/main.js",
+          "url": "./results/03293b0d/attempt-1/game/src/main.js",
+          "bytes": 2209
+        }
+      ],
+      "game_url": null,
+      "readiness": "Build failed",
+      "prompt_url": "./results/03293b0d/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 2,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Runnable application and complete game flow",
+            "max_points": 10,
+            "points": 0,
+            "reason": "Entry starts mid-expression and fails compilation; no complete Game exists."
+          },
+          {
+            "name": "Circuit, scenery and environmental presentation",
+            "max_points": 12,
+            "points": 0,
+            "reason": "Track coordinate constants alone do not implement an environment."
+          },
+          {
+            "name": "Differentiated selectable vehicles",
+            "max_points": 10,
+            "points": 1,
+            "reason": "Three speed/acceleration/braking/handling/color definitions exist, but no usable vehicles or selection."
+          },
+          {
+            "name": "Keyboard driving and handling",
+            "max_points": 12,
+            "points": 0,
+            "reason": "Input fragment calls missing game behaviors; no functioning movement."
+          },
+          {
+            "name": "Independent interacting NPC opponents",
+            "max_points": 14,
+            "points": 0,
+            "reason": "No complete opponents or independent racing."
+          },
+          {
+            "name": "Vehicle, barrier and obstacle collisions",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No functional collision system."
+          },
+          {
+            "name": "Three usable race cameras",
+            "max_points": 8,
+            "points": 0,
+            "reason": "Camera-mode key counter lacks usable view implementation."
+          },
+          {
+            "name": "Validated laps, timing, positions and finish",
+            "max_points": 14,
+            "points": 0,
+            "reason": "Truncated result/lap fragments cannot establish valid race progression."
+          },
+          {
+            "name": "Menus, HUD, instructions and interface hierarchy",
+            "max_points": 5,
+            "points": 1,
+            "reason": "Menu/results switching fragments exist but no complete UI startup."
+          },
+          {
+            "name": "Truthful deliverables and verification evidence",
+            "max_points": 5,
+            "points": 0,
+            "reason": "No report or genuine browser/menu/race captures."
+          }
+        ],
+        "summary": "Incomplete after one completion prompt: the evaluated main source still begins mid-expression and is a set of disconnected fragments; the isolated build fails at its first line. An additional Track sketch does not make the application runnable.",
+        "evidence_files": [
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-78bd19313e/artifacts/game/src/main.js",
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-78bd19313e/artifacts/game/src/Track.js",
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-78bd19313e/artifacts/game/index.html",
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-78bd19313e/artifacts/game/package.json",
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-78bd19313e/artifacts/game/vite.config.js",
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-78bd19313e/artifacts/browser_validation.json",
+          "results/improvement_campaign/racing_after_reviews.json"
+        ],
+        "limitations": [
+          "Output-only review against public benchmark/prompts/racing_game_prompt.md A-K; elapsed time, tokens, model identity, automatic scores and GPT-assisted repairs do not contribute.",
+          "Direct saved-source inspection and reusable independent isolated build/browser evidence; no candidate code executed on host.",
+          "Limited partial credit recognizes concrete source implementation; disconnected outlines and claims do not establish usable gameplay. Completion requires the requested end-to-end playable race.",
+          "Attempt 1 uses immutable original baseline artifacts; attempts 2 and 3 use the first and second completion-pass evaluated snapshots. Manual setup updates and stale/inherited captures are excluded as gameplay proof.",
+          "Same functionality scores intentionally retained where source/runtime outcomes are unchanged; no artificial variation or assumed improvement."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "browser_validation.json",
+          "url": "./results/03293b0d/attempt-2/browser_validation.json",
+          "bytes": 1250
+        },
+        {
+          "name": "game/index.html",
+          "url": "./results/03293b0d/attempt-2/game/index.html",
+          "bytes": 172
+        },
+        {
+          "name": "game/package.json",
+          "url": "./results/03293b0d/attempt-2/game/package.json",
+          "bytes": 400
+        },
+        {
+          "name": "game/README.md",
+          "url": "./results/03293b0d/attempt-2/game/README.md",
+          "bytes": 109,
+          "preview_url": "./results/03293b0d/attempt-2/game/README.md.html"
+        },
+        {
+          "name": "game/vite.config.js",
+          "url": "./results/03293b0d/attempt-2/game/vite.config.js",
+          "bytes": 157
+        },
+        {
+          "name": "game/src/main.js",
+          "url": "./results/03293b0d/attempt-2/game/src/main.js",
+          "bytes": 2209
+        },
+        {
+          "name": "game/src/Track.js",
+          "url": "./results/03293b0d/attempt-2/game/src/Track.js",
+          "bytes": 522
+        }
+      ],
+      "game_url": null,
+      "readiness": "Build failed",
+      "prompt_url": "./results/03293b0d/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 12,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Runnable application and complete game flow",
+            "max_points": 10,
+            "points": 0,
+            "reason": "Entry is an unmatched class-method fragment; isolated build fails Expression expected, with no Game declaration/setup."
+          },
+          {
+            "name": "Circuit, scenery and environmental presentation",
+            "max_points": 12,
+            "points": 2,
+            "reason": "Track module draws a straight rectangle, start-line/barrier/tree outlines and off-road loop checkpoints; undefined length and no continuous circuit prevent functionality."
+          },
+          {
+            "name": "Differentiated selectable vehicles",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No complete car construction/selection startup is saved."
+          },
+          {
+            "name": "Keyboard driving and handling",
+            "max_points": 12,
+            "points": 3,
+            "reason": "Player method includes acceleration, reverse, friction and speed-dependent steering/translation, but lacks runnable surrounding setup."
+          },
+          {
+            "name": "Independent interacting NPC opponents",
+            "max_points": 14,
+            "points": 2,
+            "reason": "Opponent target steering and distance speed changes exist, but targetCheckpoint never advances and traffic/passing/collision/recovery are absent."
+          },
+          {
+            "name": "Vehicle, barrier and obstacle collisions",
+            "max_points": 10,
+            "points": 0,
+            "reason": "Track.checkCollisions is an empty comment-only stub; no functional interaction."
+          },
+          {
+            "name": "Three usable race cameras",
+            "max_points": 8,
+            "points": 2,
+            "reason": "Three position formulas are outlined, but hood orientation is fixed and the application cannot run."
+          },
+          {
+            "name": "Validated laps, timing, positions and finish",
+            "max_points": 14,
+            "points": 2,
+            "reason": "Checkpoint/progress sorting/lap/results methods exist, but lap logic lacks validated directed circuit finish and timing/countdown setup is missing."
+          },
+          {
+            "name": "Menus, HUD, instructions and interface hierarchy",
+            "max_points": 5,
+            "points": 1,
+            "reason": "HUD/result update methods refer to absent DOM/setup; no usable menu-to-results interface."
+          },
+          {
+            "name": "Truthful deliverables and verification evidence",
+            "max_points": 5,
+            "points": 0,
+            "reason": "Failed build produced no new browser captures; no implementation report."
+          }
+        ],
+        "summary": "Needs revision: the isolated build fails because main.js is a truncated class-method fragment with an unmatched closing brace. No browser gameplay starts, and the remaining saved source lacks a complete connected racing application.",
+        "evidence_files": [
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-218154f609/artifacts/game/src/main.js",
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-218154f609/artifacts/game/src/Track.js",
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-218154f609/artifacts/game/index.html",
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-218154f609/artifacts/game/package.json",
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-218154f609/artifacts/game/vite.config.js",
+          "results/further-work/glm-4.7-flash-q4_K_M/racing_game/2026-10-09T194311-502895-0000--03293b0d/evaluations/eval-218154f609/artifacts/browser_validation.json",
+          "results/improvement_campaign/pass_2/racing_after_reviews.json"
+        ],
+        "limitations": [
+          "Output-only review against public benchmark/prompts/racing_game_prompt.md A-K; elapsed time, tokens, model identity, automatic scores and GPT-assisted repairs do not contribute.",
+          "Direct saved-source inspection and reusable independent isolated build/browser evidence; no candidate code executed on host.",
+          "Limited partial credit recognizes concrete source implementation; disconnected outlines and claims do not establish usable gameplay. Completion requires the requested end-to-end playable race.",
+          "Attempt 1 uses immutable original baseline artifacts; attempts 2 and 3 use the first and second completion-pass evaluated snapshots. Manual setup updates and stale/inherited captures are excluded as gameplay proof."
+        ],
+        "score": 3.6,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "browser_validation.json",
+          "url": "./results/03293b0d/attempt-3/browser_validation.json",
+          "bytes": 1128
+        },
+        {
+          "name": "game/index.html",
+          "url": "./results/03293b0d/attempt-3/game/index.html",
+          "bytes": 172
+        },
+        {
+          "name": "game/package.json",
+          "url": "./results/03293b0d/attempt-3/game/package.json",
+          "bytes": 400
+        },
+        {
+          "name": "game/README.md",
+          "url": "./results/03293b0d/attempt-3/game/README.md",
+          "bytes": 109,
+          "preview_url": "./results/03293b0d/attempt-3/game/README.md.html"
+        },
+        {
+          "name": "game/vite.config.js",
+          "url": "./results/03293b0d/attempt-3/game/vite.config.js",
+          "bytes": 157
+        },
+        {
+          "name": "game/src/main.js",
+          "url": "./results/03293b0d/attempt-3/game/src/main.js",
+          "bytes": 9769
+        },
+        {
+          "name": "game/src/Track.js",
+          "url": "./results/03293b0d/attempt-3/game/src/Track.js",
+          "bytes": 3052
+        }
+      ],
+      "game_url": null,
+      "readiness": "Build failed",
+      "prompt_url": "./results/03293b0d/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

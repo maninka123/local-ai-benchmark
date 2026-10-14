@@ -1,0 +1,11 @@
+{
+  "responsible_person": "Nora Vale (Unconfirmed)",
+  "confidence": 0.65,
+  "conclusion": "The prototype was likely removed by the individual in the teal work coat during the 18:10-18:14 window. While the timing and visual evidence (V04) strongly implicate the person using Nora Vale's credentials, the identity is not biometrically confirmed, and the existence of a blind spot (V10) allows for the possibility of another actor (e.g., Eli Stone) using the service corridor to move the object.",
+  "exhibits": [
+    "V04",
+    "D01",
+    "V10",
+    "D03"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "case_id": "CASE_03",
+  "reconstruction_notes": "Timeline reconciles visual exhibits (V01-V10), badge logs (D01), witness statements (D02), and internal messages (D03). Coat colors are shift assignments, not biometric IDs.",
+  "events": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone sends message expressing need for prototype.",
+      "evidence": ["D03"],
+      "type": "confirmed"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed requests moving cardboard box to loading bay.",
+      "evidence": ["D03"],
+      "type": "confirmed"
+    },
+    {
+      "time": "17:20",
+      "event": "Security message notes service corridor is blind spot and badges log credentials, not identity.",
+      "evidence": ["D03"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed visible in LAB on table.",
+      "evidence": ["V02", "V09"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:10",
+      "event": "Figure in teal coat observed in EAST CORRIDOR. Badge log shows Nora Vale entry.",
+      "evidence": ["V03", "D01"],
+      "type": "probable"
+    },
+    {
+      "time": "18:11",
+      "event": "Figure in purple coat with cardboard box observed at LOADING BAY. Badge log shows Maya Reed entry.",
+      "evidence": ["V08", "D01"],
+      "type": "probable"
+    },
+    {
+      "time": "18:12",
+      "event": "Figure in blue coat observed at CAFETERIA. Badge log shows Theo Park entry.",
+      "evidence": ["V06", "D01"],
+      "type": "probable"
+    },
+    {
+      "time": "18:13",
+      "event": "Figure in red coat observed at RECEPTION. Badge log shows Ada Finch entry.",
+      "evidence": ["V07", "D01"],
+      "type": "probable"
+    },
+    {
+      "time": "18:14",
+      "event": "Two figures observed at SERVICE DOOR. Badge logs show Eli Stone and Maya Reed entries.",
+      "evidence": ["V04", "D01"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype absent from LAB.",
+      "evidence": ["V05"],
+      "type": "confirmed"
+    }
+  ],
+  "gaps_and_contradictions": [
+    {
+      "description": "No visual evidence of LAB between 18:00 and 18:18.",
+      "evidence": ["V02", "V05"]
+    },
+    {
+      "description": "Service corridor is a blind spot (V10), preventing tracking of movement from SERVICE DOOR to LAB.",
+      "evidence": ["V10"]
+    },
+    {
+      "description": "Eli Stone's statement contradicts his badge entry at SERVICE_DOOR.",
+      "evidence": ["D01", "D02"]
+    },
+    {
+      "description": "Maya Reed's statement is incomplete regarding her 18:14 SERVICE DOOR entry.",
+      "evidence": ["D01", "D02"]
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+[
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/case_brief.md",
+    "sha256": "da6adf058cc2355a7d17370f03db4ad247171a38172ca2ebe8ea6669b4a5d67f",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/documents/D01_access.csv",
+    "sha256": "eb780882bdfa0ca3d529ceb907814b06a3c8e33d38997c46a63fdc8a8c0c8830",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/documents/D02_witnesses.md",
+    "sha256": "475ad971b60dc4b017fd45cfbd4701e1eb2d14f8ec5a80d0f912f372377324c2",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/documents/D03_messages.md",
+    "sha256": "9733e52426ed9687ebc18eb5f65e141723428bc03e62ee2259bb6972e56ec6ee",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/images/V01.png",
+    "sha256": "39b7ca73254e7e68faf9b7f93ba521d1bce78220f48e56cad49d85babb5d1769",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/images/V02.png",
+    "sha256": "b5a19b8e05d12d9658dee39aceacb09dc05f277a4a315b9c9c88c141581e8fc7",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/images/V03.png",
+    "sha256": "71ca9c7536680881f44f67be935f320e003484d22d5885ea8608f6709aaea29c",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/images/V04.png",
+    "sha256": "4e4b7dbe20b122adcf06070285bdb6461aad01d0258b4a8cdeceaf630a740b54",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/images/V05.png",
+    "sha256": "8f5395254f7dcc235592bc8723b274877915fa478530991bdaf4fb5095551245",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/images/V06.png",
+    "sha256": "82a3d45c320cf4ebd116b416a0f36891229a9750ed4ab06fc827ce2c8b086c31",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/images/V07.png",
+    "sha256": "5dc1fae3496a6ec0d294107fa5c63209e84fa43d13428deb92bf84a90e030b79",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/images/V08.png",
+    "sha256": "a92aa6c523279bd67e4693ac572084d5f24b3990787b59d1cd4df5339c95416c",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/images/V09.png",
+    "sha256": "672ec88a6260eb248332ceec9c99aa063e26182326faa3d2611a8686922a6110",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_01",
+    "source": "datasets/detective/case_01/public/images/V10.png",
+    "sha256": "0a0dade5c25de87e5f90fed7bdaa6d2255fb9040b4f660f3aab062495fb380e5",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/case_brief.md",
+    "sha256": "ca79a1abf8fa7f6c5a76e44a9ed75f3aa041463c855998ea9a6ee39edeaa2027",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/documents/D01_access.csv",
+    "sha256": "79e6a96078470976210d3d25e5510c362f65983a9c162b97c0f4fdccc5ef0d3a",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/documents/D02_witnesses.md",
+    "sha256": "475ad971b60dc4b017fd45cfbd4701e1eb2d14f8ec5a80d0f912f372377324c2",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/documents/D03_messages.md",
+    "sha256": "d7c2353693fb95d354acb22dbbb23148b57e52cf6dbc5d2e1d1be99e31f9a135",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/images/V01.png",
+    "sha256": "3387accf553a398a29c8f2f5bb2474497b8961a63a9c43b5126c722fb75f813f",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/images/V02.png",
+    "sha256": "662ed1c1ba739d8e63e7500086b4800f59a57f6ec1d973655da9f98b08d0c3ec",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/images/V03.png",
+    "sha256": "bf12b6d1dc53f8fa412c0cb8670c85b3887b5590d35f8c0d366932b31a80b673",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/images/V04.png",
+    "sha256": "6f9ed4fe6cbf5958e293dc638af20e3f907f56e59be2924f6e0ba3b6bbb35275",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/images/V05.png",
+    "sha256": "fc3069b156a60d8d767a54a955d76a781605a90cfeb140b7987558a0d5384f89",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/images/V06.png",
+    "sha256": "6e13109c96dc096b9fadd396dc991e403c7674b63dccf5a1452eb44f2fa36dbe",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/images/V07.png",
+    "sha256": "4f1d809dd18410da1b1c4aabe150be7e99d56bfc7c64faf5fc357f0f05bf3957",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/images/V08.png",
+    "sha256": "dd4bd23aa311fda8556a60ee53ea550eb3f954f8137c74937ea4e725fac56942",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/images/V09.png",
+    "sha256": "8a69c247a4f1253243b2a7379ef58025ce1ada083d0cb8b671dad7876b7f02c5",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_02",
+    "source": "datasets/detective/case_02/public/images/V10.png",
+    "sha256": "931d2eca1ad1086f006ee897e557576b90748d618398221673672a65208dc4ad",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/case_brief.md",
+    "sha256": "8ebb040a762749ab67bcd04979e61fb9d8600b48435a2e11a29340e16d74f8cf",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/documents/D01_access.csv",
+    "sha256": "10db2bd4961e00ca8046267ca034e8fc66abfc2a50ff4c1292fe8b837e563d80",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/documents/D02_witnesses.md",
+    "sha256": "475ad971b60dc4b017fd45cfbd4701e1eb2d14f8ec5a80d0f912f372377324c2",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/documents/D03_messages.md",
+    "sha256": "9733e52426ed9687ebc18eb5f65e141723428bc03e62ee2259bb6972e56ec6ee",
+    "inspection": "full document read"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/images/V01.png",
+    "sha256": "6409d3fd8451a3174dd477f30a966945a6426cb17b7feb61c556913e4cc5eff0",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/images/V02.png",
+    "sha256": "023c6bb10d99c45e990f375121902e8cb33eed10ded0289b1acfd44348dbd710",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/images/V03.png",
+    "sha256": "ab267a1c178a92b957b08f4ab1f50c0c1cb314588dadb472e138e86608ac7e84",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/images/V04.png",
+    "sha256": "a862939cac5fb3c6aa238d3c3cc004751e9934b7076f3b5b9f8e61205b1da381",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/images/V05.png",
+    "sha256": "8195135c718b006f427128918c0d5c3b46f7e79d3c3d57cc7aa77423ebee391e",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/images/V06.png",
+    "sha256": "275ae5ce43f9141a2434f7d447545aba81175e6573af560ead3e56fe39f19ca7",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/images/V07.png",
+    "sha256": "c187c1886d54da8fd48c2352916e34e34e2884523d01517b1bfcf4a32b3fac5c",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/images/V08.png",
+    "sha256": "e75bdd4a196bc452c3a098fb36d0d4ae9d6dbca24cf477045afc7cd010f0308f",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/images/V09.png",
+    "sha256": "3466033b1c8591e8bc0f4e6e483952310f13669ab1fa7a2ed15cebb878a983f6",
+    "inspection": "visual via view_image"
+  },
+  {
+    "case_id": "case_03",
+    "source": "datasets/detective/case_03/public/images/V10.png",
+    "sha256": "d4fefa0b7c58cd209cdf8e819f6f334f422a755f6aab79276a62545a4522fa7b",
+    "inspection": "visual via view_image"
+  }
+]

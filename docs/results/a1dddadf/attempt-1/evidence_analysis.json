@@ -1,0 +1,34 @@
+{
+  "evidence":[
+    {
+      "id":"D01",
+      "type":"access log",
+      "observations":"Entries recorded at 18:10-18:14 for five staff. No exit logs for service door.",
+      "details":"Nora Vale entered EAST_CORRIDOR at 18:10; Theo Park entered CAFETERIA at 18:12; Ada Finch entered RECEPTION at 18:13; Eli Stone and Maya Reed entered SERVICE_DOOR at 18:14.",
+      "timestamps":["18:10","18:12","18:13","18:14","18:14"],
+      "direct_observations":true,
+      "interpretations":"Service door likely leads to lab; no exit recorded, implying possible exit after 18:14.",
+      "uncertainty":"Badge credentials may not reflect actual presence; no exit data."
+    },
+    {
+      "id":"D02",
+      "type":"witness statements",
+      "observations":"Statements conflict with access log.",
+      "details":"Nora claims only visited east corridor; Eli denies lab after 18:00; Maya claims carrying cardboard box at 18:11; Theo remained in cafeteria; Ada staffed reception.",
+      "timestamps":[],
+      "direct_observations":false,
+      "interpretations":"Statements may be self-serving; no timestamps provided.",
+      "uncertainty":"Reliability unknown."
+    },
+    {
+      "id":"D03",
+      "type":"internal messages",
+      "observations":"Security note about badge credentials and camera blind spot.",
+      "details":"17:20 message: coat descriptions from shift assignments; doors log badge credentials, not biometric identity; service corridor is a camera blind spot.",
+      "timestamps":["17:20"],
+      "direct_observations":true,
+      "interpretations":"Service corridor entry may not be monitored; badge logs may not confirm identity.",
+      "uncertainty":"Camera blind spot may allow unobserved movement."
+    }
+  ]
+}

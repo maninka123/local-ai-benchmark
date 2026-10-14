@@ -1,0 +1,157 @@
+{
+  "case_id": "CASE_03",
+  "incident_window": {
+    "start": "18:00",
+    "end": "18:18",
+    "description": "Prototype confirmed present at 18:00 (V02), missing by 18:18 (V05)"
+  },
+  "events": [
+    {
+      "time": "17:00",
+      "type": "documentary",
+      "description": "Eli Stone message: 'My project needs that prototype tomorrow'",
+      "exhibit": "D03",
+      "certainty": "confirmed"
+    },
+    {
+      "time": "17:10",
+      "type": "documentary",
+      "description": "Maya Reed message about moving cardboard consumables box to loading bay",
+      "exhibit": "D03",
+      "certainty": "confirmed"
+    },
+    {
+      "time": "17:20",
+      "type": "documentary",
+      "description": "Security note: coat descriptions from shift assignments; badges log credentials not biometric identity; service corridor is camera blind spot",
+      "exhibit": "D03",
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:00",
+      "type": "visual",
+      "description": "Prototype visible on table in Lab",
+      "exhibit": "V02",
+      "location": "Lab",
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:10",
+      "type": "badge_event",
+      "description": "Nora Vale badge used at East Corridor (ENTRY)",
+      "exhibit": "D01",
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:10",
+      "type": "visual",
+      "description": "Person in teal coat visible in East Corridor",
+      "exhibit": "V03",
+      "location": "East Corridor",
+      "certainty": "confirmed",
+      "notes": "Coat color consistent with Nora Vale assignment but does not confirm identity per D03"
+    },
+    {
+      "time": "18:11",
+      "type": "visual",
+      "description": "Person in purple coat with cardboard box visible in Loading Bay",
+      "exhibit": "V08",
+      "location": "Loading Bay",
+      "certainty": "confirmed",
+      "notes": "Coat color consistent with Maya Reed assignment but does not confirm identity per D03"
+    },
+    {
+      "time": "18:12",
+      "type": "badge_event",
+      "description": "Theo Park badge used at Cafeteria (ENTRY)",
+      "exhibit": "D01",
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:12",
+      "type": "visual",
+      "description": "Person in blue coat visible in Cafeteria",
+      "exhibit": "V06",
+      "location": "Cafeteria",
+      "certainty": "confirmed",
+      "notes": "Coat color consistent with Theo Park assignment but does not confirm identity per D03"
+    },
+    {
+      "time": "18:13",
+      "type": "badge_event",
+      "description": "Ada Finch badge used at Reception (ENTRY)",
+      "exhibit": "D01",
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:13",
+      "type": "visual",
+      "description": "Person in red coat visible in Reception",
+      "exhibit": "V07",
+      "location": "Reception",
+      "certainty": "confirmed",
+      "notes": "Coat color consistent with Ada Finch assignment but does not confirm identity per D03"
+    },
+    {
+      "time": "18:14",
+      "type": "badge_event",
+      "description": "Eli Stone badge used at Service Door (ENTRY)",
+      "exhibit": "D01",
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:14",
+      "type": "badge_event",
+      "description": "Maya Reed badge used at Service Door (ENTRY)",
+      "exhibit": "D01",
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:14",
+      "type": "visual",
+      "description": "Two persons in GRAY coats visible at Service Door",
+      "exhibit": "V04",
+      "location": "Service Door",
+      "certainty": "confirmed",
+      "notes": "CRITICAL: Gray coats do not match Eli Stone (orange) or Maya Reed (purple) assigned colors per D03"
+    },
+    {
+      "time": "18:14-18:18",
+      "type": "unobserved_interval",
+      "description": "Service corridor is camera blind spot - no visual observation of movement or removal",
+      "exhibit": "V10",
+      "certainty": "confirmed_limitation"
+    },
+    {
+      "time": "18:18",
+      "type": "visual",
+      "description": "Prototype missing from table in Lab",
+      "exhibit": "V05",
+      "location": "Lab",
+      "certainty": "confirmed"
+    }
+  ],
+  "unobserved_intervals": [
+    {
+      "start": "18:00",
+      "end": "18:10",
+      "description": "No visual observations of Lab or access points"
+    },
+    {
+      "start": "18:14",
+      "end": "18:18",
+      "description": "Service corridor blind spot prevents observation of any removal activity"
+    }
+  ],
+  "key_gaps": [
+    "No visual evidence shows prototype being removed or carried",
+    "No visual evidence confirms who physically used Eli Stone and Maya Reed badges at 18:14",
+    "Gray coats at Service Door (V04) do not match any staff member's assigned coat color",
+    "Service corridor blind spot (V10) prevents observation of removal route"
+  ],
+  "assumptions": [
+    "Camera timestamps are accurate as displayed",
+    "Badge events correspond to the times shown in D01",
+    "Coat colors from V03-V08 represent actual visible appearances at stated times"
+  ]
+}

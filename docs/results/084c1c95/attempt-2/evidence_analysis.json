@@ -1,0 +1,42 @@
+[
+    {
+        "exhibit_id": "V01",
+        "analysis": "Floor plan identifies the unmonitored link between Lab and Service Corridor, establishing the primary theft route."
+    },
+    {
+        "exhibit_id": "V02",
+        "analysis": "Confirms prototype presence in Lab at 18:00."
+    },
+    {
+        "exhibit_id": "V03",
+        "analysis": "Identifies Nora Vale (teal) in East Corridor at 18:10."
+    },
+    {
+        "exhibit_id": "V04",
+        "analysis": "Shows two unidentified figures in grey coats at Service Door at 18:14. Discrepancy in coat color noted (expected orange/purple)."
+    },
+    {
+        "exhibit_id": "V05",
+        "analysis": "Confirms prototype is missing from Lab at 18:18."
+    },
+    {
+        "exhibit_id": "V06",
+        "analysis": "Identifies Theo Park (blue) in Cafeteria at 18:12."
+    },
+    {
+        "exhibit_id": "V07",
+        "analysis": "Identifies Ada Finch (red) in Reception at 18:13."
+    },
+    {
+        "exhibit_id": "V08",
+        "analysis": "Identifies Maya Reed (purple) in Loading Bay at 18:11, carrying a cardboard box."
+    },
+    {
+        "exhibit_id": "V09",
+        "analysis": "Provides object reference for the container/prototype detail."
+    },
+    {
+        "exhibit_id": "V10",
+        "analysis": "Confirms the existence of a blind spot in the Service Corridor."
+    }
+]

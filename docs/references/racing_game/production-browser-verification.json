@@ -1,0 +1,192 @@
+{
+  "kind": "Actual Chromium production route smoke test; keyboard input and read-only diagnostics",
+  "url": "http://127.0.0.1:8765/api/references/racing_game/files/output/game/dist/index.html",
+  "startedAt": "2026-10-13T07:19:51.980Z",
+  "errors": [],
+  "requestFailures": [],
+  "checks": [
+    {
+      "name": "Production route loads WebGL scene under dashboard response headers",
+      "passed": true
+    },
+    {
+      "name": "Selected Spectre R starts after countdown",
+      "passed": true
+    },
+    {
+      "name": "W accelerates and moves player in production build",
+      "passed": true
+    },
+    {
+      "name": "Pause freezes production race",
+      "passed": true
+    },
+    {
+      "name": "All three production camera views render",
+      "passed": true
+    },
+    {
+      "name": "Escape resumes and R restarts production game",
+      "passed": true
+    },
+    {
+      "name": "No uncaught JavaScript errors or failed network requests",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    ".\\results\\references\\gpt-6-astra-high\\racing_game\\output\\screenshots\\production_menu.png",
+    ".\\results\\references\\gpt-6-astra-high\\racing_game\\output\\screenshots\\production_race_chase.png",
+    ".\\results\\references\\gpt-6-astra-high\\racing_game\\output\\screenshots\\production_race_hood.png",
+    ".\\results\\references\\gpt-6-astra-high\\racing_game\\output\\screenshots\\production_race_overhead.png"
+  ],
+  "httpStatus": 200,
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "cache-control": "no-cache",
+    "content-length": "421",
+    "content-security-policy": "sandbox allow-scripts allow-pointer-lock; default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Tue, 13 Oct 2026 07:19:52 GMT",
+    "etag": "\"8d46edf784997aa462926967dab6990d\"",
+    "last-modified": "Tue, 13 Oct 2026 07:18:13 GMT",
+    "server": "uvicorn",
+    "x-content-type-options": "nosniff"
+  },
+  "snapshot": {
+    "phase": "countdown",
+    "paused": false,
+    "time": 0,
+    "countdown": 3.375000000000001,
+    "selected": 1,
+    "collisions": {
+      "barrier": 0,
+      "vehicle": 0,
+      "obstacle": 0
+    },
+    "standings": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "cars": [
+      {
+        "id": 0,
+        "name": "YOU",
+        "car": "spectre",
+        "x": -25,
+        "z": 82.2,
+        "speed": 0,
+        "heading": 0,
+        "completedLaps": 0,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 0,
+        "lapTimes": [],
+        "finishTime": null,
+        "recoveries": 0,
+        "collisions": 0,
+        "progress": 0
+      },
+      {
+        "id": 1,
+        "name": "M. Sato",
+        "car": "swift",
+        "x": -25,
+        "z": 87.8,
+        "speed": 0,
+        "heading": 0,
+        "completedLaps": 0,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 0,
+        "lapTimes": [],
+        "finishTime": null,
+        "recoveries": 0,
+        "collisions": 0,
+        "progress": 0
+      },
+      {
+        "id": 2,
+        "name": "A. Rivera",
+        "car": "comet",
+        "x": -33,
+        "z": 82.2,
+        "speed": 0,
+        "heading": 0,
+        "completedLaps": 0,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 0,
+        "lapTimes": [],
+        "finishTime": null,
+        "recoveries": 0,
+        "collisions": 0,
+        "progress": 0
+      },
+      {
+        "id": 3,
+        "name": "J. Quinn",
+        "car": "spectre",
+        "x": -33,
+        "z": 87.8,
+        "speed": 0,
+        "heading": 0,
+        "completedLaps": 0,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 0,
+        "lapTimes": [],
+        "finishTime": null,
+        "recoveries": 0,
+        "collisions": 0,
+        "progress": 0
+      },
+      {
+        "id": 4,
+        "name": "N. Vale",
+        "car": "swift",
+        "x": -41,
+        "z": 82.2,
+        "speed": 0,
+        "heading": 0,
+        "completedLaps": 0,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 0,
+        "lapTimes": [],
+        "finishTime": null,
+        "recoveries": 0,
+        "collisions": 0,
+        "progress": 0
+      },
+      {
+        "id": 5,
+        "name": "S. Moss",
+        "car": "comet",
+        "x": -41,
+        "z": 87.8,
+        "speed": 0,
+        "heading": 0,
+        "completedLaps": 0,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 0,
+        "lapTimes": [],
+        "finishTime": null,
+        "recoveries": 0,
+        "collisions": 0,
+        "progress": 0
+      }
+    ],
+    "inMenu": false,
+    "camera": "CHASE",
+    "renderer": {
+      "frame": 122,
+      "calls": 116,
+      "triangles": 32598,
+      "points": 0,
+      "lines": 0
+    }
+  },
+  "passed": true,
+  "completedAt": "2026-10-13T07:20:03.042Z"
+}

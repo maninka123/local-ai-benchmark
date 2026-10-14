@@ -1,0 +1,157 @@
+{
+  "case_id": "CASE_03",
+  "incident_type": "Missing laboratory prototype",
+  "responsible_person": "Eli Stone",
+  "confidence": 0.75,
+  "conclusion": "Eli Stone is the most likely responsible person for the theft of the laboratory prototype. His badge was used to access the Service Door at 18:14, providing unmonitored access to the lab via the service corridor. This directly contradicts his witness statement claiming he did not approach the lab after 18:00. Additionally, Eli expressed a stated need for the prototype in an internal message at 17:00. The coat color discrepancy at the Service Door (gray coats instead of Eli's assigned orange) suggests either deliberate disguise or badge misuse by an accomplice.",
+  "exhibits": [
+    {
+      "exhibit_id": "D03_messages.md",
+      "relevance": "Establishes Eli's motive - stated need for prototype at 17:00"
+    },
+    {
+      "exhibit_id": "D01_access.csv",
+      "relevance": "Shows Eli Stone's badge used at Service Door at 18:14, the unmonitored route to lab"
+    },
+    {
+      "exhibit_id": "D02_witnesses.md",
+      "relevance": "Eli's false statement claiming no lab approach after 18:00 contradicted by access log"
+    },
+    {
+      "exhibit_id": "V04.png",
+      "relevance": "Shows two persons in gray coats at Service Door, not matching Eli's orange or Maya's purple assignment - suggests disguise or badge misuse"
+    },
+    {
+      "exhibit_id": "V01.png",
+      "relevance": "Floor plan showing service corridor as unmonitored link to lab"
+    },
+    {
+      "exhibit_id": "V10.png",
+      "relevance": "Confirms service corridor is camera blind spot"
+    },
+    {
+      "exhibit_id": "V02.png",
+      "relevance": "Last confirmed sighting of prototype at 18:00"
+    },
+    {
+      "exhibit_id": "V05.png",
+      "relevance": "Prototype discovered missing at 18:18"
+    }
+  ],
+  "suspect_analysis": [
+    {
+      "name": "Eli Stone",
+      "coat_color": "orange (assigned)",
+      "opportunity": "HIGH - Badge used at Service Door at 18:14, unmonitored access to lab",
+      "access": "CONFIRMED - Service Door badge entry logged",
+      "timeline_consistency": "FALSE - Statement contradicts access log",
+      "contradictions": [
+        "Claims no lab approach after 18:00 but badge used at Service Door at 18:14"
+      ],
+      "supporting_evidence": [
+        "D03: Stated need for prototype at 17:00",
+        "D01: Badge used at critical unmonitored access point",
+        "V04: Present at Service Door during theft window"
+      ],
+      "exculpatory_evidence": [],
+      "uncertainty": "Coat color discrepancy (gray vs. orange) suggests possible disguise or accomplice involvement",
+      "assessment": "PRIMARY SUSPECT - Motive, opportunity, and contradictory statement"
+    },
+    {
+      "name": "Maya Reed",
+      "coat_color": "purple (assigned)",
+      "opportunity": "MODERATE - Badge used at Service Door at 18:14",
+      "access": "CONFIRMED - Service Door badge entry logged",
+      "timeline_consistency": "PARTIAL - Alibi at 18:11 Loading Bay, but badge used at 18:14",
+      "contradictions": [
+        "Badge used at Service Door while wearing gray coat (not purple)"
+      ],
+      "supporting_evidence": [
+        "D01: Badge used at Service Door at 18:14"
+      ],
+      "exculpatory_evidence": [
+        "V08: Legitimate activity at Loading Bay at 18:11 with cardboard box",
+        "D03: Message about moving consumables box provides legitimate reason for box handling",
+        "Coat color discrepancy suggests badge may have been misused"
+      ],
+      "uncertainty": "Badge may have been used by someone else wearing gray coat",
+      "assessment": "LIKELY EXONERATED - Badge possibly misused, has alibi and legitimate activity"
+    },
+    {
+      "name": "Nora Vale",
+      "coat_color": "teal (assigned)",
+      "opportunity": "LOW - Only accessed East Corridor, monitored area",
+      "access": "CONFIRMED - East Corridor entry at 18:10",
+      "timeline_consistency": "TRUE - Statement matches visual evidence",
+      "contradictions": [],
+      "supporting_evidence": [],
+      "exculpatory_evidence": [
+        "V03: Teal coat visible at East Corridor, no suspicious activity",
+        "No access to unmonitored service corridor"
+      ],
+      "uncertainty": "None significant",
+      "assessment": "EXONERATED - Consistent alibi, no opportunity for theft"
+    },
+    {
+      "name": "Theo Park",
+      "coat_color": "blue (assigned)",
+      "opportunity": "LOW - Only accessed Cafeteria, monitored area",
+      "access": "CONFIRMED - Cafeteria entry at 18:12",
+      "timeline_consistency": "TRUE - Statement matches visual evidence",
+      "contradictions": [],
+      "supporting_evidence": [],
+      "exculpatory_evidence": [
+        "V06: Blue coat visible at Cafeteria, no suspicious activity",
+        "No access to unmonitored service corridor"
+      ],
+      "uncertainty": "None significant",
+      "assessment": "EXONERATED - Consistent alibi, no opportunity for theft"
+    },
+    {
+      "name": "Ada Finch",
+      "coat_color": "red (assigned)",
+      "opportunity": "LOW - Only accessed Reception, monitored area",
+      "access": "CONFIRMED - Reception entry at 18:13",
+      "timeline_consistency": "TRUE - Statement matches visual evidence",
+      "contradictions": [],
+      "supporting_evidence": [],
+      "exculpatory_evidence": [
+        "V07: Red coat visible at Reception, no suspicious activity",
+        "No access to unmonitored service corridor"
+      ],
+      "uncertainty": "None significant",
+      "assessment": "EXONERATED - Consistent alibi, no opportunity for theft"
+    }
+  ],
+  "alternative_explanations": [
+    {
+      "explanation": "Accomplice scenario: Eli Stone and another person (possibly wearing gray coats) collaborated",
+      "plausibility": "MODERATE - V04 shows two persons, both in gray coats",
+      "supporting_evidence": ["V04.png"]
+    },
+    {
+      "explanation": "Badge theft: Someone stole Eli's and Maya's badges to gain access",
+      "plausibility": "MODERATE - Coat color discrepancy supports this",
+      "supporting_evidence": ["V04.png", "D03_messages.md"]
+    },
+    {
+      "explanation": "Maya Reed acted alone using disguise",
+      "plausibility": "LOW - Has alibi at 18:11, no stated motive",
+      "supporting_evidence": []
+    }
+  ],
+  "additional_evidence_needed": [
+    "Biometric verification of persons in V04 (Service Door camera)",
+    "Review of badge authentication logs to determine if badges were physically present or cloned",
+    "Interview with Eli Stone regarding coat color discrepancy and Service Door access",
+    "Search of Eli Stone's belongings and workspace for the prototype",
+    "Review of exit logs to identify who left the facility after 18:14"
+  ],
+  "limitations": [
+    "Visual exhibits are synthetic schematics, not actual photographs",
+    "Coat colors alone cannot definitively identify individuals (per D03)",
+    "Service corridor is unmonitored - theft itself was not captured",
+    "Access logs record badge use, not necessarily badge owner presence (per D03)",
+    "Two persons visible at Service Door but only two badge entries logged"
+  ]
+}

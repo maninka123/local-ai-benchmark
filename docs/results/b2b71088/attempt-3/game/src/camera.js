@@ -1,0 +1,1 @@
+import * as THREE from 'three';\n\n// Minimal camera wrapper to avoid ReferenceError\n\nexport default {\n  scene: null,\n  camera: null,\n  renderer: null,\n  init: function (scene, camera, renderer) {\n    this.scene = scene;\n    this.camera = camera;\n    this.renderer = renderer;\n  }\n}

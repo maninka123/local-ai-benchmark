@@ -1,0 +1,169 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Investigation Report – Case 03: Missing Laboratory Prototype</h1>
+<h2>1. Executive Summary</h2>
+<p>The prototype was last confirmed present at 18:00 and reported missing at 18:18. Access logs (D01) show five staff members entering various doors between 18:10 and 18:14, with two entries to the <strong>SERVICE_DOOR</strong> (Eli Stone and Maya Reed). No exit records exist for the service door, and the service corridor is a camera blind spot (D03). Witness statements (D02) conflict with the logs and are considered unreliable. The most plausible scenario is that the prototype was removed by an individual who entered the service door after 18:00, most likely <strong>Eli Stone</strong>. Maya Reed remains a secondary possibility. No definitive evidence identifies a single individual.</p>
+<h2>2. Evidence Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Exhibit ID</th>
+<th>Type</th>
+<th>Key Observation</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D01</td>
+<td>Access log</td>
+<td>Five entries 18:10‑18:14; two to SERVICE_DOOR</td>
+<td>/input/D01_access.csv</td>
+</tr>
+<tr>
+<td>D02</td>
+<td>Witness statements</td>
+<td>Conflicting accounts; no timestamps</td>
+<td>/input/D02_witnesses.md</td>
+</tr>
+<tr>
+<td>D03</td>
+<td>Internal messages</td>
+<td>Service corridor is a camera blind spot; badge logs not biometric</td>
+<td>/input/D03_messages.md</td>
+</tr>
+</tbody>
+</table>
+<p><em>Visual exhibits V01–V10 are not available in this text‑only track.</em></p>
+<h2>3. Timeline</h2>
+<p>The timeline is derived from the access log and the missing‑prototype report.</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Event</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18:10</td>
+<td>Nora Vale enters EAST_CORRIDOR</td>
+<td>D01</td>
+</tr>
+<tr>
+<td>18:12</td>
+<td>Theo Park enters CAFETERIA</td>
+<td>D01</td>
+</tr>
+<tr>
+<td>18:13</td>
+<td>Ada Finch enters RECEPTION</td>
+<td>D01</td>
+</tr>
+<tr>
+<td>18:14</td>
+<td>Eli Stone enters SERVICE_DOOR</td>
+<td>D01</td>
+</tr>
+<tr>
+<td>18:14</td>
+<td>Maya Reed enters SERVICE_DOOR</td>
+<td>D01</td>
+</tr>
+<tr>
+<td>18:14‑18:18</td>
+<td>Unaccounted interval after service door entry</td>
+<td>D01</td>
+</tr>
+<tr>
+<td>18:18</td>
+<td>Prototype reported missing</td>
+<td>D01</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Confirmed events</strong>: 18:10‑18:14 entries. <strong>Probable events</strong>: exit from SERVICE_DOOR between 18:14‑18:18. <strong>Missing interval</strong>: 18:14‑18:18. <strong>Contradictions</strong>: Witness statements conflict with log entries.</p>
+<h2>4. Suspect Analysis</h2>
+<table>
+<thead>
+<tr>
+<th>Suspect</th>
+<th>Opportunity</th>
+<th>Access</th>
+<th>Timeline Consistency</th>
+<th>Contradictions</th>
+<th>Supporting Evidence</th>
+<th>Exculpatory Evidence</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nora Vale</td>
+<td>Entered EAST_CORRIDOR; no exit</td>
+<td>Badge logged entry</td>
+<td>Witness says only visited corridor</td>
+<td>None</td>
+<td>D01 18:10</td>
+<td>None</td>
+<td>Possible but unconfirmed</td>
+</tr>
+<tr>
+<td>Eli Stone</td>
+<td>Entered SERVICE_DOOR; no exit</td>
+<td>Badge logged entry</td>
+<td>Witness denies lab after 18:00</td>
+<td>Witness statement</td>
+<td>D01 18:14</td>
+<td>D02 Eli statement</td>
+<td><strong>Strong candidate</strong></td>
+</tr>
+<tr>
+<td>Maya Reed</td>
+<td>Entered SERVICE_DOOR; no exit</td>
+<td>Badge logged entry</td>
+<td>Witness says carried cardboard at 18:11</td>
+<td>None</td>
+<td>D01 18:14, D02 Maya</td>
+<td>None</td>
+<td>Possible secondary suspect</td>
+</tr>
+<tr>
+<td>Theo Park</td>
+<td>Entered CAFETERIA; no exit</td>
+<td>Badge logged entry</td>
+<td>Witness says remained in cafeteria</td>
+<td>None</td>
+<td>D01 18:12, D02 Theo</td>
+<td>None</td>
+<td>Unlikely</td>
+</tr>
+<tr>
+<td>Ada Finch</td>
+<td>Entered RECEPTION; no exit</td>
+<td>Badge logged entry</td>
+<td>Witness says staffed reception</td>
+<td>None</td>
+<td>D01 18:13, D02 Ada</td>
+<td>None</td>
+<td>Unlikely</td>
+</tr>
+</tbody>
+</table>
+<h2>5. Key Deductions</h2>
+<ol>
+<li><strong>Badge logs confirm presence</strong> of Eli Stone and Maya Reed in the service corridor at 18:14. 2. <strong>No exit record</strong> for the service door suggests the prototype could have been removed after 18:14. 3. <strong>Camera blind spot</strong> (D03) means the service corridor is not monitored. 4. <strong>Witness statements</strong> are unreliable and conflict with logs. 5. <strong>Eli Stone’s denial</strong> of lab access after 18:00 is contradicted by badge entry to the service door.</li>
+</ol>
+<h2>6. Contradictions</h2>
+<ul>
+<li>Witness statements (D02) conflict with access log (D01).  - No exit logs for the service door, leaving the 18:14‑18:18 interval unaccounted for.</li>
+</ul>
+<h2>7. Final Conclusion</h2>
+<p>The most likely scenario is that the prototype was removed by an individual who entered the service door after 18:00, most plausibly <strong>Eli Stone</strong>. Maya Reed remains a possible secondary suspect due to simultaneous entry, but there is less direct evidence of her involvement. No definitive evidence identifies a single individual; the conclusion is based on the weight of badge logs and the absence of exit data.</p>
+<h2>8. Confidence and Limitations</h2>
+<ul>
+<li><strong>Confidence</strong>: 0.3 (low) – the evidence does not conclusively point to a single person.  - <strong>Limitations</strong>: lack of exit logs, camera blind spot, unreliable witness statements, no visual evidence of the prototype’s removal.</li>
+</ul>
+<h2>9. Recommended Next Investigative Steps</h2>
+<ol>
+<li>Recover and analyze any available CCTV footage from adjacent corridors. 2. Interview staff again, focusing on the 18:14‑18:18 interval. 3. Inspect the prototype’s storage area for physical evidence (e.g., fingerprints, tool marks). 4. Verify badge logs for any anomalies or unauthorized badge use. 5. Consider forensic analysis of the prototype for trace evidence.</li>
+</ol>

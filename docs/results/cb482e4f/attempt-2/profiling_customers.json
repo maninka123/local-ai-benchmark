@@ -1,0 +1,15 @@
+{
+  "file": "customers.csv",
+  "shape": [
+    1200,
+    5
+  ],
+  "columns": [
+    "customer_id",
+    "segment",
+    "region_id",
+    "joined_date",
+    "marketing_group"
+  ],
+  "dtypes": {
+    "customer_id": 

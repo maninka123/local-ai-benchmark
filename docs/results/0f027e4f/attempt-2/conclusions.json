@@ -1,0 +1,6 @@
+{
+  "responsible_person": null,
+  "confidence": 0.6,
+  "conclusion": "Prototype likely removed via service door by either Eli or Maya; no definitive individual identified.",
+  "exhibits": ["D01_access.csv","D02_witnesses.md","D03_messages.md"]
+}

@@ -1,0 +1,195 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Investigation Report: Missing Laboratory Prototype</h1>
+<h2>1. Executive Summary</h2>
+<p>A prototype was last confirmed present at 18:00 and discovered missing at 18:18. Access logs show two badge entries at SERVICE_CORRIDOR at 18:14, but the logs record credential use, not biometric identity. All five staff members entered the facility between 18:10-18:14. Due to the absence of exit records, visual evidence, and definitive identity linkage, the evidence does not support identification of a responsible individual. Eli Stone expressed motive (needs prototype for tomorrow's project), and both Eli and Maya Reed entered via SERVICE_CORRIDOR (a camera blind spot), but badge entries alone cannot establish who removed the prototype. The 18:00-18:10 interval has no access log entries, leaving the window of removal unobserved.</p>
+<h2>2. Evidence Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Exhibit</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D01_access.csv</td>
+<td>Access Log</td>
+<td>Records badge entries (not biometric identity) for 5 staff between 18:10-18:14</td>
+</tr>
+<tr>
+<td>D02_witnesses.md</td>
+<td>Witness Statements</td>
+<td>Unverified statements from 5 staff members</td>
+</tr>
+<tr>
+<td>D03_messages.md</td>
+<td>Internal Messages</td>
+<td>Motive and security notes</td>
+</tr>
+<tr>
+<td>case_brief</td>
+<td>Case Overview</td>
+<td>Prototype last seen at 18:00, missing at 18:18</td>
+</tr>
+<tr>
+<td>V01-V10</td>
+<td>Images</td>
+<td>Not available in text-only track</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Timeline</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Event</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17:00</td>
+<td>Eli: &quot;My project needs that prototype tomorrow&quot;</td>
+<td>D03_messages</td>
+</tr>
+<tr>
+<td>17:10</td>
+<td>Maya asked to move cardboard box to loading bay</td>
+<td>D03_messages</td>
+</tr>
+<tr>
+<td>17:20</td>
+<td>Security notes SERVICE_CORRIDOR is camera blind spot</td>
+<td>D03_messages</td>
+</tr>
+<tr>
+<td>18:00</td>
+<td>Prototype last confirmed present</td>
+<td>case_brief</td>
+</tr>
+<tr>
+<td>18:10</td>
+<td>Nora Vale enters EAST_CORRIDOR</td>
+<td>D01_access</td>
+</tr>
+<tr>
+<td>18:12</td>
+<td>Theo Park enters CAFETERIA</td>
+<td>D01_access</td>
+</tr>
+<tr>
+<td>18:13</td>
+<td>Ada Finch enters RECEPTION</td>
+<td>D01_access</td>
+</tr>
+<tr>
+<td>18:14</td>
+<td>Badge credential used at SERVICE_CORRIDOR (ENTRY)</td>
+<td>D01_access</td>
+</tr>
+<tr>
+<td>18:14</td>
+<td>Badge credential used at SERVICE_CORRIDOR (ENTRY)</td>
+<td>D01_access</td>
+</tr>
+<tr>
+<td>18:18</td>
+<td>Prototype discovered missing</td>
+<td>case_brief</td>
+</tr>
+</tbody>
+</table>
+<h2>4. Suspect Analysis</h2>
+<table>
+<thead>
+<tr>
+<th>Suspect</th>
+<th>Opportunity</th>
+<th>Timeline Consistency</th>
+<th>Contradictions</th>
+<th>Motive</th>
+<th>Exculpatory Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Eli Stone</strong></td>
+<td>SERVICE_CORRIDOR entry at 18:14 (blind spot)</td>
+<td>Statement contradicts access log</td>
+<td>&quot;Did not approach lab&quot; vs SERVICE_CORRIDOR entry</td>
+<td>High (needs prototype tomorrow)</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Maya Reed</strong></td>
+<td>SERVICE_CORRIDOR entry at 18:14 (blind spot)</td>
+<td>Box statement at 18:11 compatible with entry at 18:14</td>
+<td>None directly implicating</td>
+<td>None</td>
+<td>Cardboard box task</td>
+</tr>
+<tr>
+<td><strong>Nora Vale</strong></td>
+<td>EAST_CORRIDOR at 18:10</td>
+<td>Consistent with statement</td>
+<td>None</td>
+<td>None</td>
+<td>Statement matches access</td>
+</tr>
+<tr>
+<td><strong>Theo Park</strong></td>
+<td>CAFETERIA at 18:12</td>
+<td>Consistent with statement</td>
+<td>None</td>
+<td>None</td>
+<td>Statement matches access</td>
+</tr>
+<tr>
+<td><strong>Ada Finch</strong></td>
+<td>RECEPTION at 18:13</td>
+<td>Consistent with statement</td>
+<td>None</td>
+<td>None</td>
+<td>Statement matches access</td>
+</tr>
+</tbody>
+</table>
+<h2>5. Key Deductions</h2>
+<ol>
+<li><strong>Motive</strong>: Eli's 17:00 message establishes clear motive.</li>
+<li><strong>Opportunity</strong>: SERVICE_CORRIDOR is a camera blind spot (D03_messages) and provides access to lab areas.</li>
+<li><strong>Timeline</strong>: Two entries at SERVICE_CORRIDOR at 18:14; prototype missing by 18:18 — 4-minute window sufficient.</li>
+<li><strong>Contradiction</strong>: Eli's denial of approaching the lab conflicts with SERVICE_CORRIDOR entry.</li>
+<li><strong>Identity limitation</strong>: Badge entries record credential use, not biometric identity (D03_messages).</li>
+<li><strong>Missing interval</strong>: 18:00-18:10 has no access log entries; prototype may have been removed before 18:10.</li>
+</ol>
+<h2>6. Contradictions</h2>
+<ol>
+<li><strong>Eli Stone</strong>: Statement says &quot;I did not approach the lab after 18:00&quot; but access log shows SERVICE_CORRIDOR entry at 18:14.</li>
+<li><strong>Maya Reed</strong>: Statement says &quot;I carried a cardboard supply box at 18:11&quot; but access log shows SERVICE_CORRIDOR entry at 18:14. <em>Note: These events are temporally compatible, not contradictory.</em></li>
+</ol>
+<h2>7. Final Conclusion</h2>
+<p><strong>No responsible individual can be identified based on the available evidence.</strong></p>
+<p>While Eli Stone had motive (expressed need for tomorrow's project) and opportunity (SERVICE_CORRIDOR entry at 18:14, a blind spot), the access log records badge credential use, not biometric identity. The two entries at SERVICE_CORRIDOR at 18:14 could belong to any combination of the five staff members. Maya Reed also entered via SERVICE_CORRIDOR at 18:14, but there is no evidence linking her to the theft. The 18:00-18:10 interval has no access log entries, meaning the prototype could have been removed before any of the recorded entries. Without visual evidence (V01-V10 unavailable in text-only track) or exit records, attribution is speculative.</p>
+<h2>8. Confidence and Limitations</h2>
+<p><strong>Confidence</strong>: 0% (cannot identify responsible individual)</p>
+<p><strong>Limitations</strong>:</p>
+<ul>
+<li>No visual evidence (V01-V10 unavailable in text-only track)</li>
+<li>No exit records to confirm departure</li>
+<li>Badge credentials may be shared or used by others (D03_messages: &quot;doors log badge credentials, not biometric identity&quot;)</li>
+<li>18:00-18:10 gap: no access log entries (possible pre-existing presence or removal before 18:10)</li>
+<li>18:14-18:18 gap: no exit records or visual confirmation</li>
+<li>Witness statements are unverified and may be false</li>
+<li>SERVICE_CORRIDOR is a camera blind spot, reducing verifiability</li>
+</ul>
+<h2>9. Recommended Next Investigative Steps</h2>
+<ol>
+<li>Review badge access logs for exits (to confirm who left during 18:14-18:18)</li>
+<li>Obtain visual evidence (V01-V10) to identify individuals at SERVICE_CORRIDOR</li>
+<li>Interview staff about 18:00-18:10 presence (possible pre-existing presence)</li>
+<li>Examine cardboard box contents (to determine if used as cover for prototype removal)</li>
+<li>Review internal communications for additional motive or opportunity indicators</li>
+<li>Conduct biometric verification of badge usage (if available)</li>
+</ol>

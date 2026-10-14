@@ -1,0 +1,350 @@
+{
+  "run_id": "2026-10-09T205409-952701+0000--cb482e4f",
+  "model": "nemotron-3-nano:30b-a3b-q4_K_M",
+  "task": "data_analysis",
+  "case": null,
+  "track": "text_and_tools",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 3,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 3,
+            "reason": "Script profiles shapes/dtypes/missingness for six public tables; no relationships, cleaning, unusual/invalid records or saved profile results."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No verified business calculations."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No substantive findings."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No figures."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No report."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No recommendations."
+          }
+        ],
+        "summary": "Needs revision: The script stops at basic profiling and produces no business analysis, charts, findings file or report.; No completed cleaning decisions, verified financial results or five substantial findings are saved.",
+        "evidence_files": [
+          "models/nemotron-3-nano-30b-a3b-q4_K_M--b725f1117407/01_data_analysis/2026-10-09T205409-952701+0000--cb482e4f/artifacts/analysis.py",
+          "results/improvement_campaign/data_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "models/nemotron-3-nano-30b-a3b-q4_K_M--b725f1117407/01_data_analysis/2026-10-09T205409-952701+0000--cb482e4f/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "analysis.py",
+          "url": "./results/cb482e4f/attempt-1/analysis.py",
+          "bytes": 516
+        }
+      ],
+      "game_url": null,
+      "readiness": "Analysis script runs",
+      "prompt_url": "./results/cb482e4f/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 4,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 4,
+            "reason": "Six-table profiling code and saved shape/column prefixes provide limited understanding. All profiling JSONs truncate at dtype serialization, so missing/duplicate results not valid saved JSON; no cleaning/relationships/validity analysis."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No verified business calculation outputs; profiling is preliminary preparation."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No substantive business findings."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No figures."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No report."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No recommendations."
+          }
+        ],
+        "summary": "Incomplete after improvement iteration 1: Required deliverable is missing or empty: findings.json",
+        "evidence_files": [
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-516c769232/artifacts/analysis.py",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-516c769232/artifacts/profiling_customers.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-516c769232/artifacts/profiling_inventory.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-516c769232/artifacts/profiling_operational_events.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-516c769232/artifacts/profiling_products.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-516c769232/artifacts/profiling_regions.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-516c769232/artifacts/profiling_transactions.json",
+          "results/improvement_campaign/data_after_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-516c769232/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "analysis.py",
+          "url": "./results/cb482e4f/attempt-2/analysis.py",
+          "bytes": 1608
+        },
+        {
+          "name": "profiling_customers.json",
+          "url": "./results/cb482e4f/attempt-2/profiling_customers.json",
+          "bytes": 208
+        },
+        {
+          "name": "profiling_inventory.json",
+          "url": "./results/cb482e4f/attempt-2/profiling_inventory.json",
+          "bytes": 175
+        },
+        {
+          "name": "profiling_operational_events.json",
+          "url": "./results/cb482e4f/attempt-2/profiling_operational_events.json",
+          "bytes": 206
+        },
+        {
+          "name": "profiling_products.json",
+          "url": "./results/cb482e4f/attempt-2/profiling_products.json",
+          "bytes": 192
+        },
+        {
+          "name": "profiling_regions.json",
+          "url": "./results/cb482e4f/attempt-2/profiling_regions.json",
+          "bytes": 181
+        },
+        {
+          "name": "profiling_transactions.json",
+          "url": "./results/cb482e4f/attempt-2/profiling_transactions.json",
+          "bytes": 400
+        }
+      ],
+      "game_url": null,
+      "readiness": "Analysis script runs",
+      "prompt_url": "./results/cb482e4f/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 4,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 4,
+            "reason": "Six-table profiling code and saved shape/column prefixes provide limited understanding. All profiling JSONs truncate at dtype serialization, so missing/duplicate results not valid saved JSON; no cleaning/relationships/validity analysis."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No verified business calculation outputs; profiling is preliminary preparation."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No substantive business findings."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No figures."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No report."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No recommendations."
+          }
+        ],
+        "summary": "Incomplete after improvement iteration 2: Required report.md, findings.json and all six meaningful figures are absent.",
+        "evidence_files": [
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-7c31afe33c/artifacts/analysis.py",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-7c31afe33c/artifacts/profiling_customers.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-7c31afe33c/artifacts/profiling_inventory.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-7c31afe33c/artifacts/profiling_operational_events.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-7c31afe33c/artifacts/profiling_products.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-7c31afe33c/artifacts/profiling_regions.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-7c31afe33c/artifacts/profiling_transactions.json",
+          "results/improvement_campaign/pass_2/data_after_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/data_analysis/2026-10-09T205409-952701-0000--cb482e4f/evaluations/eval-7c31afe33c/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": 1.2,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "analysis.py",
+          "url": "./results/cb482e4f/attempt-3/analysis.py",
+          "bytes": 1608
+        },
+        {
+          "name": "profiling_customers.json",
+          "url": "./results/cb482e4f/attempt-3/profiling_customers.json",
+          "bytes": 208
+        },
+        {
+          "name": "profiling_inventory.json",
+          "url": "./results/cb482e4f/attempt-3/profiling_inventory.json",
+          "bytes": 175
+        },
+        {
+          "name": "profiling_operational_events.json",
+          "url": "./results/cb482e4f/attempt-3/profiling_operational_events.json",
+          "bytes": 206
+        },
+        {
+          "name": "profiling_products.json",
+          "url": "./results/cb482e4f/attempt-3/profiling_products.json",
+          "bytes": 192
+        },
+        {
+          "name": "profiling_regions.json",
+          "url": "./results/cb482e4f/attempt-3/profiling_regions.json",
+          "bytes": 181
+        },
+        {
+          "name": "profiling_transactions.json",
+          "url": "./results/cb482e4f/attempt-3/profiling_transactions.json",
+          "bytes": 400
+        }
+      ],
+      "game_url": null,
+      "readiness": "Analysis script runs",
+      "prompt_url": "./results/cb482e4f/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": [
+    {
+      "name": "GPT-6.1 Sol · separate small repair",
+      "lines": 2,
+      "files": [
+        {
+          "name": "analysis.py",
+          "url": "./results/cb482e4f/repairs/sol-6.1-small-fix-20261014/analysis.py",
+          "bytes": 1575
+        },
+        {
+          "name": "profiling_customers.json",
+          "url": "./results/cb482e4f/repairs/sol-6.1-small-fix-20261014/profiling_customers.json",
+          "bytes": 493
+        },
+        {
+          "name": "profiling_inventory.json",
+          "url": "./results/cb482e4f/repairs/sol-6.1-small-fix-20261014/profiling_inventory.json",
+          "bytes": 400
+        },
+        {
+          "name": "profiling_operational_events.json",
+          "url": "./results/cb482e4f/repairs/sol-6.1-small-fix-20261014/profiling_operational_events.json",
+          "bytes": 485
+        },
+        {
+          "name": "profiling_products.json",
+          "url": "./results/cb482e4f/repairs/sol-6.1-small-fix-20261014/profiling_products.json",
+          "bytes": 455
+        },
+        {
+          "name": "profiling_regions.json",
+          "url": "./results/cb482e4f/repairs/sol-6.1-small-fix-20261014/profiling_regions.json",
+          "bytes": 415
+        },
+        {
+          "name": "profiling_transactions.json",
+          "url": "./results/cb482e4f/repairs/sol-6.1-small-fix-20261014/profiling_transactions.json",
+          "bytes": 1187
+        }
+      ],
+      "game_url": null,
+      "limitations": [
+        "Required report.md, findings.json and all six meaningful figures are absent.",
+        "The saved code stops at profiling; it does not clean or investigate financial/time/product/region/customer/operational performance or supply five supported findings.",
+        "Every profiling JSON is truncated and invalid: pandas dtype objects cannot be serialized; the script catches each error and exits 0 despite six failed outputs.",
+        "Original benchmark scores and completeness are unchanged. This is an assisted partial preview, with original report claims retained and potentially inaccurate."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "case_id": "case_01",
+  "most_likely_account": "The prototype was present on the lab bench at 18:00 and absent at 18:18. A teal-coated figure appears in the east corridor at 18:10 and with a visually matching triangle-marked case at the east exit at 18:14, matching Nora’s credential events. The most economical reconstruction is that Nora, or someone using her coat and credential, acquired the prototype during the interval and took it toward/out through the east exit. Nora is the probable responsible individual for that movement, but identity, the pickup itself, object uniqueness, and authority to move it are not established.",
+  "exhibit_ids": [
+    "V01",
+    "V02",
+    "V03",
+    "V04",
+    "V05",
+    "V09",
+    "D01",
+    "D03"
+  ],
+  "leading_suspect": "Nora Vale",
+  "responsible_individual_definitively_identified": false,
+  "confidence": {
+    "overall": "Moderate for Nora as the person who moved the prototype; not definitive.",
+    "observed_change": "High: the reference object is present at 18:00 and absent from the bench at 18:18.",
+    "route_and_possession": "Moderate to high for the teal figure carrying a matching case at the east exit; moderate for it being the same prototype.",
+    "individual_identity": "Moderate: coat and credential align twice, but neither authenticates identity.",
+    "intent_or_authorisation": "Undetermined: no permission, ownership, or intent evidence establishes misconduct."
+  },
+  "alternatives": [
+    {
+      "text": "Someone else may have used Nora’s assigned coat and credential; D03 explicitly prevents biometric attribution.",
+      "exhibit_ids": [
+        "V03",
+        "V04",
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "text": "The exit case could be a look-alike, or the prototype could have been moved with permission. Neither alternative is demonstrated, but the exhibits do not rule them out.",
+      "exhibit_ids": [
+        "V04",
+        "V09",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "text": "A different person could have used the service blind spot and removed or relocated the prototype independently; this fits a coverage gap but has less positive support than the teal-figure sequence.",
+      "exhibit_ids": [
+        "V01",
+        "V10",
+        "D03"
+      ]
+    }
+  ],
+  "limitations": [
+    {
+      "text": "Synthetic schematics simplify persons, objects, and locations. They support only visible features, not faces, fingerprints, serial numbers, precise distances, or hidden contents.",
+      "exhibit_ids": [
+        "V01",
+        "V02",
+        "V03",
+        "V04",
+        "V05",
+        "V06",
+        "V07",
+        "V08",
+        "V09"
+      ]
+    },
+    {
+      "text": "Badge credentials and coat assignments are identity proxies; sharing, misuse, or reassignment is not ruled out or positively demonstrated.",
+      "exhibit_ids": [
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "text": "No uninterrupted removal footage, complete access history, authorisation record, recovery evidence, or full-window alibi is supplied.",
+      "exhibit_ids": [
+        "V01",
+        "V02",
+        "V05",
+        "V10",
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "text": "Confidence labels are qualitative judgments, not calibrated probabilities or findings of legal guilt.",
+      "exhibit_ids": [
+        "V02",
+        "V04",
+        "V05",
+        "D01",
+        "D03"
+      ]
+    }
+  ],
+  "recommended_next_steps": [
+    {
+      "text": "Authenticate the 18:10 and 18:14 credential users through badge custody, original footage, independent witnesses, and coat assignment/change records.",
+      "exhibit_ids": [
+        "V03",
+        "V04",
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "text": "Recover the case and verify the prototype or serial identifier; establish where the case went after the east exit.",
+      "exhibit_ids": [
+        "V02",
+        "V04",
+        "V09"
+      ]
+    },
+    {
+      "text": "Interview Nora about the case, source, destination, and authorisation; seek movement/transfer records and earlier or continuous lab footage.",
+      "exhibit_ids": [
+        "V02",
+        "V03",
+        "V04",
+        "V05",
+        "D02"
+      ]
+    },
+    {
+      "text": "Recover service-route records or witnesses and verify camera/log time alignment; obtain fuller cafeteria/reception coverage before excluding other suspects.",
+      "exhibit_ids": [
+        "V01",
+        "V06",
+        "V07",
+        "V10",
+        "D01",
+        "D03"
+      ]
+    }
+  ],
+  "suspects": [
+    {
+      "name": "Nora Vale",
+      "assessment": "Leading suspect; probable attribution, not definitive.",
+      "opportunity": "East corridor connects to the lab and is observed at 18:10.",
+      "access": "Nora’s credential logs east-corridor ENTRY at 18:10 and east-exit EXIT at 18:14.",
+      "timeline_consistency": "The teal-coat observations and exit credential form a coherent east-route sequence. Her claim of only a corridor visit is materially challenged if the matching case is the prototype.",
+      "supporting_evidence": "Teal figure with matching triangle-marked case at the east exit at 18:14, aligned with Nora’s exit credential.",
+      "exculpatory_evidence": "No object is drawn with the teal figure at 18:10; no image shows Nora entering the lab or removing the prototype.",
+      "uncertainty": "Coat/badge identity and object uniqueness are unproven; even likely possession does not establish authorisation or intent.",
+      "exhibit_ids": [
+        "V01",
+        "V03",
+        "V04",
+        "V09",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "name": "Eli Stone",
+      "assessment": "Motive/possible route only; weak implication.",
+      "opportunity": "The service corridor links to the lab; the blind spot leaves an unobserved approach possible.",
+      "access": "No Eli access event is supplied; that is not proof he had no access.",
+      "timeline_consistency": "His denial is neither corroborated nor directly contradicted by an Eli-specific movement record.",
+      "supporting_evidence": "Stated need for the prototype tomorrow.",
+      "exculpatory_evidence": "No direct lab-removal image exists. The most specific object/exit evidence concerns the teal figure.",
+      "uncertainty": "Need is not proof of misconduct; badge sharing and coat reassignment remain possible. No evidence supports a conclusive personal attribution.",
+      "exhibit_ids": [
+        "V01",
+        "V04",
+        "V10",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "name": "Maya Reed",
+      "assessment": "Routine-box explanation better supported than prototype removal.",
+      "opportunity": "At 18:11 a purple figure is at the loading bay; later movements are not shown.",
+      "access": "No Maya badge event is supplied. The loading-bay image is appearance evidence only.",
+      "timeline_consistency": "The brown-box image and request support her 18:11 statement. Her whereabouts after that frame are not established.",
+      "supporting_evidence": "She is associated with a carried box, but no observation identifies it as the prototype.",
+      "exculpatory_evidence": "The brown box lacks the prototype’s visible gray exterior and triangle. The consumables request provides a coherent innocent explanation.",
+      "uncertainty": "Contents of the brown box are unknown. Concealment is possible in principle but unsupported by a visible transfer or other specific evidence.",
+      "exhibit_ids": [
+        "V08",
+        "V09",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "name": "Theo Park",
+      "assessment": "Limited implication; partial corroboration, not a complete alibi.",
+      "opportunity": "The full period before 18:12 and movements after the single cafeteria frame remain unobserved.",
+      "access": "Theo’s credential logs cafeteria ENTRY at 18:12; no lab entry is supplied.",
+      "timeline_consistency": "The blue figure and badge event support being at the cafeteria at 18:12, but not remaining there continuously.",
+      "supporting_evidence": "No specific evidence links Theo to the prototype or its removal.",
+      "exculpatory_evidence": "Cafeteria appearance and credential align with the start of his account.",
+      "uncertainty": "Identity and continuous presence are unverified. Incomplete records cannot exclude later access.",
+      "exhibit_ids": [
+        "V01",
+        "V06",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "name": "Ada Finch",
+      "assessment": "Limited implication; partial corroboration, not a complete alibi.",
+      "opportunity": "Her location before and after the 18:13 reception frame is not continuously documented.",
+      "access": "Ada’s credential logs reception ENTRY at 18:13; no lab entry is supplied.",
+      "timeline_consistency": "The red figure and badge event support reception presence at one moment, consistent with her broad statement.",
+      "supporting_evidence": "No specific evidence links Ada to the prototype or its removal.",
+      "exculpatory_evidence": "Reception appearance and credential corroborate part of her account.",
+      "uncertainty": "The statement supplies no shift interval. Identity and full-window whereabouts are not established.",
+      "exhibit_ids": [
+        "V07",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    }
+  ],
+  "key_deductions": [
+    {
+      "text": "The east-route observation, distinctive object match, and Nora’s two credential events jointly make her a substantially stronger lead than motive alone makes Eli.",
+      "exhibit_ids": [
+        "V01",
+        "V03",
+        "V04",
+        "V09",
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "text": "An acquisition between 18:10 and 18:14 is plausible if both teal figures are the same person and the later case is the prototype. The 18:10 still’s lack of a drawn object is not a rigorous lower bound on removal.",
+      "exhibit_ids": [
+        "V02",
+        "V03",
+        "V04",
+        "V09"
+      ]
+    },
+    {
+      "text": "The brown loading-bay box is visually different and has a documented supply explanation; it should not be equated with the triangle-marked prototype.",
+      "exhibit_ids": [
+        "V08",
+        "V09",
+        "D02",
+        "D03"
+      ]
+    }
+  ],
+  "contradictions": [
+    {
+      "text": "Nora’s “only visited the east corridor and left” account omits the matching case visible at the exit. This is a material tension, conditional on identifying her and the object; it does not directly prove a lab visit or deliberate lie.",
+      "exhibit_ids": [
+        "V03",
+        "V04",
+        "V09",
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "text": "No supplied Eli-specific movement contradicts his denial. His stated project need alone cannot override the stronger east-exit evidence.",
+      "exhibit_ids": [
+        "D02",
+        "D03",
+        "V04"
+      ]
+    },
+    {
+      "text": "Theo’s and Ada’s apparent alibis are only partly corroborated; the images are schematic snapshots, not continuous records.",
+      "exhibit_ids": [
+        "V06",
+        "V07",
+        "D01",
+        "D02"
+      ]
+    }
+  ]
+}

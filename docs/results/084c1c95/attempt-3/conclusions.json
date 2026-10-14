@@ -1,0 +1,13 @@
+{
+    "responsible_person": null,
+    "confidence": 0.6,
+    "conclusion": "The prototype was likely removed from the LAB via the unmonitored service corridor between 18:00 and 18:18. While no single individual can be definitively identified, the movement of Maya Reed with a box (V08) and the subsequent entry of both Maya and Eli Stone through the service door (V04, D04, D05) suggests a high probability of involvement, potentially using the box for concealment.",
+    "exhibits": [
+        "V01",
+        "V05",
+        "V08",
+        "V10",
+        "D04",
+        "D05"
+    ]
+}

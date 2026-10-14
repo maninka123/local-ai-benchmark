@@ -1,0 +1,52 @@
+{
+  "repair_id": "sol-6.1-small-fix-20261014",
+  "run_id": "2026-10-09T205409-952701+0000--cb482e4f",
+  "source_update_id": "update-ce71998064",
+  "source_evaluation_id": "eval-7c31afe33c",
+  "configured_model": "gpt-6.1-sol",
+  "source_changed_lines": 2,
+  "source_files": [
+    {
+      "path": "analysis.py",
+      "added": 1,
+      "removed": 1
+    }
+  ],
+  "source_hashes": {
+    "analysis.py": "e24fd41b7ac6fc164b1a30173f7e8c5630e300ad52374e092223163208e6b725"
+  },
+  "changes_summary": "Serialize pandas dtype objects as strings so existing six-table profiling writes valid JSON.",
+  "status": "validated_partial",
+  "runnable": true,
+  "completion": false,
+  "limitations": [
+    "Required report.md, findings.json and all six meaningful figures are absent.",
+    "The saved code stops at profiling; it does not clean or investigate financial/time/product/region/customer/operational performance or supply five supported findings.",
+    "Every profiling JSON is truncated and invalid: pandas dtype objects cannot be serialized; the script catches each error and exits 0 despite six failed outputs.",
+    "Original benchmark scores and completeness are unchanged. This is an assisted partial preview, with original report claims retained and potentially inaccurate."
+  ],
+  "verification": [
+    {
+      "check": "git diff --no-index --numstat",
+      "source_changed_lines": 2,
+      "numstat": [
+        "1\t1\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\nemotron-3-nano-30b-a3b-q4_K_M\\\\data_analysis\\\\2026-10-09T205409-952701-0000--cb482e4f\\\\evaluations\\\\eval-7c31afe33c\\\\artifacts\\\\analysis.py\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\nemotron-3-nano-30b-a3b-q4_K_M\\\\data_analysis\\\\2026-10-09T205409-952701-0000--cb482e4f\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\analysis.py\""
+      ]
+    },
+    {
+      "check": "source SHA256 unchanged",
+      "passed": true
+    },
+    {
+      "check": "Docker network none isolated execution",
+      "exit_code": 0,
+      "runnable": true,
+      "log": "validation.log"
+    }
+  ],
+  "artifacts_path": ".\\results\\further-work\\nemotron-3-nano-30b-a3b-q4_K_M\\data_analysis\\2026-10-09T205409-952701-0000--cb482e4f\\repairs\\sol-6.1-small-fix-20261014\\artifacts",
+  "source_artifacts_path": ".\\results\\further-work\\nemotron-3-nano-30b-a3b-q4_K_M\\data_analysis\\2026-10-09T205409-952701-0000--cb482e4f\\evaluations\\eval-7c31afe33c\\artifacts",
+  "model": "nemotron-3-nano:30b-a3b-q4_K_M",
+  "task": "data_analysis",
+  "generated_outputs_disclosure": "Existing analysis script may regenerate figures/findings/profiles; report prose is unchanged."
+}

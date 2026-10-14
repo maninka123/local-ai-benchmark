@@ -1,0 +1,45 @@
+{
+  "model": "qwen3vl",
+  "errors": [],
+  "instrumentation": "Validation-only response instrumentation exposes existing local state; candidate source is unchanged.",
+  "viewport": {
+    "left": 0,
+    "top": 0,
+    "right": 1280,
+    "bottom": 720,
+    "width": 1280,
+    "height": 720,
+    "scrollWidth": 1280,
+    "scrollHeight": 720
+  },
+  "canvas_fits": true,
+  "before": {
+    "position": [
+      0,
+      0,
+      0.094526611532724
+    ],
+    "direction": 0,
+    "speed": 0.7352840330803656
+  },
+  "accelerated": {
+    "position": [
+      0,
+      0,
+      0.23683339492625027
+    ],
+    "direction": 0,
+    "speed": 0.1916000369557502
+  },
+  "steered": {
+    "position": [
+      -0.014984861590668936,
+      0,
+      0.04183267878463699
+    ],
+    "direction": 0.16221213342688673,
+    "speed": 0.8331293900506722
+  },
+  "movement": true,
+  "steering": true
+}

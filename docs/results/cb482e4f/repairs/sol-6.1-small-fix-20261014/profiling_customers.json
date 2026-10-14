@@ -1,0 +1,29 @@
+{
+  "file": "customers.csv",
+  "shape": [
+    1200,
+    5
+  ],
+  "columns": [
+    "customer_id",
+    "segment",
+    "region_id",
+    "joined_date",
+    "marketing_group"
+  ],
+  "dtypes": {
+    "customer_id": "object",
+    "segment": "object",
+    "region_id": "object",
+    "joined_date": "object",
+    "marketing_group": "int64"
+  },
+  "missing_counts": {
+    "customer_id": 0,
+    "segment": 0,
+    "region_id": 0,
+    "joined_date": 0,
+    "marketing_group": 0
+  },
+  "duplicate_count": 0
+}

@@ -1,0 +1,29 @@
+{
+  "file": "products.csv",
+  "shape": [
+    20,
+    5
+  ],
+  "columns": [
+    "product_id",
+    "name",
+    "category",
+    "unit_cost",
+    "list_price"
+  ],
+  "dtypes": {
+    "product_id": "object",
+    "name": "object",
+    "category": "object",
+    "unit_cost": "int64",
+    "list_price": "float64"
+  },
+  "missing_counts": {
+    "product_id": 0,
+    "name": 0,
+    "category": 0,
+    "unit_cost": 0,
+    "list_price": 0
+  },
+  "duplicate_count": 0
+}

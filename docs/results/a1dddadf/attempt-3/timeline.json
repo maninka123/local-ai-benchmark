@@ -1,0 +1,46 @@
+{
+  "timeline": [
+    {
+      "time": "18:10",
+      "event": "Nora Vale enters EAST_CORRIDOR",
+      "evidence": "D01",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park enters CAFETERIA",
+      "evidence": "D01",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch enters RECEPTION",
+      "evidence": "D01",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:14",
+      "event": "Eli Stone enters SERVICE_DOOR",
+      "evidence": "D01",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:14",
+      "event": "Maya Reed enters SERVICE_DOOR",
+      "evidence": "D01",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:14-18:18",
+      "event": "Unaccounted interval after service door entry",
+      "evidence": "D01",
+      "status": "probable"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype reported missing",
+      "evidence": "D01",
+      "status": "confirmed"
+    }
+  ]
+}

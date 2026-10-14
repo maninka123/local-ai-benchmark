@@ -1,0 +1,86 @@
+{
+  "timeline": [
+    {
+      "timestamp": "17:00",
+      "event": "Eli Stone message: 'My project needs that prototype tomorrow.'",
+      "source": "D03_messages.md",
+      "type": "confirmed",
+      "significance": "Establishes motive for Eli Stone"
+    },
+    {
+      "timestamp": "17:10",
+      "event": "Maya Reed message: 'Please move the cardboard consumables box to the loading bay.'",
+      "source": "D03_messages.md",
+      "type": "confirmed",
+      "significance": "Sets up potential distraction element"
+    },
+    {
+      "timestamp": "17:20",
+      "event": "Security note: Coat descriptions are from shift assignments; doors log badge credentials, not biometric identity. Service corridor is a camera blind spot.",
+      "source": "D03_messages.md",
+      "type": "confirmed",
+      "significance": "Critical limitation for identification"
+    },
+    {
+      "timestamp": "18:00",
+      "event": "Prototype visible in Lab on camera",
+      "source": "V02",
+      "type": "confirmed",
+      "significance": "Baseline state before incident"
+    },
+    {
+      "timestamp": "18:10",
+      "event": "Nora Vale (teal coat) in East Corridor",
+      "source": "V03, D01_access.csv",
+      "type": "confirmed",
+      "significance": "Nora's movements documented"
+    },
+    {
+      "timestamp": "18:11",
+      "event": "Maya Reed (purple coat) with cardboard box in Loading Bay",
+      "source": "V08, D02_witnesses.md",
+      "type": "confirmed",
+      "significance": "Maya's alibi and potential distraction"
+    },
+    {
+      "timestamp": "18:12",
+      "event": "Theo Park (blue coat) in Cafeteria",
+      "source": "V06, D01_access.csv",
+      "type": "confirmed",
+      "significance": "Theo's movements documented"
+    },
+    {
+      "timestamp": "18:13",
+      "event": "Ada Finch (red coat) at Reception",
+      "source": "V07, D01_access.csv",
+      "type": "confirmed",
+      "significance": "Ada's movements documented"
+    },
+    {
+      "timestamp": "18:14",
+      "event": "Two figures enter through Service Door (blind spot)",
+      "source": "V04, D01_access.csv",
+      "type": "confirmed",
+      "significance": "Access log shows Eli Stone and Maya Reed; coat colors don't match expected"
+    },
+    {
+      "timestamp": "18:18",
+      "event": "Prototype missing from Lab",
+      "source": "V05",
+      "type": "confirmed",
+      "significance": "Incident confirmed - prototype removed"
+    }
+  ],
+  "missing_intervals": [
+    {
+      "interval": "18:14-18:18",
+      "description": "Time between Service Door entry and prototype discovery",
+      "significance": "Critical window for prototype removal; no camera coverage of service corridor"
+    }
+  ],
+  "assumptions": [
+    "Service Door provides access to Lab via unmonitored link (V01, V10)",
+    "Coat colors in schematics may not match actual appearance per D03_messages",
+    "Access log credentials are accurate for identity verification"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "responsible_person": null,
+  "confidence": 0.4,
+  "conclusion": "The prototype was likely removed between 18:14 and 18:18 via the Service Corridor. Two individuals entered the Service Door at 18:14 using badges belonging to Eli Stone and Maya Reed, but visual evidence (V04) shows them wearing grey coats, not their assigned orange/purple work coats. This suggests impersonation or coat swapping. Nora Vale was in proximity but lacks direct evidence of entry. The identity of the perpetrators cannot be definitively established due to the coat discrepancy and blind spot.",
+  "exhibits": [
+    "V04",
+    "D01",
+    "V10",
+    "V02",
+    "V05"
+  ]
+}

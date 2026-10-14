@@ -1,0 +1,12 @@
+[
+  {"timestamp": "17:00", "event": "Eli Stone messages regarding the need for the prototype.", "type": "probable"},
+  {"timestamp": "17:10", "event": "Maya Reed messages about moving a cardboard box.", "type": "probable"},
+  {"timestamp": "17:20", "event": "Security confirms service corridor is a camera blind spot.", "type": "confirmed"},
+  {"timestamp": "18:00", "event": "Prototype is last seen in the LAB (Camera V02).", "type": "confirmed"},
+  {"timestamp": "18:10", "event": "Nora Vale enters the EAST_CORRIDOR.", "type": "confirmed"},
+  {"timestamp": "18:11", "event": "Maya Reed is observed carrying a cardboard supply box.", "type": "confirmed"},
+  {"timestamp": "18:12", "event": "Theo Park enters the CAFETERIA.", "type": "confirmed"},
+  {"timestamp": "18:13", "event": "Ada Finch enters RECEPTION.", "type": "confirmed"},
+  {"timestamp": "18:14", "event": "Eli Stone and Maya Reed enter the SERVICE_DOOR (unmonitored link).", "type": "confirmed"},
+  {"timestamp": "18:18", "event": "Prototype is discovered missing.", "type": "confirmed"}
+]

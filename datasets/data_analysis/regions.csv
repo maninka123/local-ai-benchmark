@@ -1,0 +1,5 @@
+region_id,name,timezone,shipping_distance_km
+R0,North,UTC,100
+R1,South,UTC,250
+R2,East,UTC,400
+R3,West,UTC,600

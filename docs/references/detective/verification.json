@@ -1,0 +1,63 @@
+{
+  "status": "passed_with_explicit_evidentiary_limitations",
+  "checks": [
+    "case_01/timeline.json: schema and local case ID passed",
+    "case_01/evidence_analysis.json: schema and local case ID passed",
+    "case_01/conclusions.json: schema and local case ID passed",
+    "case_01: 13 unique source-backed exhibits; chronological event ordering passed",
+    "case_02/timeline.json: schema and local case ID passed",
+    "case_02/evidence_analysis.json: schema and local case ID passed",
+    "case_02/conclusions.json: schema and local case ID passed",
+    "case_02: 13 unique source-backed exhibits; chronological event ordering passed",
+    "case_03/timeline.json: schema and local case ID passed",
+    "case_03/evidence_analysis.json: schema and local case ID passed",
+    "case_03/conclusions.json: schema and local case ID passed",
+    "case_03: 13 unique source-backed exhibits; chronological event ordering passed",
+    "Original prompts are byte-for-byte copies",
+    "18:19 minus five minutes equals 18:14",
+    "HTML: 30 embedded image exhibits, unique IDs, every internal anchor resolves",
+    "All 9 final JSON outputs revalidated after final wording adjustment",
+    "Browser: 18px body text at desktop/mobile; zero horizontal overflow; 30 source images; zero page errors",
+    "In-document image enlargement opens, loads full-resolution image, and closes under opaque-origin CSP sandbox allow-scripts",
+    "All four rendered preview screenshots visually inspected by author"
+  ],
+  "evidence_review": {
+    "public_images_visually_inspected": 30,
+    "public_document_exhibits_read": 9,
+    "case_briefs_read": 3,
+    "all_consequential_claims_reviewed_against_case_local_public_exhibits": true,
+    "reviewer": "Same reference author; no independent reviewer or private truth comparison",
+    "case_01": "Nora lead grounded in V03/V04/D01 plus V02/V09 object match, with identity and blind-spot limitations.",
+    "case_02": "Eli lead grounded in corrected V04/V10/D03 time plus D01 and V09; ENTRY direction retained explicitly.",
+    "case_03": "No definitive attribution; V04 gray figures show no carried object; both credential events retained without identity assignment."
+  },
+  "unresolved_ambiguities": [
+    "Human identity behind badge/coat observations",
+    "Unique identity and contents of visually matching cases",
+    "Exact removal time, pickup act, complete route, and destination",
+    "Authorisation and intent",
+    "Completeness and independent synchronisation of records",
+    "Case 02 service-door ENTRY direction versus any proposed outbound removal",
+    "Case 03 identity of gray figures, separate movements, and object custody"
+  ],
+  "formal_benchmark_schema_available": false,
+  "reference_schema_file": "output_schemas.json",
+  "render_validation": {
+    "status": "passed",
+    "details_file": "render_validation.json",
+    "visual_inspection": [
+      "preview_desktop.png",
+      "preview_evidence.png",
+      "preview_mobile.png",
+      "preview_lightbox.png"
+    ],
+    "observations": "Desktop and mobile layouts visibly readable with 18px body text, no horizontal overflow; 30 embedded images; section links, expandable evidence notes, and in-document full-image dialog work. Dialog tested with sandbox allow-scripts and no external network access."
+  },
+  "benchmark_scoring_or_ground_truth_comparison_performed": false,
+  "verification_limitations": [
+    "Source review and validation were performed by the same author, not an independent reviewer.",
+    "Public evidence cannot determine definitive identity, exact removal act, or authorisation.",
+    "The benchmark prompt supplies no formal JSON schema; the included schema is reference-authored.",
+    "Default Playwright Chromium executable was unavailable; validation used installed Google Chrome in headless mode."
+  ]
+}

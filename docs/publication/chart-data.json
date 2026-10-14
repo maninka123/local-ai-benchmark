@@ -1,0 +1,1714 @@
+{
+  "source": "results/judged_scores/reviewed_results.json + projected /api/summary measurements",
+  "scoring_policy": {
+    "description": "Exactly one final score per result. Completed first: 100; second: 60; third: 30. Incomplete after third: final raw rubric quality × 0.3. Earlier failed attempts have status and notes, no awarded score.",
+    "exclusions": "Time, throughput, hardware, frontier references and assisted repairs excluded."
+  },
+  "aggregation": "Equal-weight case means within model/task/track. Missing measurements omitted.",
+  "hardware": {
+    "cpu": "13th Gen Intel(R) Core(TM) i9-13900K",
+    "ram_bytes": 68447744000,
+    "gpu": "NVIDIA GeForce RTX 4080",
+    "vram_gib": 16,
+    "logical_cores": 32,
+    "os": "Windows-10-10.0.26300-SP0"
+  },
+  "rows": [
+    {
+      "run_id": "2026-10-09T154152-455028+0000--7e979ff2",
+      "model": "qwen3.5:9b-q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 91.69990167716077,
+      "prompt_tps": 17527.61060892324,
+      "initial_minutes": 5.157457040000009,
+      "total_minutes": 23.3407440250007,
+      "size_gb": 6.55082555,
+      "total_b": 8.953803264,
+      "active_b": 8.953803264,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 27,
+      "first_completed_attempt": null,
+      "final_score": 8.1
+    },
+    {
+      "run_id": "2026-10-09T160001-315989+0000--1f8e08cd",
+      "model": "gemma4:12b-it-q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 158.19813010507517,
+      "prompt_tps": 7903.962270580138,
+      "initial_minutes": 8.17173478333328,
+      "total_minutes": 25.43919190166586,
+      "size_gb": 8.021618941,
+      "total_b": 11.907350576,
+      "active_b": 11.907350576,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 27,
+      "first_completed_attempt": null,
+      "final_score": 8.1
+    },
+    {
+      "run_id": "2026-10-09T222455-630122+0000--e4d93aed",
+      "model": "qwen3.5:27b-q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 8.63182285867713,
+      "prompt_tps": 2880.601326353856,
+      "initial_minutes": 58.192473831666575,
+      "total_minutes": 157.02586466999915,
+      "size_gb": 17.478556591,
+      "total_b": 26.895998464,
+      "active_b": 26.895998464,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 57,
+      "first_completed_attempt": null,
+      "final_score": 17.099999999999998
+    },
+    {
+      "run_id": "2026-10-09T185224-948255+0000--fc5cf197",
+      "model": "gemma4:26b-a4b-it-q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 71.64812004623668,
+      "prompt_tps": 6045.56704039347,
+      "initial_minutes": 14.447695101666614,
+      "total_minutes": 26.967366651666378,
+      "size_gb": 17.989350748,
+      "total_b": 25.233142046,
+      "active_b": 3.822527246,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 6,
+      "first_completed_attempt": null,
+      "final_score": 1.7999999999999998
+    },
+    {
+      "run_id": "2026-10-09T193239-887529+0000--4afc8feb",
+      "model": "glm-4.7-flash:q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 62.42345099778379,
+      "prompt_tps": 4192.847254175541,
+      "initial_minutes": 10.522931539999991,
+      "total_minutes": 31.648168156666543,
+      "size_gb": 19.019270627,
+      "total_b": 29.94339392,
+      "active_b": 3.89676608,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 12,
+      "first_completed_attempt": null,
+      "final_score": 3.5999999999999996
+    },
+    {
+      "run_id": "2026-10-09T200004-735418+0000--666576b9",
+      "model": "laguna-xs.2:q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 60.9418959841207,
+      "prompt_tps": 3609.808181202755,
+      "initial_minutes": 7.844018926666467,
+      "total_minutes": 10.253214379999129,
+      "size_gb": 23.098061724,
+      "total_b": 33.442617088,
+      "active_b": 3.017135872,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-09T201048-163726+0000--d2466773",
+      "model": "qwen3.6:35b-a3b-q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 62.51224890165691,
+      "prompt_tps": 2940.7282144147953,
+      "initial_minutes": 13.474149253333357,
+      "total_minutes": 41.75163969500033,
+      "size_gb": 23.947173606,
+      "total_b": 35.505251456,
+      "active_b": 3.519489152,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 16,
+      "first_completed_attempt": null,
+      "final_score": 4.8
+    },
+    {
+      "run_id": "2026-10-09T205409-952701+0000--cb482e4f",
+      "model": "nemotron-3-nano:30b-a3b-q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 60.87703025253087,
+      "prompt_tps": 3991.0714272758523,
+      "initial_minutes": 13.916607644999992,
+      "total_minutes": 55.21523094500044,
+      "size_gb": 24.271934866,
+      "total_b": 31.577940288,
+      "active_b": 3.580076352,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 4,
+      "first_completed_attempt": null,
+      "final_score": 1.2
+    },
+    {
+      "run_id": "2026-10-09T211550-390468+0000--dfc1e45c",
+      "model": "nemotron3:33b-q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 50.83186781218833,
+      "prompt_tps": 3616.2377918280563,
+      "initial_minutes": 14.520821906666486,
+      "total_minutes": 41.213379495001206,
+      "size_gb": 26.345678037,
+      "total_b": 31.577940288,
+      "active_b": 3.580076352,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-10T044258-172207+0000--b863a69c",
+      "model": "gpt-oss:20b",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 126.50193665515039,
+      "prompt_tps": 23514.07875943685,
+      "initial_minutes": 3.112779730000087,
+      "total_minutes": 11.203174454999074,
+      "size_gb": 13.793441566,
+      "total_b": 20.914757184,
+      "active_b": 4.187440704,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 34,
+      "first_completed_attempt": null,
+      "final_score": 10.2
+    },
+    {
+      "run_id": "2026-10-10T045213-677557+0000--4bf840f8",
+      "model": "qwen3-coder-next:q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 36.567450608271656,
+      "prompt_tps": 1123.4746422896771,
+      "initial_minutes": 22.491262158333363,
+      "total_minutes": 89.7775034566667,
+      "size_gb": 51.741611493,
+      "total_b": 79.674391296,
+      "active_b": 3.874929408,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 19,
+      "first_completed_attempt": null,
+      "final_score": 5.7
+    },
+    {
+      "run_id": "2026-10-10T122721-970164+0000--fd5d31cb",
+      "model": "qwen3-next:80b-a3b-thinking-q4_K_M",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 37.86902554981837,
+      "prompt_tps": 1550.794147227956,
+      "initial_minutes": 22.062955498333032,
+      "total_minutes": 87.79990599166692,
+      "size_gb": 50.351334197,
+      "total_b": 79.674391296,
+      "active_b": 3.874929408,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 10,
+      "first_completed_attempt": null,
+      "final_score": 3.0
+    },
+    {
+      "run_id": "2026-10-10T140553-619694+0000--a8ccd0d6",
+      "model": "qwen3-vl:30b-a3b-instruct",
+      "task": "data_analysis",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 54.68847677040767,
+      "prompt_tps": 5141.7366402497355,
+      "initial_minutes": 21.962358176666505,
+      "total_minutes": 64.62846619999969,
+      "size_gb": 19.643814625,
+      "total_b": 30.532122624,
+      "active_b": 3.353032704,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-09T154702-060434+0000--db803285",
+      "model": "qwen3.5:9b-q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 92.16399338582642,
+      "prompt_tps": 25477.43063477595,
+      "initial_minutes": 4.912276351666757,
+      "total_minutes": 24.19187763999944,
+      "size_gb": 6.55082555,
+      "total_b": 8.953803264,
+      "active_b": 8.953803264,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 12,
+      "first_completed_attempt": null,
+      "final_score": 3.5999999999999996
+    },
+    {
+      "run_id": "2026-10-09T160811-799461+0000--96bfca0a",
+      "model": "gemma4:12b-it-q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 163.4202665131198,
+      "prompt_tps": 8006.83067766811,
+      "initial_minutes": 8.979262726666638,
+      "total_minutes": 31.29081364833297,
+      "size_gb": 8.021618941,
+      "total_b": 11.907350576,
+      "active_b": 11.907350576,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-09T200755-651982+0000--d1fb4e1a",
+      "model": "laguna-xs.2:q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 62.24385669014554,
+      "prompt_tps": 900.0164861902007,
+      "initial_minutes": 2.870921686666649,
+      "total_minutes": 60.160783406666994,
+      "size_gb": 23.098061724,
+      "total_b": 33.442617088,
+      "active_b": 3.017135872,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-09T213021-860593+0000--80971a2f",
+      "model": "nemotron3:33b-q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 50.963711686232884,
+      "prompt_tps": 2480.259668836758,
+      "initial_minutes": 21.74588970833332,
+      "total_minutes": 70.08185460333395,
+      "size_gb": 26.345678037,
+      "total_b": 31.577940288,
+      "active_b": 3.580076352,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 9,
+      "first_completed_attempt": null,
+      "final_score": 2.6999999999999997
+    },
+    {
+      "run_id": "2026-10-10T113744-712369+0000--01970a33",
+      "model": "qwen3-coder-next:q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 36.223861850621546,
+      "prompt_tps": 2099.904899753978,
+      "initial_minutes": 43.54670496833375,
+      "total_minutes": 128.24561123000143,
+      "size_gb": 51.741611493,
+      "total_b": 79.674391296,
+      "active_b": 3.874929408,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-09T232307-428711+0000--afd55c4d",
+      "model": "qwen3.5:27b-q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 8.900943799423338,
+      "prompt_tps": 3912.3717994674,
+      "initial_minutes": 42.13599652500027,
+      "total_minutes": 114.88219807333418,
+      "size_gb": 17.478556591,
+      "total_b": 26.895998464,
+      "active_b": 26.895998464,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 28,
+      "first_completed_attempt": null,
+      "final_score": 8.4
+    },
+    {
+      "run_id": "2026-10-09T190652-024797+0000--d6c18333",
+      "model": "gemma4:26b-a4b-it-q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 72.25792978829762,
+      "prompt_tps": 6029.905006639835,
+      "initial_minutes": 9.940985636666543,
+      "total_minutes": 30.939400368333477,
+      "size_gb": 17.989350748,
+      "total_b": 25.233142046,
+      "active_b": 3.822527246,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 8,
+      "first_completed_attempt": null,
+      "final_score": 2.4
+    },
+    {
+      "run_id": "2026-10-09T194311-502895+0000--03293b0d",
+      "model": "glm-4.7-flash:q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 62.90198823703782,
+      "prompt_tps": 4276.661850643818,
+      "initial_minutes": 16.879586583333246,
+      "total_minutes": 47.763288691667,
+      "size_gb": 19.019270627,
+      "total_b": 29.94339392,
+      "active_b": 3.89676608,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 12,
+      "first_completed_attempt": null,
+      "final_score": 3.5999999999999996
+    },
+    {
+      "run_id": "2026-10-09T202416-880741+0000--1d79976a",
+      "model": "qwen3.6:35b-a3b-q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 62.59179244216423,
+      "prompt_tps": 3143.07687768752,
+      "initial_minutes": 15.477246131666712,
+      "total_minutes": 44.42374206999848,
+      "size_gb": 23.947173606,
+      "total_b": 35.505251456,
+      "active_b": 3.519489152,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 16,
+      "first_completed_attempt": null,
+      "final_score": 4.8
+    },
+    {
+      "run_id": "2026-10-09T210805-172847+0000--b2b71088",
+      "model": "nemotron-3-nano:30b-a3b-q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 61.391530805379126,
+      "prompt_tps": 2882.101740596251,
+      "initial_minutes": 7.750042245000077,
+      "total_minutes": 26.767053263333462,
+      "size_gb": 24.271934866,
+      "total_b": 31.577940288,
+      "active_b": 3.580076352,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 2,
+      "first_completed_attempt": null,
+      "final_score": 0.6
+    },
+    {
+      "run_id": "2026-10-10T044605-171370+0000--65dec7d2",
+      "model": "gpt-oss:20b",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 130.8988231839869,
+      "prompt_tps": 17522.44153416703,
+      "initial_minutes": 5.021360036666738,
+      "total_minutes": 14.149732628333004,
+      "size_gb": 13.793441566,
+      "total_b": 20.914757184,
+      "active_b": 4.187440704,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 14,
+      "first_completed_attempt": null,
+      "final_score": 4.2
+    },
+    {
+      "run_id": "2026-10-10T124926-094083+0000--9b70fa88",
+      "model": "qwen3-next:80b-a3b-thinking-q4_K_M",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 38.60294829811845,
+      "prompt_tps": 1372.4814499162117,
+      "initial_minutes": 38.2499661916668,
+      "total_minutes": 125.12987048333305,
+      "size_gb": 50.351334197,
+      "total_b": 79.674391296,
+      "active_b": 3.874929408,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 5,
+      "first_completed_attempt": null,
+      "final_score": 1.5
+    },
+    {
+      "run_id": "2026-10-10T142751-670489+0000--c5f0d666",
+      "model": "qwen3-vl:30b-a3b-instruct",
+      "task": "racing_game",
+      "case": null,
+      "track": "text_and_tools",
+      "generation_tps": 55.65198664116376,
+      "prompt_tps": 9231.042167707152,
+      "initial_minutes": 14.399566499999976,
+      "total_minutes": 95.92849595666691,
+      "size_gb": 19.643814625,
+      "total_b": 30.532122624,
+      "active_b": 3.353032704,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 8,
+      "first_completed_attempt": null,
+      "final_score": 2.4
+    },
+    {
+      "run_id": "2026-10-09T155156-954616+0000--8c2d813b",
+      "model": "qwen3.5:9b-q4_K_M",
+      "task": "detective",
+      "case": "case_01",
+      "track": "native_multimodal",
+      "generation_tps": 90.35638915329974,
+      "prompt_tps": 15990.78558181954,
+      "initial_minutes": 2.7154548550000377,
+      "total_minutes": 11.45915861499816,
+      "size_gb": 6.55082555,
+      "total_b": 8.953803264,
+      "active_b": 8.953803264,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 70,
+      "first_completed_attempt": null,
+      "final_score": 21.0
+    },
+    {
+      "run_id": "2026-10-09T155440-067316+0000--b527d549",
+      "model": "qwen3.5:9b-q4_K_M",
+      "task": "detective",
+      "case": "case_02",
+      "track": "native_multimodal",
+      "generation_tps": 92.75621277428803,
+      "prompt_tps": 16456.711735594537,
+      "initial_minutes": 2.7330173600001824,
+      "total_minutes": 9.661913946668937,
+      "size_gb": 6.55082555,
+      "total_b": 8.953803264,
+      "active_b": 8.953803264,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 60,
+      "first_completed_attempt": null,
+      "final_score": 18.0
+    },
+    {
+      "run_id": "2026-10-09T155724-218486+0000--f0ea9b9b",
+      "model": "qwen3.5:9b-q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "native_multimodal",
+      "generation_tps": 90.98702030180664,
+      "prompt_tps": 18265.486207399867,
+      "initial_minutes": 2.6153638566667117,
+      "total_minutes": 12.46366526999894,
+      "size_gb": 6.55082555,
+      "total_b": 8.953803264,
+      "active_b": 8.953803264,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 68,
+      "first_completed_attempt": null,
+      "final_score": 20.4
+    },
+    {
+      "run_id": "2026-10-09T161710-741636+0000--d664e1ce",
+      "model": "gemma4:12b-it-q4_K_M",
+      "task": "detective",
+      "case": "case_01",
+      "track": "native_multimodal",
+      "generation_tps": 157.03258335878775,
+      "prompt_tps": 10358.990653711999,
+      "initial_minutes": 5.107226883333351,
+      "total_minutes": 27.237171038333138,
+      "size_gb": 8.021618941,
+      "total_b": 11.907350576,
+      "active_b": 11.907350576,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 40,
+      "first_completed_attempt": null,
+      "final_score": 12.0
+    },
+    {
+      "run_id": "2026-10-09T162217-361722+0000--338456a0",
+      "model": "gemma4:12b-it-q4_K_M",
+      "task": "detective",
+      "case": "case_02",
+      "track": "native_multimodal",
+      "generation_tps": 154.22023215323344,
+      "prompt_tps": 11484.28816141948,
+      "initial_minutes": 6.712620484999934,
+      "total_minutes": 19.660751985000214,
+      "size_gb": 8.021618941,
+      "total_b": 11.907350576,
+      "active_b": 11.907350576,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 46,
+      "first_completed_attempt": null,
+      "final_score": 13.799999999999999
+    },
+    {
+      "run_id": "2026-10-09T162900-291250+0000--93ec844c",
+      "model": "gemma4:12b-it-q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "native_multimodal",
+      "generation_tps": 156.98964718158143,
+      "prompt_tps": 9494.173084485443,
+      "initial_minutes": 5.106239095000152,
+      "total_minutes": 28.101658021667664,
+      "size_gb": 8.021618941,
+      "total_b": 11.907350576,
+      "active_b": 11.907350576,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 28,
+      "first_completed_attempt": null,
+      "final_score": 8.4
+    },
+    {
+      "run_id": "2026-10-09T173415-362170+0000--44fafbdd",
+      "model": "qwen3.5:27b-q4_K_M",
+      "task": "detective",
+      "case": "case_01",
+      "track": "native_multimodal",
+      "generation_tps": 8.125205807696027,
+      "prompt_tps": 3424.73900893292,
+      "initial_minutes": 27.181054388333237,
+      "total_minutes": 147.47496726166725,
+      "size_gb": 17.478556591,
+      "total_b": 26.895998464,
+      "active_b": 26.895998464,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 79,
+      "first_completed_attempt": null,
+      "final_score": 23.7
+    },
+    {
+      "run_id": "2026-10-09T180126-408532+0000--fc80dfe3",
+      "model": "qwen3.5:27b-q4_K_M",
+      "task": "detective",
+      "case": "case_02",
+      "track": "native_multimodal",
+      "generation_tps": 8.294415882367174,
+      "prompt_tps": 3403.004352633125,
+      "initial_minutes": 22.342870521666676,
+      "total_minutes": 119.58932914000053,
+      "size_gb": 17.478556591,
+      "total_b": 26.895998464,
+      "active_b": 26.895998464,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 72,
+      "first_completed_attempt": null,
+      "final_score": 21.599999999999998
+    },
+    {
+      "run_id": "2026-10-09T182347-157955+0000--fe17cc26",
+      "model": "qwen3.5:27b-q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "native_multimodal",
+      "generation_tps": 8.009819707798597,
+      "prompt_tps": 3274.333223530486,
+      "initial_minutes": 28.589702238333363,
+      "total_minutes": 148.8966146300003,
+      "size_gb": 17.478556591,
+      "total_b": 26.895998464,
+      "active_b": 26.895998464,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": true
+        }
+      ],
+      "final_raw_quality": 90,
+      "first_completed_attempt": 3,
+      "final_score": 30
+    },
+    {
+      "run_id": "2026-10-09T191648-675853+0000--69849de5",
+      "model": "gemma4:26b-a4b-it-q4_K_M",
+      "task": "detective",
+      "case": "case_01",
+      "track": "native_multimodal",
+      "generation_tps": 71.39260272660454,
+      "prompt_tps": 5352.39137569226,
+      "initial_minutes": 6.333227746666671,
+      "total_minutes": 24.001183613333083,
+      "size_gb": 17.989350748,
+      "total_b": 25.233142046,
+      "active_b": 3.822527246,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 61,
+      "first_completed_attempt": null,
+      "final_score": 18.3
+    },
+    {
+      "run_id": "2026-10-09T192308-873752+0000--b01857a0",
+      "model": "gemma4:26b-a4b-it-q4_K_M",
+      "task": "detective",
+      "case": "case_02",
+      "track": "native_multimodal",
+      "generation_tps": 72.26408911107946,
+      "prompt_tps": 7334.058623091287,
+      "initial_minutes": 4.406489539999893,
+      "total_minutes": 16.024275750000438,
+      "size_gb": 17.989350748,
+      "total_b": 25.233142046,
+      "active_b": 3.822527246,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 49,
+      "first_completed_attempt": null,
+      "final_score": 14.7
+    },
+    {
+      "run_id": "2026-10-09T192733-566795+0000--084c1c95",
+      "model": "gemma4:26b-a4b-it-q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "native_multimodal",
+      "generation_tps": 72.48730509571992,
+      "prompt_tps": 6338.987967498051,
+      "initial_minutes": 5.10166615166648,
+      "total_minutes": 21.755827526667236,
+      "size_gb": 17.989350748,
+      "total_b": 25.233142046,
+      "active_b": 3.822527246,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 44,
+      "first_completed_attempt": null,
+      "final_score": 13.2
+    },
+    {
+      "run_id": "2026-10-09T203945-739043+0000--ece0c2b1",
+      "model": "qwen3.6:35b-a3b-q4_K_M",
+      "task": "detective",
+      "case": "case_01",
+      "track": "native_multimodal",
+      "generation_tps": 63.499140459968764,
+      "prompt_tps": 3299.504695515498,
+      "initial_minutes": 3.813801806666743,
+      "total_minutes": 47.19224255333295,
+      "size_gb": 23.947173606,
+      "total_b": 35.505251456,
+      "active_b": 3.519489152,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 80,
+      "first_completed_attempt": null,
+      "final_score": 24.0
+    },
+    {
+      "run_id": "2026-10-09T204334-869643+0000--33c41999",
+      "model": "qwen3.6:35b-a3b-q4_K_M",
+      "task": "detective",
+      "case": "case_02",
+      "track": "native_multimodal",
+      "generation_tps": 63.191136073062395,
+      "prompt_tps": 3911.502175562958,
+      "initial_minutes": 6.998137543333481,
+      "total_minutes": 55.1960272983338,
+      "size_gb": 23.947173606,
+      "total_b": 35.505251456,
+      "active_b": 3.519489152,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 76,
+      "first_completed_attempt": null,
+      "final_score": 22.8
+    },
+    {
+      "run_id": "2026-10-09T205035-045052+0000--9f0b9aa4",
+      "model": "qwen3.6:35b-a3b-q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "native_multimodal",
+      "generation_tps": 62.426508712109175,
+      "prompt_tps": 3290.6885271403726,
+      "initial_minutes": 3.5773238433333368,
+      "total_minutes": 52.02595788333371,
+      "size_gb": 23.947173606,
+      "total_b": 35.505251456,
+      "active_b": 3.519489152,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 66,
+      "first_completed_attempt": null,
+      "final_score": 19.8
+    },
+    {
+      "run_id": "2026-10-09T215206-844355+0000--b3f28fbb",
+      "model": "nemotron3:33b-q4_K_M",
+      "task": "detective",
+      "case": "case_01",
+      "track": "native_multimodal",
+      "generation_tps": 50.693029069294646,
+      "prompt_tps": 2820.150061660186,
+      "initial_minutes": 13.720182696666841,
+      "total_minutes": 76.90236702000001,
+      "size_gb": 26.345678037,
+      "total_b": 31.577940288,
+      "active_b": 3.580076352,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-09T220550-339541+0000--be2db84d",
+      "model": "nemotron3:33b-q4_K_M",
+      "task": "detective",
+      "case": "case_02",
+      "track": "native_multimodal",
+      "generation_tps": 52.221198250281,
+      "prompt_tps": 3080.1856922472743,
+      "initial_minutes": 5.3843687683334185,
+      "total_minutes": 69.07638030166672,
+      "size_gb": 26.345678037,
+      "total_b": 31.577940288,
+      "active_b": 3.580076352,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-09T221113-659219+0000--3f316c9a",
+      "model": "nemotron3:33b-q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "native_multimodal",
+      "generation_tps": 51.103993269199,
+      "prompt_tps": 3192.7872631627242,
+      "initial_minutes": 13.695078318333254,
+      "total_minutes": 77.4463075516669,
+      "size_gb": 26.345678037,
+      "total_b": 31.577940288,
+      "active_b": 3.580076352,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-10T045106-679823+0000--a1dddadf",
+      "model": "gpt-oss:20b",
+      "task": "detective",
+      "case": "case_03",
+      "track": "text_only_detective",
+      "generation_tps": 133.17826240890585,
+      "prompt_tps": 13464.954057048848,
+      "initial_minutes": 1.1116305433330127,
+      "total_minutes": 3.9088839733330434,
+      "size_gb": 13.793441566,
+      "total_b": 20.914757184,
+      "active_b": 4.187440704,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 57,
+      "first_completed_attempt": null,
+      "final_score": 17.099999999999998
+    },
+    {
+      "run_id": "2026-10-10T122117-874706+0000--e5f7f864",
+      "model": "qwen3-coder-next:q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "text_only_detective",
+      "generation_tps": 36.12055091054355,
+      "prompt_tps": 2567.4031685583814,
+      "initial_minutes": 6.0608065550002115,
+      "total_minutes": 13.136657841666844,
+      "size_gb": 51.741611493,
+      "total_b": 79.674391296,
+      "active_b": 3.874929408,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 68,
+      "first_completed_attempt": null,
+      "final_score": 20.4
+    },
+    {
+      "run_id": "2026-10-10T132741-404835+0000--0f1a965a",
+      "model": "qwen3-next:80b-a3b-thinking-q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "text_only_detective",
+      "generation_tps": 37.418030760751066,
+      "prompt_tps": 1530.7467599783376,
+      "initial_minutes": 38.19707046666638,
+      "total_minutes": 74.55058749333367,
+      "size_gb": 50.351334197,
+      "total_b": 79.674391296,
+      "active_b": 3.874929408,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-10T144216-402987+0000--4a0cb520",
+      "model": "qwen3-vl:30b-a3b-instruct",
+      "task": "detective",
+      "case": "case_01",
+      "track": "native_multimodal",
+      "generation_tps": 54.81895116506396,
+      "prompt_tps": 6333.175578072363,
+      "initial_minutes": 6.033316635000422,
+      "total_minutes": 16.65839845166714,
+      "size_gb": 19.643814625,
+      "total_b": 30.532122624,
+      "active_b": 3.353032704,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 48,
+      "first_completed_attempt": null,
+      "final_score": 14.399999999999999
+    },
+    {
+      "run_id": "2026-10-10T144818-739466+0000--bf5b1fb8",
+      "model": "qwen3-vl:30b-a3b-instruct",
+      "task": "detective",
+      "case": "case_02",
+      "track": "native_multimodal",
+      "generation_tps": 57.57063622881558,
+      "prompt_tps": 8208.286898581353,
+      "initial_minutes": 2.6779450616668328,
+      "total_minutes": 12.775418481667051,
+      "size_gb": 19.643814625,
+      "total_b": 30.532122624,
+      "active_b": 3.353032704,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-10T145059-742743+0000--9af47dbb",
+      "model": "qwen3-vl:30b-a3b-instruct",
+      "task": "detective",
+      "case": "case_03",
+      "track": "native_multimodal",
+      "generation_tps": 55.867366267250794,
+      "prompt_tps": 7712.3089624088525,
+      "initial_minutes": 2.6461064233333067,
+      "total_minutes": 15.276248943333242,
+      "size_gb": 19.643814625,
+      "total_b": 30.532122624,
+      "active_b": 3.353032704,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 0,
+      "first_completed_attempt": null,
+      "final_score": 0.0
+    },
+    {
+      "run_id": "2026-10-12T114823-692361+0000--58ec7941",
+      "model": "glm-4.7-flash:q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "text_only_detective",
+      "generation_tps": 62.9568203116856,
+      "prompt_tps": 4178.353688653232,
+      "initial_minutes": 12.050951276666213,
+      "total_minutes": 25.752718444999726,
+      "size_gb": 19.019270627,
+      "total_b": 29.94339392,
+      "active_b": 3.89676608,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 67,
+      "first_completed_attempt": null,
+      "final_score": 20.099999999999998
+    },
+    {
+      "run_id": "2026-10-12T120027-575384+0000--19ff8faf",
+      "model": "laguna-xs.2:q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "text_only_detective",
+      "generation_tps": 58.32282441423255,
+      "prompt_tps": 3276.5336940423754,
+      "initial_minutes": 30.019666293333284,
+      "total_minutes": 42.23827958000026,
+      "size_gb": 23.098061724,
+      "total_b": 33.442617088,
+      "active_b": 3.017135872,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 43,
+      "first_completed_attempt": null,
+      "final_score": 12.9
+    },
+    {
+      "run_id": "2026-10-12T123030-225292+0000--0f027e4f",
+      "model": "nemotron-3-nano:30b-a3b-q4_K_M",
+      "task": "detective",
+      "case": "case_03",
+      "track": "text_only_detective",
+      "generation_tps": 59.12664405972798,
+      "prompt_tps": 1376.316405372763,
+      "initial_minutes": 2.518422281666426,
+      "total_minutes": 43.4008607633327,
+      "size_gb": 24.271934866,
+      "total_b": 31.577940288,
+      "active_b": 3.580076352,
+      "active_basis": "Installed GGUF tensor-shape structural estimate; not runtime activation tracing",
+      "attempts": [
+        {
+          "number": 1,
+          "completed": false
+        },
+        {
+          "number": 2,
+          "completed": false
+        },
+        {
+          "number": 3,
+          "completed": false
+        }
+      ],
+      "final_raw_quality": 30,
+      "first_completed_attempt": null,
+      "final_score": 9.0
+    }
+  ]
+}

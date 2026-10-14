@@ -1,0 +1,6 @@
+{
+  "responsible_person": "Eli Stone",
+  "confidence": 0.7,
+  "conclusion": "Eli Stone most likely removed the prototype. He entered the Service Door at 18:14, which leads to the Service Corridor—an unmonitored link to the Lab. His statement that he 'did not approach the lab' is directly contradicted by the badge logs and the corrected camera timestamp. He also had a documented motive (needing the prototype for a project). While Maya Reed's movement with a box is a possible secondary method, Eli's presence in the unmonitored corridor and his false statement make him the primary suspect.",
+  "exhibits": ["V04", "V10", "Log", "D01"]
+}

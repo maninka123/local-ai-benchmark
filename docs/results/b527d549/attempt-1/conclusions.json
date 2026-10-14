@@ -1,0 +1,48 @@
+{
+  "responsible_person": "Eli Stone",
+  "confidence": 0.85,
+  "conclusion": "Eli Stone is the most likely responsible party for the missing prototype. Evidence shows: (1) Eli stated he needed the prototype at 17:00 per D03_messages, establishing motive; (2) Service camera footage V04/V10 shows Eli with the prototype in service corridor at actual time 18:14 (camera timestamp 18:19 plus 5-minute offset from D03); (3) Access log D01 confirms Eli entered via service door at 18:14; (4) Schematic V01 shows service corridor provides unmonitored access to lab; (5) Timeline is consistent - prototype was in lab at 18:00 (V02), missing by 18:18 (V05), giving Eli window from 18:14-18:18 to enter and remove it; (6) All other staff members were accounted for elsewhere during critical window; (7) Eli's witness statement claiming he did not approach lab after 18:00 is contradicted by camera evidence.",
+  "exhibits": [
+    {
+      "id": "V02",
+      "relevance": "Establishes prototype location at 18:00 in lab before disappearance"
+    },
+    {
+      "id": "V04",
+      "relevance": "Shows Eli Stone with prototype in service corridor; timestamp corrected to 18:14 using +5 min offset"
+    },
+    {
+      "id": "V05",
+      "relevance": "Confirms prototype missing from lab by 18:18"
+    },
+    {
+      "id": "V01",
+      "relevance": "Shows unmonitored service corridor link to lab enabling access"
+    },
+    {
+      "id": "D01",
+      "relevance": "Access log confirms Eli entered via service door at 18:14"
+    },
+    {
+      "id": "D03",
+      "relevance": "Establishes Eli's stated need for prototype and documents camera offset"
+    }
+  ],
+  "alternative_explanations": [
+    {
+      "explanation": "Someone else accessed lab through unmonitored service corridor",
+      "likelihood": "low",
+      "reasoning": "No other staff had opportunity; all others were documented elsewhere during critical window"
+    },
+    {
+      "explanation": "Eli's coat color was misidentified",
+      "likelihood": "very low",
+      "reasoning": "D03 explicitly states coat descriptions are from shift assignments, not biometric identity; visual evidence V04/V10 clearly shows orange coat matching Eli Stone"
+    }
+  ],
+  "limitations": [
+    "Cannot definitively prove intent beyond reasonable doubt without additional corroborating evidence",
+    "Camera footage quality may limit detailed observation of actions",
+    "No direct witness testimony from lab interior during incident"
+  ]
+}

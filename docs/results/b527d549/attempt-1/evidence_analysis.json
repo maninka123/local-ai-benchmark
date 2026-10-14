@@ -1,0 +1,114 @@
+{
+  "exhibits": [
+    {
+      "id": "V01",
+      "type": "schematic",
+      "description": "Floor plan showing layout: LAB, EAST CORRIDOR, EAST EXIT, SERVICE CORRIDOR (unmonitored link to lab), CAFETERIA. Teal line shows corridor connection between east corridor and exit. Orange vertical line shows unmonitored service corridor link to lab."
+    },
+    {
+      "id": "V02",
+      "type": "camera_feed",
+      "description": "LAB camera at 18:00 showing prototype on workbench. Direct observation of prototype location before disappearance."
+    },
+    {
+      "id": "V03",
+      "type": "camera_feed",
+      "description": "East corridor camera at 18:10 showing Nora Vale (teal coat) entering corridor. Confirms D01 access log."
+    },
+    {
+      "id": "V04",
+      "type": "camera_feed",
+      "description": "Service corridor camera showing Eli Stone (orange coat) with prototype. Timestamp shows 18:19 but D03_messages states service camera has +5 min offset, making actual time 18:14."
+    },
+    {
+      "id": "V05",
+      "type": "camera_feed",
+      "description": "Lab camera at 18:18 showing empty workbench - prototype missing. This is the discovery time."
+    },
+    {
+      "id": "V06",
+      "type": "camera_feed",
+      "description": "Cafeteria camera at 18:12 showing Theo Park (blue coat) present. Confirms D01 and D02 statements."
+    },
+    {
+      "id": "V07",
+      "type": "camera_feed",
+      "description": "Reception camera at 18:13 showing Ada Finch (red coat). Confirms D01 access log and D02 statement."
+    },
+    {
+      "id": "V08",
+      "type": "camera_feed",
+      "description": "Loading bay area showing Maya Reed (purple coat) with cardboard box. Correlates with D03_messages at 17:10 about moving consumables box."
+    },
+    {
+      "id": "V09",
+      "type": "camera_feed",
+      "description": "East exit camera - no visible activity in provided context."
+    },
+    {
+      "id": "V10",
+      "type": "camera_feed",
+      "description": "Service corridor alternate view showing Eli Stone with prototype, reinforcing V04 observation."
+    },
+    {
+      "id": "D01",
+      "type": "document",
+      "description": "Access log showing entry times and locations for all five staff members. Key entries: Nora Vale 18:10 east corridor, Theo Park 18:12 cafeteria, Ada Finch 18:13 reception, Eli Stone 18:14 service door."
+    },
+    {
+      "id": "D02",
+      "type": "document",
+      "description": "Witness statements. Nora claims only visited east corridor and left. Eli claims no approach to lab after 18:00. Maya carried cardboard box at 18:11. Theo remained in cafeteria from 18:12. Ada staffed reception."
+    },
+    {
+      "id": "D03",
+      "type": "document",
+      "description": "Internal messages and security note. Key points: Eli requested prototype at 17:00. Maya moved cardboard box at 17:10. Security note states coat descriptions are from shift assignments, doors log badge credentials not biometric identity, service camera has +5 min offset."
+    }
+  ],
+  "key_findings": [
+    {
+      "finding": "Eli Stone had opportunity and motive",
+      "evidence": [
+        "D03_messages: Eli requested prototype at 17:00",
+        "V04/V10: Eli seen with prototype in service corridor at actual time 18:14 (camera shows 18:19)",
+        "D01: Eli entered via service door at 18:14"
+      ],
+      "significance": "Eli had both stated need for prototype and was observed with it shortly before discovery"
+    },
+    {
+      "finding": "Service corridor provides unmonitored access",
+      "evidence": [
+        "V01: Schematic shows orange line labeled 'UNMONITORED LINK TO LAB' from service corridor to lab"
+      ],
+      "significance": "Eli could enter lab without being seen through service corridor"
+    },
+    {
+      "finding": "Timeline is consistent with Eli's actions",
+      "evidence": [
+        "V02: Prototype at 18:00 in lab",
+        "D01/V03/V06/V07: Others accounted for between 18:10-18:14",
+        "V04/V10: Eli with prototype at service corridor at 18:14 actual time",
+        "V05: Prototype missing by 18:18"
+      ],
+      "significance": "Eli had window from 18:14 to 18:18 to enter lab and remove prototype"
+    },
+    {
+      "finding": "Other staff members were elsewhere",
+      "evidence": [
+        "Nora Vale: east corridor only (V03, D02)",
+        "Theo Park: cafeteria (V06, D01, D02)",
+        "Ada Finch: reception (V07, D01, D02)",
+        "Maya Reed: loading bay with box (V08, D02)"
+      ],
+      "significance": "No other staff had opportunity to access lab during critical window"
+    },
+    {
+      "finding": "Eli's statement contradicts evidence",
+      "evidence": [
+        "D02_witnesses: Eli claims 'I did not approach the lab after 18:00'"
+      ],
+      "significance": "V04/V10 show Eli in service corridor with prototype at 18:14 actual time, which is after 18:00"
+    }
+  ]
+}

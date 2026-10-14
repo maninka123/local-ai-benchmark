@@ -1,0 +1,21 @@
+product_id,name,category,unit_cost,list_price
+P00,Product 00,Premium,310,325.0
+P01,Product 01,Premium,310,325.0
+P02,Product 02,Premium,26,42.9
+P03,Product 03,Premium,33,54.45
+P04,Product 04,Premium,40,66.0
+P05,Product 05,Hardware,47,77.55
+P06,Product 06,Hardware,54,89.1
+P07,Product 07,Hardware,61,100.65
+P08,Product 08,Hardware,68,112.2
+P09,Product 09,Hardware,75,123.75
+P10,Product 10,Consumables,82,135.3
+P11,Product 11,Consumables,89,146.85
+P12,Product 12,Consumables,96,158.4
+P13,Product 13,Consumables,103,169.95
+P14,Product 14,Consumables,110,181.5
+P15,Product 15,Accessories,117,193.05
+P16,Product 16,Accessories,124,204.6
+P17,Product 17,Accessories,131,216.15
+P18,Product 18,Accessories,138,227.7
+P19,Product 19,Accessories,145,239.25

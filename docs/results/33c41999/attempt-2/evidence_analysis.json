@@ -1,0 +1,181 @@
+{
+  "case_id": "CASE_02",
+  "evidence_items": [
+    {
+      "exhibit_id": "V01",
+      "type": "floor_plan",
+      "description": "Synthetic schematic showing spatial layout: LAB, EAST CORRIDOR, SERVICE CORRIDOR (with unmonitored link to LAB), EAST EXIT, CAFETERIA",
+      "key_observations": [
+        "SERVICE CORRIDOR has UNMONITORED LINK TO LAB connecting directly to LAB",
+        "EAST CORRIDOR connects to EAST EXIT",
+        "CAFETERIA is spatially separate from LAB area"
+      ],
+      "reliability": "confirmed_layout_reference",
+      "limitations": "Synthetic schematic; may not reflect actual surveillance coverage or door states"
+    },
+    {
+      "exhibit_id": "V02",
+      "type": "visual_snapshot",
+      "description": "LAB camera at 18:00 showing object (grey box with black triangle) on brown table",
+      "key_observations": [
+        "Object confirmed present in LAB at 18:00",
+        "Object is grey rectangular box with black triangle symbol on brown table"
+      ],
+      "reliability": "confirmed_present_state",
+      "limitations": "Single snapshot; does not confirm when object arrived or if it was moved before 18:00"
+    },
+    {
+      "exhibit_id": "V03",
+      "type": "visual_snapshot",
+      "description": "EAST CORRIDOR camera at 18:10 showing person in teal coat",
+      "key_observations": [
+        "Person wearing teal work coat observed in EAST CORRIDOR"
+      ],
+      "reliability": "confirmed_appearance",
+      "limitations": "Coat color identifies appearance not identity; badge record D01 associates Nora Vale with EAST_CORRIDOR credential use at 18:10 but doesn't prove she wore teal coat"
+    },
+    {
+      "exhibit_id": "V04",
+      "type": "visual_snapshot",
+      "description": "SERVICE DOOR camera at displayed 18:19 (corrected to 18:14 per V10) showing person in orange coat with object visible",
+      "key_observations": [
+        "Person wearing orange work coat observed at SERVICE DOOR",
+        "Object (grey box with black triangle) visible next to person",
+        "Brown table also visible in frame"
+      ],
+      "reliability": "confirmed_appearance_with_object",
+      "limitations": [
+        "Displayed time 18:19 corrected to 18:14 using V10 offset",
+        "Badge record D01 associates Eli Stone with SERVICE_DOOR credential at 18:14 but doesn't prove biometric identity",
+        "Orange coat may not be worn by badge holder"
+      ]
+    },
+    {
+      "exhibit_id": "V05",
+      "type": "visual_snapshot",
+      "description": "LAB camera at 18:18 showing only empty brown table; object absent",
+      "key_observations": [
+        "Object confirmed absent from LAB at 18:18"
+      ],
+      "reliability": "confirmed_absent_state",
+      "limitations": "Single snapshot; doesn't confirm when object was removed (could be before 18:00 or after 18:18)"
+    },
+    {
+      "exhibit_id": "V06",
+      "type": "visual_snapshot",
+      "description": "CAFETERIA camera at 18:12 showing person in blue coat",
+      "key_observations": [
+        "Person wearing blue work coat observed in CAFETERIA"
+      ],
+      "reliability": "confirmed_appearance",
+      "limitations": "Coat color identifies appearance not identity; badge record D01 associates Theo Park with CAFETERIA credential at 18:12 but doesn't prove he wore blue coat"
+    },
+    {
+      "exhibit_id": "V07",
+      "type": "visual_snapshot",
+      "description": "RECEPTION camera at 18:13 showing person in red coat",
+      "key_observations": [
+        "Person wearing red work coat observed at RECEPTION"
+      ],
+      "reliability": "confirmed_appearance",
+      "limitations": "Coat color identifies appearance not identity; badge record D01 associates Ada Finch with RECEPTION credential at 18:13 but doesn't prove she wore red coat"
+    },
+    {
+      "exhibit_id": "V08",
+      "type": "visual_snapshot",
+      "description": "LOADING BAY camera at 18:11 showing person in purple coat with cardboard box",
+      "key_observations": [
+        "Person wearing purple work coat observed at LOADING BAY",
+        "Cardboard box visible next to person"
+      ],
+      "reliability": "confirmed_appearance_with_object",
+      "limitations": "Coat color identifies appearance not identity; badge record D01 associates Maya Reed with LOADING_BAY credential at 18:11 but doesn't prove she wore purple coat; cardboard box is different from prototype"
+    },
+    {
+      "exhibit_id": "V09",
+      "type": "object_reference",
+      "description": "Object detail showing grey box with black triangle on brown table",
+      "key_observations": [
+        "Prototype is grey rectangular box with black triangle symbol"
+      ],
+      "reliability": "confirmed_object_description",
+      "limitations": "Reference image only; doesn't establish timeline or location"
+    },
+    {
+      "exhibit_id": "V10",
+      "type": "maintenance_record",
+      "description": "Service camera maintenance note documenting CLOCK OFFSET +5 MINUTES",
+      "key_observations": [
+        "Service camera displays times 5 minutes ahead of actual time"
+      ],n      "reliability": "confirmed_calibration_data",
+      "limitations": "Applies only to service camera; other cameras not affected by this offset"
+    },
+    {
+      "exhibit_id": "D01",
+      "type": "badge_access_log",
+      "description": "Badge access records showing credential use at various doors",
+      "entries": [
+        {"time": "18:10", "name": "Nora Vale", "door": "EAST_CORRIDOR", "direction": "ENTRY"},
+        {"time": "18:12", "name": "Theo Park", "door": "CAFETERIA", "direction": "ENTRY"},
+        {"time": "18:13", "name": "Ada Finch", "door": "RECEPTION", "direction": "ENTRY"},
+        {"time": "18:14", "name": "Eli Stone", "door": "SERVICE_DOOR", "direction": "ENTRY"}
+      ],
+      "key_observations": [
+        "Four badge entries recorded between 18:10-18:14",
+        "No entry for Maya Reed in D01 despite V08 showing her at LOADING BAY at 18:11 (possible discrepancy or unlogged access)"
+      ],
+      "reliability": "confirmed_credential_use",
+      "limitations": [
+        "D03 explicitly states doors log badge credentials not biometric identity",
+        "Badge use doesn't prove named individual was present",
+        "Credential could be used by unauthorized person"
+      ]
+    },
+    {
+      "exhibit_id": "D02",
+      "type": "internal_messages",
+      "entries": [
+        {"time": "17:00", "sender": "Eli", "content": "My project needs that prototype tomorrow."},
+        {"time": "17:10", "sender": "Maya", "content": "Please move the cardboard consumables box to the loading bay."}
+      ],
+      "key_observations": [
+        "Eli's message indicates project need for prototype",
+        "Maya's message concerns cardboard box not prototype"
+      ],
+      "reliability": "documentary_evidence",
+      "limitations": [
+        "Messages show motive but not action",
+        "Authenticity not verified",
+        "Eli's need doesn't prove he took object"
+      ]
+    },
+    {
+      "exhibit_id": "D03",
+      "type": "security_clarification",
+      "description": "Security note clarifying coat descriptions from shift assignments, doors log badge credentials not biometric identity, service camera has +5 minute clock offset",
+      "key_observations": [
+        "Coat descriptions are from shift assignments not personal identification",
+        "Badge records log credentials not biometric identity",
+        "Service camera has +5 minute offset (corroborates V10)"
+      ],
+      "reliability": "confirmed_evidence_limitations",
+      "limitations": "This is a limitation notice, not evidence of events"
+    }
+  ],
+  "cross_reference_analysis": {
+    "identity_chain_breaks": [
+      "Badge credential use (D01) does not prove biometric identity of named person (D03)",
+      "Coat color observation (V03-V08) does not prove which staff member wore it (D03)",
+      "Visual presence with object (V04) does not prove biometric identity"
+    ],
+    "timeline_corroboration": [
+      "V04 displayed time 18:19 corrected to 18:14 using V10 offset matches D01 badge entry at 18:14",
+      "V02 (object present 18:00) and V05 (object absent 18:18) establish removal window"
+    ],
+    "spatial_consistency": [
+      "V01 floor plan shows SERVICE CORRIDOR unmonitored link to LAB provides route for object removal",
+      "EAST CORRIDOR (V03) connects to EAST EXIT but not directly to LAB",
+      "CAFETERIA (V06) and RECEPTION (V07) are spatially distant from LAB"
+    ]
+  }
+}

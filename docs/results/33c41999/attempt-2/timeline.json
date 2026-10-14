@@ -1,0 +1,109 @@
+{
+  "case_id": "CASE_02",
+  "incident_summary": "Prototype last confirmed present in LAB at 18:00 (V02) and discovered missing at 18:18 (V05)",
+  "timeline": [
+    {
+      "time": "17:00",
+      "event": "Eli sends internal message stating project needs prototype tomorrow",
+      "source": "D02",
+      "type": "documentary",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya sends internal message requesting cardboard consumables box be moved to loading bay",
+      "source": "D02",
+      "type": "documentary",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "17:20",
+      "event": "Security note clarifies coat descriptions from shift assignments, doors log badge credentials not biometric identity, service camera has +5 minute clock offset",
+      "source": "D03",
+      "type": "documentary",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "17:20-18:00",
+      "event": "NO EVIDENCE INTERVAL - no badge records or visual evidence for any person; object status presumed present but unconfirmed after 17:20",
+      "source": "none",
+      "type": "gap",
+      "confidence": "unknown"
+    },
+    {
+      "time": "18:00",
+      "event": "Object (grey box with black triangle) confirmed present in LAB on brown table",
+      "source": "V02",
+      "type": "visual",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:10",
+      "event": "Person in teal coat observed in EAST CORRIDOR; Nora Vale badge credential used at EAST_CORRIDOR door (ENTRY)",
+      "source": ["V03", "D01"],
+      "type": "visual_and_badge",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:11",
+      "event": "Person in purple coat observed at LOADING BAY with cardboard box; Maya Reed badge credential used at LOADING_BAY door (ENTRY)",
+      "source": ["V08", "D01"],
+      "type": "visual_and_badge",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:12",
+      "event": "Person in blue coat observed in CAFETERIA; Theo Park badge credential used at CAFETERIA door (ENTRY)",
+      "source": ["V06", "D01"],
+      "type": "visual_and_badge",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:13",
+      "event": "Person in red coat observed at RECEPTION; Ada Finch badge credential used at RECEPTION door (ENTRY)",
+      "source": ["V07", "D01"],
+      "type": "visual_and_badge",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:14",
+      "event": "Person in orange coat observed at SERVICE DOOR with object (grey box with black triangle) visible; Eli Stone badge credential used at SERVICE_DOOR door (ENTRY). Displayed time 18:19 corrected to 18:14 using V10 offset.",
+      "source": ["V04", "D01", "V10"],
+      "type": "visual_and_badge",
+      "confidence": "confirmed_with_offset_correction"
+    },
+    {
+      "time": "18:14-18:18",
+      "event": "NO EVIDENCE INTERVAL - object moves from SERVICE DOOR area to LAB and disappears; no visual record of transfer or removal",
+      "source": "none",
+      "type": "gap",
+      "confidence": "unknown"
+    },
+    {
+      "time": "18:18",
+      "event": "Object confirmed absent from LAB; only empty brown table visible",
+      "source": "V05",
+      "type": "visual",
+      "confidence": "confirmed"
+    }
+  ],
+  "gaps_and_uncertainties": [
+    {
+      "interval": "17:20-18:00",
+      "description": "No visual or badge evidence for any person; object status presumed present but unconfirmed after 17:20"
+    },
+    {
+      "interval": "18:14-18:18",
+      "description": "Object moves from SERVICE DOOR area to LAB and disappears; no visual record of transfer or removal"
+    },
+    {
+      "interval": "identity_verification",
+      "description": "Badge records log credentials not biometric identity (D03); coat colors identify appearance at specific moments only"
+    }
+  ],
+  "assumptions": [
+    "V10 offset (+5 minutes) applies only to service camera; other timestamps are uncorrected",
+    "Object confirmed present at 18:00 (V02) and absent at 18:18 (V05) establishes removal window",
+    "Floor plan V01 accurately represents spatial relationships including unmonitored link between SERVICE CORRIDOR and LAB"
+  ]
+}

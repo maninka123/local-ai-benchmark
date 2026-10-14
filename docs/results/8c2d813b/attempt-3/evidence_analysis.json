@@ -1,0 +1,81 @@
+{
+  "exhibits": [
+    {
+      "id": "V01",
+      "type": "visual",
+      "description": "Floor plan showing LAB, EAST CORRIDOR, EAST EXIT, SERVICE CORRIDOR (unmonitored link to lab), CAFETERIA"
+    },
+    {
+      "id": "V02",
+      "type": "visual",
+      "description": "LAB camera feed at 18:00 - prototype visible on table"
+    },
+    {
+      "id": "V03",
+      "type": "visual",
+      "description": "EAST CORRIDOR camera feed at 18:10 - person in teal coat enters corridor"
+    },
+    {
+      "id": "V04",
+      "type": "visual",
+      "description": "EAST EXIT camera feed at 18:14 - person in teal coat exits with prototype"
+    },
+    {
+      "id": "V05",
+      "type": "visual",
+      "description": "LAB camera feed at 18:18 - lab empty, prototype missing"
+    },
+    {
+      "id": "V06",
+      "type": "visual",
+      "description": "CAFETERIA camera feed at 18:12 - person in blue coat present"
+    },
+    {
+      "id": "V07",
+      "type": "visual",
+      "description": "RECEPTION camera feed at 18:13 - person in red coat present"
+    },
+    {
+      "id": "V08",
+      "type": "visual",
+      "description": "LOADING BAY camera feed at 18:11 - person in purple coat with cardboard box"
+    },
+    {
+      "id": "V09",
+      "type": "visual",
+      "description": "OBJECT DETAIL camera reference showing prototype visual reference"
+    },
+    {
+      "id": "V10",
+      "type": "visual",
+      "description": "SERVICE CAMERA showing blind spot: service corridor"
+    },
+    {
+      "id": "D01",
+      "type": "documentary",
+      "description": "Access log CSV with badge credential entries/exits and timestamps"
+    },
+    {
+      "id": "D02",
+      "type": "documentary",
+      "description": "Witness statements from all five staff members (unverified)"
+    },
+    {
+      "id": "D03",
+      "type": "documentary",
+      "description": "Internal messages including Eli's prototype request, Maya's box move request, security notes"
+    }
+  ],
+  "summary": {
+    "total_exhibits": 13,
+    "visual_count": 10,
+    "documentary_count": 3
+  },
+  "key_limitations": [
+    "Coat color is appearance evidence only, not biometric identity",
+    "Badge credentials establish credential use, not biometric identity",
+    "Location snapshots are point-in-time observations, not continuous tracking",
+    "Service corridor blind spot does NOT prove absence of use during incident window",
+    "Witness statements are unverified and may be incomplete"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "file": "regions.csv",
+  "shape": [
+    4,
+    4
+  ],
+  "columns": [
+    "region_id",
+    "name",
+    "timezone",
+    "shipping_distance_km"
+  ],
+  "dtypes": {
+    "region_id": "object",
+    "name": "object",
+    "timezone": "object",
+    "shipping_distance_km": "int64"
+  },
+  "missing_counts": {
+    "region_id": 0,
+    "name": 0,
+    "timezone": 0,
+    "shipping_distance_km": 0
+  },
+  "duplicate_count": 0
+}

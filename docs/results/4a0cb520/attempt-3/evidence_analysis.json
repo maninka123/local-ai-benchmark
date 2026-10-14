@@ -1,0 +1,44 @@
+{
+    "exhibits": [
+        {
+            "exhibit_id": "V01",
+            "description": "Floor plan of the laboratory, showing the LAB, EAST CORRIDOR, EAST EXIT, SERVICE CORRIDOR, and CAFETERIA. The SERVICE CORRIDOR is an unmonitored link to the LAB."
+        },
+        {
+            "exhibit_id": "V02",
+            "description": "Camera footage from the LAB at 18:00, showing the prototype on a table. The prototype is a rectangular object with a black triangle on top."
+        },
+        {
+            "exhibit_id": "D01",
+            "description": "Access log showing the entry and exit times of individuals through various doors. Nora Vale entered the EAST_CORRIDOR at 18:10 and exited through the EAST_EXIT at 18:14. Theo Park entered the CAFETERIA at 18:12, and Ada Finch entered the RECEPTION at 18:13."
+        },
+        {
+            "exhibit_id": "D02",
+            "description": "Witness statements. Nora claims she only visited the east corridor and left. Eli states he did not approach the lab after 18:00. Maya says she carried a cardboard supply box at 18:11. Theo claims he remained in the cafeteria from 18:12. Ada says she staffed reception."
+        },
+        {
+            "exhibit_id": "D03",
+            "description": "Internal messages. Eli mentions needing the prototype for his project. Maya requests the cardboard consumables box be moved to the loading bay. A security message states that coat descriptions are from shift assignments and that the service corridor is a camera blind spot."
+        }
+    ],
+    "findings": [
+        {
+            "title": "Prototype was last seen at 18:00 in the LAB",
+            "evidence": "V02",
+            "method": "Direct observation from camera footage",
+            "limitations": "Camera footage only confirms the presence of the prototype at 18:00. It does not provide information about the prototype's status after that time."
+        },
+        {
+            "title": "Nora Vale had access to the LAB via the SERVICE CORRIDOR",
+            "evidence": "V01, D01",
+            "method": "Analysis of floor plan and access log",
+            "limitations": "The access log only shows Nora Vale's entry and exit through the EAST_CORRIDOR and EAST_EXIT. It does not confirm her entry through the SERVICE CORRIDOR."
+        },
+        {
+            "title": "Nora Vale's statement contradicts the possibility of her entering the LAB",
+            "evidence": "D02",
+            "method": "Analysis of witness statements",
+            "limitations": "The witness statement is unverified and could be a lie to cover up her involvement in the theft."
+        }
+    ]
+}

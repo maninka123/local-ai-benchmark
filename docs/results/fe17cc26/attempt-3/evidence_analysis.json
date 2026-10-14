@@ -1,0 +1,171 @@
+{
+  "case_id": "CASE_03",
+  "exhibits": [
+    {
+      "id": "D01",
+      "type": "documentary",
+      "name": "Access Log",
+      "description": "Badge entry records for five staff members",
+      "observations": [
+        "Nora Vale badge at East Corridor 18:10 (ENTRY)",
+        "Theo Park badge at Cafeteria 18:12 (ENTRY)",
+        "Ada Finch badge at Reception 18:13 (ENTRY)",
+        "Eli Stone badge at Service Door 18:14 (ENTRY)",
+        "Maya Reed badge at Service Door 18:14 (ENTRY)"
+      ],
+      "interpretation": "Records credential use, not biometric identity per D03",
+      "uncertainty": "Cannot confirm who physically used each badge"
+    },
+    {
+      "id": "D02",
+      "type": "documentary",
+      "name": "Witness Statements",
+      "description": "Unverified statements from all five suspects",
+      "observations": [
+        "Nora: I only visited the east corridor and left",
+        "Eli: I did not approach the lab after 18:00",
+        "Maya: I carried a cardboard supply box at 18:11",
+        "Theo: I remained in the cafeteria from 18:12",
+        "Ada: I staffed reception"
+      ],
+      "interpretation": "Statements are unverified and require cross-reference with visual evidence",
+      "uncertainty": "No independent verification of truthfulness"
+    },
+    {
+      "id": "D03",
+      "type": "documentary",
+      "name": "Internal Messages",
+      "description": "Context messages and security notes",
+      "observations": [
+        "17:00 Eli: My project needs that prototype tomorrow",
+        "17:10 Maya: Please move the cardboard consumables box to the loading bay",
+        "17:20 Security: Coat descriptions are from shift assignments; doors log badge credentials, not biometric identity. Service corridor is a camera blind spot"
+      ],
+      "interpretation": "Establishes Eli interest in prototype; clarifies badge and coat limitations",
+      "uncertainty": null
+    },
+    {
+      "id": "V01",
+      "type": "visual",
+      "name": "Floor Plan",
+      "timestamp": null,
+      "location": "Facility Layout",
+      "observations": [
+        "Shows LAB, EAST CORRIDOR, EAST EXIT, SERVICE CORRIDOR, CAFETERIA",
+        "Service corridor labeled UNMONITORED LINK TO LAB",
+        "Teal line connects Lab to East Corridor to East Exit",
+        "Orange line connects Lab to Service Corridor"
+      ],
+      "interpretation": "Service corridor provides unmonitored access route to lab",
+      "uncertainty": null
+    },
+    {
+      "id": "V02",
+      "type": "visual",
+      "name": "Camera Capture",
+      "timestamp": "18:00",
+      "location": "Lab",
+      "observations": [
+        "Prototype (black triangle in gray box) visible on brown table"
+      ],
+      "interpretation": "Confirms prototype present at start of incident window",
+      "uncertainty": null
+    },
+    {
+      "id": "V03",
+      "type": "visual",
+      "name": "Camera Capture",
+      "timestamp": "18:10",
+      "location": "East Corridor",
+      "observations": [
+        "Person in teal coat visible"
+      ],
+      "interpretation": "Consistent with Nora Vale assigned coat color and badge event at 18:10",
+      "uncertainty": "Coat color alone does not confirm identity per D03"
+    },
+    {
+      "id": "V04",
+      "type": "visual",
+      "name": "Camera Capture",
+      "timestamp": "18:14",
+      "location": "Service Door",
+      "observations": [
+        "Two persons in GRAY coats visible"
+      ],
+      "interpretation": "CRITICAL DISCREPANCY - Gray coats do not match Eli Stone (orange) or Maya Reed (purple) assigned colors",
+      "uncertainty": "Cannot determine if badge holders changed coats, lent badges, or if unknown individuals used stolen credentials"
+    },
+    {
+      "id": "V05",
+      "type": "visual",
+      "name": "Camera Capture",
+      "timestamp": "18:18",
+      "location": "Lab",
+      "observations": [
+        "Prototype missing from brown table"
+      ],
+      "interpretation": "Confirms prototype removed sometime between 18:00 and 18:18",
+      "uncertainty": null
+    },
+    {
+      "id": "V06",
+      "type": "visual",
+      "name": "Camera Capture",
+      "timestamp": "18:12",
+      "location": "Cafeteria",
+      "observations": [
+        "Person in blue coat visible"
+      ],
+      "interpretation": "Consistent with Theo Park assigned coat color and badge event at 18:12",
+      "uncertainty": "Coat color alone does not confirm identity per D03"
+    },
+    {
+      "id": "V07",
+      "type": "visual",
+      "name": "Camera Capture",
+      "timestamp": "18:13",
+      "location": "Reception",
+      "observations": [
+        "Person in red coat visible"
+      ],
+      "interpretation": "Consistent with Ada Finch assigned coat color and badge event at 18:13",
+      "uncertainty": "Coat color alone does not confirm identity per D03"
+    },
+    {
+      "id": "V08",
+      "type": "visual",
+      "name": "Camera Capture",
+      "timestamp": "18:11",
+      "location": "Loading Bay",
+      "observations": [
+        "Person in purple coat visible with cardboard box"
+      ],
+      "interpretation": "Consistent with Maya Reed assigned coat color and statement about carrying box at 18:11",
+      "uncertainty": "Coat color alone does not confirm identity per D03"
+    },
+    {
+      "id": "V09",
+      "type": "visual",
+      "name": "Object Detail Reference",
+      "timestamp": null,
+      "location": "Reference",
+      "observations": [
+        "Prototype shown as black triangle in gray box on brown table"
+      ],
+      "interpretation": "Reference image for prototype identification",
+      "uncertainty": null
+    },
+    {
+      "id": "V10",
+      "type": "visual",
+      "name": "Service Camera Maintenance Notice",
+      "timestamp": null,
+      "location": "Service Corridor",
+      "observations": [
+        "Text: BLIND SPOT: SERVICE CORRIDOR"
+      ],
+      "interpretation": "Confirms service corridor is unmonitored - no visual observation possible of movement through this area",
+      "uncertainty": null
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "scope": "Only datasets/data_analysis; no external sources",
+  "files": [
+    {
+      "path": "datasets\\data_analysis\\customers.csv",
+      "bytes": 37259,
+      "sha256": "3d94aa3982e25a48d01a9d1a67995aad26983a6066063d2cd05d42e059ec419a"
+    },
+    {
+      "path": "datasets\\data_analysis\\data_dictionary.md",
+      "bytes": 1059,
+      "sha256": "bf487e90f913cba2b3e5fba2105b05eeea744b6d2eb1145f91aa19c9380745e2"
+    },
+    {
+      "path": "datasets\\data_analysis\\inventory.csv",
+      "bytes": 9046,
+      "sha256": "afb912eb7eb31e270609bfcb4efe512082df0a257b59a516a662f4314dc5f68e"
+    },
+    {
+      "path": "datasets\\data_analysis\\operational_events.csv",
+      "bytes": 287,
+      "sha256": "48a506cae8eb4c862154ce528a0fa742a1ab36c1f721222ca5ea7a1f75fd953e"
+    },
+    {
+      "path": "datasets\\data_analysis\\products.csv",
+      "bytes": 765,
+      "sha256": "ce28fbe108e2d0949a8bd7ce86230aed865c6b2c27c55b12a88a83112b53a1b1"
+    },
+    {
+      "path": "datasets\\data_analysis\\regions.csv",
+      "bytes": 116,
+      "sha256": "9830237a1245cbd121e6d56108918ffda9ed82ead1b4894f67ad2bfc0baf4a2d"
+    },
+    {
+      "path": "datasets\\data_analysis\\transactions.csv",
+      "bytes": 2047069,
+      "sha256": "a4ffc1bb237c9dbd5737af871379c79e4aee2a4fa32d83cdc895324cc22b3c6b"
+    }
+  ],
+  "environment": {
+    "python": "3.10.14",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6",
+    "matplotlib": "3.10.9"
+  },
+  "join_checks": {
+    "_product_join": 0,
+    "_customer_join": 0,
+    "_region_join": 0
+  },
+  "inventory_join_unmatched": 0,
+  "all_financial_subtotals_reconciled": true
+}

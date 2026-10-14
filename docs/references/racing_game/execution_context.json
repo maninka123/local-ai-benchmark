@@ -1,0 +1,63 @@
+{
+  "reference_type": "self-authored tool-assisted reference",
+  "task": "racing_game",
+  "requested_model": "gpt-6-astra",
+  "configured_model": "gpt-6-astra",
+  "requested_reasoning_effort": "high",
+  "configured_reasoning_effort": "high",
+  "configuration_basis": "Explicit model and reasoning selection in parent agent runtime tool call, confirmed by parent for original and both continuations; provider-side attestation unavailable.",
+  "execution_mode": "Single original task assignment with tool-assisted implementation and verification; interrupted authoring/verification sessions resumed to complete delivery. Not a single model inference.",
+  "original_prompts": {
+    "system": "system_prompt.md",
+    "task": "prompt.md",
+    "byte_identical_to_originals": true,
+    "files": [
+      {
+        "path": "prompt.md",
+        "bytes": 4254,
+        "sha256": "f1531e948eaa147e881f59712104ec5f85a56626f451aa9589f403fc21a96ef1",
+        "original": "benchmark/prompts/racing_game_prompt.md",
+        "byte_identical": true
+      },
+      {
+        "path": "system_prompt.md",
+        "bytes": 711,
+        "sha256": "a1353db4babaa7b74193f159301ae578ff83d36a0370590f9bbaaa7660a04e35",
+        "original": "benchmark/prompts/common_system_prompt.md",
+        "byte_identical": true
+      }
+    ]
+  },
+  "subsequent_user_correction_prompts": [],
+  "parent_delivery_guidance": "Resume saved original task/source; complete testing and missing reports; preserve interruption evidence; verify dashboard production route. No new benchmark task prompt or feature request.",
+  "source_restriction": "Saved racing source, prompts and verification artifacts; sibling data_analysis metadata schema only. No candidate answers, evaluation_private, scoring answers, Ollama or local campaigns accessed.",
+  "tools_used": [
+    "PowerShell",
+    "Node.js 24.21.0",
+    "provided Vite and Three.js dependencies",
+    "Playwright Chromium keyboard/browser tests",
+    "Python/Pillow PNG validation",
+    "local image viewing"
+  ],
+  "local_gpu_or_ollama_used": false,
+  "gpu_scope_note": "No local LLM/GPU benchmark invoked. Browser WebGL rendering was used; GPU versus software rendering was not measured.",
+  "other_models_or_subagents_called": false,
+  "local_model_campaign_modified_or_resumed": false,
+  "timing": {
+    "kind": "browser verification intervals measured; overall authoring elapsed unknown",
+    "measurement_started_utc": "2026-10-13T07:17:51.102Z",
+    "measurement_finished_utc": "2026-10-13T07:20:20.279Z",
+    "elapsed_wall_seconds": 149.177,
+    "scope": "Completed resumed development-browser verification only, not total authoring or model inference latency.",
+    "overall_authoring_elapsed_wall_seconds": null,
+    "comparable_to_ollama_benchmark": false
+  },
+  "tokens": {
+    "input": null,
+    "output": null,
+    "total": null,
+    "status": "unknown; not measured"
+  },
+  "benchmark_score": null,
+  "not_ground_truth": true
+}

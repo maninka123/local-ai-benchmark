@@ -1,0 +1,71 @@
+{
+  "responsible_person": "Eli Stone",
+  "confidence": 0.85,
+  "conclusion": "Based on available evidence, Eli Stone is the most likely responsible individual for the missing prototype. He had documented motive (requested prototype at 17:00), was observed with the prototype in service corridor at actual time 18:14 (V04/V10 showing 18:19 due to +5 min offset), and entered via service door at 18:14 (D01). The service corridor provides unmonitored access to lab per V01 schematic. Other staff were documented in separate locations during the critical window (V03/V06/V07/V08). However, limitations exist: coat color is appearance evidence not biometric verification per D03_messages; location snapshots do not establish continuous whereabouts; badge credentials log access but not identity per D03_messages. Alternative explanations remain plausible including unauthorized use of service corridor by unknown person or timing gaps between observed locations.
+",
+  "exhibits": [
+    {
+      "id": "V01",
+      "role": "Establishes unmonitored service corridor access to lab"
+    },
+    {
+      "id": "V02",
+      "role": "Confirms prototype location at 18:00 in lab"
+    },
+    {
+      "id": "V04",
+      "role": "Shows Eli Stone with prototype at service corridor (actual time 18:14)"
+    },
+    {
+      "id": "V05",
+      "role": "Confirms prototype missing by 18:18"
+    },
+    {
+      "id": "V06",
+      "role": "Places Theo Park in cafeteria at 18:12"
+    },
+    {
+      "id": "V07",
+      "role": "Places Ada Finch in reception at 18:13"
+    },
+    {
+      "id": "V08",
+      "role": "Places Maya Reed in loading bay at 18:11"
+    },
+    {
+      "id": "V10",
+      "role": "Reinforces V04 observation and documents clock offset"
+    },
+    {
+      "id": "D01",
+      "role": "Access log showing Eli entered via service door at 18:14"
+    },
+    {
+      "id": "D02",
+      "role": "Witness statements including Eli's claim of no approach after 18:00"
+    },
+    {
+      "id": "D03",
+      "role": "Documents Eli's motive (17:00 request) and limitations about identity verification"
+    }
+  ],
+  "limitations": [
+    "Coat color evidence does not verify biometric identity per D03_messages",
+    "Badge credentials log access but not verified identity per D03_messages",
+    "Location snapshots do not establish continuous whereabouts between observed times",
+    "Service corridor camera blind spots may have missed additional activity",
+    "Eli's witness statement claiming no approach to lab after 18:00 contradicts visual evidence in V04/V10"
+  ],
+  "alternative_explanations": [
+    "Unknown person used service corridor access without badge credential logging",
+    "Timing gaps between observed locations allow for unobserved movements",
+    "Prototype could have been moved by multiple people during documented windows"
+  ],
+  "recommended_next_steps": [
+    "Obtain biometric verification from security footage if available",
+    "Review service corridor access logs for additional entries at 18:14-18:18",
+    "Interview Eli Stone regarding timeline of events and prototype handling",
+    "Check if prototype was logged as removed or transferred in inventory system",
+    "Verify service corridor camera calibration and blind spot coverage"
+  ]
+}

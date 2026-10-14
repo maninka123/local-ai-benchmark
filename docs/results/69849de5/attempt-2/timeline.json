@@ -1,0 +1,52 @@
+[
+  {
+    "time": "17:00",
+    "event": "Eli Stone expresses need for prototype (D03)",
+    "type": "confirmed"
+  },
+  {
+    "time": "17:10",
+    "event": "Maya Reed tasked with moving box to loading bay (D03)",
+    "type": "confirmed"
+  },
+  {
+    "time": "17:20",
+    "event": "Security notes service corridor blind spot (D03)",
+    "type": "confirmed"
+  },
+  {
+    "time": "18:00",
+    "event": "Prototype confirmed present in LAB (V02)",
+    "type": "confirmed"
+  },
+  {
+    "time": "18:10",
+    "event": "Nora Vale's badge enters EAST CORRIDOR (D01); teal-coated person observed (V03)",
+    "type": "confirmed"
+  },
+  {
+    "time": "18:11",
+    "event": "Maya Reed observed at LOADING BAY with a box (V08)",
+    "type": "confirmed"
+  },
+  {
+    "time": "18:12",
+    "event": "Theo Park's badge enters CAFETERIA (D01); blue-coated person observed (V06)",
+    "type": "confirmed"
+  },
+  {
+    "time": "18:13",
+    "event": "Ada Finch's badge enters RECEPTION (D01); red-coated person observed (V07)",
+    "type": "confirmed"
+  },
+  {
+    "time": "18:14",
+    "event": "Nora Vale's badge exits EAST EXIT (D01); teal-coated person seen with prototype at exit (V04)",
+    "type": "confirmed"
+  },
+  {
+    "time": "18:18",
+    "event": "Prototype discovered missing from LAB (V05)",
+    "type": "confirmed"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "responsible_person": "Nora Vale",
+  "confidence": 0.95,
+  "conclusion": "Nora Vale (teal coat) took the prototype from the LAB between 18:00 and 18:14. She was seen in the EAST CORRIDOR at 18:10 (V03) and exiting the EAST EXIT at 18:14 carrying the prototype (V04). Her witness statement claiming she 'only visited the east corridor and left' is a misleading partial truth designed to obscure her theft of the item. Other suspects have corroborated alibis or lack of opportunity.",
+  "exhibits": [
+    {
+      "id": "V03",
+      "description": "Nora Vale (teal coat) in EAST CORRIDOR at 18:10, adjacent to LAB."
+    },
+    {
+      "id": "V04",
+      "description": "Nora Vale (teal coat) exiting EAST EXIT at 18:14 carrying the prototype."
+    },
+    {
+      "id": "D01",
+      "description": "Access logs confirming Nora's entry to EAST_CORRIDOR and exit from EAST_EXIT."
+    },
+    {
+      "id": "D02",
+      "description": "Nora's misleading witness statement."
+    }
+  ]
+}

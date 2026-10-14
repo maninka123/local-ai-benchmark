@@ -1,0 +1,12 @@
+{
+  "responsible_person": null,
+  "confidence": 0.35,
+  "conclusion": "The prototype was removed through the Service Corridor blind spot between 18:14 and 18:18 by one or both individuals who entered through the Service Door at 18:14. However, badge credentials do not confirm biometric identity, coat colors in visual exhibits may not match actual wearers, and no continuous surveillance footage exists. The evidence does not support identifying a single responsible individual with confidence above 35%.",
+  "exhibits": [
+    {"id": "V02", "type": "camera_feed", "timestamp": "18:00", "finding": "Prototype visible in Lab"},
+    {"id": "V04", "type": "camera_feed", "timestamp": "18:14", "finding": "Two grey-coated figures at Service Door entrance; coat colors do not match expected wearers (Eli=orange, Maya=purple)"},
+    {"id": "V05", "type": "camera_feed", "timestamp": "18:18", "finding": "Prototype missing from Lab"},
+    {"id": "V10", "type": "reference", "timestamp": "N/A", "finding": "Service Corridor is a blind spot with no camera coverage"},
+    {"id": "D03_messages.md", "type": "documentary", "timestamp": "17:20", "finding": "Security note states doors log badge credentials, not biometric identity; coat descriptions are from shift assignments"}
+  ]
+}

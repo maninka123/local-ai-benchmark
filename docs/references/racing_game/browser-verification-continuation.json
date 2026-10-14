@@ -1,0 +1,1433 @@
+{
+  "kind": "actual Chromium browser, keyboard input, live read-only diagnostics",
+  "url": "http://127.0.0.1:5187/",
+  "startedAt": "2026-10-13T07:17:51.102Z",
+  "browserErrors": [],
+  "checks": [
+    {
+      "name": "Menu renders",
+      "passed": true
+    },
+    {
+      "name": "All three selection buttons change the actual player vehicle",
+      "passed": true
+    },
+    {
+      "name": "Countdown releases race",
+      "passed": true
+    },
+    {
+      "name": "Arrow acceleration moves selected Swift RS",
+      "passed": true,
+      "before": {
+        "id": 0,
+        "name": "YOU",
+        "car": "swift",
+        "x": -25,
+        "z": 82.2,
+        "speed": 0,
+        "heading": 0,
+        "completedLaps": 0,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 0,
+        "lapTimes": [],
+        "finishTime": null,
+        "recoveries": 0,
+        "collisions": 0,
+        "progress": 0
+      },
+      "after": {
+        "id": 0,
+        "name": "YOU",
+        "car": "swift",
+        "x": -10.805614286548478,
+        "z": 82.2,
+        "speed": 20.059791134069282,
+        "heading": 0,
+        "completedLaps": 0,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 0,
+        "lapTimes": [],
+        "finishTime": null,
+        "recoveries": 0,
+        "collisions": 0,
+        "progress": 4.194385713451538
+      }
+    },
+    {
+      "name": "Three camera views switch and render",
+      "passed": true
+    },
+    {
+      "name": "P pauses exact timer; Escape resumes",
+      "passed": true
+    },
+    {
+      "name": "S brakes and reverses",
+      "passed": true
+    },
+    {
+      "name": "R resets the race",
+      "passed": true
+    },
+    {
+      "name": "W/D steering causes real barrier collision",
+      "passed": true,
+      "snapshot": {
+        "phase": "racing",
+        "paused": false,
+        "time": 1.6166666666666634,
+        "countdown": 0,
+        "selected": 2,
+        "collisions": {
+          "barrier": 1,
+          "vehicle": 6,
+          "obstacle": 0
+        },
+        "standings": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          1
+        ],
+        "cars": [
+          {
+            "id": 0,
+            "name": "YOU",
+            "car": "swift",
+            "x": -19.768374528312847,
+            "z": 93.55,
+            "speed": 2.3709438774303693,
+            "heading": 0.6093035500500051,
+            "completedLaps": 0,
+            "nextCheckpoint": 1,
+            "passedCheckpoints": 0,
+            "lapTimes": [],
+            "finishTime": null,
+            "recoveries": 0,
+            "collisions": 2,
+            "progress": 41.95796326794897
+          },
+          {
+            "id": 1,
+            "name": "M. Sato",
+            "car": "swift",
+            "x": -2.9514376920397067,
+            "z": 87.81131044023147,
+            "speed": 26.726688333223283,
+            "heading": -0.0010987384990963187,
+            "completedLaps": 0,
+            "nextCheckpoint": 1,
+            "passedCheckpoints": 0,
+            "lapTimes": [],
+            "finishTime": null,
+            "recoveries": 0,
+            "collisions": 1,
+            "progress": 12.04856230796031
+          },
+          {
+            "id": 2,
+            "name": "A. Rivera",
+            "car": "comet",
+            "x": -17.944422368519195,
+            "z": 85.69564826942847,
+            "speed": 18.506140744710603,
+            "heading": 0.17515383284164732,
+            "completedLaps": 0,
+            "nextCheckpoint": 1,
+            "passedCheckpoints": 0,
+            "lapTimes": [],
+            "finishTime": null,
+            "recoveries": 0,
+            "collisions": 1,
+            "progress": 41.95796326794897
+          },
+          {
+            "id": 3,
+            "name": "J. Quinn",
+            "car": "spectre",
+            "x": -23.16512688169739,
+            "z": 85.37245463557393,
+            "speed": 10.004036467117684,
+            "heading": -0.33086158887108186,
+            "completedLaps": 0,
+            "nextCheckpoint": 1,
+            "passedCheckpoints": 0,
+            "lapTimes": [],
+            "finishTime": null,
+            "recoveries": 0,
+            "collisions": 1,
+            "progress": 41.95796326794897
+          },
+          {
+            "id": 4,
+            "name": "N. Vale",
+            "car": "swift",
+            "x": -27.093782188067312,
+            "z": 85.37340146003544,
+            "speed": 10.693303146387835,
+            "heading": 0.22235800547621112,
+            "completedLaps": 0,
+            "nextCheckpoint": 1,
+            "passedCheckpoints": 0,
+            "lapTimes": [],
+            "finishTime": null,
+            "recoveries": 0,
+            "collisions": 1,
+            "progress": 41.95796326794897
+          },
+          {
+            "id": 5,
+            "name": "S. Moss",
+            "car": "comet",
+            "x": -30.498528150622715,
+            "z": 85.21917016704813,
+            "speed": 10.030940024624995,
+            "heading": -0.32008995106862237,
+            "completedLaps": 0,
+            "nextCheckpoint": 1,
+            "passedCheckpoints": 0,
+            "lapTimes": [],
+            "finishTime": null,
+            "recoveries": 0,
+            "collisions": 1,
+            "progress": 41.95796326794897
+          }
+        ],
+        "inMenu": false,
+        "camera": "CHASE",
+        "renderer": {
+          "frame": 505,
+          "calls": 70,
+          "triangles": 31778,
+          "points": 0,
+          "lines": 0
+        }
+      }
+    },
+    {
+      "name": "Space recovery aligns car without awarding lap",
+      "passed": true
+    },
+    {
+      "name": "Keyboard-driven player completes all 48 checkpoints and three laps",
+      "passed": true
+    },
+    {
+      "name": "Five NPCs independently complete three actual browser laps",
+      "passed": true,
+      "finishTimes": [
+        81.85833333334455,
+        72.39166666667035,
+        80.0750000000098,
+        82.4750000000117,
+        82.73333333334524
+      ]
+    },
+    {
+      "name": "Final standings and lap times render",
+      "passed": true,
+      "standings": [
+        2,
+        3,
+        1,
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "name": "No browser JavaScript errors",
+      "passed": true
+    }
+  ],
+  "snapshots": [
+    {
+      "phase": "racing",
+      "paused": false,
+      "time": 0,
+      "countdown": 0,
+      "selected": 2,
+      "collisions": {
+        "barrier": 0,
+        "vehicle": 0,
+        "obstacle": 0
+      },
+      "standings": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "cars": [
+        {
+          "id": 0,
+          "name": "YOU",
+          "car": "swift",
+          "x": -25,
+          "z": 82.2,
+          "speed": 0,
+          "heading": 0,
+          "completedLaps": 0,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 0,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 0,
+          "progress": 0
+        },
+        {
+          "id": 1,
+          "name": "M. Sato",
+          "car": "swift",
+          "x": -25,
+          "z": 87.8,
+          "speed": 0,
+          "heading": 0,
+          "completedLaps": 0,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 0,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 0,
+          "progress": 0
+        },
+        {
+          "id": 2,
+          "name": "A. Rivera",
+          "car": "comet",
+          "x": -33,
+          "z": 82.2,
+          "speed": 0,
+          "heading": 0,
+          "completedLaps": 0,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 0,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 0,
+          "progress": 0
+        },
+        {
+          "id": 3,
+          "name": "J. Quinn",
+          "car": "spectre",
+          "x": -33,
+          "z": 87.8,
+          "speed": 0,
+          "heading": 0,
+          "completedLaps": 0,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 0,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 0,
+          "progress": 0
+        },
+        {
+          "id": 4,
+          "name": "N. Vale",
+          "car": "swift",
+          "x": -41,
+          "z": 82.2,
+          "speed": 0,
+          "heading": 0,
+          "completedLaps": 0,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 0,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 0,
+          "progress": 0
+        },
+        {
+          "id": 5,
+          "name": "S. Moss",
+          "car": "comet",
+          "x": -41,
+          "z": 87.8,
+          "speed": 0,
+          "heading": 0,
+          "completedLaps": 0,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 0,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 0,
+          "progress": 0
+        }
+      ],
+      "inMenu": false,
+      "camera": "CHASE",
+      "renderer": {
+        "frame": 618,
+        "calls": 113,
+        "triangles": 32562,
+        "points": 0,
+        "lines": 0
+      }
+    },
+    {
+      "phase": "racing",
+      "paused": false,
+      "time": 20.049999999999503,
+      "countdown": 0,
+      "selected": 2,
+      "collisions": {
+        "barrier": 0,
+        "vehicle": 4,
+        "obstacle": 1
+      },
+      "standings": [
+        2,
+        1,
+        3,
+        0,
+        4,
+        5
+      ],
+      "cars": [
+        {
+          "id": 0,
+          "name": "YOU",
+          "car": "swift",
+          "x": -88.00274136234012,
+          "z": -64.93123381417288,
+          "speed": 22.890400583868583,
+          "heading": -4.2523762949386015,
+          "completedLaps": 0,
+          "nextCheckpoint": 11,
+          "passedCheckpoints": 10,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 448.75255453544287
+        },
+        {
+          "id": 1,
+          "name": "M. Sato",
+          "car": "swift",
+          "x": -101.18196856178277,
+          "z": -48.73511248353989,
+          "speed": 25.98301195304883,
+          "heading": -4.554631858980339,
+          "completedLaps": 0,
+          "nextCheckpoint": 12,
+          "passedCheckpoints": 11,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 0,
+          "progress": 469.87754765862246
+        },
+        {
+          "id": 2,
+          "name": "A. Rivera",
+          "car": "comet",
+          "x": -98.38021329361969,
+          "z": -7.1973579998391966,
+          "speed": 30.68522623828811,
+          "heading": -4.735222489697191,
+          "completedLaps": 0,
+          "nextCheckpoint": 13,
+          "passedCheckpoints": 12,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 511.2982012155485
+        },
+        {
+          "id": 3,
+          "name": "J. Quinn",
+          "car": "spectre",
+          "x": -98.30089577966933,
+          "z": -59.48604103619544,
+          "speed": 21.984547138963315,
+          "heading": -4.445999529735165,
+          "completedLaps": 0,
+          "nextCheckpoint": 11,
+          "passedCheckpoints": 10,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 459.03204465038857
+        },
+        {
+          "id": 4,
+          "name": "N. Vale",
+          "car": "swift",
+          "x": -82.54978016565593,
+          "z": -75.27846617934777,
+          "speed": 23.658394106802735,
+          "heading": -3.8721712355556863,
+          "completedLaps": 0,
+          "nextCheckpoint": 11,
+          "passedCheckpoints": 10,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 436.26892009447374
+        },
+        {
+          "id": 5,
+          "name": "S. Moss",
+          "car": "comet",
+          "x": -77.2987501773065,
+          "z": -81.91103558116743,
+          "speed": 23.188440058816397,
+          "heading": -3.509509090510469,
+          "completedLaps": 0,
+          "nextCheckpoint": 11,
+          "passedCheckpoints": 10,
+          "lapTimes": [],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 428.1942384941972
+        }
+      ],
+      "inMenu": false,
+      "camera": "CHASE",
+      "renderer": {
+        "frame": 1205,
+        "calls": 154,
+        "triangles": 33756,
+        "points": 0,
+        "lines": 0
+      }
+    },
+    {
+      "phase": "racing",
+      "paused": false,
+      "time": 40.149999999998364,
+      "countdown": 0,
+      "selected": 2,
+      "collisions": {
+        "barrier": 0,
+        "vehicle": 4,
+        "obstacle": 1
+      },
+      "standings": [
+        2,
+        1,
+        3,
+        0,
+        4,
+        5
+      ],
+      "cars": [
+        {
+          "id": 0,
+          "name": "YOU",
+          "car": "swift",
+          "x": 70.93834213845352,
+          "z": -78.56519752575947,
+          "speed": 24.5348437702267,
+          "heading": -9.378091714431598,
+          "completedLaps": 1,
+          "nextCheckpoint": 7,
+          "passedCheckpoints": 22,
+          "lapTimes": [
+            28.74999999999901
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 949.389889008908
+        },
+        {
+          "id": 1,
+          "name": "M. Sato",
+          "car": "swift",
+          "x": 45.83702734808884,
+          "z": -87.44549856241684,
+          "speed": 25.80333583557005,
+          "heading": -9.421966126003806,
+          "completedLaps": 1,
+          "nextCheckpoint": 8,
+          "passedCheckpoints": 23,
+          "lapTimes": [
+            27.983333333332386
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 0,
+          "progress": 976.1540910826864
+        },
+        {
+          "id": 2,
+          "name": "A. Rivera",
+          "car": "comet",
+          "x": -67.21671518915441,
+          "z": -80.6606910062681,
+          "speed": 24.484432432406958,
+          "heading": -9.634641312550901,
+          "completedLaps": 1,
+          "nextCheckpoint": 10,
+          "passedCheckpoints": 25,
+          "lapTimes": [
+            25.63333333333252
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 1089.9781188797665
+        },
+        {
+          "id": 3,
+          "name": "J. Quinn",
+          "car": "spectre",
+          "x": 53.15131334026428,
+          "z": -87.13644703661612,
+          "speed": 30.626751283577146,
+          "heading": -9.300196735399892,
+          "completedLaps": 1,
+          "nextCheckpoint": 8,
+          "passedCheckpoints": 23,
+          "lapTimes": [
+            28.22499999999904
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 968.8398050905109
+        },
+        {
+          "id": 4,
+          "name": "N. Vale",
+          "car": "swift",
+          "x": 79.50553457866243,
+          "z": -78.44950903687193,
+          "speed": 23.92756186852216,
+          "heading": -8.93237679342584,
+          "completedLaps": 1,
+          "nextCheckpoint": 7,
+          "passedCheckpoints": 22,
+          "lapTimes": [
+            29.19166666666565
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 940.8741002199943
+        },
+        {
+          "id": 5,
+          "name": "S. Moss",
+          "car": "comet",
+          "x": 88.69040544423567,
+          "z": -74.11771885540774,
+          "speed": 22.87116725870737,
+          "heading": -8.616990471862824,
+          "completedLaps": 1,
+          "nextCheckpoint": 7,
+          "passedCheckpoints": 22,
+          "lapTimes": [
+            29.458333333332302
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 930.8708635733619
+        }
+      ],
+      "inMenu": false,
+      "camera": "CHASE",
+      "renderer": {
+        "frame": 1785,
+        "calls": 170,
+        "triangles": 26980,
+        "points": 0,
+        "lines": 0
+      }
+    },
+    {
+      "phase": "racing",
+      "paused": false,
+      "time": 60.21666666666389,
+      "countdown": 0,
+      "selected": 2,
+      "collisions": {
+        "barrier": 0,
+        "vehicle": 4,
+        "obstacle": 1
+      },
+      "standings": [
+        2,
+        1,
+        3,
+        0,
+        4,
+        5
+      ],
+      "cars": [
+        {
+          "id": 0,
+          "name": "YOU",
+          "car": "swift",
+          "x": 87.62875127735683,
+          "z": 65.83907837320383,
+          "speed": 22.89612300322951,
+          "heading": -13.6236234342329,
+          "completedLaps": 2,
+          "nextCheckpoint": 3,
+          "passedCheckpoints": 34,
+          "lapTimes": [
+            28.74999999999901,
+            26.899999999998474
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 1454.6379694977213
+        },
+        {
+          "id": 1,
+          "name": "M. Sato",
+          "car": "swift",
+          "x": 101.57134590753284,
+          "z": 45.920388993070056,
+          "speed": 26.13440356289652,
+          "heading": -14.015946615635828,
+          "completedLaps": 2,
+          "nextCheckpoint": 4,
+          "passedCheckpoints": 35,
+          "lapTimes": [
+            27.983333333332386,
+            26.749999999998483
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 0,
+          "progress": 1479.6012228867949
+        },
+        {
+          "id": 2,
+          "name": "A. Rivera",
+          "car": "comet",
+          "x": 30.449787404958133,
+          "z": -82.3658717623749,
+          "speed": 30.760375573674956,
+          "heading": -15.72578234320556,
+          "completedLaps": 2,
+          "nextCheckpoint": 8,
+          "passedCheckpoints": 39,
+          "lapTimes": [
+            25.63333333333252,
+            23.383333333332008
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 1662.8687433130006
+        },
+        {
+          "id": 3,
+          "name": "J. Quinn",
+          "car": "spectre",
+          "x": 96.34460319728038,
+          "z": 58.2336426586335,
+          "speed": 24.148874850332756,
+          "heading": -13.878266700854644,
+          "completedLaps": 2,
+          "nextCheckpoint": 3,
+          "passedCheckpoints": 34,
+          "lapTimes": [
+            28.22499999999904,
+            26.758333333331816
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 1466.518903924385
+        },
+        {
+          "id": 4,
+          "name": "N. Vale",
+          "car": "swift",
+          "x": 85.46300286136655,
+          "z": 74.06229057454819,
+          "speed": 23.03984853380164,
+          "heading": -13.180180421592624,
+          "completedLaps": 2,
+          "nextCheckpoint": 3,
+          "passedCheckpoints": 34,
+          "lapTimes": [
+            29.19166666666565,
+            26.91666666666514
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 1446.4341227487116
+        },
+        {
+          "id": 5,
+          "name": "S. Moss",
+          "car": "comet",
+          "x": 79.99111901375964,
+          "z": 79.18041516494856,
+          "speed": 21.26132828538411,
+          "heading": -12.964813865175376,
+          "completedLaps": 2,
+          "nextCheckpoint": 3,
+          "passedCheckpoints": 34,
+          "lapTimes": [
+            29.458333333332302,
+            26.933333333331806
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 1438.823650066975
+        }
+      ],
+      "inMenu": false,
+      "camera": "CHASE",
+      "renderer": {
+        "frame": 2392,
+        "calls": 151,
+        "triangles": 26592,
+        "points": 0,
+        "lines": 0
+      }
+    },
+    {
+      "phase": "racing",
+      "paused": false,
+      "time": 80.26666666667661,
+      "countdown": 0,
+      "selected": 2,
+      "collisions": {
+        "barrier": 0,
+        "vehicle": 6,
+        "obstacle": 3
+      },
+      "standings": [
+        2,
+        3,
+        1,
+        4,
+        5,
+        0
+      ],
+      "cars": [
+        {
+          "id": 0,
+          "name": "YOU",
+          "car": "swift",
+          "x": 95.23074554489183,
+          "z": 48.218421052575316,
+          "speed": -0.019853624141507962,
+          "heading": -13.872051920707026,
+          "completedLaps": 2,
+          "nextCheckpoint": 4,
+          "passedCheckpoints": 35,
+          "lapTimes": [
+            28.74999999999901,
+            26.899999999998474
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 3,
+          "progress": 1476.84268695819
+        },
+        {
+          "id": 1,
+          "name": "M. Sato",
+          "car": "swift",
+          "x": -57.27141026328746,
+          "z": 86.94059274247492,
+          "speed": 26.275993573558036,
+          "heading": -18.765109726309742,
+          "completedLaps": 2,
+          "nextCheckpoint": 15,
+          "passedCheckpoints": 46,
+          "lapTimes": [
+            27.983333333332386,
+            26.749999999998483
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 1971.7108265982629
+        },
+        {
+          "id": 2,
+          "name": "A. Rivera",
+          "car": "comet",
+          "x": 97.15444097677234,
+          "z": -40.61900884192551,
+          "speed": 25.317544309898402,
+          "heading": -20.47056531493454,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            25.63333333333252,
+            23.383333333332008,
+            23.37500000000582
+          ],
+          "finishTime": 72.39166666667035,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 2014.1974253685196
+        },
+        {
+          "id": 3,
+          "name": "J. Quinn",
+          "car": "spectre",
+          "x": -8.36770065706101,
+          "z": 87.81398211873312,
+          "speed": 33.28136787414532,
+          "heading": -18.86227695455123,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            28.22499999999904,
+            26.758333333331816,
+            25.09166666667894
+          ],
+          "finishTime": 80.0750000000098,
+          "recoveries": 0,
+          "collisions": 2,
+          "progress": 2014.2314379875788
+        },
+        {
+          "id": 4,
+          "name": "N. Vale",
+          "car": "swift",
+          "x": -72.56076001463862,
+          "z": 81.66424052860715,
+          "speed": 25.945403973267712,
+          "heading": -18.594416377939314,
+          "completedLaps": 2,
+          "nextCheckpoint": 15,
+          "passedCheckpoints": 46,
+          "lapTimes": [
+            29.19166666666565,
+            26.91666666666514
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 1955.77994632855
+        },
+        {
+          "id": 5,
+          "name": "S. Moss",
+          "car": "comet",
+          "x": -80.30590669577097,
+          "z": 80.24386095179369,
+          "speed": 23.063424240014324,
+          "heading": -18.230236209622817,
+          "completedLaps": 2,
+          "nextCheckpoint": 15,
+          "passedCheckpoints": 46,
+          "lapTimes": [
+            29.458333333332302,
+            26.933333333331806
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 1948.074179523409
+        }
+      ],
+      "inMenu": false,
+      "camera": "CHASE",
+      "renderer": {
+        "frame": 2988,
+        "calls": 83,
+        "triangles": 25084,
+        "points": 0,
+        "lines": 0
+      }
+    },
+    {
+      "phase": "racing",
+      "paused": false,
+      "time": 100.28333333335921,
+      "countdown": 0,
+      "selected": 2,
+      "collisions": {
+        "barrier": 0,
+        "vehicle": 7,
+        "obstacle": 3
+      },
+      "standings": [
+        2,
+        3,
+        1,
+        4,
+        5,
+        0
+      ],
+      "cars": [
+        {
+          "id": 0,
+          "name": "YOU",
+          "car": "swift",
+          "x": 96.47821852450038,
+          "z": 46.99618630749902,
+          "speed": -0.019853624141507962,
+          "heading": -14.000247830597626,
+          "completedLaps": 2,
+          "nextCheckpoint": 4,
+          "passedCheckpoints": 35,
+          "lapTimes": [
+            28.74999999999901,
+            26.899999999998474
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 3,
+          "progress": 1478.2999510071236
+        },
+        {
+          "id": 1,
+          "name": "M. Sato",
+          "car": "swift",
+          "x": -98.87710893306769,
+          "z": -58.20055794103068,
+          "speed": 25.111097443237938,
+          "heading": -23.227198429722588,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            27.983333333332386,
+            26.749999999998483,
+            27.125000000013678
+          ],
+          "finishTime": 81.85833333334455,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 2014.1269749373214
+        },
+        {
+          "id": 2,
+          "name": "A. Rivera",
+          "car": "comet",
+          "x": 95.1477574153862,
+          "z": 57.66993074096483,
+          "speed": 24.77737236861694,
+          "heading": -26.2484176155138,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            25.63333333333252,
+            23.383333333332008,
+            23.37500000000582
+          ],
+          "finishTime": 72.39166666667035,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 2014.1974253685196
+        },
+        {
+          "id": 3,
+          "name": "J. Quinn",
+          "car": "spectre",
+          "x": -102.0700906372026,
+          "z": 47.380014115498774,
+          "speed": 24.808378406195057,
+          "heading": -23.67184250329983,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            28.22499999999904,
+            26.758333333331816,
+            25.09166666667894
+          ],
+          "finishTime": 80.0750000000098,
+          "recoveries": 0,
+          "collisions": 2,
+          "progress": 2014.2314379875788
+        },
+        {
+          "id": 4,
+          "name": "N. Vale",
+          "car": "swift",
+          "x": -95.22309741791886,
+          "z": -64.34746644498051,
+          "speed": 22.72666019340901,
+          "heading": -23.15821027545826,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            29.19166666666565,
+            26.91666666666514,
+            26.366666666680914
+          ],
+          "finishTime": 82.4750000000117,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 2014.0640898466027
+        },
+        {
+          "id": 5,
+          "name": "S. Moss",
+          "car": "comet",
+          "x": -91.84527129098652,
+          "z": -70.588824323609,
+          "speed": 22.857347344353347,
+          "heading": -22.823699329976904,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            29.458333333332302,
+            26.933333333331806,
+            26.341666666681135
+          ],
+          "finishTime": 82.73333333334524,
+          "recoveries": 0,
+          "collisions": 2,
+          "progress": 2014.0287597513588
+        }
+      ],
+      "inMenu": false,
+      "camera": "CHASE",
+      "renderer": {
+        "frame": 3588,
+        "calls": 57,
+        "triangles": 24452,
+        "points": 0,
+        "lines": 0
+      }
+    },
+    {
+      "phase": "racing",
+      "paused": false,
+      "time": 120.45000000004192,
+      "countdown": 0,
+      "selected": 2,
+      "collisions": {
+        "barrier": 0,
+        "vehicle": 8,
+        "obstacle": 3
+      },
+      "standings": [
+        2,
+        3,
+        1,
+        4,
+        5,
+        0
+      ],
+      "cars": [
+        {
+          "id": 0,
+          "name": "YOU",
+          "car": "swift",
+          "x": -97.10546603817464,
+          "z": 24.008740065591883,
+          "speed": 26.219111658084053,
+          "heading": -17.48794928947069,
+          "completedLaps": 2,
+          "nextCheckpoint": 13,
+          "passedCheckpoints": 44,
+          "lapTimes": [
+            28.74999999999901,
+            26.899999999998474
+          ],
+          "finishTime": null,
+          "recoveries": 0,
+          "collisions": 3,
+          "progress": 1885.1591238553465
+        },
+        {
+          "id": 1,
+          "name": "M. Sato",
+          "car": "swift",
+          "x": 54.784689367098906,
+          "z": -87.09785907228775,
+          "speed": 26.399223648886377,
+          "heading": -28.207517946416463,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            27.983333333332386,
+            26.749999999998483,
+            27.125000000013678
+          ],
+          "finishTime": 81.85833333334455,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 2014.1269749373214
+        },
+        {
+          "id": 2,
+          "name": "A. Rivera",
+          "car": "comet",
+          "x": -59.182079020203,
+          "z": 82.16402608338895,
+          "speed": 29.77233602431982,
+          "heading": -31.322554548488466,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            25.63333333333252,
+            23.383333333332008,
+            23.37500000000582
+          ],
+          "finishTime": 72.39166666667035,
+          "recoveries": 0,
+          "collisions": 2,
+          "progress": 2014.1974253685196
+        },
+        {
+          "id": 3,
+          "name": "J. Quinn",
+          "car": "spectre",
+          "x": -91.71987703634343,
+          "z": -72.90133607619656,
+          "speed": 22.428464626549577,
+          "heading": -29.114435114569932,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            28.22499999999904,
+            26.758333333331816,
+            25.09166666667894
+          ],
+          "finishTime": 80.0750000000098,
+          "recoveries": 0,
+          "collisions": 2,
+          "progress": 2014.2314379875788
+        },
+        {
+          "id": 4,
+          "name": "N. Vale",
+          "car": "swift",
+          "x": 37.70804653941168,
+          "z": -82.0935193387352,
+          "speed": 26.718425276999046,
+          "heading": -28.269492993611987,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            29.19166666666565,
+            26.91666666666514,
+            26.366666666680914
+          ],
+          "finishTime": 82.4750000000117,
+          "recoveries": 0,
+          "collisions": 1,
+          "progress": 2014.0640898466027
+        },
+        {
+          "id": 5,
+          "name": "S. Moss",
+          "car": "comet",
+          "x": 61.41565568060998,
+          "z": -84.13234664491438,
+          "speed": 25.891726864835537,
+          "heading": -28.06859817376497,
+          "completedLaps": 3,
+          "nextCheckpoint": 1,
+          "passedCheckpoints": 48,
+          "lapTimes": [
+            29.458333333332302,
+            26.933333333331806,
+            26.341666666681135
+          ],
+          "finishTime": 82.73333333334524,
+          "recoveries": 0,
+          "collisions": 2,
+          "progress": 2014.0287597513588
+        }
+      ],
+      "inMenu": false,
+      "camera": "CHASE",
+      "renderer": {
+        "frame": 4170,
+        "calls": 86,
+        "triangles": 32238,
+        "points": 0,
+        "lines": 0
+      }
+    }
+  ],
+  "finalRace": {
+    "phase": "results",
+    "paused": false,
+    "time": 125.6166666667127,
+    "countdown": 0,
+    "selected": 2,
+    "collisions": {
+      "barrier": 0,
+      "vehicle": 8,
+      "obstacle": 3
+    },
+    "standings": [
+      2,
+      3,
+      1,
+      4,
+      5,
+      0
+    ],
+    "cars": [
+      {
+        "id": 0,
+        "name": "YOU",
+        "car": "swift",
+        "x": -14.843569150709545,
+        "z": 81.24349776654076,
+        "speed": 27.09095720881405,
+        "heading": -18.677503217816213,
+        "completedLaps": 3,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 48,
+        "lapTimes": [
+          28.74999999999901,
+          26.899999999998474,
+          69.96666666671521
+        ],
+        "finishTime": 125.6166666667127,
+        "recoveries": 0,
+        "collisions": 3,
+        "progress": 2014.138667710841
+      },
+      {
+        "id": 1,
+        "name": "M. Sato",
+        "car": "swift",
+        "x": -76.87509709058736,
+        "z": -82.70141099058281,
+        "speed": 23.932689321615992,
+        "heading": -28.71602304290221,
+        "completedLaps": 3,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 48,
+        "lapTimes": [
+          27.983333333332386,
+          26.749999999998483,
+          27.125000000013678
+        ],
+        "finishTime": 81.85833333334455,
+        "recoveries": 0,
+        "collisions": 1,
+        "progress": 2014.1269749373214
+      },
+      {
+        "id": 2,
+        "name": "A. Rivera",
+        "car": "comet",
+        "x": 86.35402507602662,
+        "z": 70.42583811303534,
+        "speed": 23.70685286246602,
+        "heading": -32.21015438556416,
+        "completedLaps": 3,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 48,
+        "lapTimes": [
+          25.63333333333252,
+          23.383333333332008,
+          23.37500000000582
+        ],
+        "finishTime": 72.39166666667035,
+        "recoveries": 0,
+        "collisions": 2,
+        "progress": 2014.1974253685196
+      },
+      {
+        "id": 3,
+        "name": "J. Quinn",
+        "car": "spectre",
+        "x": -94.69091854431699,
+        "z": 68.92248949553951,
+        "speed": 22.700365961245815,
+        "heading": -30.430282296844812,
+        "completedLaps": 3,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 48,
+        "lapTimes": [
+          28.22499999999904,
+          26.758333333331816,
+          25.09166666667894
+        ],
+        "finishTime": 80.0750000000098,
+        "recoveries": 0,
+        "collisions": 2,
+        "progress": 2014.2314379875788
+      },
+      {
+        "id": 4,
+        "name": "N. Vale",
+        "car": "swift",
+        "x": -89.69462515733113,
+        "z": -65.43270401359703,
+        "speed": 23.230379625359976,
+        "heading": -29.243110129862732,
+        "completedLaps": 3,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 48,
+        "lapTimes": [
+          29.19166666666565,
+          26.91666666666514,
+          26.366666666680914
+        ],
+        "finishTime": 82.4750000000117,
+        "recoveries": 0,
+        "collisions": 1,
+        "progress": 2014.0640898466027
+      },
+      {
+        "id": 5,
+        "name": "S. Moss",
+        "car": "comet",
+        "x": -69.43118033745903,
+        "z": -83.12981411731845,
+        "speed": 17.022416207232204,
+        "heading": -28.395951524156075,
+        "completedLaps": 3,
+        "nextCheckpoint": 1,
+        "passedCheckpoints": 48,
+        "lapTimes": [
+          29.458333333332302,
+          26.933333333331806,
+          26.341666666681135
+        ],
+        "finishTime": 82.73333333334524,
+        "recoveries": 0,
+        "collisions": 2,
+        "progress": 2014.0287597513588
+      }
+    ],
+    "inMenu": false,
+    "camera": "CHASE",
+    "renderer": {
+      "frame": 4328,
+      "calls": 88,
+      "triangles": 32262,
+      "points": 0,
+      "lines": 0
+    }
+  },
+  "completedAt": "2026-10-13T07:20:20.279Z"
+}

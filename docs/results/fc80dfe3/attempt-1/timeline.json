@@ -1,0 +1,115 @@
+{
+  "case_id": "CASE_02",
+  "incident_type": "Missing Laboratory Prototype",
+  "theft_window": {
+    "start": "18:00",
+    "end": "18:18"
+  },
+  "events": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone messages about needing prototype tomorrow",
+      "source": "D03",
+      "type": "motive",
+      "status": "confirmed"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed messages about moving cardboard consumables box to loading bay",
+      "source": "D03",
+      "type": "activity",
+      "status": "confirmed"
+    },
+    {
+      "time": "17:20",
+      "event": "Security notes service camera has +5 minute clock offset; doors log badge not biometric identity",
+      "source": "D03, V10",
+      "type": "system_note",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed present in lab (black triangle in gray container)",
+      "source": "V02",
+      "type": "observation",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:10",
+      "event": "Nora Vale (teal coat) enters East Corridor",
+      "source": "D01, V03",
+      "type": "access_log",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:11",
+      "event": "Maya Reed (purple coat) at Loading Bay with cardboard box",
+      "source": "V08",
+      "type": "observation",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park (blue coat) enters Cafeteria",
+      "source": "D01, V06",
+      "type": "access_log",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch (red coat) enters Reception",
+      "source": "D01, V07",
+      "type": "access_log",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:14",
+      "event": "Eli Stone (orange coat) enters Service Door - ACTUAL TIME (camera shows 18:19)",
+      "source": "D01, V04, V10",
+      "type": "access_log",
+      "status": "confirmed_corrected"
+    },
+    {
+      "time": "18:14-18:18",
+      "event": "Prototype removed from lab via unmonitored Service Corridor link",
+      "source": "V01, V02, V05",
+      "type": "inferred",
+      "status": "probable"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype discovered missing from lab",
+      "source": "V05",
+      "type": "observation",
+      "status": "confirmed"
+    },
+    {
+      "time": "18:19",
+      "event": "Eli Stone (orange coat) observed at Service Door with prototype - CAMERA TIME (actual: 18:14)",
+      "source": "V04, V10",
+      "type": "observation_corrected",
+      "status": "confirmed"
+    }
+  ],
+  "contradictions": [
+    {
+      "statement": "Eli Stone: I did not approach the lab after 18:00",
+      "contradicted_by": "V04 shows Eli with prototype at Service Door (actual time 18:14)",
+      "resolution": "Statement is false"
+    }
+  ],
+  "missing_intervals": [
+    {
+      "interval": "18:14-18:18",
+      "description": "Direct theft act not captured - Service Corridor is unmonitored link to lab (V01)"
+    }
+  ],
+  "clock_corrections": [
+    {
+      "camera": "Service Door Camera",
+      "offset": "+5 minutes",
+      "source": "D03, V10",
+      "affected_events": ["V04 timestamp"]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "rubric": {
+    "event_reconstruction": 25,
+    "logic": 25,
+    "evidence_accuracy": 20,
+    "uncertainty": 15,
+    "report_quality": 15
+  },
+  "categories": {
+    "event_reconstruction": null,
+    "logic": 25,
+    "evidence_accuracy": null,
+    "uncertainty": 15,
+    "report_quality": null
+  },
+  "verified_points": 40,
+  "pending_points": 60,
+  "quality_score": null,
+  "complete": false,
+  "evidence": {
+    "conclusion_correct": true,
+    "declared_person": null,
+    "expected_person": null,
+    "abstention": true,
+    "timeline_checks": [
+      {
+        "expected": {
+          "time": "18:00",
+          "event": "Prototype present in laboratory",
+          "exhibits": [
+            "V02"
+          ]
+        },
+        "timestamp_and_reference_present": false
+      },
+      {
+        "expected": {
+          "time": "18:10",
+          "event": "Nora entered east corridor",
+          "exhibits": [
+            "D01",
+            "V03"
+          ]
+        },
+        "timestamp_and_reference_present": true
+      },
+      {
+        "expected": {
+          "time": "18:14",
+          "event": "Two unidentified people entered unmonitored service corridor",
+          "exhibits": [
+            "V04",
+            "D01"
+          ]
+        },
+        "timestamp_and_reference_present": true
+      },
+      {
+        "expected": {
+          "time": "18:18",
+          "event": "Prototype absent from laboratory",
+          "exhibits": [
+            "V05"
+          ]
+        },
+        "timestamp_and_reference_present": false
+      }
+    ],
+    "visual_exhibit_coverage": 0.2,
+    "native_exhibits_actually_received": [],
+    "invalid_exhibit_ids": [],
+    "writing": {
+      "words": 690,
+      "sections": {
+        "executive": true,
+        "inventory": true,
+        "timeline": true,
+        "suspect": true,
+        "deduction": true,
+        "contradiction": true,
+        "conclusion": true,
+        "confidence|limitation": true,
+        "next|recommend": true
+      },
+      "section_coverage": 1.0,
+      "nonempty": true,
+      "subjective_quality": "pending blinded human review; word count and headings do not establish quality"
+    },
+    "sensory_track": "text_only_detective",
+    "available_exhibits": [
+      "D01",
+      "D02",
+      "D03"
+    ],
+    "unsupported_conclusion_references": []
+  },
+  "limitations": [
+    "Correct identity/abstention is scored deterministically; correctness of reasoning and observations is pending ground-truth review. Timestamp/reference presence is diagnostic, not proof that an event is reconstructed correctly.",
+    "Written-evidence version with a separate 100-point rubric. Images were not supplied; exclude from native multimodal rankings. Full completion needs independent review."
+  ],
+  "review_status": "pending",
+  "scoring_version": "text-detective-1.0",
+  "judge": "deterministic independent artifact/ground-truth checks; no model judge"
+}

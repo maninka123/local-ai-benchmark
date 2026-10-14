@@ -1,0 +1,440 @@
+{
+  "run_id": "2026-10-10T044258-172207+0000--b863a69c",
+  "model": "gpt-oss:20b",
+  "task": "data_analysis",
+  "case": null,
+  "track": "text_and_tools",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 33,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 7,
+            "reason": "Profiles four main tables with missing/duplicate counts and catalogue cost imputation; five loaded sources but events omitted, duplicate sales retained and exceptional legitimate/error orders not distinguished."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 9,
+            "reason": "Saved script generates financial formulas, six plots and JSON with public-rule arithmetic; duplicates/anomalous prices retained, 3-sigma outlier label not entry-error diagnosis, narrative numbers largely hard-coded and inconsistent."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 3,
+            "reason": "Real plotted time/product/region/segment/inventory and near-zero correlation analyses, but narrative incorrectly states Q3 2024 peak, 55% Enterprise, product dominance and declining stockouts; little substantive supported numerical explanation."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 9,
+            "reason": "Public full visual evidence reused: six readable chart panels with titles and axes using actual values; vague currency, scatter dominated by extreme values and narrative disagreement prevent high-quality conclusion support."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 3,
+            "reason": "Short approximately 301-word report has section structure and brief method/limitations; lacks required depth, chart embeds, numerical evidence and correct central conclusions."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 2,
+            "reason": "Some generic investigation/discount caution, but high-margin P01/P02 advice and regional inventory/SMB churn recommendations lack completed supporting analysis."
+          }
+        ],
+        "summary": "Needs revision: The report is approximately 400 words rather than the requested approximately 2,000 and does not embed its charts.; The script counts but does not remove duplicate sales and does not reliably distinguish entry mistakes from genuine unusually large orders.; Several narrative findings are hard-coded and disagree with the saved charts, including the stated customer-segment share and timing of the revenue peak.; The report alleges missing months without evidence, omits operational_events entirely, and labels products high-margin without a supporting profitability investigation.; Most findings lack concrete numerical evidence, business significance and source-column references; initial numerical checks did not capture the final regenerated metrics.",
+        "evidence_files": [
+          "models/gpt-oss-20b--f38aa0c53da5/01_data_analysis/2026-10-10T044258-172207+0000--b863a69c/artifacts/analysis.py",
+          "models/gpt-oss-20b--f38aa0c53da5/01_data_analysis/2026-10-10T044258-172207+0000--b863a69c/artifacts/findings.json",
+          "models/gpt-oss-20b--f38aa0c53da5/01_data_analysis/2026-10-10T044258-172207+0000--b863a69c/artifacts/report.md",
+          "models/gpt-oss-20b--f38aa0c53da5/01_data_analysis/2026-10-10T044258-172207+0000--b863a69c/artifacts/figures/figure_01.png",
+          "models/gpt-oss-20b--f38aa0c53da5/01_data_analysis/2026-10-10T044258-172207+0000--b863a69c/artifacts/figures/figure_02.png",
+          "models/gpt-oss-20b--f38aa0c53da5/01_data_analysis/2026-10-10T044258-172207+0000--b863a69c/artifacts/figures/figure_03.png",
+          "models/gpt-oss-20b--f38aa0c53da5/01_data_analysis/2026-10-10T044258-172207+0000--b863a69c/artifacts/figures/figure_04.png",
+          "models/gpt-oss-20b--f38aa0c53da5/01_data_analysis/2026-10-10T044258-172207+0000--b863a69c/artifacts/figures/figure_05.png",
+          "models/gpt-oss-20b--f38aa0c53da5/01_data_analysis/2026-10-10T044258-172207+0000--b863a69c/artifacts/figures/figure_06.png",
+          "results/improvement_campaign/data_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "models/gpt-oss-20b--f38aa0c53da5/01_data_analysis/2026-10-10T044258-172207+0000--b863a69c/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "analysis.py",
+          "url": "./results/b863a69c/attempt-1/analysis.py",
+          "bytes": 11015
+        },
+        {
+          "name": "findings.json",
+          "url": "./results/b863a69c/attempt-1/findings.json",
+          "bytes": 2424
+        },
+        {
+          "name": "report.md",
+          "url": "./results/b863a69c/attempt-1/report.md",
+          "bytes": 2274,
+          "preview_url": "./results/b863a69c/attempt-1/report.md.html"
+        },
+        {
+          "name": "figures/figure_01.png",
+          "url": "./results/b863a69c/attempt-1/figures/figure_01.png",
+          "bytes": 51012
+        },
+        {
+          "name": "figures/figure_02.png",
+          "url": "./results/b863a69c/attempt-1/figures/figure_02.png",
+          "bytes": 22343
+        },
+        {
+          "name": "figures/figure_03.png",
+          "url": "./results/b863a69c/attempt-1/figures/figure_03.png",
+          "bytes": 14411
+        },
+        {
+          "name": "figures/figure_04.png",
+          "url": "./results/b863a69c/attempt-1/figures/figure_04.png",
+          "bytes": 31603
+        },
+        {
+          "name": "figures/figure_05.png",
+          "url": "./results/b863a69c/attempt-1/figures/figure_05.png",
+          "bytes": 48882
+        },
+        {
+          "name": "figures/figure_06.png",
+          "url": "./results/b863a69c/attempt-1/figures/figure_06.png",
+          "bytes": 22607
+        }
+      ],
+      "game_url": null,
+      "readiness": "Analysis script runs",
+      "prompt_url": "./results/b863a69c/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 41,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 7,
+            "reason": "Same basic source profiling/cost imputation and retained duplicate/exceptional-price population; events omitted and inventory only profiled in current work."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 12,
+            "reason": "Recorded isolated reproduction generates six plots and JSON; calculated peak, product totals and segment shares agree with independent public-rule aggregation. Unreliable population, unresolved anomaly distinction and stale report remain."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 8,
+            "reason": "Six structured findings now carry actual computed amounts, percentages and method/limits; mainly descriptive averages/top lists and weak business significance, operations/event investigation absent, stale report contradicts conclusions."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 10,
+            "reason": "Six regenerated charts with useful customer/outlier comparisons; existing visual evidence sampled two, remaining purposes inspected in full code. No claim of full per-point visual verification; missing AUD and extreme-scale compression remain."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 2,
+            "reason": "Unchanged brief report now additionally contradicts current findings and renamed chart purposes; missing depth and embeds."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 2,
+            "reason": "Same unsupported/generic recommendation prose unchanged."
+          }
+        ],
+        "summary": "Incomplete after improvement iteration 1: calculations/findings and several figures improved, but the unchanged approximately 301-word report contradicts the current outputs and the financial population remains unreliable.",
+        "evidence_files": [
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-dee82b7278/artifacts/analysis.py",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-dee82b7278/artifacts/findings.json",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-dee82b7278/artifacts/report.md",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-dee82b7278/artifacts/figures/figure_01.png",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-dee82b7278/artifacts/figures/figure_02.png",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-dee82b7278/artifacts/figures/figure_03.png",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-dee82b7278/artifacts/figures/figure_04.png",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-dee82b7278/artifacts/figures/figure_05.png",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-dee82b7278/artifacts/figures/figure_06.png",
+          "results/improvement_campaign/data_after_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-dee82b7278/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "analysis.py",
+          "url": "./results/b863a69c/attempt-2/analysis.py",
+          "bytes": 8759
+        },
+        {
+          "name": "findings.json",
+          "url": "./results/b863a69c/attempt-2/findings.json",
+          "bytes": 2520
+        },
+        {
+          "name": "report.md",
+          "url": "./results/b863a69c/attempt-2/report.md",
+          "bytes": 2274,
+          "preview_url": "./results/b863a69c/attempt-2/report.md.html"
+        },
+        {
+          "name": "figures/figure_01.png",
+          "url": "./results/b863a69c/attempt-2/figures/figure_01.png",
+          "bytes": 51012
+        },
+        {
+          "name": "figures/figure_02.png",
+          "url": "./results/b863a69c/attempt-2/figures/figure_02.png",
+          "bytes": 24223
+        },
+        {
+          "name": "figures/figure_03.png",
+          "url": "./results/b863a69c/attempt-2/figures/figure_03.png",
+          "bytes": 38652
+        },
+        {
+          "name": "figures/figure_04.png",
+          "url": "./results/b863a69c/attempt-2/figures/figure_04.png",
+          "bytes": 18659
+        },
+        {
+          "name": "figures/figure_05.png",
+          "url": "./results/b863a69c/attempt-2/figures/figure_05.png",
+          "bytes": 30494
+        },
+        {
+          "name": "figures/figure_06.png",
+          "url": "./results/b863a69c/attempt-2/figures/figure_06.png",
+          "bytes": 25589
+        }
+      ],
+      "game_url": null,
+      "readiness": "Analysis script runs",
+      "prompt_url": "./results/b863a69c/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 34,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 6,
+            "reason": "Some source relationships/quality decisions explained, but false removal of duplicates and invented product/inventory/region fields, events omitted and monthly product-region grain incorrect."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 8,
+            "reason": "Public-rule headline arithmetic supported, but failed region_name join and inventory.date prevent regeneration. Central product/region/segment/month/stockout evidence fabricated and conflicts with actual plots; anomalous orders unresolved."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 3,
+            "reason": "Six findings contain method/source-column/chart references, but reverted unsupported narrative; report invents 70% top-product share, 55% Enterprise and stockout/month amounts. Only weak correlation/basic source summaries earn limited investigation credit."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 9,
+            "reason": "Six readable saved chart panels reviewed in prior public full visual receipt; five reused original figures with generic currency and extreme scatter. Actual plotted patterns contradict narrative rather than support it."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 5,
+            "reason": "Approximately 1510 words and all section themes improve depth/structure, but many material fabricated figures/schema/causes, false reproduction claims and no Markdown embeds sharply limit quality."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 3,
+            "reason": "Useful manual anomaly review, demand forecasting and proposed discount experimentation; principal allocation recommendations based on fabricated shares and 3–5% uplift unsupported."
+          }
+        ],
+        "summary": "Incomplete after improvement iteration 2: Saved isolated reproduction fails with KeyError for nonexistent regions.region_name at line 106. Later inventory logic also accesses nonexistent inventory.date, so the figures/findings cannot be fully regenerated.",
+        "evidence_files": [
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-50097fb5b4/artifacts/analysis.py",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-50097fb5b4/artifacts/findings.json",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-50097fb5b4/artifacts/report.md",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-50097fb5b4/artifacts/figures/figure_01.png",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-50097fb5b4/artifacts/figures/figure_02.png",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-50097fb5b4/artifacts/figures/figure_03.png",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-50097fb5b4/artifacts/figures/figure_04.png",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-50097fb5b4/artifacts/figures/figure_05.png",
+          "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-50097fb5b4/artifacts/figures/figure_06.png",
+          "results/improvement_campaign/pass_2/data_after_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "results/further-work/gpt-oss-20b/data_analysis/2026-10-10T044258-172207-0000--b863a69c/evaluations/eval-50097fb5b4/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": 10.2,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "analysis.py",
+          "url": "./results/b863a69c/attempt-3/analysis.py",
+          "bytes": 9473
+        },
+        {
+          "name": "findings.json",
+          "url": "./results/b863a69c/attempt-3/findings.json",
+          "bytes": 2705
+        },
+        {
+          "name": "report.md",
+          "url": "./results/b863a69c/attempt-3/report.md",
+          "bytes": 11349,
+          "preview_url": "./results/b863a69c/attempt-3/report.md.html"
+        },
+        {
+          "name": "figures/figure_01.png",
+          "url": "./results/b863a69c/attempt-3/figures/figure_01.png",
+          "bytes": 51012
+        },
+        {
+          "name": "figures/figure_02.png",
+          "url": "./results/b863a69c/attempt-3/figures/figure_02.png",
+          "bytes": 23769
+        },
+        {
+          "name": "figures/figure_03.png",
+          "url": "./results/b863a69c/attempt-3/figures/figure_03.png",
+          "bytes": 14411
+        },
+        {
+          "name": "figures/figure_04.png",
+          "url": "./results/b863a69c/attempt-3/figures/figure_04.png",
+          "bytes": 31603
+        },
+        {
+          "name": "figures/figure_05.png",
+          "url": "./results/b863a69c/attempt-3/figures/figure_05.png",
+          "bytes": 48882
+        },
+        {
+          "name": "figures/figure_06.png",
+          "url": "./results/b863a69c/attempt-3/figures/figure_06.png",
+          "bytes": 22607
+        }
+      ],
+      "game_url": null,
+      "readiness": "Analysis did not reproduce successfully",
+      "prompt_url": "./results/b863a69c/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": [
+    {
+      "name": "GPT-6.1 Sol · separate small repair",
+      "lines": 8,
+      "files": [
+        {
+          "name": "analysis.py",
+          "url": "./results/b863a69c/repairs/sol-6.1-small-fix-20261014/analysis.py",
+          "bytes": 9354
+        },
+        {
+          "name": "findings.json",
+          "url": "./results/b863a69c/repairs/sol-6.1-small-fix-20261014/findings.json",
+          "bytes": 2967
+        },
+        {
+          "name": "report.md",
+          "url": "./results/b863a69c/repairs/sol-6.1-small-fix-20261014/report.md",
+          "bytes": 11349,
+          "preview_url": "./results/b863a69c/repairs/sol-6.1-small-fix-20261014/report.md.html"
+        },
+        {
+          "name": "figures/figure_01.png",
+          "url": "./results/b863a69c/repairs/sol-6.1-small-fix-20261014/figures/figure_01.png",
+          "bytes": 51012
+        },
+        {
+          "name": "figures/figure_02.png",
+          "url": "./results/b863a69c/repairs/sol-6.1-small-fix-20261014/figures/figure_02.png",
+          "bytes": 23769
+        },
+        {
+          "name": "figures/figure_03.png",
+          "url": "./results/b863a69c/repairs/sol-6.1-small-fix-20261014/figures/figure_03.png",
+          "bytes": 19111
+        },
+        {
+          "name": "figures/figure_04.png",
+          "url": "./results/b863a69c/repairs/sol-6.1-small-fix-20261014/figures/figure_04.png",
+          "bytes": 23576
+        },
+        {
+          "name": "figures/figure_05.png",
+          "url": "./results/b863a69c/repairs/sol-6.1-small-fix-20261014/figures/figure_05.png",
+          "bytes": 21766
+        },
+        {
+          "name": "figures/figure_06.png",
+          "url": "./results/b863a69c/repairs/sol-6.1-small-fix-20261014/figures/figure_06.png",
+          "bytes": 22607
+        }
+      ],
+      "game_url": null,
+      "limitations": [
+        "Saved isolated reproduction fails with KeyError for nonexistent regions.region_name at line 106. Later inventory logic also accesses nonexistent inventory.date, so the figures/findings cannot be fully regenerated.",
+        "The report says duplicates were removed, but analysis.py never removes them and retains 20 duplicate business keys; five AUD99,000 unit-price entries remain in financial totals without distinguishing errors from ten legitimate 200-unit orders.",
+        "Central report/findings numbers contradict independently calculated public values and the plots: P01/P02/P03 share is 12.10%, not 70%; R0/R3 revenue is AUD5.35M/AUD5.24M, not AUD7.2M/AUD1.1M; Enterprise share is 30.46%, not 55%.",
+        "Reported July 2024 revenue AUD2.12M and February 2025 AUD1.05M contradict public-rule values AUD0.947M/AUD0.620M and the plotted data; the rule peak is July 2025 at AUD1.300M. January 2024 stockouts are 65, not 1,200; peak is August 2024 at 84, not a monotonic decline.",
+        "operational_events.csv is omitted entirely; report invents product selling_price, inventory region_id/date and regions region_name columns. Table relationships/data types and operational-event investigation are incomplete.",
+        "Findings mostly substitute nonnumerical or incorrect narrative for required per-finding quantitative evidence/business meaning; asserted flagship launch, missing 5?10% monthly logs, 4% lost sales and 3?5% profitability gain lack source calculations. Correlation does not establish discount effectiveness.",
+        "The approximately 1510-word report references files in a table but contains zero Markdown image embeds despite claiming integration; supported charts are not integrated into the professional report.",
+        "Original benchmark scores and completeness are unchanged. This is an assisted partial preview, with original report claims retained and potentially inaccurate."
+      ]
+    }
+  ]
+}

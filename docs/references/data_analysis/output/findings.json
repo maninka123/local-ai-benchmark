@@ -1,0 +1,684 @@
+{
+  "scope": "Supplied fictional 2024–2025 data; AUD",
+  "population": {
+    "transactions": 24963,
+    "customers": 1200,
+    "revenue": 17355447.830000002,
+    "cost": 12307512.0,
+    "gross_profit": 5047935.83,
+    "margin": 0.29085598248143846,
+    "units": 114758,
+    "on_time_rate": 0.7634899651484197
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "title": "Annual decline despite December peaks",
+      "kind": "calculated_result",
+      "evidence": {
+        "revenue_change": -0.018631279753720476,
+        "profit_change": -0.016806828962630416,
+        "transactions_change": -0.012499999999999956,
+        "units_change": -0.01463617175876264,
+        "without_large_orders_revenue_change": -0.02066103470971936,
+        "annual": [
+          {
+            "year": "2024",
+            "transactions": 12560,
+            "revenue": 8759322.61,
+            "cost": 6213965.0,
+            "gross_profit": 2545357.61,
+            "units": 57802,
+            "on_time_count": 9615,
+            "mean_delivery_days": 3.6706648089,
+            "margin": 0.2905884077,
+            "on_time_rate": 0.7655254777
+          },
+          {
+            "year": "2025",
+            "transactions": 12403,
+            "revenue": 8596125.22,
+            "cost": 6093547.0,
+            "gross_profit": 2502578.22,
+            "units": 56956,
+            "on_time_count": 9444,
+            "mean_delivery_days": 3.0815254374,
+            "margin": 0.2911286371,
+            "on_time_rate": 0.7614286866
+          }
+        ],
+        "december_baselines": {
+          "2024": {
+            "december_revenue": 1238795.61,
+            "jan_nov_mean_revenue": 683684.2727272727,
+            "december_transactions": 1784,
+            "jan_nov_mean_transactions": 979.6363636363636,
+            "december_uplift": 0.8119410660981605
+          },
+          "2025": {
+            "december_revenue": 1290220.47,
+            "jan_nov_mean_revenue": 664173.1590909092,
+            "december_transactions": 1805,
+            "jan_nov_mean_transactions": 963.4545454545455,
+            "december_uplift": 0.9425965237228144
+          }
+        }
+      },
+      "method": "Calendar-year sums and December / Jan–Nov monthly mean; large-order sensitivity.",
+      "business_significance": "Plan December capacity separately from annual growth.",
+      "limitations": [
+        "Two years only; campaign attribution unavailable."
+      ],
+      "source_columns": [
+        "transactions.transaction_date",
+        "transactions.revenue",
+        "transactions.quantity",
+        "transactions.unit_cost"
+      ],
+      "charts": [
+        "figures/figure_01.png"
+      ]
+    },
+    {
+      "id": "F2",
+      "title": "P00/P01 drive poor Premium profitability",
+      "kind": "calculated_result",
+      "evidence": {
+        "transactions": 2442,
+        "revenue": 3476822.05,
+        "gross_profit": -6027.949999999993,
+        "margin": -0.0017337528102710905,
+        "revenue_share": 0.20033029882352504,
+        "loss_making_transactions": 1519,
+        "all_loss_making_transactions": 1519,
+        "catalog_break_even_discount": 0.0461538461538461
+      },
+      "method": "Sum revenue minus extended transaction cost; catalog fill where missing.",
+      "business_significance": "Target discount floors and cost negotiation.",
+      "limitations": [
+        "Excludes overhead and customer lifetime effects."
+      ],
+      "source_columns": [
+        "transactions.product_id",
+        "transactions.revenue",
+        "transactions.quantity",
+        "transactions.unit_cost",
+        "products.unit_cost",
+        "products.category",
+        "products.list_price"
+      ],
+      "charts": [
+        "figures/figure_02.png"
+      ]
+    },
+    {
+      "id": "F3",
+      "title": "North price premium accompanies higher margins",
+      "kind": "observed_association_and_scenario",
+      "evidence": {
+        "north_mean_price_to_list": 1.1199991532117355,
+        "other_mean_price_to_list": 1.0,
+        "north_discount": 0.07389038066656137,
+        "other_discount": 0.07498389866895663,
+        "north_margin_without_12pct_price_premium_scenario": 0.2628487721399038,
+        "regions": [
+          {
+            "region_name": "East",
+            "transactions": 6213,
+            "revenue": 4196601.58,
+            "cost": 3048331.0,
+            "gross_profit": 1148270.58,
+            "units": 28715,
+            "on_time_count": 4762,
+            "mean_delivery_days": 3.3720585868,
+            "margin": 0.2736191554,
+            "on_time_rate": 0.766457428
+          },
+          {
+            "region_name": "North",
+            "transactions": 6331,
+            "revenue": 4781853.42,
+            "cost": 3147276.0,
+            "gross_profit": 1634577.42,
+            "units": 28731,
+            "on_time_count": 4808,
+            "mean_delivery_days": 3.4110867162,
+            "margin": 0.3418292608,
+            "on_time_rate": 0.7594376876
+          },
+          {
+            "region_name": "South",
+            "transactions": 6201,
+            "revenue": 4288830.1,
+            "cost": 3142700.0,
+            "gross_profit": 1146130.1,
+            "units": 29186,
+            "on_time_count": 4734,
+            "mean_delivery_days": 3.3815029834,
+            "margin": 0.2672360698,
+            "on_time_rate": 0.763425254
+          },
+          {
+            "region_name": "West",
+            "transactions": 6218,
+            "revenue": 4088162.73,
+            "cost": 2969205.0,
+            "gross_profit": 1118957.73,
+            "units": 28126,
+            "on_time_count": 4755,
+            "mean_delivery_days": 3.346545513,
+            "margin": 0.2737067489,
+            "on_time_rate": 0.7647153426
+          }
+        ]
+      },
+      "method": "Matched price/list ratios and fixed-volume revenue-divided-by-1.12 scenario.",
+      "business_significance": "Adjust regional comparisons for price realization.",
+      "limitations": [
+        "Scenario holds demand and mix fixed; no causal demand estimate."
+      ],
+      "source_columns": [
+        "transactions.region_id",
+        "transactions.selling_price",
+        "transactions.discount",
+        "transactions.revenue",
+        "products.list_price",
+        "regions.name"
+      ],
+      "charts": [
+        "figures/figure_03.png"
+      ]
+    },
+    {
+      "id": "F4",
+      "title": "Supplier ranking reverses within service",
+      "kind": "observed_association",
+      "evidence": {
+        "common_service_weights": {
+          "express": 0.5015823418659616,
+          "standard": 0.4984176581340384
+        },
+        "standardized_on_time_rates": {
+          "A": 0.7950096101960995,
+          "B": 0.7191090820564212
+        },
+        "express_shares": {
+          "A": 0.8540362702615952,
+          "B": 0.15022798176145907
+        },
+        "supplier_service": [
+          {
+            "supplier_id": "A",
+            "service_class": "express",
+            "transactions": 10643,
+            "revenue": 7571375.59,
+            "cost": 5417620.0,
+            "gross_profit": 2153755.59,
+            "units": 49568,
+            "on_time_count": 6648,
+            "mean_delivery_days": 4.06771493,
+            "margin": 0.284460276,
+            "on_time_rate": 0.6246359109
+          },
+          {
+            "supplier_id": "A",
+            "service_class": "standard",
+            "transactions": 1819,
+            "revenue": 1264996.75,
+            "cost": 884728.0,
+            "gross_profit": 380268.75,
+            "units": 8508,
+            "on_time_count": 1758,
+            "mean_delivery_days": 2.3574656405,
+            "margin": 0.3006084798,
+            "on_time_rate": 0.9664650907
+          },
+          {
+            "supplier_id": "B",
+            "service_class": "express",
+            "transactions": 1878,
+            "revenue": 1268476.9,
+            "cost": 894219.0,
+            "gross_profit": 374257.9,
+            "units": 8350,
+            "on_time_count": 996,
+            "mean_delivery_days": 4.5638551651,
+            "margin": 0.2950451049,
+            "on_time_rate": 0.5303514377
+          },
+          {
+            "supplier_id": "B",
+            "service_class": "standard",
+            "transactions": 10623,
+            "revenue": 7250598.59,
+            "cost": 5110945.0,
+            "gross_profit": 2139653.59,
+            "units": 48332,
+            "on_time_count": 9657,
+            "mean_delivery_days": 2.6519693119,
+            "margin": 0.2951002684,
+            "on_time_rate": 0.9090652358
+          }
+        ],
+        "overall": [
+          {
+            "supplier_id": "A",
+            "transactions": 12462,
+            "revenue": 8836372.34,
+            "cost": 6302348.0,
+            "gross_profit": 2534024.34,
+            "units": 58076,
+            "on_time_count": 8406,
+            "mean_delivery_days": 3.8180805649,
+            "margin": 0.2867720194,
+            "on_time_rate": 0.6745305729
+          },
+          {
+            "supplier_id": "B",
+            "transactions": 12501,
+            "revenue": 8519075.49,
+            "cost": 6005164.0,
+            "gross_profit": 2513911.49,
+            "units": 56682,
+            "on_time_count": 10653,
+            "mean_delivery_days": 2.939188065,
+            "margin": 0.2950920546,
+            "on_time_rate": 0.8521718263
+          }
+        ]
+      },
+      "method": "Stratified on-time rates and direct standardization to combined service mix.",
+      "business_significance": "Avoid biased aggregate supplier scorecards.",
+      "limitations": [
+        "Routes, promises and assignment are uncontrolled."
+      ],
+      "source_columns": [
+        "transactions.supplier_id",
+        "transactions.service_class",
+        "transactions.on_time"
+      ],
+      "charts": [
+        "figures/figure_04.png"
+      ]
+    },
+    {
+      "id": "F5",
+      "title": "Delivery duration falls but on-time flags barely improve",
+      "kind": "observed_association",
+      "evidence": {
+        "2025_half_year": [
+          {
+            "period": "Before July 2025",
+            "transactions": 5721,
+            "revenue": 3925925.36,
+            "cost": 2787678.0,
+            "gross_profit": 1138247.36,
+            "units": 25892,
+            "on_time_count": 4335,
+            "mean_delivery_days": 3.7465932529,
+            "margin": 0.2899309731,
+            "on_time_rate": 0.7577346618
+          },
+          {
+            "period": "July–December 2025",
+            "transactions": 6682,
+            "revenue": 4670199.86,
+            "cost": 3305869.0,
+            "gross_profit": 1364330.86,
+            "units": 31064,
+            "on_time_count": 5109,
+            "mean_delivery_days": 2.5121071535,
+            "margin": 0.2921354334,
+            "on_time_rate": 0.7645914397
+          }
+        ],
+        "pre_post_mean_difference": -1.1823193001482504,
+        "pre_post_on_time_difference": 0.0015040812291130523,
+        "period": [
+          {
+            "period": "Before July 2025",
+            "transactions": 18281,
+            "revenue": 12685247.97,
+            "cost": 9001643.0,
+            "gross_profit": 3683604.97,
+            "units": 83694,
+            "on_time_count": 13950,
+            "mean_delivery_days": 3.6944264537,
+            "margin": 0.2903849399,
+            "on_time_rate": 0.7630873585
+          },
+          {
+            "period": "July–December 2025",
+            "transactions": 6682,
+            "revenue": 4670199.86,
+            "cost": 3305869.0,
+            "gross_profit": 1364330.86,
+            "units": 31064,
+            "on_time_count": 5109,
+            "mean_delivery_days": 2.5121071535,
+            "margin": 0.2921354334,
+            "on_time_rate": 0.7645914397
+          }
+        ],
+        "period_service": [
+          {
+            "period": "Before July 2025",
+            "service_class": "express",
+            "transactions": 9201,
+            "revenue": 6452623.75,
+            "cost": 4598051.0,
+            "gross_profit": 1854572.75,
+            "units": 42223,
+            "on_time_count": 5601,
+            "mean_delivery_days": 4.4628018694,
+            "margin": 0.2874137439,
+            "on_time_rate": 0.6087381806
+          },
+          {
+            "period": "Before July 2025",
+            "service_class": "standard",
+            "transactions": 9080,
+            "revenue": 6232624.22,
+            "cost": 4403592.0,
+            "gross_profit": 1829032.22,
+            "units": 41471,
+            "on_time_count": 8349,
+            "mean_delivery_days": 2.915811674,
+            "margin": 0.2934610134,
+            "on_time_rate": 0.9194933921
+          },
+          {
+            "period": "July–December 2025",
+            "service_class": "express",
+            "transactions": 3320,
+            "revenue": 2387228.74,
+            "cost": 1713788.0,
+            "gross_profit": 673440.74,
+            "units": 15695,
+            "on_time_count": 2043,
+            "mean_delivery_days": 3.2534246988,
+            "margin": 0.2821014713,
+            "on_time_rate": 0.6153614458
+          },
+          {
+            "period": "July–December 2025",
+            "service_class": "standard",
+            "transactions": 3362,
+            "revenue": 2282971.12,
+            "cost": 1592081.0,
+            "gross_profit": 690890.12,
+            "units": 15369,
+            "on_time_count": 3066,
+            "mean_delivery_days": 1.7800505651,
+            "margin": 0.3026276215,
+            "on_time_rate": 0.9119571684
+          }
+        ],
+        "period_region": [
+          {
+            "period": "Before July 2025",
+            "region_name": "East",
+            "transactions": 4524,
+            "revenue": 3072597.43,
+            "cost": 2239830.0,
+            "gross_profit": 832767.43,
+            "units": 20897,
+            "on_time_count": 3473,
+            "mean_delivery_days": 3.6842528736,
+            "margin": 0.2710304389,
+            "on_time_rate": 0.767683466
+          },
+          {
+            "period": "Before July 2025",
+            "region_name": "North",
+            "transactions": 4667,
+            "revenue": 3497862.39,
+            "cost": 2307965.0,
+            "gross_profit": 1189897.39,
+            "units": 21062,
+            "on_time_count": 3533,
+            "mean_delivery_days": 3.7245768159,
+            "margin": 0.3401784454,
+            "on_time_rate": 0.7570173559
+          },
+          {
+            "period": "Before July 2025",
+            "region_name": "South",
+            "transactions": 4541,
+            "revenue": 3094569.37,
+            "cost": 2258026.0,
+            "gross_profit": 836543.37,
+            "units": 21136,
+            "on_time_count": 3457,
+            "mean_delivery_days": 3.7126690156,
+            "margin": 0.2703262619,
+            "on_time_rate": 0.7612860603
+          },
+          {
+            "period": "Before July 2025",
+            "region_name": "West",
+            "transactions": 4549,
+            "revenue": 3020218.78,
+            "cost": 2195822.0,
+            "gross_profit": 824396.78,
+            "units": 20599,
+            "on_time_count": 3487,
+            "mean_delivery_days": 3.6554011871,
+            "margin": 0.272959292,
+            "on_time_rate": 0.7665420972
+          },
+          {
+            "period": "July–December 2025",
+            "region_name": "East",
+            "transactions": 1689,
+            "revenue": 1124004.15,
+            "cost": 808501.0,
+            "gross_profit": 315503.15,
+            "units": 7818,
+            "on_time_count": 1289,
+            "mean_delivery_days": 2.5358436945,
+            "margin": 0.2806957163,
+            "on_time_rate": 0.7631734754
+          },
+          {
+            "period": "July–December 2025",
+            "region_name": "North",
+            "transactions": 1664,
+            "revenue": 1283991.03,
+            "cost": 839311.0,
+            "gross_profit": 444680.03,
+            "units": 7669,
+            "on_time_count": 1275,
+            "mean_delivery_days": 2.5318449519,
+            "margin": 0.3463264303,
+            "on_time_rate": 0.7662259615
+          },
+          {
+            "period": "July–December 2025",
+            "region_name": "South",
+            "transactions": 1660,
+            "revenue": 1194260.73,
+            "cost": 884674.0,
+            "gross_profit": 309586.73,
+            "units": 8050,
+            "on_time_count": 1277,
+            "mean_delivery_days": 2.4755843373,
+            "margin": 0.2592287615,
+            "on_time_rate": 0.7692771084
+          },
+          {
+            "period": "July–December 2025",
+            "region_name": "West",
+            "transactions": 1669,
+            "revenue": 1067943.95,
+            "cost": 773383.0,
+            "gross_profit": 294560.95,
+            "units": 7527,
+            "on_time_count": 1268,
+            "mean_delivery_days": 2.5047333733,
+            "margin": 0.2758206084,
+            "on_time_rate": 0.7597363691
+          }
+        ]
+      },
+      "method": "Before/after 1 July 2025 and 2025-only sensitivity; monthly patterns.",
+      "business_significance": "Check both operational change and measurement consistency.",
+      "limitations": [
+        "No control group; promises and dispatch dates unavailable."
+      ],
+      "source_columns": [
+        "transactions.transaction_date",
+        "transactions.delivery_days",
+        "transactions.on_time",
+        "operational_events.event_date",
+        "operational_events.description"
+      ],
+      "charts": [
+        "figures/figure_05.png"
+      ]
+    },
+    {
+      "id": "F6",
+      "title": "Modest concentration with customer profit exceptions",
+      "kind": "calculated_result",
+      "evidence": {
+        "top10_revenue_share": 0.02923292357360046,
+        "top120_revenue_share": 0.17081777831600903,
+        "largest_customer": "C0620",
+        "largest_customer_share": 0.004495847687959084,
+        "negative_profit_customers": 1,
+        "segments": [
+          {
+            "segment": "Consumer",
+            "transactions": 8320,
+            "revenue": 5833882.16,
+            "cost": 4133254.0,
+            "gross_profit": 1700628.16,
+            "units": 38692,
+            "on_time_count": 6347,
+            "mean_delivery_days": 3.3871454327,
+            "margin": 0.2915088295,
+            "on_time_rate": 0.7628605769
+          },
+          {
+            "segment": "Enterprise",
+            "transactions": 8358,
+            "revenue": 5887341.83,
+            "cost": 4189231.0,
+            "gross_profit": 1698110.83,
+            "units": 38610,
+            "on_time_count": 6346,
+            "mean_delivery_days": 3.3920124432,
+            "margin": 0.2884342168,
+            "on_time_rate": 0.7592725532
+          },
+          {
+            "segment": "SMB",
+            "transactions": 8285,
+            "revenue": 5634223.84,
+            "cost": 3985027.0,
+            "gross_profit": 1649196.84,
+            "units": 37456,
+            "on_time_count": 6366,
+            "mean_delivery_days": 3.3545226313,
+            "margin": 0.2927105644,
+            "on_time_rate": 0.7683765842
+          }
+        ]
+      },
+      "method": "Rank customer revenue totals and reconcile segment aggregates.",
+      "business_significance": "Use profitability alongside revenue in account planning.",
+      "limitations": [
+        "No inactive account or lifetime cost data."
+      ],
+      "source_columns": [
+        "transactions.customer_id",
+        "transactions.revenue",
+        "transactions.quantity",
+        "transactions.unit_cost",
+        "customers.segment"
+      ],
+      "charts": [
+        "figures/figure_06.png"
+      ]
+    },
+    {
+      "id": "F7",
+      "title": "Inventory and advertising do not establish demand drivers",
+      "kind": "observed_correlation",
+      "evidence": {
+        "product_months": 480,
+        "stockout_count": 1590,
+        "positive_stockout_months": 408,
+        "units_stockouts_pearson": -0.010739726584707067,
+        "stock_stockouts_pearson": -0.022825251298661982,
+        "transaction_ad_revenue_pearson": -0.0066462303325366635
+      },
+      "method": "One-to-one product-month inventory join and Pearson correlations; transaction-level ad correlation.",
+      "business_significance": "Collect exposure, replenishment and unmet demand before claiming ROI or lost sales.",
+      "limitations": [
+        "No causal interpretation; stock timing and spend undefined."
+      ],
+      "source_columns": [
+        "inventory.month",
+        "inventory.product_id",
+        "inventory.stock_units",
+        "inventory.stockouts",
+        "transactions.quantity",
+        "transactions.ad_index",
+        "transactions.revenue"
+      ],
+      "charts": [
+        "figures/figure_08.png"
+      ]
+    },
+    {
+      "id": "F8",
+      "title": "Extreme prices materially inflate the untreated total",
+      "kind": "data_quality_and_sensitivity",
+      "evidence": {
+        "raw_rows": 25000,
+        "raw_revenue": 19351814.96,
+        "duplicate_copies": 20,
+        "duplicate_revenue": 14718.41,
+        "dedup_revenue": 19337096.55,
+        "invalid_quantity_rows": 12,
+        "invalid_quantity_revenue": -3301.2799999999997,
+        "extreme_price_rows": 5,
+        "extreme_price_revenue": 1984950.0,
+        "min_extreme_price_to_list": 512.8205128205128,
+        "max_extreme_price_to_list": 1500.0,
+        "missing_cost_rows": 30,
+        "imputed_cost": 17438.0,
+        "imputed_rows_revenue": 24128.83,
+        "known_cost_margin": 0.2908748607073703,
+        "revenue_formula_max_error": 0.005000000000109139,
+        "home_region_disagreements": 0,
+        "retained_large_orders": {
+          "rows": 10,
+          "revenue": 345980.4,
+          "revenue_share": 0.019934973928010705,
+          "gross_profit": 69780.4
+        }
+      },
+      "method": "Exact deduplication, positive completed-sale quantities, >10x catalog-price quarantine, catalog cost fill.",
+      "business_significance": "Resolve invoices before using an audited financial baseline.",
+      "limitations": [
+        "True anomalous prices unverified; large orders plausible rather than externally confirmed."
+      ],
+      "source_columns": [
+        "transactions.transaction_id",
+        "transactions.quantity",
+        "transactions.selling_price",
+        "transactions.unit_cost",
+        "transactions.revenue",
+        "products.list_price",
+        "products.unit_cost"
+      ],
+      "charts": [
+        "figures/figure_07.png"
+      ]
+    }
+  ],
+  "reference_status": "Self-authored tool-assisted reference; no ground-truth or measured benchmark-score claim"
+}

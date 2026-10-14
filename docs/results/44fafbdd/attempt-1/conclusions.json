@@ -1,0 +1,60 @@
+{
+  "responsible_person": "Nora Vale",
+  "confidence": 0.95,
+  "conclusion": "Nora Vale stole the laboratory prototype between 18:00 and 18:14. Visual evidence V04 shows a person in teal coat (Nora's assigned color) carrying the prototype out of East Exit at 18:14. Her witness statement claiming she 'only visited the east corridor and left' is directly contradicted by this visual evidence. She likely accessed the lab through the unmonitored Service Corridor (V01, V10, D03) between 18:00-18:10, then exited via East Corridor/East Exit where cameras captured her with the stolen property.",
+  "exhibits": [
+    {
+      "id": "V04",
+      "description": "Direct visual evidence of teal-coated person carrying prototype at East Exit 18:14"
+    },
+    {
+      "id": "V02",
+      "description": "Prototype confirmed present in Lab at 18:00"
+    },
+    {
+      "id": "V05",
+      "description": "Prototype missing from Lab at 18:18"
+    },
+    {
+      "id": "D01",
+      "description": "Access logs confirm Nora Vale entered East Corridor 18:10, exited East Exit 18:14"
+    },
+    {
+      "id": "V03",
+      "description": "Teal-coated person in East Corridor at 18:10"
+    },
+    {
+      "id": "D02",
+      "description": "Nora's false statement claiming she only visited east corridor and left"
+    },
+    {
+      "id": "V01",
+      "description": "Floor plan showing Service Corridor as unmonitored link to Lab"
+    },
+    {
+      "id": "V10",
+      "description": "Service Camera blind spot confirmation"
+    }
+  ],
+  "alternative_explanations": [
+    "Badge impersonation - D03 notes doors log credentials not biometric identity, but coat color + timing + possession makes this implausible"
+  ],
+  "cleared_suspects": [
+    {
+      "name": "Maya Reed",
+      "reason": "Visual alibi at Loading Bay 18:11 (V08) with cardboard box"
+    },
+    {
+      "name": "Theo Park",
+      "reason": "Visual alibi in Cafeteria from 18:12 (V06, D01)"
+    },
+    {
+      "name": "Ada Finch",
+      "reason": "Visual alibi at Reception from 18:13 (V07, D01)"
+    },
+    {
+      "name": "Eli Stone",
+      "reason": "Motive only (D03), no evidence of opportunity or access during theft window"
+    }
+  ]
+}

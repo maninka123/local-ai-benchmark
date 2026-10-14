@@ -1,0 +1,149 @@
+{
+  "exhibits": [
+    {
+      "id": "V01",
+      "type": "schematic",
+      "description": "Floor plan showing LAB, EAST CORRIDOR, EAST EXIT, SERVICE CORRIDOR (unmonitored link to lab), CAFETERIA",
+      "key_findings": [
+        "Service corridor provides unmonitored access to lab",
+        "East corridor connects to east exit"
+      ],
+      "limitations": "Synthetic schematic, not photograph"
+    },
+    {
+      "id": "V02",
+      "type": "camera_feed",
+      "timestamp": "18:00",
+      "location": "LAB",
+      "description": "Prototype visible on table in lab",
+      "key_findings": [
+        "Prototype confirmed present at 18:00"
+      ],
+      "limitations": "Synthetic schematic"
+    },
+    {
+      "id": "V03",
+      "type": "camera_feed",
+      "timestamp": "18:10",
+      "location": "EAST CORRIDOR",
+      "description": "Person in teal coat (Nora Vale) entering east corridor",
+      "key_findings": [
+        "Nora Vale entered east corridor at 18:10"
+      ],
+      "limitations": "Synthetic schematic, coat color only"
+    },
+    {
+      "id": "V04",
+      "type": "camera_feed",
+      "timestamp": "18:14",
+      "location": "EAST EXIT",
+      "description": "Person in teal coat (Nora Vale) exiting east exit with prototype",
+      "key_findings": [
+        "Nora Vale left lab area at 18:14 with prototype visible"
+      ],
+      "limitations": "Synthetic schematic"
+    },
+    {
+      "id": "V05",
+      "type": "camera_feed",
+      "timestamp": "18:18",
+      "location": "LAB",
+      "description": "Lab empty except for brown object (no prototype)",
+      "key_findings": [
+        "Prototype missing from lab at 18:18"
+      ],
+      "limitations": "Synthetic schematic"
+    },
+    {
+      "id": "V06",
+      "type": "camera_feed",
+      "timestamp": "18:12",
+      "location": "CAFETERIA",
+      "description": "Person in blue coat (Theo Park) in cafeteria",
+      "key_findings": [
+        "Theo Park in cafeteria at 18:12"
+      ],
+      "limitations": "Synthetic schematic"
+    },
+    {
+      "id": "V07",
+      "type": "camera_feed",
+      "timestamp": "18:13",
+      "location": "RECEPTION",
+      "description": "Person in red coat (Ada Finch) at reception",
+      "key_findings": [
+        "Ada Finch at reception at 18:13"
+      ],
+      "limitations": "Synthetic schematic"
+    },
+    {
+      "id": "V08",
+      "type": "camera_feed",
+      "timestamp": "18:11",
+      "location": "LOADING BAY",
+      "description": "Person in purple coat (Maya Reed) with cardboard box",
+      "key_findings": [
+        "Maya Reed moved cardboard box to loading bay at 18:11"
+      ],
+      "limitations": "Synthetic schematic"
+    },
+    {
+      "id": "V09",
+      "type": "camera_reference",
+      "description": "Object detail showing prototype (grey rectangle with black triangle)",
+      "key_findings": [
+        "Prototype visual reference"
+      ],
+      "limitations": "Camera reference only"
+    },
+    {
+      "id": "V10",
+      "type": "camera_reference",
+      "description": "Service camera maintenance - blind spot: service corridor",
+      "key_findings": [
+        "Service corridor is camera blind spot"
+      ],
+      "limitations": "Camera not operational"
+    },
+    {
+      "id": "D01_access.csv",
+      "type": "document",
+      "description": "Access log showing door entries/exits",
+      "key_findings": [
+        "Nora Vale entered east corridor at 18:10, exited east exit at 18:14",
+        "Theo Park entered cafeteria at 18:12",
+        "Ada Finch entered reception at 18:13"
+      ],
+      "limitations": "Badge credentials only, not biometric"
+    },
+    {
+      "id": "D02_witnesses.md",
+      "type": "document",
+      "description": "Witness statements (unverified)",
+      "key_findings": [
+        "Nora claims only visited east corridor and left",
+        "Eli claims no approach to lab after 18:00",
+        "Maya claims carrying cardboard box at 18:11",
+        "Theo claims remained in cafeteria from 18:12",
+        "Ada claims staffed reception"
+      ],
+      "limitations": "Unverified statements, potential bias"
+    },
+    {
+      "id": "D03_messages.md",
+      "type": "document",
+      "description": "Internal messages and security notes",
+      "key_findings": [
+        "Eli requested prototype at 17:00",
+        "Maya requested cardboard box move at 17:10",
+        "Security note: coat descriptions from shift assignments, doors log badge credentials not biometric identity, service corridor is camera blind spot"
+      ],
+      "limitations": "Messages may be incomplete"
+    }
+  ],
+  "summary": {
+    "total_exhibits": 12,
+    "visual_evidence": 9,
+    "documentary_evidence": 3
+  }
+}

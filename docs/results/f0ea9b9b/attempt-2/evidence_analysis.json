@@ -1,0 +1,234 @@
+{
+  "exhibits": [
+    {
+      "id": "V01",
+      "type": "schematic",
+      "timestamp": null,
+      "observations": [
+        "Floor plan showing Lab, East Corridor, Service Corridor (unmonitored link), Cafeteria, East Exit"
+      ],
+      "interpretations": [
+        "Service corridor provides unmonitored access to Lab"
+      ],
+      "limitations": [
+        "Static diagram, not real-time surveillance"
+      ]
+    },
+    {
+      "id": "V02",
+      "type": "camera_feed",
+      "timestamp": "18:00",
+      "observations": [
+        "Prototype visible in Lab with triangular marker on surface"
+      ],
+      "interpretations": [
+        "Prototype last confirmed at 18:00"
+      ],
+      "limitations": [
+        "Single snapshot, not continuous footage"
+      ]
+    },
+    {
+      "id": "V03",
+      "type": "camera_feed",
+      "timestamp": "18:10",
+      "observations": [
+        "Teal-coated figure in East Corridor"
+      ],
+      "interpretations": [
+        "Nora Vale present at 18:10 per coat color"
+      ],
+      "limitations": [
+        "Coat color may not match actual appearance; does not show Lab entry"
+      ]
+    },
+    {
+      "id": "V04",
+      "type": "camera_feed",
+      "timestamp": "18:14",
+      "observations": [
+        "Two grey-coated figures at Service Door"
+      ],
+      "interpretations": [
+        "Two people entered via Service Door"
+      ],
+      "limitations": [
+        "Coat colors do not match expected Eli (orange) and Maya (purple); does not show Lab entry"
+      ]
+    },
+    {
+      "id": "V05",
+      "type": "camera_feed",
+      "timestamp": "18:18",
+      "observations": [
+        "Prototype missing from Lab"
+      ],
+      "interpretations": [
+        "Prototype removed between 18:14-18:18"
+      ],
+      "limitations": [
+        "Single snapshot, not continuous footage"
+      ]
+    },
+    {
+      "id": "V06",
+      "type": "camera_feed",
+      "timestamp": "18:12",
+      "observations": [
+        "Blue-coated figure in Cafeteria"
+      ],
+      "interpretations": [
+        "Theo Park present at 18:12 per coat color"
+      ],
+      "limitations": [
+        "Coat color may not match actual appearance; does not show Lab access"
+      ]
+    },
+    {
+      "id": "V07",
+      "type": "camera_feed",
+      "timestamp": "18:13",
+      "observations": [
+        "Red-coated figure at Reception"
+      ],
+      "interpretations": [
+        "Ada Finch present at 18:13 per coat color"
+      ],
+      "limitations": [
+        "Coat color may not match actual appearance; does not show Lab access"
+      ]
+    },
+    {
+      "id": "V08",
+      "type": "camera_feed",
+      "timestamp": "18:11",
+      "observations": [
+        "Purple-coated figure with cardboard box in Loading Bay"
+      ],
+      "interpretations": [
+        "Maya Reed present at 18:11 per coat color; witness statement consistent"
+      ],
+      "limitations": [
+        "Coat color may not match actual appearance"
+      ]
+    },
+    {
+      "id": "V09",
+      "type": "reference",
+      "timestamp": null,
+      "observations": [
+        "Object detail showing prototype with triangular marker"
+      ],
+      "interpretations": [
+        "Reference for prototype identification"
+      ],
+      "limitations": [
+        "No timestamp; reference only"
+      ]
+    },
+    {
+      "id": "V10",
+      "type": "reference",
+      "timestamp": null,
+      "observations": [
+        "Service corridor identified as camera blind spot"
+      ],
+      "interpretations": [
+        "No surveillance coverage of Service Corridor"
+      ],
+      "limitations": [
+        "Static diagram; does not show actual conditions at time of incident"
+      ]
+    },
+    {
+      "id": "D01_access.csv",
+      "type": "access_log",
+      "timestamp": null,
+      "observations": [
+        "Entry records: Nora Vale 18:10 East Corridor, Theo Park 18:12 Cafeteria, Ada Finch 18:13 Reception, Eli Stone 18:14 Service Door, Maya Reed 18:14 Service Door"
+      ],
+      "interpretations": [
+        "Badge credentials used at specific times and doors"
+      ],
+      "limitations": [
+        "Logs badge credentials, not biometric identity; does not show Lab entry specifically"
+      ]
+    },
+    {
+      "id": "D02_witnesses.md",
+      "type": "witness_statements",
+      "timestamp": null,
+      "observations": [
+        "Nora: visited East Corridor and left; Eli: did not approach lab after 18:00; Maya: carried cardboard box at 18:11; Theo: remained in cafeteria from 18:12; Ada: staffed reception"
+      ],
+      "interpretations": [
+        "Witness accounts of whereabouts"
+      ],
+      "limitations": [
+        "Statements unverified per case instructions; may be inaccurate"
+      ]
+    },
+    {
+      "id": "D03_messages.md",
+      "type": "internal_messages",
+      "timestamp": null,
+      "observations": [
+        "17:00 Eli: My project needs that prototype tomorrow; 17:10 Maya: Please move cardboard consumables box to loading bay; 17:20 Security: Coat descriptions from shift assignments; doors log badge credentials not biometric identity; Service corridor is camera blind spot"
+      ],
+      "interpretations": [
+        "Eli has motive; coat colors unreliable for identification; Service corridor blind spot confirmed"
+      ],
+      "limitations": [
+        "Messages may be incomplete; security note establishes key limitations"
+      ]
+    }
+  ],
+  "key_findings": [
+    {
+      "finding": "Two people entered Service Door at 18:14",
+      "supporting_exhibits": [
+        "V04",
+        "D01_access.csv"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "finding": "Service corridor is camera blind spot",
+      "supporting_exhibits": [
+        "V10",
+        "D03_messages.md"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "finding": "Coat colors unreliable for identification",
+      "supporting_exhibits": [
+        "D03_messages.md"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "finding": "Eli Stone has motive",
+      "supporting_exhibits": [
+        "D03_messages.md"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "finding": "Maya Reed movements consistent across evidence",
+      "supporting_exhibits": [
+        "V08",
+        "D01_access.csv",
+        "D02_witnesses.md"
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "contradictions": [
+    {
+      "statement": "Eli Stone: I did not approach the lab after 18:00",
+      "contradicted_by": "D01_access.csv shows Eli entered Service Door at 18:14",
+      "resolution": "Access log is more reliable than witness statement; coat color in V04 does not match expected orange"
+    }
+  ]
+}

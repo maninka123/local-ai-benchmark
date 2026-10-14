@@ -1,0 +1,153 @@
+{
+  "case_id": "CASE_02",
+  "responsible_person": null,
+  "confidence": 0.15,
+  "conclusion": "The prototype was removed from the LAB between 18:00 and 18:18 via the unmonitored service corridor link (V01). A person in an orange work coat was visually documented with the object at SERVICE DOOR at 18:14 (V04, corrected from displayed 18:19 using V10 offset). Badge record D01 associates Eli Stone's credential with SERVICE_DOOR entry at 18:14, and internal message D02 shows project motive. However, due to documented identity limitations (D03), no responsible individual can be definitively identified. Badge records log credentials not biometric identity; coat colors identify appearance at specific moments only. The person in V04 could be Eli Stone using his own credential, someone else using stolen credentials while wearing an orange coat, or any combination thereof. Alternative explanations include legitimate transfer of the object before 18:00 or after 18:18 by a different party, credential theft and misuse by an unknown person, or misidentification of the person in V04.",
+  "exhibits": [
+    {
+      "id": "V02",
+      "relevance": "Establishes object present at 18:00"
+    },
+    {
+      "id": "V05",
+      "relevance": "Establishes object absent at 18:18"
+    },
+    {
+      "id": "V04",
+      "relevance": "Only visual evidence of anyone with the object; person in orange coat at SERVICE DOOR"
+    },
+    {
+      "id": "V10",
+      "relevance": "Documents +5 minute offset for service camera; corrects V04 displayed time from 18:19 to 18:14"
+    },
+    {
+      "id": "D01",
+      "relevance": "Badge credential used at SERVICE_DOOR at 18:14 associated with Eli Stone; but D03 clarifies credentials are not biometric identity"
+    },
+    {
+      "id": "D02",
+      "relevance": "Eli's message at 17:00 shows project motive but not action"
+    },
+    {
+      "id": "D03",
+      "relevance": "Documents fundamental identity limitations: coat descriptions from shift assignments, badges log credentials not biometric identity"
+    },
+    {
+      "id": "V01",
+      "relevance": "Floor plan shows unmonitored link between SERVICE CORRIDOR and LAB providing removal route"
+    },
+    {
+      "id": "V03",
+      "relevance": "Nora Vale in teal coat at EAST CORRIDOR 18:10; no connection to object or LAB proximity confirmed"
+    },
+    {
+      "id": "V06",
+      "relevance": "Theo Park in blue coat at CAFETERIA 18:12; spatially distant from LAB"
+    },
+    {
+      "id": "V07",
+      "relevance": "Ada Finch in red coat at RECEPTION 18:13; spatially distant from LAB"
+    },
+    {
+      "id": "V08",
+      "relevance": "Maya Reed in purple coat at LOADING BAY 18:11 with cardboard box (not prototype)"
+    }
+  ],
+  "alternative_explanations": [
+    {
+      "scenario": "Credential theft and misuse",
+      "description": "Someone stole Eli Stone's badge credential and wore an orange coat to access SERVICE DOOR; object removal by different person or same person using stolen credentials",
+      "plausibility": "moderate",
+      "supporting_evidence": ["D03 clarifies badges are not biometric identity", "V04 shows object with person at service door"]
+    },
+    {
+      "scenario": "Legitimate transfer before 18:00",
+      "description": "Object was legitimately moved from LAB before V02 confirmation at 18:00; V05 absence at 18:18 reflects prior removal not incident",
+      "plausibility": "low_to_moderate",
+      "supporting_evidence": ["V02 is single snapshot; timing of confirmation uncertain", "No evidence object was moved between 18:00-18:18"]
+    },
+    {
+      "scenario": "Legitimate transfer after 18:18",
+      "description": "Object removed from LAB legitimately after V05 snapshot at 18:18 by authorized person",
+      "plausibility": "low_to_moderate",
+      "supporting_evidence": ["V05 is single snapshot; timing of absence confirmation uncertain"]
+    },
+    {
+      "scenario": "Misidentification of person in V04",
+      "description": "Person in orange coat at SERVICE DOOR is not Eli Stone but someone else wearing orange coat and using stolen credentials",
+      "plausibility": "moderate",
+      "supporting_evidence": ["D03 states coat descriptions from shift assignments", "Badge records log credentials not biometric identity"]
+    }
+  ],
+  "key_deductions": [
+    {
+      "deduction": "Removal window is between 18:00 and 18:18",
+      "basis": ["V02 confirms object present at 18:00", "V05 confirms object absent at 18:18"]
+    },
+    {
+      "deduction": "Service corridor provides unmonitored route to LAB",
+      "basis": ["V01 floor plan shows unmonitored link between SERVICE CORRIDOR and LAB"]
+    },
+    {
+      "deduction": "Person in orange coat was with object at SERVICE DOOR at 18:14 (corrected time)",
+      "basis": ["V04 visual evidence", "V10 offset correction applied to displayed 18:19"]
+    },
+    {
+      "deduction": "Identity cannot be definitively established",
+      "basis": ["D03 explicitly states badge credentials are not biometric identity", "D03 states coat descriptions are from shift assignments not personal identification"]
+    }
+  ],
+  "limitations": [
+    "Badge records log credentials not biometric identity (D03)",
+    "Coat colors identify appearance at specific moments only (D03)",
+    "No visual evidence places anyone in LAB between 18:00-18:18 except through unmonitored links",
+    "Service camera offset correction (V10) applies only to service camera; other timestamps unaffected",
+    "Witness statements are unverified and not treated as automatic truth",
+    "Internal messages show motive but not action (D02)",
+    "No surveillance in SERVICE CORRIDOR or LAB during critical window",
+    "Single snapshot evidence at 18:00 and 18:18 establishes presence/absence but not exact timing of removal",
+    "Maya Reed has no badge entry in D01 despite V08 showing her at LOADING BAY at 18:11 (possible unlogged access or discrepancy)"
+  ],
+  "recommended_next_steps": [
+    {
+      "step": "Biometric verification",
+      "description": "Cross-reference badge holder biometrics with person in V04 if available"
+    },
+    {
+      "step": "Coat inventory audit",
+      "description": "Verify which staff were assigned orange coat on this date vs. who actually wore it"
+    },
+    {
+      "step": "Service corridor surveillance review",
+      "description": "Check if any other cameras capture movement through unmonitored link"
+    },
+    {
+      "step": "Badge credential audit",
+      "description": "Determine if Eli Stone's badge was reported lost/stolen prior to incident"
+    },
+    {
+      "step": "LAB access log verification",
+      "description": "Verify if LAB door has separate logging from service door"
+    },
+    {
+      "step": "Object tracking confirmation",
+      "description": "Confirm object wasn't legitimately moved before 18:00 or after 18:18"
+    },
+    {
+      "step": "Formal witness interviews",
+      "description": "Conduct formal interviews with all five staff focusing on movements between documented locations"
+    },
+    {
+      "step": "Message authenticity verification",
+      "description": "Verify authenticity of internal messages D02"
+    },
+    {
+      "step": "Camera calibration audit",
+      "description": "Confirm V10 offset applies only to service camera or other cameras too"
+    },
+    {
+      "step": "Access pattern analysis",
+      "description": "Review historical access patterns for all five staff to identify anomalies"
+    }
+  ]
+}

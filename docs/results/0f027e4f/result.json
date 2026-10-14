@@ -1,0 +1,290 @@
+{
+  "run_id": "2026-10-12T123030-225292+0000--0f027e4f",
+  "model": "nemotron-3-nano:30b-a3b-q4_K_M",
+  "task": "detective",
+  "case": "case_03",
+  "track": "text_only_detective",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 40,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 7,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. The report and timeline place the prototype-request message at a time that disagrees with its timestamp in D03; the same report gives a different time elsewhere. evidence_analysis.json only labels the documents generically rather than examining their actual observations, important details, timestamps, interpretations and uncertainty."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 6,
+            "reason": "Credits recorded chronology and correct incident bounds where present. The report and timeline place the prototype-request message at a time that disagrees with its timestamp in D03; the same report gives a different time elsewhere. The timeline omits the case-brief baseline that the prototype was present at the start of the incident window and does not consistently cite the case brief for discovery."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 10,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. Claims that staff had no laboratory access and that removal was via the service door by either named badge owner overstate what incomplete written records establish; plausible alternative explanations and assumptions are missing. Structured deductions/contradictions need meaningful exhibit references and confidence must be reconciled with the limits of written-only evidence."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 3,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. The report and timeline place the prototype-request message at a time that disagrees with its timestamp in D03; the same report gives a different time elsewhere. The timeline omits the case-brief baseline that the prototype was present at the start of the incident window and does not consistently cite the case brief for discovery."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 4,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. The report and timeline place the prototype-request message at a time that disagrees with its timestamp in D03; the same report gives a different time elsewhere. The timeline omits the case-brief baseline that the prototype was present at the start of the incident window and does not consistently cite the case brief for discovery."
+          }
+        ],
+        "summary": "Public-written-evidence review finds valid required files and abstention, but an incorrect and internally inconsistent message timestamp, missing baseline chronology, generic exhibit analysis and unsupported personal-access/route claims prevent full completion. Supported work: All four required deliverables exist and the three JSON files parse successfully. The report uses the nine required headings and briefly discusses all five staff.",
+        "evidence_files": [
+          "models/nemotron-3-nano-30b-a3b-q4_K_M--b725f1117407/03_detective/2026-10-12T123030-225292+0000--0f027e4f/artifacts/investigation_report.md",
+          "models/nemotron-3-nano-30b-a3b-q4_K_M--b725f1117407/03_detective/2026-10-12T123030-225292+0000--0f027e4f/artifacts/timeline.json",
+          "models/nemotron-3-nano-30b-a3b-q4_K_M--b725f1117407/03_detective/2026-10-12T123030-225292+0000--0f027e4f/artifacts/evidence_analysis.json",
+          "models/nemotron-3-nano-30b-a3b-q4_K_M--b725f1117407/03_detective/2026-10-12T123030-225292+0000--0f027e4f/artifacts/conclusions.json",
+          "models/nemotron-3-nano-30b-a3b-q4_K_M--b725f1117407/03_detective/2026-10-12T123030-225292+0000--0f027e4f/input/case_brief.md",
+          "models/nemotron-3-nano-30b-a3b-q4_K_M--b725f1117407/03_detective/2026-10-12T123030-225292+0000--0f027e4f/input/documents/D01_access.csv",
+          "models/nemotron-3-nano-30b-a3b-q4_K_M--b725f1117407/03_detective/2026-10-12T123030-225292+0000--0f027e4f/input/documents/D02_witnesses.md",
+          "models/nemotron-3-nano-30b-a3b-q4_K_M--b725f1117407/03_detective/2026-10-12T123030-225292+0000--0f027e4f/input/documents/D03_messages.md",
+          "results/improvement_campaign/detective_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Written-only track: no images or floor plan were supplied. Evidence coverage is judged against case_brief/D01?D03 only; inability to identify a culprit or inspect unavailable images is not a deduction. Scores are comparable within this track, not directly with native multimodal cases."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/0f027e4f/attempt-1/conclusions.json",
+          "bytes": 250
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/0f027e4f/attempt-1/evidence_analysis.json",
+          "bytes": 311
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/0f027e4f/attempt-1/investigation_report.md",
+          "bytes": 2128,
+          "preview_url": "./results/0f027e4f/attempt-1/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/0f027e4f/attempt-1/timeline.json",
+          "bytes": 765
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/0f027e4f/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 40,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 7,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. The report and timeline still put the prototype-request message at 18:00, contradicting D03 and the report itself giving 17:00 elsewhere. evidence_analysis.json still only describes document types generically rather than examining actual observations, timestamps, relevant details, interpretations and uncertainty."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 6,
+            "reason": "Credits recorded chronology and correct incident bounds where present. The report and timeline still put the prototype-request message at 18:00, contradicting D03 and the report itself giving 17:00 elsewhere. The 18:00 prototype-presence baseline remains absent from the structured chronology, while discovery is attributed to N/A rather than the case brief."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 10,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. The report and timeline still put the prototype-request message at 18:00, contradicting D03 and the report itself giving 17:00 elsewhere. Suspect analysis still says some staff had no lab access from incomplete logs, and the conclusion narrows removal to either named service-door badge owner without sufficient alternatives/assumptions."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 3,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. The report and timeline still put the prototype-request message at 18:00, contradicting D03 and the report itself giving 17:00 elsewhere. The 18:00 prototype-presence baseline remains absent from the structured chronology, while discovery is attributed to N/A rather than the case brief."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 4,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. The report and timeline still put the prototype-request message at 18:00, contradicting D03 and the report itself giving 17:00 elsewhere. The 18:00 prototype-presence baseline remains absent from the structured chronology, while discovery is attributed to N/A rather than the case brief."
+          }
+        ],
+        "summary": "Needs revision after one prompt: all four required files exist and parse, but are byte-identical to initial files and retain an incorrect/internally inconsistent message timestamp, generic exhibit analysis and unsupported personal-access/route claims. Supported work: All four required deliverables are saved; the three JSON files parse successfully. The report contains the requested nine headings, briefly discusses five staff, identifies the written-only version and abstains from naming one definitive person.",
+        "evidence_files": [
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-8b51e82c79/artifacts/investigation_report.md",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-8b51e82c79/artifacts/timeline.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-8b51e82c79/artifacts/evidence_analysis.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-8b51e82c79/artifacts/conclusions.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-8b51e82c79/input/case_brief.md",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-8b51e82c79/input/documents/D01_access.csv",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-8b51e82c79/input/documents/D02_witnesses.md",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-8b51e82c79/input/documents/D03_messages.md",
+          "results/improvement_campaign/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Written-only track: no images or floor plan were supplied. Evidence coverage is judged against case_brief/D01?D03 only; inability to identify a culprit or inspect unavailable images is not a deduction. Scores are comparable within this track, not directly with native multimodal cases.",
+          "The four required artifacts are byte-identical in content to the prior judged attempt; equal raw points preserve output-only fairness."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/0f027e4f/attempt-2/conclusions.json",
+          "bytes": 250
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/0f027e4f/attempt-2/evidence_analysis.json",
+          "bytes": 311
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/0f027e4f/attempt-2/investigation_report.md",
+          "bytes": 2128,
+          "preview_url": "./results/0f027e4f/attempt-2/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/0f027e4f/attempt-2/timeline.json",
+          "bytes": 765
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/0f027e4f/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 30,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 5,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. Report and conclusions.json favor removal during 18:18-18:30, after the prototype was already discovered missing at 18:18. The actual acquisition interval is 18:00-18:18 from case_brief. No public 18:30 endpoint exists; timeline further invents a probable unrecorded lab movement at 18:15 without supporting observation. The 18:00 presence baseline and discovery are repeatedly attributed to D03 even though that exhibit contains only 17:00/17:10/17:20 messages; evidence inventory calls D01 the case brief, and access records use invented exhibit IDs time,door records. Actual D01 is the credential CSV and case_brief supplies presence/discovery. Traceability must be corrected across all files."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 3,
+            "reason": "Credits recorded chronology and correct incident bounds where present. Report and conclusions.json favor removal during 18:18-18:30, after the prototype was already discovered missing at 18:18. The actual acquisition interval is 18:00-18:18 from case_brief. No public 18:30 endpoint exists; timeline further invents a probable unrecorded lab movement at 18:15 without supporting observation. The 18:00 presence baseline and discovery are repeatedly attributed to D03 even though that exhibit contains only 17:00/17:10/17:20 messages; evidence inventory calls D01 the case brief, and access records use invented exhibit IDs time,door records. Actual D01 is the credential CSV and case_brief supplies presence/discovery. Traceability must be corrected across all files."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 8,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. Report and conclusions.json favor removal during 18:18-18:30, after the prototype was already discovered missing at 18:18. The actual acquisition interval is 18:00-18:18 from case_brief. No public 18:30 endpoint exists; timeline further invents a probable unrecorded lab movement at 18:15 without supporting observation. Timeline omits 17:10/17:20 events, marks the known 18:00 brief baseline only probable and treats named badge-owner movement as confirmed. The report says baseline absent from structured chronology although it is present in probable_events, and its Contradictions section discusses prior-draft errors rather than examining conflicting case evidence."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 0,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. Report and conclusions.json favor removal during 18:18-18:30, after the prototype was already discovered missing at 18:18. The actual acquisition interval is 18:00-18:18 from case_brief. No public 18:30 endpoint exists; timeline further invents a probable unrecorded lab movement at 18:15 without supporting observation. The 18:00 presence baseline and discovery are repeatedly attributed to D03 even though that exhibit contains only 17:00/17:10/17:20 messages; evidence inventory calls D01 the case brief, and access records use invented exhibit IDs time,door records. Actual D01 is the credential CSV and case_brief supplies presence/discovery. Traceability must be corrected across all files."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 4,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. Report and conclusions.json favor removal during 18:18-18:30, after the prototype was already discovered missing at 18:18. The actual acquisition interval is 18:00-18:18 from case_brief. No public 18:30 endpoint exists; timeline further invents a probable unrecorded lab movement at 18:15 without supporting observation. The 18:00 presence baseline and discovery are repeatedly attributed to D03 even though that exhibit contains only 17:00/17:10/17:20 messages; evidence inventory calls D01 the case brief, and access records use invented exhibit IDs time,door records. Actual D01 is the credential CSV and case_brief supplies presence/discovery. Traceability must be corrected across all files."
+          }
+        ],
+        "summary": "Needs revision: all four files now exist and parse, but the investigation places the most likely removal after discovery, misidentifies source exhibits, lacks substantive five-staff analysis and mixes unrelated revenue metrics into deficient evidence examination. A provisional abstention cannot support that chronology. Supported work: All four required deliverables are saved and the three JSON files parse; the report includes nine headings. The prototype-request message time is correctly 17:00, badge-versus-identity limitations are stated and the conclusion declines to identify one responsible person at 0.45 confidence.",
+        "evidence_files": [
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-f996745e0c/artifacts/investigation_report.md",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-f996745e0c/artifacts/timeline.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-f996745e0c/artifacts/evidence_analysis.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-f996745e0c/artifacts/conclusions.json",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-f996745e0c/input/case_brief.md",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-f996745e0c/input/documents/D01_access.csv",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-f996745e0c/input/documents/D02_witnesses.md",
+          "results/further-work/nemotron-3-nano-30b-a3b-q4_K_M/detective-case_03/2026-10-12T123030-225292-0000--0f027e4f/evaluations/eval-f996745e0c/input/documents/D03_messages.md",
+          "results/improvement_campaign/pass_2/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Written-only track: no images or floor plan were supplied. Evidence coverage is judged against case_brief/D01?D03 only; inability to identify a culprit or inspect unavailable images is not a deduction. Scores are comparable within this track, not directly with native multimodal cases."
+        ],
+        "score": 9.0,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/0f027e4f/attempt-3/conclusions.json",
+          "bytes": 506
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/0f027e4f/attempt-3/evidence_analysis.json",
+          "bytes": 1048
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/0f027e4f/attempt-3/investigation_report.md",
+          "bytes": 2404,
+          "preview_url": "./results/0f027e4f/attempt-3/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/0f027e4f/attempt-3/timeline.json",
+          "bytes": 1240
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/0f027e4f/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

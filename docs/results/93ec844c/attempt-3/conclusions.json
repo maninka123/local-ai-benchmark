@@ -1,0 +1,14 @@
+{
+  "responsible_person": "Maya Reed",
+  "confidence": 0.9,
+  "conclusion": "Maya Reed entered the Lab via the unmonitored Service Corridor at approximately 18:14. She was observed inside the Lab carrying a cardboard box (V07). Given the prototype was confirmed present at 18:00 (V02) and missing by 18:18, and she was the only person seen inside the Lab during that window, she is the primary suspect. Eli Stone, who had a stated motive (D03) and was in the Service Corridor with her (V06, V09), suggests potential collusion.",
+  "exhibits": [
+    "V01",
+    "V02",
+    "V06",
+    "V07",
+    "V09",
+    "D01",
+    "D03"
+  ]
+}

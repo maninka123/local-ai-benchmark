@@ -1,0 +1,17 @@
+Continue and finish your case_03 Detective investigation from the current Further work results. This is the written-evidence-only Detective case. The case brief and D01-D03 are available; visual exhibits are not supplied, so the finished investigation must not claim image observations or import findings from the native visual case.
+
+What is already done:
+- All four required files are saved and the three structured JSON outputs parse successfully.
+- conclusions.json now abstains from definitive identification, lowers confidence and acknowledges unverified box contents, badge identity limits, missing visual evidence and alternatives.
+- timeline.json now labels document records and the unverified witness statement separately, and notes corridor-versus-door and identity limitations.
+- The report includes all nine requested headings and discusses all five staff.
+
+What remains missing, wrong or inconsistent in your saved work:
+- investigation_report.md is unchanged from initial output: it still says a high probability of Maya theft, box likely contained the prototype and 75% confidence, contradicting the revised abstaining conclusion with 10% confidence.
+- The unchanged narrative still calls an unverified box claim an observation and calls the Service Door the documented blind spot, although the revised timeline recognises the public message identifies the Service Corridor.
+- The timeline/evidence/narrative still recast Maya requesting a box move as an instruction given to Maya, altering the message attribution.
+- Badge records are still expressed as confirmed personal movements and witness/log contradictions, without consistently conditioning identity on credential-use limitations.
+- The revised conclusions.json no longer cites D01/D02/D03 for its deductions; unavailability references to V01-V10 do not support its written-evidence claims.
+- Structured timeline and report still do not adequately explain missing intervals, unobserved movements and alternative explanations consistently across deliverables.
+
+The finished result needs all four deliverables: investigation_report.md, timeline.json, evidence_analysis.json and conclusions.json. They must present one consistent, defensible investigation of the public case, with valid structured outputs and traceable exhibit references. The report needs the requested nine sections; each public exhibit needs its important observations, timestamps, interpretation and uncertainty; each of the five staff needs an individual evidence-based assessment. The timeline needs the confirmed and probable sequence, unobserved intervals and remaining movement/identity uncertainties. The final conclusion must explain the most likely supported account, plausible alternatives, whether responsibility can be identified, the strength and limits of that conclusion, and what additional evidence would resolve the uncertainty. Preserve useful existing work while completing the missing analysis and correcting the factual inconsistencies. Do not turn an unseen movement, missing log entry, motive or appearance association into an observed fact. A qualified or inconclusive conclusion is appropriate when the supplied evidence cannot establish more.

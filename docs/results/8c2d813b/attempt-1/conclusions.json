@@ -1,0 +1,119 @@
+{
+  "responsible_person": "Nora Vale",
+  "confidence": 0.92,
+  "conclusion": "Nora Vale (teal coat) entered the lab area at 18:10, took the prototype from the lab, and exited through the east exit at 18:14 carrying the prototype. The visual evidence shows her entering the east corridor with no object (V03), then exiting the east exit with the prototype visible (V04). By 18:18 the prototype was missing from the lab (V05). Her witness statement claiming she only visited the east corridor and left is contradicted by camera evidence showing her carrying the prototype out.",
+  "exhibits": [
+    {
+      "id": "V02",
+      "finding": "Prototype confirmed in lab at 18:00"
+    },
+    {
+      "id": "V03",
+      "finding": "Nora Vale (teal coat) enters east corridor at 18:10 without prototype"
+    },
+    {
+      "id": "V04",
+      "finding": "Nora Vale exits east exit at 18:14 with prototype visible"
+    },
+    {
+      "id": "V05",
+      "finding": "Prototype missing from lab at 18:18"
+    },
+    {
+      "id": "D01_access.csv",
+      "finding": "Access log confirms Nora Vale's entry/exit times"
+    },
+    {
+      "id": "D02_witnesses.md",
+      "finding": "Nora's statement contradicted by visual evidence"
+    }
+  ],
+  "suspect_analysis": {
+    "Nora Vale": {
+      "opportunity": "High - entered lab area at 18:10",
+      "access": "Confirmed via badge credential",
+      "timeline_consistency": "Entered at 18:10, exited with prototype at 18:14",
+      "contradictions": "Witness statement claims only visited corridor, but camera shows her carrying prototype out",
+      "supporting_evidence": [
+        "V03 shows entry without object",
+        "V04 shows exit with prototype",
+        "D01 confirms timing"
+      ],
+      "exculpatory_evidence": null
+    },
+    "Eli Stone": {
+      "opportunity": "Low - not in lab area during incident",
+      "access": "Not logged in access records during timeframe",
+      "timeline_consistency": "Statement aligns with visual evidence (not seen in cameras)",
+      "contradictions": null,
+      "supporting_evidence": [
+        "D03_messages.md shows request for prototype at 17:00",
+        "Not visible in any camera feeds"
+      ],
+      "exculpatory_evidence": "No visual evidence places him near lab during incident"
+    },
+    "Maya Reed": {
+      "opportunity": "Medium - moved cardboard box",
+      "access": "Confirmed at loading bay",
+      "timeline_consistency": "At loading bay with cardboard box at 18:11, not in lab area",
+      "contradictions": null,
+      "supporting_evidence": [
+        "V08 shows her with cardboard box at loading bay",
+        "D03_messages.md confirms box move request"
+      ],
+      "exculpatory_evidence": "Visual evidence places her away from lab during incident"
+    },
+    "Theo Park": {
+      "opportunity": "Low - in cafeteria",
+      "access": "Confirmed at cafeteria",
+      "timeline_consistency": "In cafeteria at 18:12 per witness and camera",
+      "contradictions": null,
+      "supporting_evidence": [
+        "V06 shows him in cafeteria",
+        "D01 confirms cafeteria entry"
+      ],
+      "exculpatory_evidence": "Visual evidence places him away from lab during incident"
+    },
+    "Ada Finch": {
+      "opportunity": "Low - at reception",
+      "access": "Confirmed at reception",
+      "timeline_consistency": "At reception at 18:13 per witness and camera",
+      "contradictions": null,
+      "supporting_evidence": [
+        "V07 shows her at reception",
+        "D01 confirms reception entry"
+      ],
+      "exculpatory_evidence": "Visual evidence places her away from lab during incident"
+    }
+  },
+  "key_deductions": [
+    "The prototype was taken between 18:10-18:14",
+    "Nora Vale is the only person with visual confirmation of entering and exiting the lab area during this timeframe",
+    "The prototype is visible in V04 being carried by Nora Vale at east exit",
+    "Service corridor blind spot (V10) was not used based on available evidence",
+    "Eli Stone's request for prototype at 17:00 provides motive but no opportunity"
+  ],
+  "contradictions": [
+    {
+      "source": "Nora Vale witness statement",
+      "claim": "Only visited east corridor and left",
+      "contradicted_by": "V04 shows her carrying prototype out of east exit"
+    },
+    {
+      "source": "D03_messages.md security note",
+      "claim": "Coat descriptions from shift assignments, doors log badge credentials not biometric identity",
+      "implication": "Identity confirmed by coat color and badge, not biometrics"
+    }
+  ],
+  "alternative_explanations": [
+    "Nora Vale may have been authorized to take the prototype for legitimate work purposes",
+    "The service corridor blind spot could theoretically allow unauthorized access but no evidence shows anyone using it",
+    "Eli Stone may have requested the prototype but did not execute the theft"
+  ],
+  "additional_evidence_needed": [
+    "Access logs for service corridor to determine if anyone used the unmonitored link",
+    "Biometric verification of badge credentials",
+    "Interview with Nora Vale regarding her actions and authorization",
+    "Review of any security footage from east exit area showing prototype being carried out"
+  ]
+}

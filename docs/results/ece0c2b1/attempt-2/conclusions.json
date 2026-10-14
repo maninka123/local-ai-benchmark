@@ -1,0 +1,44 @@
+{
+  "responsible_person": null,
+  "confidence": 0.35,
+  "conclusion": "A person wearing a teal work coat was observed carrying the prototype at the EAST EXIT at 18:14 (V04). Badge credential 'Nora Vale' was used at EAST_CORRIDOR (18:10) and EAST_EXIT (18:14) (D01). However, per D03, doors log badge credentials not biometric identity, and coat color indicates appearance not identity. The service corridor provides an unmonitored route from LAB to EAST CORRIDOR (V01, V10), creating alternative explanations for how the prototype could have been removed. No evidence directly proves who removed the prototype or their intent. A responsible individual cannot be identified with confidence from available evidence.",
+  "exhibits": [
+    {
+      "id": "V04",
+      "description": "Person in teal coat with prototype at EAST EXIT, 18:14"
+    },
+    {
+      "id": "D01",
+      "description": "Badge credential 'Nora Vale' used at EAST_CORRIDOR (18:10) and EAST_EXIT (18:14)"
+    },
+    {
+      "id": "V03",
+      "description": "Person in teal coat observed in EAST CORRIDOR, 18:10"
+    },
+    {
+      "id": "V02",
+      "description": "Prototype confirmed present in LAB, 18:00"
+    },
+    {
+      "id": "V05",
+      "description": "Prototype confirmed missing from LAB, 18:18"
+    },
+    {
+      "id": "V01",
+      "description": "Floor plan showing unmonitored SERVICE CORRIDOR link between LAB and EAST CORRIDOR"
+    },
+    {
+      "id": "V10",
+      "description": "Service camera blind spot: SERVICE CORRIDOR"
+    },
+    {
+      "id": "D03",
+      "description": "Security notice: coat descriptions from shift assignments; doors log credentials not identity; service corridor is blind spot"
+    }
+  ],
+  "alternative_explanations": [
+    "Someone other than Nora Vale used her badge credential to enter EAST_CORRIDOR and EAST_EXIT",
+    "The prototype was moved through the unmonitored SERVICE CORRIDOR (V01, V10) by an unidentified person",
+    "The teal-coated individual at EAST EXIT may not be the same person who removed the prototype from LAB"
+  ]
+}

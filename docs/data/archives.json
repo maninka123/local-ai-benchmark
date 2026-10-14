@@ -1,0 +1,93 @@
+[
+  {
+    "model": "gemma4-12b-it-q4_K_M",
+    "url": "./downloads/gemma4-12b-it-q4_K_M.zip",
+    "bytes": 20840232,
+    "files": 593,
+    "sha256": "7728c1db9a8ba84a6d387740b446f8cae054758368a057a619720086c8b1007c"
+  },
+  {
+    "model": "gemma4-26b-a4b-it-q4_K_M",
+    "url": "./downloads/gemma4-26b-a4b-it-q4_K_M.zip",
+    "bytes": 8436954,
+    "files": 564,
+    "sha256": "0235352732ee81b23a02bc8d50d396db06c96ce6f67db4fb219b952aff5e31f5"
+  },
+  {
+    "model": "glm-4.7-flash-q4_K_M",
+    "url": "./downloads/glm-4.7-flash-q4_K_M.zip",
+    "bytes": 5694016,
+    "files": 233,
+    "sha256": "f1b65cd79294528187014826229dc3668d748dc9ced7bd83af8600a537992c04"
+  },
+  {
+    "model": "gpt-oss-20b",
+    "url": "./downloads/gpt-oss-20b.zip",
+    "bytes": 6941212,
+    "files": 409,
+    "sha256": "a18808e06f9bfe31a07c615a76e7982c703746dcc0944894f6f95450d939a8f0"
+  },
+  {
+    "model": "laguna-xs.2-q4_K_M",
+    "url": "./downloads/laguna-xs.2-q4_K_M.zip",
+    "bytes": 3354742,
+    "files": 225,
+    "sha256": "4600a0d4583d23b6d5845dec74230c979bafcf152ab5821c8b7f29d798d8b542"
+  },
+  {
+    "model": "nemotron-3-nano-30b-a3b-q4_K_M",
+    "url": "./downloads/nemotron-3-nano-30b-a3b-q4_K_M.zip",
+    "bytes": 4898386,
+    "files": 288,
+    "sha256": "3a086dfb402241d6e4ea1ffc99927624255127a66ed842f67bd5ee38396d4607"
+  },
+  {
+    "model": "nemotron3-33b-q4_K_M",
+    "url": "./downloads/nemotron3-33b-q4_K_M.zip",
+    "bytes": 8829270,
+    "files": 466,
+    "sha256": "53f4f7bec72d252245720e86a50866fccf8d508eace2fb1aba5556aa18621850"
+  },
+  {
+    "model": "qwen3-coder-next-q4_K_M",
+    "url": "./downloads/qwen3-coder-next-q4_K_M.zip",
+    "bytes": 7366383,
+    "files": 329,
+    "sha256": "2023493158fa6cbe16172301b4ca8acd9f3ee6dd1a7b2c056cced4d792c28b4d"
+  },
+  {
+    "model": "qwen3-next-80b-a3b-thinking-q4_K_M",
+    "url": "./downloads/qwen3-next-80b-a3b-thinking-q4_K_M.zip",
+    "bytes": 9881435,
+    "files": 274,
+    "sha256": "38ee42e3043516491cda9d9fbf82ef7ce3c6ccdfa14ea478f43f96f46e8f99e7"
+  },
+  {
+    "model": "qwen3-vl-30b-a3b-instruct",
+    "url": "./downloads/qwen3-vl-30b-a3b-instruct.zip",
+    "bytes": 7138282,
+    "files": 506,
+    "sha256": "d383f8cc47c4403dd94ca906ada05cd811864aef1ce647ad19c316fb1166f471"
+  },
+  {
+    "model": "qwen3.5-27b-q4_K_M",
+    "url": "./downloads/qwen3.5-27b-q4_K_M.zip",
+    "bytes": 19344080,
+    "files": 739,
+    "sha256": "4bee84e618d5dd1ac0c63d2443eeb8a0a17bb2fd267e3f3aa806b9414d3ea704"
+  },
+  {
+    "model": "qwen3.5-9b-q4_K_M",
+    "url": "./downloads/qwen3.5-9b-q4_K_M.zip",
+    "bytes": 19332455,
+    "files": 1028,
+    "sha256": "bf900d87c1621cbd1a6eedcbc4b9284e8a9043d7ada9a0660165c378fefd0e7d"
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q4_K_M",
+    "url": "./downloads/qwen3.6-35b-a3b-q4_K_M.zip",
+    "bytes": 12890575,
+    "files": 504,
+    "sha256": "6e2b3c757b4703f90ae99494611a3b996eba9428cfcce8486acf4ad6219c7025"
+  }
+]

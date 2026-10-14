@@ -1,0 +1,11 @@
+{
+  "timeline": [
+    {"time": "18:00", "event": "Prototype confirmed in Lab", "evidence": ["V02"]},
+    {"time": "18:10", "event": "Nora Vale enters East Corridor with box", "evidence": ["V03", "D01"]},
+    {"time": "18:11", "event": "Maya Reed at Loading Bay with box", "evidence": ["V08"]},
+    {"time": "18:12", "event": "Theo Park enters Cafeteria", "evidence": ["V06", "D01"]},
+    {"time": "18:13", "event": "Ada Finch at Reception", "evidence": ["V07", "D01"]},
+    {"time": "18:14", "event": "Nora Vale exits East Exit with box", "evidence": ["V04", "D01"]},
+    {"time": "18:18", "event": "Prototype confirmed missing from Lab", "evidence": ["V05"]}
+  ]
+}

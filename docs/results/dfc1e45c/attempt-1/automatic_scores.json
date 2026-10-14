@@ -1,0 +1,183 @@
+{
+  "rubric": {
+    "data_understanding": 15,
+    "numerical_accuracy": 20,
+    "hidden_patterns": 20,
+    "visualization": 15,
+    "report_quality": 15,
+    "recommendations": 15
+  },
+  "categories": {
+    "data_understanding": 0.0,
+    "numerical_accuracy": 0.0,
+    "hidden_patterns": 0.0,
+    "visualization": 0,
+    "report_quality": 0,
+    "recommendations": 0
+  },
+  "verified_points": 0.0,
+  "pending_points": 0,
+  "quality_score": 0.0,
+  "complete": false,
+  "evidence": {
+    "patterns": [
+      {
+        "id": "duplicates",
+        "detected": false,
+        "expected_metric": "duplicate_count",
+        "expected_value": 20,
+        "matching_findings": []
+      },
+      {
+        "id": "missing",
+        "detected": false,
+        "expected_metric": "missing_unit_cost",
+        "expected_value": 30,
+        "matching_findings": []
+      },
+      {
+        "id": "invalid",
+        "detected": false,
+        "expected_metric": "invalid_quantity_count",
+        "expected_value": 12,
+        "matching_findings": []
+      },
+      {
+        "id": "entry_outlier",
+        "detected": false,
+        "expected_metric": "entry_outlier_count",
+        "expected_value": 5,
+        "matching_findings": []
+      },
+      {
+        "id": "bulk_orders",
+        "detected": false,
+        "expected_metric": "genuine_bulk_orders",
+        "expected_value": 10,
+        "matching_findings": []
+      },
+      {
+        "id": "seasonality",
+        "detected": false,
+        "expected_metric": "december_mean_revenue",
+        "expected_value": 1264508.04,
+        "matching_findings": []
+      },
+      {
+        "id": "low_margin",
+        "detected": false,
+        "expected_metric": "premium_margin",
+        "expected_value": -0.0017337528102710905,
+        "matching_findings": []
+      },
+      {
+        "id": "region",
+        "detected": false,
+        "expected_metric": "north_revenue",
+        "expected_value": 4781853.42,
+        "matching_findings": []
+      },
+      {
+        "id": "policy",
+        "detected": false,
+        "expected_metric": "policy_delivery_delta",
+        "expected_value": -1.1823193001482504,
+        "matching_findings": []
+      },
+      {
+        "id": "aggregate",
+        "detected": false,
+        "expected_metric": "supplier_A_overall",
+        "expected_value": 0.6745305729417429,
+        "matching_findings": []
+      },
+      {
+        "id": "simpson",
+        "detected": false,
+        "expected_metric": "supplier_A_express",
+        "expected_value": 0.6246359109273701,
+        "matching_findings": []
+      },
+      {
+        "id": "churn",
+        "detected": false,
+        "expected_metric": "inactive_second_half_customers",
+        "expected_value": 151,
+        "matching_findings": []
+      }
+    ],
+    "numeric_checks": [
+      {
+        "metric": "total_revenue",
+        "expected": 17355447.830000002,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "profit_margin",
+        "expected": 0.29085598248143846,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "clean_row_count",
+        "expected": 24963,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "duplicate_count",
+        "expected": 20,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "missing_unit_cost",
+        "expected": 30,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "invalid_quantity_count",
+        "expected": 12,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "entry_outlier_count",
+        "expected": 5,
+        "actual": null,
+        "correct": false
+      }
+    ],
+    "figures": [],
+    "writing": {
+      "words": 0,
+      "sections": {
+        "executive summary": false,
+        "dataset|data overview": false,
+        "quality": false,
+        "method": false,
+        "finding": false,
+        "chart|figure": false,
+        "limitation": false,
+        "recommendation": false,
+        "conclusion": false
+      },
+      "section_coverage": 0.0,
+      "nonempty": false,
+      "subjective_quality": "pending blinded human review; word count and headings do not establish quality"
+    },
+    "reproducibility": {
+      "executed": false,
+      "exit_code": null
+    }
+  },
+  "limitations": [
+    "Chart existence is verified; plotted values, visual clarity, substantive writing and recommendations require human review. Data-understanding points are numerical issue checks, not a full understanding assessment."
+  ],
+  "review_status": "automatic",
+  "scoring_version": "1.0.0",
+  "judge": "deterministic independent artifact/ground-truth checks; no model judge",
+  "scoring_seconds": 1.0879932999960147
+}

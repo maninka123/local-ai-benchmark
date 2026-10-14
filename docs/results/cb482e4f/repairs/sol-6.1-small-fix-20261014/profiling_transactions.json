@@ -1,0 +1,59 @@
+{
+  "file": "transactions.csv",
+  "shape": [
+    25000,
+    15
+  ],
+  "columns": [
+    "transaction_id",
+    "customer_id",
+    "product_id",
+    "transaction_date",
+    "quantity",
+    "selling_price",
+    "discount",
+    "unit_cost",
+    "revenue",
+    "region_id",
+    "supplier_id",
+    "service_class",
+    "delivery_days",
+    "on_time",
+    "ad_index"
+  ],
+  "dtypes": {
+    "transaction_id": "object",
+    "customer_id": "object",
+    "product_id": "object",
+    "transaction_date": "object",
+    "quantity": "int64",
+    "selling_price": "float64",
+    "discount": "float64",
+    "unit_cost": "float64",
+    "revenue": "float64",
+    "region_id": "object",
+    "supplier_id": "object",
+    "service_class": "object",
+    "delivery_days": "float64",
+    "on_time": "int64",
+    "ad_index": "float64"
+  },
+  "missing_counts": {
+    "transaction_id": 0,
+    "customer_id": 0,
+    "product_id": 0,
+    "transaction_date": 0,
+    "quantity": 0,
+    "selling_price": 0,
+    "discount": 0,
+    "unit_cost": 30,
+    "revenue": 0,
+    "region_id": 0,
+    "supplier_id": 0,
+    "service_class": 0,
+    "delivery_days": 0,
+    "on_time": 0,
+    "ad_index": 0
+  },
+  "duplicate_count": 20
+}

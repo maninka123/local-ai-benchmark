@@ -1,0 +1,114 @@
+{
+  "case_id": "CASE_02",
+  "responsible_person": "Eli Stone",
+  "confidence": 0.85,
+  "conclusion": "Eli Stone is responsible for the theft of the laboratory prototype. Visual evidence (V04) shows a person in an orange coat (Eli's assigned color per case brief) in possession of the prototype at the Service Door. After applying the +5 minute clock offset correction documented in D03 and V10, the actual time of this observation is 18:14 - within the theft window between 18:00 (V02, prototype present) and 18:18 (V05, prototype missing). Eli's statement claiming he did not approach the lab after 18:00 is directly contradicted by this evidence. The Service Corridor provides unmonitored access to the lab (V01), enabling the theft without triggering main cameras. Eli also expressed prior motive in D03 ('My project needs that prototype tomorrow' at 17:00).",
+  "exhibits": [
+    {
+      "id": "V04",
+      "type": "visual_evidence",
+      "description": "Orange coat figure with prototype at Service Door",
+      "significance": "Direct visual evidence of suspect in possession of stolen item"
+    },
+    {
+      "id": "V10",
+      "type": "system_notice",
+      "description": "Service camera clock offset +5 minutes notice",
+      "significance": "Critical for correcting V04 timestamp from 18:19 to actual time 18:14"
+    },
+    {
+      "id": "D03",
+      "type": "document",
+      "description": "Internal messages including Eli's motive and camera offset notice",
+      "significance": "Establishes prior motive and confirms timestamp correction requirement"
+    },
+    {
+      "id": "V01",
+      "type": "floor_plan",
+      "description": "Building schematic showing Service Corridor as unmonitored link to lab",
+      "significance": "Explains how theft occurred without triggering main cameras"
+    },
+    {
+      "id": "V02",
+      "type": "visual_evidence",
+      "description": "Prototype present in lab at 18:00",
+      "significance": "Establishes last confirmed presence of prototype"
+    },
+    {
+      "id": "V05",
+      "type": "visual_evidence",
+      "description": "Lab empty at 18:18, prototype missing",
+      "significance": "Confirms theft completed by this time"
+    },
+    {
+      "id": "D02",
+      "type": "witness_statement",
+      "description": "Eli Stone's false statement: 'I did not approach the lab after 18:00'",
+      "significance": "Statement contradicted by V04 evidence, indicating deception"
+    },
+    {
+      "id": "D01",
+      "type": "access_log",
+      "description": "Eli Stone entry at Service Door at 18:14",
+      "significance": "Corroborates timing of theft opportunity"
+    }
+  ],
+  "alternative_explanations": [
+    {
+      "explanation": "Badge impersonation - someone else used Eli's badge",
+      "plausibility": "low",
+      "reasoning": "Coat color matches Eli's assignment; no evidence of badge theft or impersonation"
+    },
+    {
+      "explanation": "Prototype was returned after 18:14 but before 18:18",
+      "plausibility": "low",
+      "reasoning": "V05 shows empty lab at 18:18; no evidence of return"
+    },
+    {
+      "explanation": "Multiple perpetrators involved",
+      "plausibility": "low",
+      "reasoning": "Only one person visible in V04 with prototype; no corroborating evidence of accomplices"
+    }
+  ],
+  "exonerated_individuals": [
+    {
+      "name": "Nora Vale",
+      "reasoning": "V03 confirms presence only in East Corridor at 18:10; statement consistent with visual evidence; no access to lab shown"
+    },
+    {
+      "name": "Theo Park",
+      "reasoning": "V06 confirms presence in Cafeteria at 18:12; statement consistent with visual evidence; no access to lab shown"
+    },
+    {
+      "name": "Ada Finch",
+      "reasoning": "V07 confirms presence at Reception at 18:13; statement consistent with visual evidence; no access to lab shown"
+    },
+    {
+      "name": "Maya Reed",
+      "reasoning": "V08 confirms presence at Loading Bay with cardboard box at 18:11; statement consistent with visual evidence; box is not the prototype"
+    }
+  ],
+  "key_deductions": [
+    "Theft occurred between 18:00 and 18:18",
+    "Service camera timestamp requires -5 minute correction (D03, V10)",
+    "Eli Stone's actual time at Service Door with prototype is 18:14 (not 18:19)",
+    "Service Corridor provides unmonitored access to lab (V01)",
+    "Only Eli Stone has both opportunity and direct visual evidence of possession",
+    "All other suspects have verified alibis consistent with visual evidence"
+  ],
+  "limitations": [
+    "No direct footage of theft act itself - Service Corridor is unmonitored",
+    "Coat color is assignment-based identification, not biometric verification",
+    "Service camera timestamp required manual correction",
+    "Cannot confirm if Eli acted alone or had assistance"
+  ],
+  "recommended_next_steps": [
+    "Confront Eli Stone with V04 evidence and corrected timeline",
+    "Search Eli Stone's belongings and assigned areas for prototype",
+    "Review complete service corridor access logs",
+    "Interview Eli Stone about statement contradiction",
+    "Secure service door to prevent future unmonitored access",
+    "Synchronize all camera clocks system-wide",
+    "Install monitoring on service corridor link to lab"
+  ]
+}

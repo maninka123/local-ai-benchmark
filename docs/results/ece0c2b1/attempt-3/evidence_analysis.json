@@ -1,0 +1,96 @@
+{
+  "case_id": "CASE_01",
+  "exhibits": [
+    {
+      "id": "V01",
+      "type": "Floor plan",
+      "observation": "LAB, EAST CORRIDOR, EAST EXIT, CAFETERIA, SERVICE CORRIDOR layout. Unmonitored link between LAB and SERVICE CORRIDOR (orange line). LAB linked to EAST CORRIDOR (teal line).",
+      "interpretation": "Spatial layout shows direct connection between LAB and SERVICE CORRIDOR. SERVICE CORRIDOR is a blind spot.",
+      "uncertainty": "V01 does not show an exit from SERVICE CORRIDOR to other monitored areas."
+    },
+    {
+      "id": "V02",
+      "type": "Camera snapshot",
+      "observation": "LAB at 18:00. Prototype confirmed present on brown table.",
+      "interpretation": "Prototype was in LAB at 18:00.",
+      "uncertainty": "None."
+    },
+    {
+      "id": "V03",
+      "type": "Camera snapshot",
+      "observation": "EAST CORRIDOR at 18:10. Person in teal coat observed.",
+      "interpretation": "Person wearing teal coat was in EAST CORRIDOR at 18:10.",
+      "uncertainty": "Coat color is evidence of appearance, not biometric identity."
+    },
+    {
+      "id": "V04",
+      "type": "Camera snapshot",
+      "observation": "EAST EXIT at 18:14. Person in teal coat carrying prototype.",
+      "interpretation": "Person wearing teal coat was seen with prototype at EAST EXIT at 18:14.",
+      "uncertainty": "Coat color is evidence of appearance, not biometric identity."
+    },
+    {
+      "id": "V05",
+      "type": "Camera snapshot",
+      "observation": "LAB at 18:18. Prototype confirmed missing.",
+      "interpretation": "Prototype was removed from LAB between 18:00 and 18:18.",
+      "uncertainty": "None."
+    },
+    {
+      "id": "V06",
+      "type": "Camera snapshot",
+      "observation": "CAFETERIA at 18:12. Person in blue coat observed.",
+      "interpretation": "Person wearing blue coat was in CAFETERIA at 18:12.",
+      "uncertainty": "Coat color is evidence of appearance, not biometric identity."
+    },
+    {
+      "id": "V07",
+      "type": "Camera snapshot",
+      "observation": "RECEPTION at 18:13. Person in red coat observed.",
+      "interpretation": "Person wearing red coat was at RECEPTION at 18:13.",
+      "uncertainty": "Coat color is evidence of appearance, not biometric identity."
+    },
+    {
+      "id": "V08",
+      "type": "Camera snapshot",
+      "observation": "LOADING BAY at 18:11. Person in purple coat with cardboard box.",
+      "interpretation": "Person wearing purple coat was at LOADING BAY at 18:11 with a box.",
+      "uncertainty": "Coat color is evidence of appearance, not biometric identity."
+    },
+    {
+      "id": "V09",
+      "type": "Object detail",
+      "observation": "Prototype close-up. Grey box with black triangular marking.",
+      "interpretation": "Visual reference for the prototype.",
+      "uncertainty": "None."
+    },
+    {
+      "id": "V10",
+      "type": "Camera maintenance record",
+      "observation": "SERVICE CAMERA blind spot in SERVICE CORRIDOR.",
+      "interpretation": "Movement through SERVICE CORRIDOR is unmonitored.",
+      "uncertainty": "None."
+    },
+    {
+      "id": "D01",
+      "type": "Access records",
+      "observation": "Badge credentials used at doors: Nora Vale (EAST_CORRIDOR, EAST_EXIT), Theo Park (CAFETERIA), Ada Finch (RECEPTION).",
+      "interpretation": "Credentials were used. Identity of bearer is not confirmed biometrically.",
+      "uncertainty": "Coat descriptions are from shift assignments; doors log badge credentials, not biometric identity."
+    },
+    {
+      "id": "D02",
+      "type": "Witness statements",
+      "observation": "Nora: visited east corridor and left. Eli: did not approach lab after 18:00. Maya: carried box at 18:11. Theo: remained in cafeteria. Ada: staffed reception.",
+      "interpretation": "Statements are unverified. Consistent with visual evidence for some, but gaps exist.",
+      "uncertainty": "Witness statements are not automatically accurate."
+    },
+    {
+      "id": "D03",
+      "type": "Internal messages",
+      "observation": "Eli: needs prototype tomorrow (17:00). Maya: move box to loading bay (17:10). Security: coat descriptions from shift assignments; doors log credentials not identity; service corridor is blind spot (17:20).",
+      "interpretation": "Context for motive and operational constraints.",
+      "uncertainty": "None."
+    }
+  ]
+}

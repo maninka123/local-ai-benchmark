@@ -1,0 +1,59 @@
+{
+  "suspects": [
+    {
+      "name": "Nora Vale",
+      "opportunity": "Entered EAST_CORRIDOR at 18:10; no exit recorded.",
+      "access": "Badge logged entry; no exit.",
+      "timeline_consistency": "Witness says only visited east corridor; aligns with log.",
+      "contradictions": "None.",
+      "supporting_evidence": ["D01 18:10 entry"],
+      "exculpatory_evidence": [],
+      "uncertainty": "Could have entered lab via service corridor if badge misused; no exit log.",
+      "assessment": "Possible but not definitive."
+    },
+    {
+      "name": "Eli Stone",
+      "opportunity": "Entered SERVICE_DOOR at 18:14; no exit.",
+      "access": "Badge logged entry; no exit.",
+      "timeline_consistency": "Witness denies lab after 18:00; contradicts log.",
+      "contradictions": "Witness statement vs log.",
+      "supporting_evidence": ["D01 18:14 entry"],
+      "exculpatory_evidence": ["D02 Eli statement"],
+      "uncertainty": "Badge may not confirm presence; witness may be lying.",
+      "assessment": "High likelihood of involvement."
+    },
+    {
+      "name": "Maya Reed",
+      "opportunity": "Entered SERVICE_DOOR at 18:14; no exit.",
+      "access": "Badge logged entry; no exit.",
+      "timeline_consistency": "Witness says carried cardboard at 18:11; no conflict.",
+      "contradictions": "None.",
+      "supporting_evidence": ["D01 18:14 entry", "D02 Maya statement"],
+      "exculpatory_evidence": [],
+      "uncertainty": "Could have taken prototype.",
+      "assessment": "Possible."
+    },
+    {
+      "name": "Theo Park",
+      "opportunity": "Entered CAFETERIA at 18:12; no exit.",
+      "access": "Badge logged entry; no exit.",
+      "timeline_consistency": "Witness says remained in cafeteria; aligns.",
+      "contradictions": "None.",
+      "supporting_evidence": ["D01 18:12 entry", "D02 Theo statement"],
+      "exculpatory_evidence": [],
+      "uncertainty": "No evidence of lab access.",
+      "assessment": "Unlikely."
+    },
+    {
+      "name": "Ada Finch",
+      "opportunity": "Entered RECEPTION at 18:13; no exit.",
+      "access": "Badge logged entry; no exit.",
+      "timeline_consistency": "Witness says staffed reception; aligns.",
+      "contradictions": "None.",
+      "supporting_evidence": ["D01 18:13 entry", "D02 Ada statement"],
+      "exculpatory_evidence": [],
+      "uncertainty": "No lab access.",
+      "assessment": "Unlikely."
+    }
+  ]
+}

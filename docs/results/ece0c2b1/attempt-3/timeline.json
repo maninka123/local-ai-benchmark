@@ -1,0 +1,135 @@
+{
+  "case_id": "CASE_01",
+  "generated": "2026-10-13T15:40:00Z",
+  "confirmed_events": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone sends message about needing prototype tomorrow",
+      "source": "D03",
+      "type": "background_context"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed requests moving cardboard consumables box to loading bay",
+      "source": "D03",
+      "type": "background_context"
+    },
+    {
+      "time": "17:20",
+      "event": "Security notice: coat descriptions from shift assignments; doors log credentials not identity; service corridor is blind spot",
+      "source": "D03",
+      "type": "background_context"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed present in LAB on brown table",
+      "source": "V02",
+      "type": "confirmed_event",
+      "confidence": "high"
+    },
+    {
+      "time": "18:10",
+      "event": "Person in teal coat observed in EAST CORRIDOR; Badge credential 'Nora Vale' used at EAST_CORRIDOR",
+      "source": [
+        "V03",
+        "D01"
+      ],
+      "type": "confirmed_event",
+      "confidence": "high"
+    },
+    {
+      "time": "18:11",
+      "event": "Person in purple coat with cardboard box observed at LOADING BAY",
+      "source": "V08",
+      "type": "confirmed_event",
+      "confidence": "high"
+    },
+    {
+      "time": "18:12",
+      "event": "Person in blue coat observed in CAFETERIA; Badge credential 'Theo Park' used at CAFETERIA",
+      "source": [
+        "V06",
+        "D01"
+      ],
+      "type": "confirmed_event",
+      "confidence": "high"
+    },
+    {
+      "time": "18:13",
+      "event": "Person in red coat observed at RECEPTION; Badge credential 'Ada Finch' used at RECEPTION",
+      "source": [
+        "V07",
+        "D01"
+      ],
+      "type": "confirmed_event",
+      "confidence": "high"
+    },
+    {
+      "time": "18:14",
+      "event": "Person in teal coat with prototype observed at EAST EXIT; Badge credential 'Nora Vale' used at EAST_EXIT",
+      "source": [
+        "V04",
+        "D01"
+      ],
+      "type": "confirmed_event",
+      "confidence": "high"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype confirmed missing from LAB",
+      "source": "V05",
+      "type": "confirmed_event",
+      "confidence": "high"
+    }
+  ],
+  "missing_intervals": [
+    {
+      "interval": "18:00-18:14",
+      "description": "No visual confirmation of prototype between V02 (18:00, present in LAB) and V04 (18:14, seen with person at EAST EXIT). The four-minute gap covers the entire period during which removal could have occurred.",
+      "impact": "Cannot confirm how or when the prototype left the LAB. Brief location snapshots cannot account for continuous whereabouts.",
+      "status": "unobserved_interval"
+    },
+    {
+      "interval": "18:00-18:18",
+      "description": "No visual confirmation of any person in or near the LAB during this period. V02 (18:00) and V05 (18:18) are single snapshots.",
+      "impact": "Cannot confirm who was present in or near the LAB between 18:00 and 18:18.",
+      "status": "unobserved_interval"
+    }
+  ],
+  "probable_events": [
+    {
+      "event": "Prototype was removed from LAB between 18:00 and 18:14",
+      "basis": "V02 shows prototype present at 18:00; V05 shows it absent at 18:18; V04 shows it with a person at EAST EXIT at 18:14",
+      "confidence": "high",
+      "status": "probable"
+    },
+    {
+      "event": "Person wearing teal coat was carrying prototype at EAST EXIT at 18:14",
+      "basis": "V04 visual evidence",
+      "confidence": "high",
+      "status": "confirmed_observation"
+    }
+  ],
+  "contradictions": [
+    {
+      "description": "Badge credential 'Nora Vale' used at EAST_CORRIDOR (18:10) and EAST_EXIT (18:14) does not biometrically confirm the wearer was Nora Vale. D03 states doors log credentials, not identity.",
+      "sources": [
+        "D01",
+        "D03"
+      ]
+    },
+    {
+      "description": "Teal coat observed at EAST CORRIDOR (V03) and EAST EXIT (V04) does not biometrically confirm wearer was Nora Vale. D03 states coat descriptions are from shift assignments.",
+      "sources": [
+        "V03",
+        "V04",
+        "D03"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Camera timestamps are accurate and synchronized",
+    "Brief location snapshots represent the state at that moment only, not continuous presence",
+    "Badge credential usage indicates someone with that credential passed through a door, not necessarily the named individual"
+  ]
+}

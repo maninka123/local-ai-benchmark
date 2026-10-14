@@ -1,0 +1,140 @@
+{
+  "case_id": "CASE_01",
+  "incident_type": "Missing laboratory prototype",
+  "responsible_person": "Nora Vale (probable, not definitive)",
+  "confidence": 0.75,
+  "conclusion": "The evidence strongly suggests Nora Vale removed the prototype, but identification limitations prevent a definitive conclusion. A teal-coated person was observed with the prototype at East Exit at 18:14 (V04). Nora Vale's badge credential was used to enter East Corridor at 18:10 and exit via East Exit at 18:14 (D01). The coat color matches Nora Vale's shift assignment per case brief. However, D03 explicitly states that badge credentials are not biometric identifiers and coat colors are shift assignments, meaning another person could have used Nora's badge or worn a teal coat. Additionally, the Service Corridor blind spot (V10, D03) creates an unobserved movement route that cannot be ruled out.",
+  "exhibits": [
+    {
+      "id": "V04",
+      "relevance": "Primary evidence - shows teal-coated person with prototype at East Exit 18:14"
+    },
+    {
+      "id": "D01",
+      "relevance": "Links Nora Vale's badge credential to corridor entry and exit during incident window"
+    },
+    {
+      "id": "V02",
+      "relevance": "Confirms prototype present in Lab at 18:00"
+    },
+    {
+      "id": "V05",
+      "relevance": "Confirms prototype missing from Lab by 18:18"
+    },
+    {
+      "id": "D03",
+      "relevance": "Documents identification limitations - badges not biometric, coats are shift assignments"
+    },
+    {
+      "id": "V10",
+      "relevance": "Documents Service Corridor blind spot creating unobserved movement possibility"
+    }
+  ],
+  "key_deductions": [
+    {
+      "deduction": "Prototype removed between 18:00 and 18:14",
+      "evidence": [
+        "V02",
+        "V05",
+        "V04"
+      ],
+      "certainty": "high"
+    },
+    {
+      "deduction": "Teal-coated person possessed prototype at East Exit at 18:14",
+      "evidence": [
+        "V04"
+      ],
+      "certainty": "confirmed_visual"
+    },
+    {
+      "deduction": "Nora Vale's badge credential used for corridor access during incident window",
+      "evidence": [
+        "D01"
+      ],
+      "certainty": "confirmed_badge_record"
+    },
+    {
+      "deduction": "Coat color consistent with Nora Vale's shift assignment (case brief)",
+      "evidence": [
+        "V04",
+        "case brief"
+      ],
+      "certainty": "appearance_consistency_only"
+    }
+  ],
+  "alternative_explanations": [
+    {
+      "scenario": "Another person used Nora Vale's badge credential",
+      "plausibility": "moderate",
+      "supporting_evidence": [
+        "D03 - badges not biometric identifiers"
+      ]
+    },
+    {
+      "scenario": "Another person wore a teal coat (shift assignment)",
+      "plausibility": "moderate",
+      "supporting_evidence": [
+        "D03 - coats are shift assignments, not unique identifiers"
+      ]
+    },
+    {
+      "scenario": "Prototype removed via Service Corridor blind spot",
+      "plausibility": "low_to_moderate",
+      "supporting_evidence": [
+        "V10",
+        "D03 - Service Corridor unmonitored"
+      ]
+    },
+    {
+      "scenario": "Authorized removal not documented in available evidence",
+      "plausibility": "low",
+      "supporting_evidence": [
+        "No authorization records reviewed"
+      ]
+    }
+  ],
+  "contradictions_addressed": [
+    {
+      "issue": "Nora's statement vs visual evidence",
+      "description": "Nora stated she 'only visited the east corridor and left' (D02). V04 shows teal-coated person with prototype at East Exit. Statement does not explicitly deny taking prototype, only describes route.",
+      "resolution": "Visual evidence of possession contradicts implication of innocent passage; statement is unverified"
+    },
+    {
+      "issue": "Badge record vs identity certainty",
+      "description": "D01 shows Nora Vale's badge used, but D03 clarifies badges are not biometric identifiers",
+      "resolution": "Cannot definitively identify person as Nora Vale based on badge alone"
+    }
+  ],
+  "limitations": [
+    "No camera captured the actual theft moment",
+    "Badge credentials do not equal biometric identification (D03)",
+    "Coat colors are shift assignments, not unique identifiers (case brief/D03)",
+    "Service Corridor blind spot creates unobserved movement possibility (V10, D03)",
+    "Single timestamp snapshots do not provide continuous alibis",
+    "No authorization records reviewed to confirm or deny legitimate removal",
+    "Theft window is 18:00-18:14 based on confirmed presence/absence; exact removal time unknown"
+  ],
+  "recommended_next_steps": [
+    {
+      "step": "Review authorization records for prototype access during incident window",
+      "rationale": "Determine if removal was authorized"
+    },
+    {
+      "step": "Interview Nora Vale about possession of prototype at East Exit",
+      "rationale": "Address contradiction between statement and visual evidence"
+    },
+    {
+      "step": "Check badge credential custody - verify Nora Vale had physical control of her badge during incident window",
+      "rationale": "Rule out badge theft or unauthorized use"
+    },
+    {
+      "step": "Review Service Corridor access logs if available",
+      "rationale": "Determine if unmonitored route was used"
+    },
+    {
+      "step": "Obtain continuous video footage from East Corridor and East Exit cameras",
+      "rationale": "Capture actual theft moment and movement path"
+    }
+  ]
+}

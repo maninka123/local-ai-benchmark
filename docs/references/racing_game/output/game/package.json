@@ -1,0 +1,1 @@
+{"name":"solstice-circuit","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --configLoader native","build":"vite build --configLoader native","preview":"vite preview --configLoader native","test":"node tests/simulation.test.js"},"dependencies":{"three":"0.184.0"},"devDependencies":{"vite":"7.3.7"}}

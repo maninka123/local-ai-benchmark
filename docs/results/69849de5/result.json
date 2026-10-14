@@ -1,0 +1,318 @@
+{
+  "run_id": "2026-10-09T191648-675853+0000--69849de5",
+  "model": "gemma4:26b-a4b-it-q4_K_M",
+  "task": "detective",
+  "case": "case_01",
+  "track": "native_multimodal",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 40,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 11,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. The evidence-analysis file omits the floor plan, object reference, maintenance/blind-spot exhibit and all three document analyses. Personal identification and theft are described as proven without addressing badge/coat limitations, authorisation uncertainty or plausible alternatives."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 9,
+            "reason": "Credits recorded chronology and correct incident bounds where present. timeline.json is malformed and cannot be read as valid JSON. The report's grouped/brief suspect discussion and timeline need supported gaps, contradictions and confidence for each staff member."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 4,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. Personal identification and theft are described as proven without addressing badge/coat limitations, authorisation uncertainty or plausible alternatives. The report's grouped/brief suspect discussion and timeline need supported gaps, contradictions and confidence for each staff member."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 4,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. timeline.json is malformed and cannot be read as valid JSON. The report's grouped/brief suspect discussion and timeline need supported gaps, contradictions and confidence for each staff member."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 6,
+            "reason": "4/4 required artifacts present; invalid JSON: timeline.json."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 6,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. The report's grouped/brief suspect discussion and timeline need supported gaps, contradictions and confidence for each staff member."
+          }
+        ],
+        "summary": "Direct review of the saved deliverables against public documents and visually inspected exhibits found missing required analysis, invalid structured output or material unsupported claims. Supported work: Four files exist; report has the requested headings and broadly matches the visible object/coat observations. Timeline includes the access-log events and internal-message context.",
+        "evidence_files": [
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/artifacts/investigation_report.md",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/artifacts/timeline.json",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/artifacts/evidence_analysis.json",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/artifacts/conclusions.json",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/case_brief.md",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/documents/D01_access.csv",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/documents/D02_witnesses.md",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/documents/D03_messages.md",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/images/V01.png",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/images/V02.png",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/images/V03.png",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/images/V04.png",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/images/V05.png",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/images/V06.png",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/images/V07.png",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/images/V08.png",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/images/V09.png",
+          "models/gemma4-26b-a4b-it-q4_K_M--58820a4a8087/03_detective/2026-10-09T191648-675853+0000--69849de5/input/images/V10.png",
+          "results/improvement_campaign/detective_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/69849de5/attempt-1/conclusions.json",
+          "bytes": 403
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/69849de5/attempt-1/evidence_analysis.json",
+          "bytes": 1546
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/69849de5/attempt-1/investigation_report.md",
+          "bytes": 2940,
+          "preview_url": "./results/69849de5/attempt-1/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/69849de5/attempt-1/timeline.json",
+          "bytes": 1717
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/69849de5/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 61,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 18,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. D03 is repeatedly described as Maya being tasked or instructed to move a box, including a confirmed timeline event and the basis for clearing her. The public message is Maya asking for the consumables box to be moved; it does not document an instruction to her or prove that the visible box movement was authorized. The report treats Nora's corridor-only statement as contradicted by possession at the exit without separating the unconfirmed personal identity and unobserved acquisition/route. The conclusion also narrows likely removal to 18:10-18:14, although V03 alone does not establish continued lab possession at 18:10. The report elsewhere gives 18:00-18:14. Those inferences need qualification and consistency."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 11,
+            "reason": "Credits recorded chronology and correct incident bounds where present. Maya, Theo and Ada are labelled Cleared from appearances at 18:11,18:12 and 18:13. Those snapshots support activities at those instants but do not account for the full 18:00-18:18 incident interval or establish continuous alibis. The suspect analysis omits the remaining access, opportunity and temporal uncertainty for those three people. D03 is repeatedly described as Maya being tasked or instructed to move a box, including a confirmed timeline event and the basis for clearing her. The public message is Maya asking for the consumables box to be moved; it does not document an instruction to her or prove that the visible box movement was authorized."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 12,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. D03 is repeatedly described as Maya being tasked or instructed to move a box, including a confirmed timeline event and the basis for clearing her. The public message is Maya asking for the consumables box to be moved; it does not document an instruction to her or prove that the visible box movement was authorized. The report treats Nora's corridor-only statement as contradicted by possession at the exit without separating the unconfirmed personal identity and unobserved acquisition/route. The conclusion also narrows likely removal to 18:10-18:14, although V03 alone does not establish continued lab possession at 18:10. The report elsewhere gives 18:00-18:14. Those inferences need qualification and consistency."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 5,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. Maya, Theo and Ada are labelled Cleared from appearances at 18:11,18:12 and 18:13. Those snapshots support activities at those instants but do not account for the full 18:00-18:18 incident interval or establish continuous alibis. The suspect analysis omits the remaining access, opportunity and temporal uncertainty for those three people. D03 is repeatedly described as Maya being tasked or instructed to move a box, including a confirmed timeline event and the basis for clearing her. The public message is Maya asking for the consumables box to be moved; it does not document an instruction to her or prove that the visible box movement was authorized."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 5,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. The report treats Nora's corridor-only statement as contradicted by possession at the exit without separating the unconfirmed personal identity and unobserved acquisition/route. The conclusion also narrows likely removal to 18:10-18:14, although V03 alone does not establish continued lab possession at 18:10. The report elsewhere gives 18:00-18:14. Those inferences need qualification and consistency. Evidence inventory entries are brief descriptions rather than critical examination for each item: important uncertainties and observation-versus-interpretation distinctions are largely absent. The final conclusion has limited alternative analysis and no consideration of authorized relocation; the report's blind-spot possibility is not developed into an evidence-bounded sequence."
+          }
+        ],
+        "summary": "All four deliverables were rewritten and saved, and all JSON parses. The report now qualifies its strongest identification, but still clears three suspects from isolated snapshots, misreads an authored request as an instruction received, and omits required uncertainty and timeline-gap analysis. Substantive completion is not yet supported by the public evidence. Supported work: Rewrote all four outputs into a concise nine-section report, chronological timeline, inventory of all thirteen exhibits and cited conclusion. Correctly distinguishes the prototype at the east exit from the cardboard box at the loading bay and correlates appearance with badge events while acknowledging credential and identification limits.",
+        "evidence_files": [
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/artifacts/investigation_report.md",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/artifacts/timeline.json",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/artifacts/evidence_analysis.json",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/artifacts/conclusions.json",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/case_brief.md",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/documents/D01_access.csv",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/documents/D02_witnesses.md",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/documents/D03_messages.md",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/images/V02.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/images/V03.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/images/V04.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/images/V05.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/images/V06.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/images/V07.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/images/V08.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-fe279ae6f2/input/images/V10.png",
+          "results/improvement_campaign/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/69849de5/attempt-2/conclusions.json",
+          "bytes": 560
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/69849de5/attempt-2/evidence_analysis.json",
+          "bytes": 1494
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/69849de5/attempt-2/investigation_report.md",
+          "bytes": 4708,
+          "preview_url": "./results/69849de5/attempt-2/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/69849de5/attempt-2/timeline.json",
+          "bytes": 1311
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/69849de5/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 61,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 18,
+            "reason": "Credits accurate supplied-exhibit examination and traceability where supported. D03 is repeatedly described as tasking Maya to move the box, with a documented task treated as clearing her. The 17:10 message is a request authored by Maya; assignment, authorization or who actually fulfilled it are not established. Nora's corridor-only statement is called contradicted by a teal-coated person's exit possession. Possession supports suspicion but does not establish a named identity, observed lab visit or the exact stated route false; the conclusion should not rely on that as a proved contradiction."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 11,
+            "reason": "Credits recorded chronology and correct incident bounds where present. Maya, Theo and Ada are categorically cleared from their 18:11/18:12/18:13 snapshots. Those appearances cannot establish full-window alibis or exclude movement before/after them, and their entries omit substantive opportunity/access, uncertainty and alternative explanations. D03 is repeatedly described as tasking Maya to move the box, with a documented task treated as clearing her. The 17:10 message is a request authored by Maya; assignment, authorization or who actually fulfilled it are not established."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 12,
+            "reason": "Credits supported inference, calibrated uncertainty, plausible alternatives and useful next evidence. Maya, Theo and Ada are categorically cleared from their 18:11/18:12/18:13 snapshots. Those appearances cannot establish full-window alibis or exclude movement before/after them, and their entries omit substantive opportunity/access, uncertainty and alternative explanations. D03 is repeatedly described as tasking Maya to move the box, with a documented task treated as clearing her. The 17:10 message is a request authored by Maya; assignment, authorization or who actually fulfilled it are not established."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 5,
+            "reason": "Credits individual opportunity/access/support/exculpatory comparisons supported by the supplied record. Maya, Theo and Ada are categorically cleared from their 18:11/18:12/18:13 snapshots. Those appearances cannot establish full-window alibis or exclude movement before/after them, and their entries omit substantive opportunity/access, uncertainty and alternative explanations. D03 is repeatedly described as tasking Maya to move the box, with a documented task treated as clearing her. The 17:10 message is a request authored by Maya; assignment, authorization or who actually fulfilled it are not established."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 10,
+            "reason": "4/4 required artifacts present; all required JSON parses."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 5,
+            "reason": "Credits readable organization while requiring agreement across saved artifacts. Nora's corridor-only statement is called contradicted by a teal-coated person's exit possession. Possession supports suspicion but does not establish a named identity, observed lab visit or the exact stated route false; the conclusion should not rely on that as a proved contradiction. evidence_analysis.json is a short description inventory rather than item-level observations, important details, timestamps where available, interpretations and uncertainty. It does not substantively compare the V09 reference with V04 or examine all witness/message content and documentary limitations."
+          }
+        ],
+        "summary": "Needs revision: all four required outputs remain unchanged. The report has useful credential/identity qualifications but clears three staff from isolated snapshots, invents Maya tasking, overclaims a literal witness contradiction and lacks the required substantive item analysis and structured treatment of inferred events/gaps. Supported work: The four required files exist, all three JSON outputs parse, and the report contains nine sections and five staff entries. The timeline includes the three pre-incident message times, prototype presence/absence and relevant credential/appearance events.",
+        "evidence_files": [
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/artifacts/investigation_report.md",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/artifacts/timeline.json",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/artifacts/evidence_analysis.json",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/artifacts/conclusions.json",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/case_brief.md",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/documents/D01_access.csv",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/documents/D02_witnesses.md",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/documents/D03_messages.md",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/images/V01.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/images/V02.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/images/V03.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/images/V04.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/images/V05.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/images/V06.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/images/V07.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/images/V08.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/images/V09.png",
+          "results/further-work/gemma4-26b-a4b-it-q4_K_M/detective-case_01/2026-10-09T191648-675853-0000--69849de5/evaluations/eval-601c434a3b/input/images/V10.png",
+          "results/improvement_campaign/pass_2/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable.",
+          "The four required artifacts are byte-identical in content to the prior judged attempt; equal raw points preserve output-only fairness."
+        ],
+        "score": 18.3,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "conclusions.json",
+          "url": "./results/69849de5/attempt-3/conclusions.json",
+          "bytes": 560
+        },
+        {
+          "name": "evidence_analysis.json",
+          "url": "./results/69849de5/attempt-3/evidence_analysis.json",
+          "bytes": 1494
+        },
+        {
+          "name": "investigation_report.md",
+          "url": "./results/69849de5/attempt-3/investigation_report.md",
+          "bytes": 4708,
+          "preview_url": "./results/69849de5/attempt-3/investigation_report.md.html"
+        },
+        {
+          "name": "timeline.json",
+          "url": "./results/69849de5/attempt-3/timeline.json",
+          "bytes": 1311
+        }
+      ],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/69849de5/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

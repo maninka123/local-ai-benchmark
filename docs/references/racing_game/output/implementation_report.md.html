@@ -1,0 +1,109 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Solstice Circuit — implementation and verification</h1>
+<p>Solstice Circuit is a playable desktop-browser arcade racer: choose one of three cars and race five opponents around a closed desert circuit for three laps. The delivered production build is <code>game/dist/index.html</code>; <code>index.html</code> forwards to it. Use an HTTP server rather than opening module scripts through <code>file://</code>.</p>
+<h2>Run locally</h2>
+<p>From <code>output/game</code>, with Node.js and npm installed:</p>
+<pre><code class="language-sh">npm install
+npm run dev -- --host 127.0.0.1 --port 5187
+</code></pre>
+<p>Open the printed local URL. To test and build:</p>
+<pre><code class="language-sh">npm test
+npm run build
+npm run preview -- --host 127.0.0.1 --port 5188
+</code></pre>
+<p>The saved build requires no network assets. Dependencies are pinned in <code>package.json</code> (Three.js 0.184.0 and Vite 7.3.7); a fresh install requires registry access. No package lock was supplied. In the provided evaluation environment, the installed sandbox Vite CLI and Three.js fallback were used with Node.js 24.21.0. The executed build command from <code>output/game</code> was <code>node ../../../../../../sandbox/node_modules/vite/bin/vite.js build --configLoader native</code>; development used that CLI with <code>--host 127.0.0.1 --port 5187 --strictPort</code>. Both completed successfully. <code>node tests/simulation.test.js</code> ran the simulation suite.</p>
+<h2>Controls and flow</h2>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W / Up</td>
+<td>Accelerate</td>
+</tr>
+<tr>
+<td>S / Down</td>
+<td>Brake, then reverse</td>
+</tr>
+<tr>
+<td>A / Left</td>
+<td>Steer left</td>
+</tr>
+<tr>
+<td>D / Right</td>
+<td>Steer right</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle chase, hood and overhead cameras</td>
+</tr>
+<tr>
+<td>P / Escape</td>
+<td>Pause or resume</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Restart race with selected car</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Recover heading/position on track without awarding checkpoints</td>
+</tr>
+</tbody>
+</table>
+<p>Select a car, choose <strong>Take the grid</strong>, and wait for the countdown. The HUD shows speed, lap, rank, race time, current/best lap, live classification, camera and minimap. Pause provides restart and garage buttons. After finishing, the race waits for the field and presents final standings; race-again and change-car buttons are available. Keyboard input is cleared and the race pauses on lost window focus.</p>
+<h2>Architecture and implemented features</h2>
+<p><code>src/simulation.js</code> implements rendering-independent vehicle dynamics, exact track projection, AI, collision response, race progression and immutable diagnostic snapshots. <code>src/main.js</code> builds the Three.js scene, cameras, DOM interface, input handlers and animation loop. <code>src/style.css</code> defines the visual presentation; <code>tests/simulation.test.js</code> exercises the model directly.</p>
+<p>The approximately 671 m circuit has four straights and four rounded corners. Asphalt, centre markings, edge lines, alternating kerbs, barriers, checkpoint beacons and a chequered start/finish gantry make its boundaries clear. Original procedural geometry supplies desert mountains, rocks, palms, an oasis, paddock, grandstand and signs. Directional shadows, hemisphere light, warm fog, material roughness and a sunset palette give the scene a consistent appearance. Static scenery is batched by material to reduce draw calls. There are no externally downloaded proprietary assets; <code>public/</code> is intentionally empty because geometry and sign textures are generated in code.</p>
+<p>The three vehicles differ in colour, dimensions, trim and spoilers as well as all four driving parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Vehicle</th>
+<th style="text-align:right">Maximum m/s (km/h)</th>
+<th style="text-align:right">Acceleration</th>
+<th style="text-align:right">Braking</th>
+<th style="text-align:right">Handling coefficient</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comet GT</td>
+<td style="text-align:right">38 (137)</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">25</td>
+<td style="text-align:right">1.70</td>
+</tr>
+<tr>
+<td>Spectre R</td>
+<td style="text-align:right">44 (158)</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">21</td>
+<td style="text-align:right">1.38</td>
+</tr>
+<tr>
+<td>Swift RS</td>
+<td style="text-align:right">34 (122)</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">30</td>
+<td style="text-align:right">2.05</td>
+</tr>
+</tbody>
+</table>
+<p>Driving uses a fixed 120 Hz simulation step, throttle and braking acceleration, rolling/speed-related drag, smoothed steering and reduced yaw response at higher speed. This is an arcade planar physics model rendered in 3D. Chase view follows behind with speed-dependent field of view; hood view places the camera near the front of the selected vehicle; overhead follows from above.</p>
+<p>Five opponents steer and accelerate using the same dynamics and collision system as the player. Look-ahead steering follows the track, anticipated bends reduce target speed, nearby traffic triggers lane changes and braking, and tyre obstacles trigger avoidance. A blocked NPC realigns at its current track progress after approximately 2.5 seconds. NPCs are not moved along a prerecorded animation path. Their decisions are deterministic heuristics, not optimal racing tactics.</p>
+<p>Track-side confinement, circular car contacts with momentum transfer, and circular tyre-stack contacts provide collision response. Two position-resolution passes reduce overlapping contacts; impacts reduce or reverse speed and visibly flash the affected car and player vignette. Major reachable obstacles are tyre stacks. Decorative scenery lies outside the enclosing barriers and has no separate vehicle collider.</p>
+<p>Sixteen ordered checkpoints validate each lap. Forward crossing, a bounded local progress increment and the expected checkpoint sequence prevent a finish-line shortcut, reversing over a gate or a large position jump from awarding a valid lap. Three laps require 48 checkpoint crossings. Position uses validated progress and finish times; lap times and final standings are retained. Recovery changes heading and lateral position at current longitudinal progress without skipping checkpoints.</p>
+<h2>Verification results</h2>
+<p>The resumed verification used the saved original task and source. No game features or benchmark prompt were added in this completion pass. Earlier interrupted browser captures and logs remain as evidence; they are not counted as completed tests.</p>
+<p><strong>Build and direct simulation:</strong> the development server ran, the production build compiled, and all 12 simulation checks passed. These cover closed-loop projection, three distinct car parameter sets, selected vehicle, countdown/pause, throttle/coasting/braking/reverse/steering, barrier impact, vehicle momentum/separation, tyre impact, invalid checkpoint crossings, NPC avoidance, blocked recovery, independent NPC finishing and full race/restart. Fifteen NPC finishes were checked across three races, one for each player-car selection. The direct full-player test uses a simulation controller and is reported separately from browser gameplay. Detailed results: <code>../simulation-verification.json</code>.</p>
+<p><strong>Actual browser gameplay:</strong> Playwright launched headless Chromium at 960 × 600 against the Vite development server. Fourteen recorded checks passed, including menu, all three car selections, countdown, Arrow acceleration, C cameras, P/Escape pause/resume, S braking, R restart, W/D barrier collision and Space recovery. An external driver then read only <code>window.solstice.snapshot()</code> and sent ordinary W/A/S/D keyboard events. It did not write game state or invoke the game's AI. The selected Swift RS completed all 48 checkpoints and three laps in 125.617 simulated seconds; lap times were 28.750, 26.900 and 69.967 seconds. All five NPCs independently completed three laps in 72.392–82.733 simulated seconds. Final standings and lap times rendered, with zero uncaught browser JavaScript errors. The player was temporarily blocked late in the race but continued and finished without state injection or added recovery logic. The final race recorded vehicle and obstacle interactions. Detailed snapshots and results: <code>../browser-verification-continuation.json</code>.</p>
+<p><strong>Production delivery:</strong> seven additional Chromium checks passed at 1440 × 900 on <code>http://127.0.0.1:8765/api/references/racing_game/files/output/game/dist/index.html</code>, under the dashboard's actual sandbox Content Security Policy. The checks verified HTTP 200, WebGL/menu rendering, Spectre R selection/countdown, W movement, pause freezing, camera selection, Escape resume and R restart. No uncaught JavaScript errors or failed network requests were recorded. The <code>production_race_*.png</code> captures include the pause overlay; they document that paused UI/camera test rather than unobstructed driving. Detailed response headers and results: <code>../production-browser-verification.json</code>. The production route was tested directly; dashboard iframe selection/navigation is outside this report's verification scope.</p>
+<p><strong>Visual evidence:</strong> required <code>screenshots/menu.png</code>, <code>race_chase.png</code>, <code>race_hood.png</code> and <code>race_overhead.png</code> are valid 1440 × 900 development-browser captures and were visually inspected. They show the menu, selected car, track, rivals and three camera views with readable HUD elements. <code>continuation_results.png</code> shows the completed race standings. The original damaged PNGs remain under <code>*.interrupted.png</code>; an additional damaged barrier capture is archived before replacement. <code>../screenshot-validation.json</code> distinguishes deliverable screenshots from interrupted evidence.</p>
+<h2>Known limitations and interpretation</h2>
+<p>The collision bodies are circular approximations rather than oriented chassis hulls; tight contacts can look coarse or temporarily trap a player. Space provides explicit recovery. AI can collide and lose time and does not guarantee optimal overtakes. Vehicles are constrained to a flat track; there is no suspension or off-road exploration. The hood camera is a simple hood view, with no full cockpit interior. Camera switching and the tested views were usable, but camera obstruction avoidance is not a general raycast collision system. Finishing cars continue circulating until the complete field has finished.</p>
+<p>This is a keyboard-focused desktop game, with no touch controls, audio, multiplayer or saved progression. Low frame rates clamp accumulated simulation time, so simulated race seconds need not equal elapsed wall time. Testing used Chromium on this Windows host; it does not establish exhaustive browser, GPU, accessibility or long-duration coverage. A fresh network-based dependency installation was not performed during this completion pass.</p>
+<p>This reference is a tool-assisted implementation under the GPT-6 Astra / high assignment. Authoring and verification continued after interruptions. It is one original task assignment with multiple tool iterations and resumed verification, not a single inference or an Ollama-comparable timing run. Overall authoring elapsed time and token usage are unknown. No benchmark score or ground-truth status is claimed.</p>

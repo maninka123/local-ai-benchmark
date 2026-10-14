@@ -1,0 +1,20 @@
+{
+  "desktop": {
+    "bodyFont": "18px",
+    "overflow": false,
+    "images": 30,
+    "brokenImages": 0,
+    "caseSections": 3
+  },
+  "mobile": {
+    "bodyFont": "18px",
+    "overflow": false
+  },
+  "navigation_hash": "#case_03",
+  "evidence_details_expand": true,
+  "sandbox_lightbox_opens": true,
+  "sandbox_full_resolution_image_loads": true,
+  "sandbox_lightbox_closes": true,
+  "sandbox_test_policy": "sandbox allow-scripts; default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:",
+  "page_errors": []
+}

@@ -1,0 +1,183 @@
+{
+  "case_id": "CASE_02",
+  "analysis_date": "2026-10-13",
+  "exhibits": [
+    {
+      "id": "V01",
+      "type": "floor_plan",
+      "title": "Synthetic Schematic - Building Layout",
+      "observations": [
+        "LAB connects directly to EAST CORRIDOR (shown by teal line)",
+        "SERVICE CORRIDOR has UNMONITORED LINK TO LAB (shown by orange line)",
+        "CAFETERIA and EAST EXIT shown as separate areas",
+        "No LOADING BAY or RECEPTION depicted on this schematic"
+      ],
+      "interpretation": "V01 establishes spatial relationships. Direct LAB-EAST CORRIDOR link means anyone in the east corridor could access the lab. SERVICE CORRIDOR provides an unmonitored path to the lab.",
+      "uncertainty": "Schematic may not show all corridors or connections; only depicts key areas",
+      "reliability": "High - clear layout diagram"
+    },
+    {
+      "id": "V02",
+      "type": "camera_snapshot",
+      "title": "LAB | CAMERA 18:00",
+      "observations": [
+        "Prototype clearly visible on brown table in LAB",
+        "Prototype is a grey rectangular object with black triangle symbol"
+      ],
+      "interpretation": "Confirmed prototype presence at start of incident window. No person visible in frame.",
+      "uncertainty": "Single snapshot; does not show entire lab or confirm duration of presence",
+      "reliability": "High - direct visual confirmation"
+    },
+    {
+      "id": "V03",
+      "type": "camera_snapshot",
+      "title": "EAST CORRIDOR | CAMERA 18:10",
+      "observations": [
+        "Person wearing teal work coat visible in EAST CORRIDOR",
+        "No prototype visible in frame"
+      ],
+      "interpretation": "Per shift assignments, teal coat corresponds to Nora Vale. Person present at 18:10.",
+      "uncertainty": "Coat color from shift assignment, not biometric ID; cannot confirm identity with certainty",
+      "reliability": "Moderate - visual confirmation of presence but identity uncertain"
+    },
+    {
+      "id": "V04",
+      "type": "camera_snapshot",
+      "title": "SERVICE DOOR | CAMERA 18:19 (displayed)",
+      "observations": [
+        "Person wearing orange work coat standing beside prototype",
+        "Prototype visible next to figure on brown table/surface"
+      ],
+      "interpretation": "Per shift assignments, orange coat corresponds to Eli Stone. Corrected time is 18:14 (V10 offset). This is the only frame showing a person with the prototype.",
+      "uncertainty": "Displayed time 18:19 corrected to 18:14 per V10; identity based on coat color from shift assignments, not biometric verification",
+      "reliability": "Moderate - visual confirmation of presence with prototype but identity uncertain"
+    },
+    {
+      "id": "V05",
+      "type": "camera_snapshot",
+      "title": "LAB | CAMERA 18:18",
+      "observations": [
+        "Table in LAB is empty; prototype absent"
+      ],
+      "interpretation": "Confirmed prototype removal occurred before 18:18. No person visible.",
+      "uncertainty": "Single snapshot; does not show when exactly prototype was removed",
+      "reliability": "High - direct visual confirmation of absence"
+    },
+    {
+      "id": "V06",
+      "type": "camera_snapshot",
+      "title": "CAFETERIA | CAMERA 18:12",
+      "observations": [
+        "Person wearing blue work coat visible in CAFETERIA",
+        "No prototype visible"
+      ],
+      "interpretation": "Per shift assignments, blue coat corresponds to Theo Park. Person present at 18:12.",
+      "uncertainty": "Identity based on coat color; cannot confirm biometric identity",
+      "reliability": "Moderate - visual confirmation of presence but identity uncertain"
+    },
+    {
+      "id": "V07",
+      "type": "camera_snapshot",
+      "title": "RECEPTION | CAMERA 18:13",
+      "observations": [
+        "Person wearing red work coat visible at RECEPTION",
+        "No prototype visible"
+      ],
+      "interpretation": "Per shift assignments, red coat corresponds to Ada Finch. Person present at 18:13.",
+      "uncertainty": "Identity based on coat color; cannot confirm biometric identity",
+      "reliability": "Moderate - visual confirmation of presence but identity uncertain"
+    },
+    {
+      "id": "V08",
+      "type": "camera_snapshot",
+      "title": "LOADING BAY | CAMERA 18:11",
+      "observations": [
+        "Person wearing purple work coat visible with cardboard box at LOADING BAY",
+        "No prototype visible"
+      ],
+      "interpretation": "Per shift assignments, purple coat corresponds to Maya Reed. Person present at 18:11 with cardboard box (consistent with D03 message about moving consumables).",
+      "uncertainty": "Identity based on coat color; cannot confirm biometric identity; cardboard box contents unknown",
+      "reliability": "Moderate - visual confirmation of presence but identity uncertain"
+    },
+    {
+      "id": "V09",
+      "type": "object_reference",
+      "title": "OBJECT DETAIL | CAMERA REFERENCE",
+      "observations": [
+        "Close-up of prototype: grey rectangular object with black triangle symbol on brown surface"
+      ],
+      "interpretation": "Reference image for prototype identification. Matches prototype seen in V02 and V04.",
+      "uncertainty": "None - reference image",
+      "reliability": "High - clear reference"
+    },
+    {
+      "id": "V10",
+      "type": "maintenance_record",
+      "title": "SERVICE CAMERA | CAMERA MAINTENANCE",
+      "observations": [
+        "Service camera has CLOCK OFFSET +5 MINUTES"
+      ],
+      "interpretation": "All timestamps from SERVICE DOOR camera (V04) must be corrected by subtracting 5 minutes. V04 displayed 18:19 = actual 18:14.",
+      "uncertainty": "Applies only to service camera; other cameras assumed accurate",
+      "reliability": "High - documented maintenance record"
+    },
+    {
+      "id": "D01",
+      "type": "badge_records",
+      "title": "Access Log Entries",
+      "observations": [
+        "18:10 Nora Vale EAST_CORRIDOR ENTRY",
+        "18:12 Theo Park CAFETERIA ENTRY",
+        "18:13 Ada Finch RECEPTION ENTRY",
+        "18:14 Eli Stone SERVICE_DOOR ENTRY"
+      ],
+      "interpretation": "Four badge entries total. No entry for Maya Reed at any door. Badge records log credential use, not biometric identity per D03.",
+      "uncertainty": "Badge credentials may be shared or borrowed; does not confirm actual person present",
+      "reliability": "Moderate - confirms credential use but not identity"
+    },
+    {
+      "id": "D02",
+      "type": "witness_statements",
+      "title": "Unverified Witness Statements",
+      "observations": [
+        "Nora: 'I only visited the east corridor and left.'",
+        "Eli: 'I did not approach the lab after 18:00.'",
+        "Maya: 'I carried a cardboard supply box at 18:11.'",
+        "Theo: 'I remained in the cafeteria from 18:12.'",
+        "Ada: 'I staffed reception.'"
+      ],
+      "interpretation": "Statements are unverified. Nora's and Theo's statements align with badge/camera evidence. Eli's statement contradicts V04 (orange coat with prototype at SERVICE DOOR). Maya's statement consistent with V08. Ada's statement consistent with V07.",
+      "uncertainty": "Statements are self-reported and unverified; may be incomplete or inaccurate",
+      "reliability": "Low - unverified self-reporting"
+    },
+    {
+      "id": "D03",
+      "type": "internal_messages",
+      "title": "Internal Communications",
+      "observations": [
+        "17:00 Eli: 'My project needs that prototype tomorrow.'",
+        "17:10 Maya: 'Please move the cardboard consumables box to the loading bay.'",
+        "17:20 Security: 'Coat descriptions are from shift assignments; doors log badge credentials, not biometric identity. Service camera has a +5 minute clock offset.'"
+      ],
+      "interpretation": "Eli's message establishes motive (project need). Maya's message about cardboard box is consistent with V08. Security message clarifies critical limitations of all evidence.",
+      "uncertainty": "Messages establish context but not direct involvement in incident",
+      "reliability": "Moderate - documented communications"
+    }
+  ],
+  "identity_limitations": {
+    "description": "All coat-color identifications derive from shift assignments (per D03 Security message). Badge records log credential use, not biometric identity. Visual snapshots cannot confirm actual person identity.",
+    "impact": "Cannot definitively attribute any observed figure to a named individual. Coat colors may be swapped, shared, or outdated. Identity uncertainty applies to all five suspects equally.",
+    "recommendation": "Biometric verification required for definitive attribution"
+  },
+  "spatial_analysis": {
+    "confirmed_connections": [
+      "LAB directly connects to EAST CORRIDOR (V01)",
+      "SERVICE CORRIDOR has UNMONITORED LINK TO LAB (V01)"
+    ],
+    "areas_not_on_schematic": [
+      "LOADING BAY not shown on V01",
+      "RECEPTION not shown on V01"
+    ],
+    "notes": "V01 does not show LOADING BAY or RECEPTION. No direct LAB-SERVICE DOOR connection visible on schematic. SERVICE CORRIDOR provides potential unmonitored access to LAB."
+  }
+}

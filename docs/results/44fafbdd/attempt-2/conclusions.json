@@ -1,0 +1,60 @@
+{
+  "case_id": "CASE_01",
+  "incident_type": "Missing laboratory prototype",
+  "responsible_person": "Nora Vale",
+  "confidence": 0.75,
+  "confidence_level": "Moderate-High",
+  "conclusion": "Based on available evidence, Nora Vale is the most likely responsible party for removing the laboratory prototype. Visual evidence (V04) shows a teal-coated person with the prototype at East Exit at 18:14. Badge records (D01) show Nora Vale's credential was used to enter East Corridor at 18:10 and exit East Exit at 18:14, consistent with the visual timeline. Nora Vale is assigned a teal work coat per shift assignments (D03). Her witness statement claiming she only visited the corridor without taking anything is contradicted by V04 showing prototype possession.",
+  "limitations": [
+    "Badge credentials do not constitute biometric identification (D03) - another person could have used Nora Vale's badge",
+    "Coat colors are assigned per shift, not unique identifiers (D03) - another person could have worn a teal coat",
+    "Theft moment was not captured on any camera - exact removal time and method unknown",
+    "Service Corridor is an unmonitored blind spot (V10, D03) - cannot confirm whether this route was used",
+    "Single timestamp snapshots do not provide continuous alibis for other staff members"
+  ],
+  "exhibits": {
+    "primary_evidence": [
+      "V04",
+      "D01",
+      "V03"
+    ],
+    "supporting_evidence": [
+      "V02",
+      "V05",
+      "D02",
+      "D03"
+    ],
+    "contextual_evidence": [
+      "V01",
+      "V10",
+      "V06",
+      "V07",
+      "V08",
+      "V09"
+    ]
+  },
+  "alternative_explanations": [
+    {
+      "explanation": "Badge impersonation - another person used Nora Vale's badge while wearing a teal coat",
+      "plausibility": "Low-Moderate",
+      "reasoning": "Requires coordinated deception; no evidence of badge theft or sharing"
+    },
+    {
+      "explanation": "Authorized removal - prototype legitimately removed with authorization not in available evidence",
+      "plausibility": "Low",
+      "reasoning": "No supporting documentation found for authorized removal"
+    },
+    {
+      "explanation": "Coat substitution - another person wore a teal coat assigned to someone else",
+      "plausibility": "Low-Moderate",
+      "reasoning": "Possible given D03 shift assignment note, but less likely than direct involvement"
+    }
+  ],
+  "recommended_next_steps": [
+    "Biometric verification - collect fingerprint/DNA from prototype and compare to Nora Vale",
+    "Badge audit - review Nora Vale's badge usage patterns for unauthorized use",
+    "Formal witness interviews - interview all five staff members with specific questions",
+    "Authorization review - check for legitimate removal authorizations not in current evidence",
+    "Service Corridor investigation - install monitoring; check for physical evidence"
+  ]
+}

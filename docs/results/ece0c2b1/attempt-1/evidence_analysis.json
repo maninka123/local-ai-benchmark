@@ -1,0 +1,78 @@
+{
+  "exhibits": [
+    {
+      "id": "V01",
+      "type": "Floor Plan",
+      "analysis": "Establishes spatial relationships. LAB is adjacent to EAST CORRIDOR and SERVICE CORRIDOR. SERVICE CORRIDOR is an unmonitored link to LAB. EAST CORRIDOR connects to EAST EXIT.",
+      "relevance": "Critical for understanding movement paths."
+    },
+    {
+      "id": "V02",
+      "type": "LAB Camera 18:00",
+      "analysis": "Prototype (grey box with black triangle) is present on the brown table in the LAB.",
+      "relevance": "Establishes baseline state of prototype."
+    },
+    {
+      "id": "V03",
+      "type": "EAST CORRIDOR Camera 18:10",
+      "analysis": "Person in teal coat (Nora Vale) is present in the EAST CORRIDOR. No prototype visible yet.",
+      "relevance": "Places Nora adjacent to LAB at a critical time."
+    },
+    {
+      "id": "V04",
+      "type": "EAST EXIT Camera 18:14",
+      "analysis": "Person in teal coat (Nora Vale) is exiting EAST EXIT carrying the prototype (grey box with black triangle).",
+      "relevance": "Direct evidence of Nora taking the prototype."
+    },
+    {
+      "id": "V05",
+      "type": "LAB Camera 18:18",
+      "analysis": "Prototype is missing from the brown table in the LAB.",
+      "relevance": "Confirms loss of prototype."
+    },
+    {
+      "id": "V06",
+      "type": "CAFETERIA Camera 18:12",
+      "analysis": "Person in blue coat (Theo Park) is present.",
+      "relevance": "Corroborates Theo's alibi."
+    },
+    {
+      "id": "V07",
+      "type": "RECEPTION Camera 18:13",
+      "analysis": "Person in red coat (Ada Finch) is present.",
+      "relevance": "Corroborates Ada's alibi."
+    },
+    {
+      "id": "V08",
+      "type": "LOADING BAY Camera 18:11",
+      "analysis": "Person in purple coat (Maya Reed) is carrying a cardboard box.",
+      "relevance": "Corroborates Maya's statement about moving consumables."
+    },
+    {
+      "id": "V09",
+      "type": "OBJECT DETAIL Reference",
+      "analysis": "Reference image of the prototype.",
+      "relevance": "Used to identify the prototype in other images."
+    },
+    {
+      "id": "V10",
+      "type": "SERVICE CAMERA Maintenance",
+      "analysis": "Service Corridor is a blind spot.",
+      "relevance": "Explains lack of footage for that area."
+    }
+  ],
+  "document_analysis": {
+    "D01_access.csv": {
+      "summary": "Access logs confirm Nora Vale entered EAST_CORRIDOR at 18:10 and exited EAST_EXIT at 18:14. Theo Park entered CAFETERIA at 18:12. Ada Finch entered RECEPTION at 18:13.",
+      "relevance": "Corroborates camera timestamps and locations."
+    },
+    "D02_witnesses.md": {
+      "summary": "Nora claims she 'only visited the east corridor and left.' This is technically true but misleading as she took the prototype. Others' statements are corroborated by visual evidence.",
+      "relevance": "Nora's statement is a partial truth designed to obscure her actions."
+    },
+    "D03_messages.md": {
+      "summary": "Eli needed the prototype. Maya requested moving consumables. Security noted coat descriptions are from shift assignments and service corridor is blind.",
+      "relevance": "Provides motive for Eli, but visual evidence points to Nora."
+    }
+  }
+}

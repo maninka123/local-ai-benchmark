@@ -1,0 +1,42 @@
+{
+  "build": true,
+  "loads": true,
+  "errors": [
+    "ReferenceError: showCarSelect is not defined"
+  ],
+  "checks": {
+    "canvas": true,
+    "selection": false,
+    "movement": false,
+    "timer": false,
+    "hud": true,
+    "camera": false,
+    "pause": false,
+    "npc_laps": false,
+    "restart": false
+  },
+  "states": [
+    {
+      "label": "menu",
+      "value": null
+    },
+    {
+      "label": "race",
+      "value": null
+    },
+    {
+      "label": "moved",
+      "value": null
+    },
+    {
+      "label": "simulation",
+      "value": null
+    }
+  ],
+  "notes": [
+    "Hooks are candidate supplied. Snapshot claims alone do not prove collisions, valid checkpoints, or NPC intelligence; these require manual review. No credit awarded for hooks alone."
+  ],
+  "build_log": "vite v7.3.7 building client environment for production...\ntransforming...\n✓ 6 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                6.93 kB │ gzip: 2.11 kB\ndist/assets/index-B5Qt9EMX.js  0.71 kB │ gzip: 0.40 kB\n✓ built in 439ms\n",
+  "menu_text": "ARCADE RACING\nHigh Speed Championship\nSTART RACE\nCONTROLS\nWASD: Drive | C: Camera | P: Pause | R: Restart",
+  "npc_observations": null
+}

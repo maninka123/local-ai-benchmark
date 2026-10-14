@@ -1,0 +1,713 @@
+{
+  "run_id": "2026-10-10T142751-670489+0000--c5f0d666",
+  "model": "qwen3-vl:30b-a3b-instruct",
+  "task": "racing_game",
+  "case": null,
+  "track": "text_and_tools",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 7,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Runnable application and complete game flow",
+            "max_points": 10,
+            "points": 0,
+            "reason": "Initial dependency/build failure prevents running; independent Car/NPC and OrbitControls startup blockers remain."
+          },
+          {
+            "name": "Circuit, scenery and environmental presentation",
+            "max_points": 12,
+            "points": 1,
+            "reason": "Twelve separated thin cylinders and checkpoint objects are geometry work, not a continuous drivable circuit with scenery/barriers."
+          },
+          {
+            "name": "Differentiated selectable vehicles",
+            "max_points": 10,
+            "points": 1,
+            "reason": "One fixed blue box and stat fields exist; position is overwritten with number zero and there is no three-car selection."
+          },
+          {
+            "name": "Keyboard driving and handling",
+            "max_points": 12,
+            "points": 1,
+            "reason": "Input/friction/acceleration outline exists, but accelerationRate is unset, steering changes an unused property and vector state is overwritten."
+          },
+          {
+            "name": "Independent interacting NPC opponents",
+            "max_points": 14,
+            "points": 1,
+            "reason": "Four NPC outlines exist but unimported Car, absent velocity and unsupported interfaces prevent functioning navigation or laps; no traffic/avoidance/passing/recovery."
+          },
+          {
+            "name": "Vehicle, barrier and obstacle collisions",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No vehicle/barrier/obstacle collision implementation."
+          },
+          {
+            "name": "Three usable race cameras",
+            "max_points": 8,
+            "points": 2,
+            "reason": "Three camera position/mode formulas exist, but startup is broken and hood orientation/game integration do not establish usability."
+          },
+          {
+            "name": "Validated laps, timing, positions and finish",
+            "max_points": 14,
+            "points": 1,
+            "reason": "Checkpoint/lap fields and finish checks exist, but checkpointCount never advances through spatial ordered validation; countdown/timing/standings are absent."
+          },
+          {
+            "name": "Menus, HUD, instructions and interface hierarchy",
+            "max_points": 5,
+            "points": 0,
+            "reason": "No main menu, selection, HUD or results. Pause input is gated by unpaused state so cannot resume; restart cannot cleanly restart race."
+          },
+          {
+            "name": "Truthful deliverables and verification evidence",
+            "max_points": 5,
+            "points": 0,
+            "reason": "Screenshot-labelled files contain prose; unsupported report assertions cannot establish verification."
+          }
+        ],
+        "summary": "Saved dependency/build failure and inconsistent source demonstrate no complete game. Direct file-byte inspection proves screenshot-named files are prose, not images; report assertions are not independent verification.",
+        "evidence_files": [
+          "models/qwen3-vl-30b-a3b-instruct--c871fc73fabc/02_racing_game/2026-10-10T142751-670489+0000--c5f0d666/artifacts/game/src/Car.js",
+          "models/qwen3-vl-30b-a3b-instruct--c871fc73fabc/02_racing_game/2026-10-10T142751-670489+0000--c5f0d666/artifacts/game/src/main.js",
+          "models/qwen3-vl-30b-a3b-instruct--c871fc73fabc/02_racing_game/2026-10-10T142751-670489+0000--c5f0d666/artifacts/game/src/NPC.js",
+          "models/qwen3-vl-30b-a3b-instruct--c871fc73fabc/02_racing_game/2026-10-10T142751-670489+0000--c5f0d666/artifacts/game/src/Track.js",
+          "models/qwen3-vl-30b-a3b-instruct--c871fc73fabc/02_racing_game/2026-10-10T142751-670489+0000--c5f0d666/artifacts/game/index.html",
+          "models/qwen3-vl-30b-a3b-instruct--c871fc73fabc/02_racing_game/2026-10-10T142751-670489+0000--c5f0d666/artifacts/game/package.json",
+          "models/qwen3-vl-30b-a3b-instruct--c871fc73fabc/02_racing_game/2026-10-10T142751-670489+0000--c5f0d666/artifacts/game/vite.config.js",
+          "models/qwen3-vl-30b-a3b-instruct--c871fc73fabc/02_racing_game/2026-10-10T142751-670489+0000--c5f0d666/artifacts/implementation_report.md",
+          "models/qwen3-vl-30b-a3b-instruct--c871fc73fabc/02_racing_game/2026-10-10T142751-670489+0000--c5f0d666/artifacts/browser_validation.json",
+          "results/improvement_campaign/racing_reviews.json"
+        ],
+        "limitations": [
+          "Output-only review against public benchmark/prompts/racing_game_prompt.md A-K; elapsed time, tokens, model identity, automatic scores and GPT-assisted repairs do not contribute.",
+          "Direct saved-source inspection and reusable independent isolated build/browser evidence; no candidate code executed on host.",
+          "Limited partial credit recognizes concrete source implementation; disconnected outlines and claims do not establish usable gameplay. Completion requires the requested end-to-end playable race.",
+          "Attempt 1 uses immutable original baseline artifacts; attempts 2 and 3 use the first and second completion-pass evaluated snapshots. Manual setup updates and stale/inherited captures are excluded as gameplay proof."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "browser_validation.json",
+          "url": "./results/c5f0d666/attempt-1/browser_validation.json",
+          "bytes": 1079
+        },
+        {
+          "name": "implementation_report.md",
+          "url": "./results/c5f0d666/attempt-1/implementation_report.md",
+          "bytes": 3622,
+          "preview_url": "./results/c5f0d666/attempt-1/implementation_report.md.html"
+        },
+        {
+          "name": "screenshot_menu.png",
+          "url": "./results/c5f0d666/attempt-1/screenshot_menu.png",
+          "bytes": 866
+        },
+        {
+          "name": "screenshot_race_chase.png",
+          "url": "./results/c5f0d666/attempt-1/screenshot_race_chase.png",
+          "bytes": 1015
+        },
+        {
+          "name": "screenshot_race_hood.png",
+          "url": "./results/c5f0d666/attempt-1/screenshot_race_hood.png",
+          "bytes": 1100
+        },
+        {
+          "name": "screenshot_race_overhead.png",
+          "url": "./results/c5f0d666/attempt-1/screenshot_race_overhead.png",
+          "bytes": 1239
+        },
+        {
+          "name": "game/index.html",
+          "url": "./results/c5f0d666/attempt-1/game/index.html",
+          "bytes": 172
+        },
+        {
+          "name": "game/package.json",
+          "url": "./results/c5f0d666/attempt-1/game/package.json",
+          "bytes": 400
+        },
+        {
+          "name": "game/README.md",
+          "url": "./results/c5f0d666/attempt-1/game/README.md",
+          "bytes": 2012,
+          "preview_url": "./results/c5f0d666/attempt-1/game/README.md.html"
+        },
+        {
+          "name": "game/vite.config.js",
+          "url": "./results/c5f0d666/attempt-1/game/vite.config.js",
+          "bytes": 157
+        },
+        {
+          "name": "game/src/Car.js",
+          "url": "./results/c5f0d666/attempt-1/game/src/Car.js",
+          "bytes": 4384
+        },
+        {
+          "name": "game/src/main.js",
+          "url": "./results/c5f0d666/attempt-1/game/src/main.js",
+          "bytes": 6611
+        },
+        {
+          "name": "game/src/NPC.js",
+          "url": "./results/c5f0d666/attempt-1/game/src/NPC.js",
+          "bytes": 4945
+        },
+        {
+          "name": "game/src/Track.js",
+          "url": "./results/c5f0d666/attempt-1/game/src/Track.js",
+          "bytes": 2152
+        }
+      ],
+      "game_url": null,
+      "readiness": "Build failed",
+      "prompt_url": "./results/c5f0d666/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 8,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Runnable application and complete game flow",
+            "max_points": 10,
+            "points": 1,
+            "reason": "Build now succeeds but saved browser aborts with ReferenceError Car is not defined; no playable app."
+          },
+          {
+            "name": "Circuit, scenery and environmental presentation",
+            "max_points": 12,
+            "points": 1,
+            "reason": "Twelve separated thin cylinders and checkpoint objects are geometry work, not a continuous drivable circuit with scenery/barriers."
+          },
+          {
+            "name": "Differentiated selectable vehicles",
+            "max_points": 10,
+            "points": 1,
+            "reason": "One fixed blue box and stat fields exist; position is overwritten with number zero and there is no three-car selection."
+          },
+          {
+            "name": "Keyboard driving and handling",
+            "max_points": 12,
+            "points": 1,
+            "reason": "Input/friction/acceleration outline exists, but accelerationRate is unset, steering changes an unused property and vector state is overwritten."
+          },
+          {
+            "name": "Independent interacting NPC opponents",
+            "max_points": 14,
+            "points": 1,
+            "reason": "Four NPC outlines exist but unimported Car, absent velocity and unsupported interfaces prevent functioning navigation or laps; no traffic/avoidance/passing/recovery."
+          },
+          {
+            "name": "Vehicle, barrier and obstacle collisions",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No vehicle/barrier/obstacle collision implementation."
+          },
+          {
+            "name": "Three usable race cameras",
+            "max_points": 8,
+            "points": 2,
+            "reason": "Three camera position/mode formulas exist, but startup is broken and hood orientation/game integration do not establish usability."
+          },
+          {
+            "name": "Validated laps, timing, positions and finish",
+            "max_points": 14,
+            "points": 1,
+            "reason": "Checkpoint/lap fields and finish checks exist, but checkpointCount never advances through spatial ordered validation; countdown/timing/standings are absent."
+          },
+          {
+            "name": "Menus, HUD, instructions and interface hierarchy",
+            "max_points": 5,
+            "points": 0,
+            "reason": "No main menu, selection, HUD or results. Pause input is gated by unpaused state so cannot resume; restart cannot cleanly restart race."
+          },
+          {
+            "name": "Truthful deliverables and verification evidence",
+            "max_points": 5,
+            "points": 0,
+            "reason": "Fresh actual captures are blank white; original screenshot descriptions and report claims do not verify gameplay."
+          }
+        ],
+        "summary": "Incomplete after one completion prompt: the latest isolated evaluation now builds and opens a page, but startup crashes on an undefined Car reference in the NPC component. The actual evaluated output is blank, and source/report inspection confirms numerous required race features remain absent or inconsistent.",
+        "evidence_files": [
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/game/src/Car.js",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/game/src/main.js",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/game/src/NPC.js",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/game/src/Track.js",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/game/index.html",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/game/package.json",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/game/vite.config.js",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/implementation_report.md",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/browser_validation.json",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/screenshots/menu.png",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/screenshots/race_chase.png",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/screenshots/race_hood.png",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-2744628304/artifacts/screenshots/race_overhead.png",
+          "results/improvement_campaign/racing_after_reviews.json"
+        ],
+        "limitations": [
+          "Output-only review against public benchmark/prompts/racing_game_prompt.md A-K; elapsed time, tokens, model identity, automatic scores and GPT-assisted repairs do not contribute.",
+          "Direct saved-source inspection and reusable independent isolated build/browser evidence; no candidate code executed on host.",
+          "Limited partial credit recognizes concrete source implementation; disconnected outlines and claims do not establish usable gameplay. Completion requires the requested end-to-end playable race.",
+          "Attempt 1 uses immutable original baseline artifacts; attempts 2 and 3 use the first and second completion-pass evaluated snapshots. Manual setup updates and stale/inherited captures are excluded as gameplay proof."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [
+        {
+          "name": "browser_validation.json",
+          "url": "./results/c5f0d666/attempt-2/browser_validation.json",
+          "bytes": 1603
+        },
+        {
+          "name": "implementation_report.md",
+          "url": "./results/c5f0d666/attempt-2/implementation_report.md",
+          "bytes": 3622,
+          "preview_url": "./results/c5f0d666/attempt-2/implementation_report.md.html"
+        },
+        {
+          "name": "screenshot_menu.png",
+          "url": "./results/c5f0d666/attempt-2/screenshot_menu.png",
+          "bytes": 866
+        },
+        {
+          "name": "screenshot_race_chase.png",
+          "url": "./results/c5f0d666/attempt-2/screenshot_race_chase.png",
+          "bytes": 1015
+        },
+        {
+          "name": "screenshot_race_hood.png",
+          "url": "./results/c5f0d666/attempt-2/screenshot_race_hood.png",
+          "bytes": 1100
+        },
+        {
+          "name": "screenshot_race_overhead.png",
+          "url": "./results/c5f0d666/attempt-2/screenshot_race_overhead.png",
+          "bytes": 1239
+        },
+        {
+          "name": "game/index.html",
+          "url": "./results/c5f0d666/attempt-2/game/index.html",
+          "bytes": 172
+        },
+        {
+          "name": "game/package.json",
+          "url": "./results/c5f0d666/attempt-2/game/package.json",
+          "bytes": 400
+        },
+        {
+          "name": "game/README.md",
+          "url": "./results/c5f0d666/attempt-2/game/README.md",
+          "bytes": 2012,
+          "preview_url": "./results/c5f0d666/attempt-2/game/README.md.html"
+        },
+        {
+          "name": "game/vite.config.js",
+          "url": "./results/c5f0d666/attempt-2/game/vite.config.js",
+          "bytes": 157
+        },
+        {
+          "name": "game/dist/index.html",
+          "url": "./results/c5f0d666/attempt-2/game/dist/index.html",
+          "bytes": 201
+        },
+        {
+          "name": "game/dist/assets/index-mpRpqGfe.js",
+          "url": "./results/c5f0d666/attempt-2/game/dist/assets/index-mpRpqGfe.js",
+          "bytes": 508257
+        },
+        {
+          "name": "game/src/Car.js",
+          "url": "./results/c5f0d666/attempt-2/game/src/Car.js",
+          "bytes": 4384
+        },
+        {
+          "name": "game/src/main.js",
+          "url": "./results/c5f0d666/attempt-2/game/src/main.js",
+          "bytes": 6611
+        },
+        {
+          "name": "game/src/NPC.js",
+          "url": "./results/c5f0d666/attempt-2/game/src/NPC.js",
+          "bytes": 4945
+        },
+        {
+          "name": "game/src/Track.js",
+          "url": "./results/c5f0d666/attempt-2/game/src/Track.js",
+          "bytes": 2152
+        },
+        {
+          "name": "screenshots/menu.png",
+          "url": "./results/c5f0d666/attempt-2/screenshots/menu.png",
+          "bytes": 4253
+        },
+        {
+          "name": "screenshots/race_chase.png",
+          "url": "./results/c5f0d666/attempt-2/screenshots/race_chase.png",
+          "bytes": 4253
+        },
+        {
+          "name": "screenshots/race_hood.png",
+          "url": "./results/c5f0d666/attempt-2/screenshots/race_hood.png",
+          "bytes": 4253
+        },
+        {
+          "name": "screenshots/race_overhead.png",
+          "url": "./results/c5f0d666/attempt-2/screenshots/race_overhead.png",
+          "bytes": 4253
+        }
+      ],
+      "game_url": "./results/c5f0d666/attempt-2/game/dist/index.html",
+      "readiness": "Preview opens; recorded runtime errors",
+      "prompt_url": "./results/c5f0d666/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 8,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Runnable application and complete game flow",
+            "max_points": 10,
+            "points": 1,
+            "reason": "Build now succeeds but saved browser aborts with ReferenceError Car is not defined; no playable app."
+          },
+          {
+            "name": "Circuit, scenery and environmental presentation",
+            "max_points": 12,
+            "points": 1,
+            "reason": "Twelve separated thin cylinders and checkpoint objects are geometry work, not a continuous drivable circuit with scenery/barriers."
+          },
+          {
+            "name": "Differentiated selectable vehicles",
+            "max_points": 10,
+            "points": 1,
+            "reason": "One fixed blue box and stat fields exist; position is overwritten with number zero and there is no three-car selection."
+          },
+          {
+            "name": "Keyboard driving and handling",
+            "max_points": 12,
+            "points": 1,
+            "reason": "Input/friction/acceleration outline exists, but accelerationRate is unset, steering changes an unused property and vector state is overwritten."
+          },
+          {
+            "name": "Independent interacting NPC opponents",
+            "max_points": 14,
+            "points": 1,
+            "reason": "Four NPC outlines exist but unimported Car, absent velocity and unsupported interfaces prevent functioning navigation or laps; no traffic/avoidance/passing/recovery."
+          },
+          {
+            "name": "Vehicle, barrier and obstacle collisions",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No vehicle/barrier/obstacle collision implementation."
+          },
+          {
+            "name": "Three usable race cameras",
+            "max_points": 8,
+            "points": 2,
+            "reason": "Three camera position/mode formulas exist, but startup is broken and hood orientation/game integration do not establish usability."
+          },
+          {
+            "name": "Validated laps, timing, positions and finish",
+            "max_points": 14,
+            "points": 1,
+            "reason": "Checkpoint/lap fields and finish checks exist, but checkpointCount never advances through spatial ordered validation; countdown/timing/standings are absent."
+          },
+          {
+            "name": "Menus, HUD, instructions and interface hierarchy",
+            "max_points": 5,
+            "points": 0,
+            "reason": "No main menu, selection, HUD or results. Pause input is gated by unpaused state so cannot resume; restart cannot cleanly restart race."
+          },
+          {
+            "name": "Truthful deliverables and verification evidence",
+            "max_points": 5,
+            "points": 0,
+            "reason": "Fresh actual captures are blank white; original screenshot descriptions and report claims do not verify gameplay."
+          }
+        ],
+        "summary": "Needs revision: the current saved isolated browser aborts with ReferenceError: Car is not defined in NPC.js. Complete source reveals additional incompatible vector/object interfaces, absent collisions/race UI and unusable pause/steering. All four required captures are blank white pages.",
+        "evidence_files": [
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/game/src/Car.js",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/game/src/main.js",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/game/src/NPC.js",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/game/src/Track.js",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/game/index.html",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/game/package.json",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/game/vite.config.js",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/implementation_report.md",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/browser_validation.json",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/screenshots/menu.png",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/screenshots/race_chase.png",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/screenshots/race_hood.png",
+          "results/further-work/qwen3-vl-30b-a3b-instruct/racing_game/2026-10-10T142751-670489-0000--c5f0d666/evaluations/eval-e87c476318/artifacts/screenshots/race_overhead.png",
+          "results/improvement_campaign/pass_2/racing_after_reviews.json"
+        ],
+        "limitations": [
+          "Output-only review against public benchmark/prompts/racing_game_prompt.md A-K; elapsed time, tokens, model identity, automatic scores and GPT-assisted repairs do not contribute.",
+          "Direct saved-source inspection and reusable independent isolated build/browser evidence; no candidate code executed on host.",
+          "Limited partial credit recognizes concrete source implementation; disconnected outlines and claims do not establish usable gameplay. Completion requires the requested end-to-end playable race.",
+          "Attempt 1 uses immutable original baseline artifacts; attempts 2 and 3 use the first and second completion-pass evaluated snapshots. Manual setup updates and stale/inherited captures are excluded as gameplay proof.",
+          "Same functionality scores intentionally retained where source/runtime outcomes are unchanged; no artificial variation or assumed improvement."
+        ],
+        "score": 2.4,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "browser_validation.json",
+          "url": "./results/c5f0d666/attempt-3/browser_validation.json",
+          "bytes": 1603
+        },
+        {
+          "name": "implementation_report.md",
+          "url": "./results/c5f0d666/attempt-3/implementation_report.md",
+          "bytes": 3622,
+          "preview_url": "./results/c5f0d666/attempt-3/implementation_report.md.html"
+        },
+        {
+          "name": "screenshot_menu.png",
+          "url": "./results/c5f0d666/attempt-3/screenshot_menu.png",
+          "bytes": 866
+        },
+        {
+          "name": "screenshot_race_chase.png",
+          "url": "./results/c5f0d666/attempt-3/screenshot_race_chase.png",
+          "bytes": 1015
+        },
+        {
+          "name": "screenshot_race_hood.png",
+          "url": "./results/c5f0d666/attempt-3/screenshot_race_hood.png",
+          "bytes": 1100
+        },
+        {
+          "name": "screenshot_race_overhead.png",
+          "url": "./results/c5f0d666/attempt-3/screenshot_race_overhead.png",
+          "bytes": 1239
+        },
+        {
+          "name": "game/index.html",
+          "url": "./results/c5f0d666/attempt-3/game/index.html",
+          "bytes": 172
+        },
+        {
+          "name": "game/package.json",
+          "url": "./results/c5f0d666/attempt-3/game/package.json",
+          "bytes": 400
+        },
+        {
+          "name": "game/README.md",
+          "url": "./results/c5f0d666/attempt-3/game/README.md",
+          "bytes": 2012,
+          "preview_url": "./results/c5f0d666/attempt-3/game/README.md.html"
+        },
+        {
+          "name": "game/vite.config.js",
+          "url": "./results/c5f0d666/attempt-3/game/vite.config.js",
+          "bytes": 157
+        },
+        {
+          "name": "game/dist/index.html",
+          "url": "./results/c5f0d666/attempt-3/game/dist/index.html",
+          "bytes": 201
+        },
+        {
+          "name": "game/dist/assets/index-mpRpqGfe.js",
+          "url": "./results/c5f0d666/attempt-3/game/dist/assets/index-mpRpqGfe.js",
+          "bytes": 508257
+        },
+        {
+          "name": "game/src/Car.js",
+          "url": "./results/c5f0d666/attempt-3/game/src/Car.js",
+          "bytes": 4384
+        },
+        {
+          "name": "game/src/main.js",
+          "url": "./results/c5f0d666/attempt-3/game/src/main.js",
+          "bytes": 6611
+        },
+        {
+          "name": "game/src/NPC.js",
+          "url": "./results/c5f0d666/attempt-3/game/src/NPC.js",
+          "bytes": 4945
+        },
+        {
+          "name": "game/src/Track.js",
+          "url": "./results/c5f0d666/attempt-3/game/src/Track.js",
+          "bytes": 2152
+        },
+        {
+          "name": "screenshots/menu.png",
+          "url": "./results/c5f0d666/attempt-3/screenshots/menu.png",
+          "bytes": 4253
+        },
+        {
+          "name": "screenshots/race_chase.png",
+          "url": "./results/c5f0d666/attempt-3/screenshots/race_chase.png",
+          "bytes": 4253
+        },
+        {
+          "name": "screenshots/race_hood.png",
+          "url": "./results/c5f0d666/attempt-3/screenshots/race_hood.png",
+          "bytes": 4253
+        },
+        {
+          "name": "screenshots/race_overhead.png",
+          "url": "./results/c5f0d666/attempt-3/screenshots/race_overhead.png",
+          "bytes": 4253
+        }
+      ],
+      "game_url": "./results/c5f0d666/attempt-3/game/dist/index.html",
+      "readiness": "Preview opens; recorded runtime errors",
+      "prompt_url": "./results/c5f0d666/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": [
+    {
+      "name": "GPT-6.1 Sol · separate small repair",
+      "lines": 23,
+      "files": [
+        {
+          "name": "browser_validation.json",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/browser_validation.json",
+          "bytes": 1412
+        },
+        {
+          "name": "implementation_report.md",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/implementation_report.md",
+          "bytes": 3622,
+          "preview_url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/implementation_report.md.html"
+        },
+        {
+          "name": "keyboard_validation.json",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/keyboard_validation.json",
+          "bytes": 866
+        },
+        {
+          "name": "screenshot_menu.png",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/screenshot_menu.png",
+          "bytes": 866
+        },
+        {
+          "name": "screenshot_race_chase.png",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/screenshot_race_chase.png",
+          "bytes": 1015
+        },
+        {
+          "name": "screenshot_race_hood.png",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/screenshot_race_hood.png",
+          "bytes": 1100
+        },
+        {
+          "name": "screenshot_race_overhead.png",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/screenshot_race_overhead.png",
+          "bytes": 1239
+        },
+        {
+          "name": "game/index.html",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/index.html",
+          "bytes": 243
+        },
+        {
+          "name": "game/package.json",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/package.json",
+          "bytes": 400
+        },
+        {
+          "name": "game/README.md",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/README.md",
+          "bytes": 2012,
+          "preview_url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/README.md.html"
+        },
+        {
+          "name": "game/vite.config.js",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/vite.config.js",
+          "bytes": 157
+        },
+        {
+          "name": "game/dist/index.html",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/dist/index.html",
+          "bytes": 272
+        },
+        {
+          "name": "game/dist/assets/index-BywkCKeE.js",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/dist/assets/index-BywkCKeE.js",
+          "bytes": 529246
+        },
+        {
+          "name": "game/src/Car.js",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/src/Car.js",
+          "bytes": 4356
+        },
+        {
+          "name": "game/src/main.js",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/src/main.js",
+          "bytes": 6420
+        },
+        {
+          "name": "game/src/NPC.js",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/src/NPC.js",
+          "bytes": 4878
+        },
+        {
+          "name": "game/src/Track.js",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/src/Track.js",
+          "bytes": 2152
+        },
+        {
+          "name": "screenshots/keyboard_verified.png",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/screenshots/keyboard_verified.png",
+          "bytes": 7702
+        },
+        {
+          "name": "screenshots/menu.png",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/screenshots/menu.png",
+          "bytes": 6818
+        },
+        {
+          "name": "screenshots/race_chase.png",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/screenshots/race_chase.png",
+          "bytes": 8265
+        },
+        {
+          "name": "screenshots/race_hood.png",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/screenshots/race_hood.png",
+          "bytes": 8044
+        },
+        {
+          "name": "screenshots/race_overhead.png",
+          "url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/screenshots/race_overhead.png",
+          "bytes": 7191
+        }
+      ],
+      "game_url": "./results/c5f0d666/repairs/sol-6.1-small-fix-20261014/game/dist/index.html",
+      "limitations": [
+        "NPC.js constructs Car without importing it, matching the saved browser ReferenceError. main also constructs THREE.OrbitControls although OrbitControls is not exported from the Three.js namespace, as the recorded build warning notes.",
+        "Car.setupCar replaces its Vector3 position with number 0. NPC likewise assigns position=0 before using position.set, refers to nonexistent setCarPosition, never initializes velocity, and getCar returns a Car wrapper while main adds it as a scene object. Multiple independent runtime blockers remain.",
+        "The track consists of twelve separated narrow cylinders at radius 100, not a continuous drivable road with corners/straights, barriers and scenery; player starts at the origin away from these segments. No functional vehicle/barrier/obstacle collision detection exists.",
+        "There is only one fixed blue box player car and no selection of three differentiated models. AccelerationRate is not initialized in the Car constructor; acceleration only affects velocity.x, steering changes an unused acceleration property, and no meaningful speed-dependent directional handling is implemented.",
+        "NPC outlines do not implement functioning navigation, avoidance, overtaking, collisions or recovery; checkpointCount is never updated by spatial/ordered validation, so valid independent player/NPC laps cannot occur. Countdown, timing, positioning, results/standings and all requested UI/HUD are absent.",
+        "Input handling runs only while started and unpaused, so P/Escape cannot resume after pausing. Restart clears gameStarted without a UI path to start again, does not reset velocities/laps/checkpoints, and camera formulas do not establish a usable hood view.",
+        "All four required screenshots are byte-identical blank white pages, not genuine distinct game views. Additional screenshot-named artifacts and the report cannot establish successful gameplay; report/README claim complete verified features contradicted by source and isolated browser failure.",
+        "Original benchmark scores and completeness are unchanged. This is an assisted partial preview, with original report claims retained and potentially inaccurate."
+      ]
+    }
+  ]
+}

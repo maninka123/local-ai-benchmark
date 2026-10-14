@@ -1,0 +1,70 @@
+{
+  "timeline": [
+    {
+      "time": "17:00",
+      "event": "Eli expresses need for prototype",
+      "status": "confirmed",
+      "source": "D03"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya mentions moving a box",
+      "status": "confirmed",
+      "source": "D03"
+    },
+    {
+      "time": "17:20",
+      "event": "Security notes Service Corridor is a blind spot",
+      "status": "confirmed",
+      "source": "D03"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed present in Lab",
+      "status": "confirmed",
+      "source": "V02"
+    },
+    {
+      "time": "18:10",
+      "event": "Nora Vale enters East Corridor",
+      "status": "confirmed",
+      "source": "D01"
+    },
+    {
+      "time": "18:11",
+      "event": "Maya claims to have a box",
+      "status": "probable",
+      "source": "D02"
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park enters Cafeteria",
+      "status": "confirmed",
+      "source": "D01"
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch enters Reception",
+      "status": "confirmed",
+      "source": "D01"
+    },
+    {
+      "time": "18:14",
+      "event": "Eli Stone and Maya Reed enter Service Door",
+      "status": "confirmed",
+      "source": "D01"
+    },
+    {
+      "time": "18:14-18:18",
+      "event": "Maya Reed enters Lab via Service Corridor with a box",
+      "status": "probable",
+      "source": "V07"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype discovered missing",
+      "status": "confirmed",
+      "source": "Case Brief"
+    }
+  ]
+}

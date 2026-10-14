@@ -1,0 +1,46 @@
+{
+  "assessment": "Share with caveats",
+  "verified_at_utc": "2026-10-13T06:43:00.388221+00:00",
+  "method": "Independent csv.DictReader + Decimal aggregation; no analysis helpers or pandas imported. Every exported financial group is compared, including all 1,200 customers. Pearson correlations recomputed from sums.",
+  "checks_passed": 11556,
+  "checks_failed": 0,
+  "key_verified_results": {
+    "transactions": 24963,
+    "customers": 1200,
+    "revenue": 17355447.830000002,
+    "cost": 12307512.0,
+    "gross_profit": 5047935.83,
+    "margin": 0.29085598248143846,
+    "units": 114758,
+    "on_time_rate": 0.7634899651484197
+  },
+  "reproducibility": {
+    "commands": [
+      "python analysis.py",
+      "python build_report.py",
+      "python verify.py"
+    ],
+    "python_environment": "D:/LocalLLM/benchmark-env/Scripts/python.exe",
+    "source_hashes": "output/source_manifest.json",
+    "detailed_checks": "output/independent_checks.json"
+  },
+  "presentation": {
+    "static_checks": "Passed: eight embedded PNGs, required report sections, valid section targets, no external network assets, no replacement characters or placeholders.",
+    "visual_checks": "All eight final chart images inspected in a contact sheet; chart title overlaps corrected. Chrome desktop preview at 1920x911 and narrow preview at 390x844 inspected. All eight browser images loaded. No body horizontal overflow at either width. Main-findings and executive-summary links checked. Expanded chart opened/closed on mobile; desktop selected customer-chart DOM content verified. Browser console returned no errors or warnings.",
+    "chart_review_artifact": "output/figures_review.png",
+    "preview_url": "http://127.0.0.1:8767/",
+    "browser_surface": "Chrome; in-app browser unavailable",
+    "interaction_scope": "Static report with section links and chart expansion. No analytical filters, no server data dependencies.",
+    "limitations": "No PDF export verification; no claim of exhaustive assistive-technology testing. Dashboard embedding is delivered for parent integration; standalone page was browser-tested."
+  },
+  "limitations": [
+    "Five extreme prices are quarantined analytically, not externally confirmed errors.",
+    "Thirty missing costs use catalog cost; no historical ledger verification.",
+    "No causal policy or supplier-performance effect established.",
+    "No promised dates, dispatch dates, overhead, campaign spend or unmet-demand measurements.",
+    "Reference authoring includes tool-assisted implementation and verification, so timing is not comparable with a single Ollama model response.",
+    "Token usage unknown; no benchmark score assigned."
+  ],
+  "original_inputs_and_prompts_unchanged": true,
+  "not_ground_truth": true
+}

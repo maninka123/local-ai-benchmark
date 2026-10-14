@@ -1,0 +1,122 @@
+{
+  "case_id": "CASE_02",
+  "incident_type": "Missing Laboratory Prototype",
+  "responsible_person": null,
+  "primary_suspect": "Eli Stone (probable)",
+  "confidence": 0.65,
+  "conclusion": "The available evidence points to Eli Stone as the most likely responsible individual, but definitive identification cannot be made. Visual evidence V04 shows a person in an orange coat (Eli's assigned color) in possession of the prototype at the Service Door at actual time 18:14 (corrected from displayed 18:19 per V10/D03). Eli Stone's badge credential was used for Service Door entry at 18:14 (D01), and his statement claiming no lab approach after 18:00 is contradicted by this evidence. However, D03 explicitly states that badge credentials are not biometric identification and coat colors are appearance-based only. Therefore, while Eli Stone is the primary suspect, a supported abstention from absolute identification is warranted.",
+  "key_findings": [
+    {
+      "finding": "Theft window: 18:00-18:18",
+      "evidence": [
+        "V02",
+        "V05"
+      ],
+      "certainty": "high"
+    },
+    {
+      "finding": "Service Corridor used for theft (unmonitored route)",
+      "evidence": [
+        "V01"
+      ],
+      "certainty": "high"
+    },
+    {
+      "finding": "Eli Stone's statement contradicted by visual evidence",
+      "evidence": [
+        "D02",
+        "V04"
+      ],
+      "certainty": "high"
+    },
+    {
+      "finding": "Clock offset correction critical for timeline",
+      "evidence": [
+        "V10",
+        "D03"
+      ],
+      "certainty": "high"
+    },
+    {
+      "finding": "Identification limitations prevent definitive attribution",
+      "evidence": [
+        "D03"
+      ],
+      "certainty": "high"
+    }
+  ],
+  "exhibits": [
+    {
+      "id": "V04",
+      "type": "primary_evidence",
+      "description": "Service Door camera showing orange coat with prototype at displayed time 18:19 (actual: 18:14 after -5 min correction)"
+    },
+    {
+      "id": "V10",
+      "type": "system_notice",
+      "description": "Service camera clock offset +5 minutes notice"
+    },
+    {
+      "id": "D03",
+      "type": "internal_message",
+      "description": "Security note: badge credentials not biometric; service camera +5 min offset; coat colors from shift assignments"
+    },
+    {
+      "id": "D01",
+      "type": "access_log",
+      "description": "Eli Stone badge entry at Service Door at 18:14"
+    },
+    {
+      "id": "V02",
+      "type": "observation",
+      "description": "Prototype present in lab at 18:00"
+    },
+    {
+      "id": "V05",
+      "type": "observation",
+      "description": "Prototype missing from lab at 18:18"
+    },
+    {
+      "id": "V01",
+      "type": "floor_plan",
+      "description": "Service Corridor unmonitored link to lab; orange line connects Lab to Service Corridor"
+    },
+    {
+      "id": "D02",
+      "type": "witness_statement",
+      "description": "Eli Stone statement contradicted by visual evidence"
+    }
+  ],
+  "alternative_explanations": [
+    {
+      "explanation": "Badge impersonation",
+      "plausibility": "moderate",
+      "description": "Someone else used Eli Stone's badge to enter Service Door. D03 explicitly states doors log badge credentials, not biometric identity."
+    },
+    {
+      "explanation": "Coat color coincidence",
+      "plausibility": "low-to-moderate",
+      "description": "Orange coat wearer is not Eli Stone. Case brief assigns coat colors, but this is appearance-based identification only."
+    },
+    {
+      "explanation": "Authorized removal",
+      "plausibility": "low",
+      "description": "Eli had permission to take prototype. No authorization documentation found; theft classification suggests unauthorized removal."
+    }
+  ],
+  "limitations": [
+    "Badge credentials are not biometric identification (D03)",
+    "Coat color is appearance-based only, not conclusive proof of identity",
+    "Single timestamp snapshots do not establish continuous presence or absence during full incident window",
+    "Service Corridor is unmonitored - actual theft moment not captured",
+    "No biometric or DNA evidence available",
+    "Motive (D03 message) does not constitute proof of action"
+  ],
+  "recommended_next_steps": [
+    "Obtain biometric verification (fingerprint, facial recognition) from Service Door area",
+    "Review authorization records for prototype access permissions",
+    "Interview Eli Stone about V04 visual evidence and badge use",
+    "Check if other staff had access to Eli Stone's badge",
+    "Review additional camera angles that may capture Service Corridor movement"
+  ]
+}

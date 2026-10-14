@@ -1,0 +1,100 @@
+{
+  "case_id": "CASE_01",
+  "incident_type": "Missing laboratory prototype",
+  "last_seen": "18:00 (V02)",
+  "discovered_missing": "18:18 (V05)",
+  "events": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone sends message about needing prototype tomorrow",
+      "source": "D03",
+      "type": "background_context",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed requests moving cardboard consumables box to loading bay",
+      "source": "D03",
+      "type": "background_context",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "17:20",
+      "event": "Security notice: coat descriptions from shift assignments; doors log credentials not identity; service corridor is blind spot",
+      "source": "D03",
+      "type": "background_context",
+      "confidence": "confirmed"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed present in LAB on brown table",
+      "source": "V02",
+      "type": "confirmed_event",
+      "confidence": "high"
+    },
+    {
+      "time": "18:10",
+      "event": "Person in teal coat observed in EAST CORRIDOR (V03); Badge credential 'Nora Vale' used at EAST_CORRIDOR (D01)",
+      "source": "V03, D01",
+      "type": "confirmed_event",
+      "confidence": "high",
+      "notes": "Credential use != biometric identity per D03; coat color indicates appearance not identity"
+    },
+    {
+      "time": "18:11",
+      "event": "Person in purple coat with cardboard box at LOADING BAY (V08)",
+      "source": "V08",
+      "type": "confirmed_event",
+      "confidence": "high"
+    },
+    {
+      "time": "18:12",
+      "event": "Person in blue coat observed in CAFETERIA (V06); Badge credential 'Theo Park' used at CAFETERIA (D01)",
+      "source": "V06, D01",
+      "type": "confirmed_event",
+      "confidence": "high"
+    },
+    {
+      "time": "18:13",
+      "event": "Person in red coat observed at RECEPTION (V07); Badge credential 'Ada Finch' used at RECEPTION (D01)",
+      "source": "V07, D01",
+      "type": "confirmed_event",
+      "confidence": "high"
+    },
+    {
+      "time": "18:14",
+      "event": "Person in teal coat with prototype observed at EAST EXIT (V04); Badge credential 'Nora Vale' used at EAST_EXIT (D01)",
+      "source": "V04, D01",
+      "type": "confirmed_event",
+      "confidence": "high",
+      "notes": "Prototype first seen outside LAB; identity of teal-coated person unconfirmed"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype confirmed missing from LAB (V05)",
+      "source": "V05",
+      "type": "confirmed_event",
+      "confidence": "high"
+    }
+  ],
+  "gaps": [
+    {
+      "interval": "18:00-18:10",
+      "description": "No visual confirmation of prototype between 18:00 (V02) and 18:14 (V04). Service corridor provides unmonitored route from LAB to EAST CORRIDOR (V01, V10).",
+      "impact": "Cannot confirm how or when prototype left LAB. This gap is between two confirmed observations.",
+      "status": "missing_interval"
+    },
+    {
+      "interval": "18:14-18:18",
+      "description": "Person exits EAST EXIT at 18:14 with prototype (V04). LAB camera shows empty room at 18:18 (V05). No visual confirmation of prototype movement between these points.",
+      "impact": "Confirms removal but not method or route taken after exit.",
+      "status": "missing_interval"
+    }
+  ],
+  "assumptions": [
+    "Badge credentials used by 'Nora Vale' may have been used by someone other than Nora Vale (per D03)",
+    "Coat color indicates appearance, not biometric identity (per D03)",
+    "Service corridor provides unmonitored route between LAB and EAST CORRIDOR (V01, V10)",
+    "Camera snapshots represent single moments in time; continuous whereabouts cannot be confirmed from brief location snapshots"
+  ]
+}

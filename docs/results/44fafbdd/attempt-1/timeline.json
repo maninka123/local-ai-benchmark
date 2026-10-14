@@ -1,0 +1,110 @@
+{
+  "events": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone messages about needing prototype tomorrow",
+      "source": "D03",
+      "status": "confirmed",
+      "significance": "Establishes motive for Eli"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed messages about moving cardboard consumables box to loading bay",
+      "source": "D03",
+      "status": "confirmed",
+      "significance": "Context for V08 visual evidence"
+    },
+    {
+      "time": "17:20",
+      "event": "Security notes coat descriptions from shift assignments; service corridor is camera blind spot",
+      "source": "D03",
+      "status": "confirmed",
+      "significance": "Critical vulnerability in security system"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed present in Laboratory",
+      "source": "V02",
+      "status": "confirmed",
+      "significance": "Last known location of prototype before theft"
+    },
+    {
+      "time": "18:00-18:10",
+      "event": "Theft window - Nora Vale likely accessed lab via Service Corridor blind spot",
+      "source": "V01, V10, D03",
+      "status": "probable",
+      "significance": "Unmonitored access route used for theft"
+    },
+    {
+      "time": "18:10",
+      "event": "Nora Vale enters East Corridor (badge swipe)",
+      "source": "D01, V03",
+      "status": "confirmed",
+      "significance": "First documented movement after theft"
+    },
+    {
+      "time": "18:10",
+      "event": "Person in teal coat observed in East Corridor",
+      "source": "V03",
+      "status": "confirmed",
+      "significance": "Visual confirmation of Nora Vale"
+    },
+    {
+      "time": "18:11",
+      "event": "Maya Reed at Loading Bay with cardboard box",
+      "source": "V08",
+      "status": "confirmed",
+      "significance": "Alibi for Maya Reed"
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park enters Cafeteria (badge swipe)",
+      "source": "D01, V06",
+      "status": "confirmed",
+      "significance": "Alibi for Theo Park"
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch enters Reception (badge swipe)",
+      "source": "D01, V07",
+      "status": "confirmed",
+      "significance": "Alibi for Ada Finch"
+    },
+    {
+      "time": "18:14",
+      "event": "Nora Vale exits East Exit (badge swipe)",
+      "source": "D01, V04",
+      "status": "confirmed",
+      "significance": "Exit with stolen prototype"
+    },
+    {
+      "time": "18:14",
+      "event": "Person in teal coat observed at East Exit CARRYING PROTOTYPE",
+      "source": "V04",
+      "status": "confirmed",
+      "significance": "Direct visual evidence of theft"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype discovered missing from Laboratory",
+      "source": "V05",
+      "status": "confirmed",
+      "significance": "Theft confirmed"
+    }
+  ],
+  "gaps": [
+    {
+      "interval": "18:00-18:10",
+      "description": "No camera coverage of Service Corridor - theft likely occurred during this window",
+      "source": "V10, D03"
+    }
+  ],
+  "contradictions": [
+    {
+      "claim": "Nora Vale: I only visited the east corridor and left",
+      "source": "D02",
+      "contradicted_by": "V04 shows her carrying prototype at East Exit",
+      "resolution": "Statement is false - visual evidence takes precedence"
+    }
+  ]
+}

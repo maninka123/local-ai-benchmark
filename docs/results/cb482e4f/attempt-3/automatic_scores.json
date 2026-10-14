@@ -1,0 +1,192 @@
+{
+  "rubric": {
+    "data_understanding": 15,
+    "numerical_accuracy": 20,
+    "hidden_patterns": 20,
+    "visualization": 15,
+    "report_quality": 15,
+    "recommendations": 15
+  },
+  "categories": {
+    "data_understanding": 0.0,
+    "numerical_accuracy": 0.0,
+    "hidden_patterns": 0.0,
+    "visualization": 0,
+    "report_quality": 0,
+    "recommendations": 0
+  },
+  "verified_points": 0.0,
+  "pending_points": 0,
+  "quality_score": 0.0,
+  "complete": false,
+  "evidence": {
+    "patterns": [
+      {
+        "id": "duplicates",
+        "detected": false,
+        "expected_metric": "duplicate_count",
+        "expected_value": 20,
+        "matching_findings": []
+      },
+      {
+        "id": "missing",
+        "detected": false,
+        "expected_metric": "missing_unit_cost",
+        "expected_value": 30,
+        "matching_findings": []
+      },
+      {
+        "id": "invalid",
+        "detected": false,
+        "expected_metric": "invalid_quantity_count",
+        "expected_value": 12,
+        "matching_findings": []
+      },
+      {
+        "id": "entry_outlier",
+        "detected": false,
+        "expected_metric": "entry_outlier_count",
+        "expected_value": 5,
+        "matching_findings": []
+      },
+      {
+        "id": "bulk_orders",
+        "detected": false,
+        "expected_metric": "genuine_bulk_orders",
+        "expected_value": 10,
+        "matching_findings": []
+      },
+      {
+        "id": "seasonality",
+        "detected": false,
+        "expected_metric": "december_mean_revenue",
+        "expected_value": 1264508.04,
+        "matching_findings": []
+      },
+      {
+        "id": "low_margin",
+        "detected": false,
+        "expected_metric": "premium_margin",
+        "expected_value": -0.0017337528102710905,
+        "matching_findings": []
+      },
+      {
+        "id": "region",
+        "detected": false,
+        "expected_metric": "north_revenue",
+        "expected_value": 4781853.42,
+        "matching_findings": []
+      },
+      {
+        "id": "policy",
+        "detected": false,
+        "expected_metric": "policy_delivery_delta",
+        "expected_value": -1.1823193001482504,
+        "matching_findings": []
+      },
+      {
+        "id": "aggregate",
+        "detected": false,
+        "expected_metric": "supplier_A_overall",
+        "expected_value": 0.6745305729417429,
+        "matching_findings": []
+      },
+      {
+        "id": "simpson",
+        "detected": false,
+        "expected_metric": "supplier_A_express",
+        "expected_value": 0.6246359109273701,
+        "matching_findings": []
+      },
+      {
+        "id": "churn",
+        "detected": false,
+        "expected_metric": "inactive_second_half_customers",
+        "expected_value": 151,
+        "matching_findings": []
+      }
+    ],
+    "numeric_checks": [
+      {
+        "metric": "total_revenue",
+        "expected": 17355447.830000002,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "profit_margin",
+        "expected": 0.29085598248143846,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "clean_row_count",
+        "expected": 24963,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "duplicate_count",
+        "expected": 20,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "missing_unit_cost",
+        "expected": 30,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "invalid_quantity_count",
+        "expected": 12,
+        "actual": null,
+        "correct": false
+      },
+      {
+        "metric": "entry_outlier_count",
+        "expected": 5,
+        "actual": null,
+        "correct": false
+      }
+    ],
+    "figures": [],
+    "writing": {
+      "words": 0,
+      "sections": {
+        "executive summary": false,
+        "dataset|data overview": false,
+        "quality": false,
+        "method": false,
+        "finding": false,
+        "chart|figure": false,
+        "limitation": false,
+        "recommendation": false,
+        "conclusion": false
+      },
+      "section_coverage": 0.0,
+      "nonempty": false,
+      "subjective_quality": "pending blinded human review; word count and headings do not establish quality"
+    },
+    "reproducibility": {
+      "executed": true,
+      "exit_code": 0,
+      "stdout": "=== Customer information (customers.csv) ===\nShape: (1200, 5)\nColumns: ['customer_id', 'segment', 'region_id', 'joined_date', 'marketing_group']\nData types:\ncustomer_id        object\nsegment            object\nregion_id          object\njoined_date        object\nmarketing_group     int64\ndtype: object\nMissing values per column:\ncustomer_id        0\nsegment            0\nregion_id          0\njoined_date        0\nmarketing_group    0\ndtype: int64\nDuplicate rows: 0\n---\n\nError reading customers.csv: Object of type ObjectDType is not JSON serializable\n=== Product inventory levels (inventory.csv) ===\nShape: (480, 4)\nColumns: ['month', 'product_id', 'stock_units', 'stockouts']\nData types:\nmonth          object\nproduct_id     object\nstock_units     int64\nstockouts       int64\ndtype: object\nMissing values per column:\nmonth          0\nproduct_id     0\nstock_units    0\nstockouts      0\ndtype: int64\nDuplicate rows: 0\n---\n\nError reading inventory.csv: Object of type ObjectDType is not JSON serializable\n=== Operational events log (operational_events.csv) ===\nShape: (3, 5)\nColumns: ['event_id', 'event_date', 'region_id', 'event_type', 'description']\nData types:\nevent_id       object\nevent_date     object\nregion_id      object\nevent_type     object\ndescription    object\ndtype: object\nMissing values per column:\nevent_id       0\nevent_date     0\nregion_id      0\nevent_type     0\ndescription    0\ndtype: int64\nDuplicate rows: 0\n---\n\nError reading operational_events.csv: Object of type ObjectDType is not JSON serializable\n=== Product catalog (products.csv) ===\nShape: (20, 5)\nColumns: ['product_id', 'name', 'category', 'unit_cost', 'list_price']\nData types:\nproduct_id     object\nname           object\ncategory       object\nunit_cost       int64\nlist_price    float64\ndtype: object\nMissing values per column:\nproduct_id    0\nname          0\ncategory      0\nunit_cost     0\nlist_price    0\ndtype: int64\nDuplicate rows: 0\n---\n\nError reading products.csv: Object of type ObjectDType is not JSON serializable\n=== Geographic regions (regions.csv) ===\nShape: (4, 4)\nColumns: ['region_id', 'name', 'timezone', 'shipping_distance_km']\nData types:\nregion_id               object\nname                    object\ntimezone                object\nshipping_distance_km     int64\ndtype: object\nMissing values per column:\nregion_id               0\nname                    0\ntimezone                0\nshipping_distance_km    0\ndtype: int64\nDuplicate rows: 0\n---\n\nError reading regions.csv: Object of type ObjectDType is not JSON serializable\n=== Sales transactions (transactions.csv) ===\nShape: (25000, 15)\nColumns: ['transaction_id', 'customer_id', 'product_id', 'transaction_date', 'quantity', 'selling_price', 'discount', 'unit_cost', 'revenue', 'region_id', 'supplier_id', 'service_class', 'delivery_days', 'on_time', 'ad_index']\nData types:\ntransaction_id       object\ncustomer_id          object\nproduct_id           object\ntransaction_date     object\nquantity              int64\nselling_price       float64\ndiscount            float64\nunit_cost           float64\nrevenue             float64\nregion_id            object\nsupplier_id          object\nservice_class        object\ndelivery_days       float64\non_time               int64\nad_index            float64\ndtype: object\nMissing values per column:\ntransaction_id       0\ncustomer_id          0\nproduct_id           0\ntransaction_date     0\nquantity             0\nselling_price        0\ndiscount             0\nunit_cost           30\nrevenue              0\nregion_id            0\nsupplier_id          0\nservice_class        0\ndelivery_days        0\non_time              0\nad_index             0\ndtype: int64\nDuplicate rows: 20\n---\n\nError reading transactions.csv: Object of type ObjectDType is not JSON serializable\n",
+      "stderr": "",
+      "duration_seconds": 0.5664764999964973,
+      "category": "reproducibility_validation",
+      "start": "2026-10-13T16:48:36.776248+00:00",
+      "end": "2026-10-13T16:48:37.342613+00:00",
+      "command": [
+        "python",
+        "/output/analysis.py"
+      ]
+    }
+  },
+  "limitations": [
+    "Chart existence is verified; plotted values, visual clarity, substantive writing and recommendations require human review. Data-understanding points are numerical issue checks, not a full understanding assessment."
+  ],
+  "review_status": "automatic",
+  "scoring_version": "1.0.0",
+  "judge": "deterministic independent artifact/ground-truth checks; no model judge"
+}

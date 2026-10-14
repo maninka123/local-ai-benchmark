@@ -1,0 +1,56 @@
+{
+  "events": [
+    {
+      "time": "18:00",
+      "type": "confirmed",
+      "description": "Prototype confirmed in lab",
+      "exhibits": ["V02"]
+    },
+    {
+      "time": "18:10",
+      "type": "confirmed",
+      "description": "Nora Vale enters east corridor",
+      "exhibits": ["D01", "V03"]
+    },
+    {
+      "time": "18:11",
+      "type": "confirmed",
+      "description": "Maya Reed moves cardboard box to loading bay",
+      "exhibits": ["D02", "D03", "V08"]
+    },
+    {
+      "time": "18:12",
+      "type": "confirmed",
+      "description": "Theo Park enters cafeteria",
+      "exhibits": ["D01", "V06"]
+    },
+    {
+      "time": "18:13",
+      "type": "confirmed",
+      "description": "Ada Finch enters reception",
+      "exhibits": ["D01", "V07"]
+    },
+    {
+      "time": "18:14",
+      "type": "confirmed",
+      "description": "Eli Stone enters service door",
+      "exhibits": ["D01"]
+    },
+    {
+      "time": "18:14 (displayed 18:19)",
+      "type": "confirmed",
+      "description": "Service camera shows Eli Stone with prototype - actual time is 18:14 due to +5 min offset",
+      "exhibits": ["V04", "V10"]
+    },
+    {
+      "time": "18:18",
+      "type": "confirmed",
+      "description": "Lab camera shows prototype missing",
+      "exhibits": ["V05"]
+    }
+  ],
+  "assumptions": [
+    "Service camera timestamp is 5 minutes ahead of actual time per D03_messages",
+    "All other cameras are synchronized to system time"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "evidence": [
+    {
+      "id": "V01",
+      "type": "schematic",
+      "description": "Floor plan showing Lab, East Corridor, East Exit, Service Corridor (unmonitored link to Lab), Cafeteria",
+      "key_findings": ["Service corridor provides unmonitored access to Lab", "East corridor connects to East exit via teal line", "Orange vertical line marks service corridor entrance"],
+      "limitations": "Synthetic schematic, not photograph; no scale or dimensions"
+    },
+    {
+      "id": "V02",
+      "type": "camera_feed",
+      "description": "Lab camera at 18:00 showing prototype on brown surface",
+      "key_findings": ["Prototype present and visible at 18:00", "Object has triangular marker"],
+      "limitations": "Single timestamp; no identification of personnel in frame"
+    },
+    {
+      "id": "V03",
+      "type": "camera_feed",
+      "description": "East Corridor camera at 18:10 showing teal-coated figure",
+      "key_findings": ["Nora Vale (teal coat) present in East Corridor at 18:10", "Consistent with D01_access.csv entry at 18:10"],
+      "limitations": "Coat color may not match actual appearance per D03_messages"
+    },
+    {
+      "id": "V04",
+      "type": "camera_feed",
+      "description": "Service Door camera at 18:14 showing two grey-coated figures",
+      "key_findings": ["Two people entered Service Door at 18:14", "Coats appear grey in schematic (not matching expected colors)"],
+      "limitations": "Critical: Camera blind spot per V10; coat colors unreliable for identification"
+    },
+    {
+      "id": "V05",
+      "type": "camera_feed",
+      "description": "Lab camera at 18:18 showing empty surface where prototype was",
+      "key_findings": ["Prototype missing by 18:18", "Only brown surface remains"],
+      "limitations": "No identification of who removed it"
+    },
+    {
+      "id": "V06",
+      "type": "camera_feed",
+      "description": "Cafeteria camera at 18:12 showing blue-coated figure",
+      "key_findings": ["Theo Park (blue coat) in Cafeteria at 18:12", "Consistent with D01_access.csv entry at 18:12"],
+      "limitations": "Coat color may not match actual appearance"
+    },
+    {
+      "id": "V07",
+      "type": "camera_feed",
+      "description": "Reception camera at 18:13 showing red-coated figure",
+      "key_findings": ["Ada Finch (red coat) at Reception at 18:13", "Consistent with D01_access.csv entry at 18:13"],
+      "limitations": "Coat color may not match actual appearance"
+    },
+    {
+      "id": "V08",
+      "type": "camera_feed",
+      "description": "Loading Bay camera at 18:11 showing purple-coated figure with cardboard box",
+      "key_findings": ["Maya Reed (purple coat) in Loading Bay at 18:11 with cardboard box",
+      "Consistent with D02_witnesses.md statement about carrying box at 18:11", "Consistent with D03_messages.md request to move box"],
+      "limitations": "Coat color may not match actual appearance"
+    },
+    {
+      "id": "V09",
+      "type": "camera_reference",
+      "description": "Object detail showing prototype with triangular marker",
+      "key_findings": ["Prototype has distinctive triangular marker", "Can be identified across camera feeds"],
+      "limitations": "Reference image only; no additional context"
+    },
+    {
+      "id": "V10",
+      "type": "camera_reference",
+      "description": "Service Camera showing blind spot for Service Corridor",
+      "key_findings": ["Service corridor is camera blind spot per V10 and D03_messages.md", "Explains why V04 shows grey coats instead of actual colors"],
+      "limitations": "Confirms lack of visual surveillance in critical area"
+    },
+    {
+      "id": "D01_access.csv",
+      "type": "document",
+      "description": "Access log showing entry times and doors",
+      "key_findings": ["Nora Vale entered East Corridor at 18:10",
+      "Theo Park entered Cafeteria at 18:12",
+      "Ada Finch entered Reception at 18:13",
+      "Eli Stone and Maya Reed both entered via Service Door at 18:14"],
+      "limitations": "Logs badge credentials, not biometric identity per D03_messages.md"
+    },
+    {
+      "id": "D02_witnesses.md",
+      "type": "document",
+      "description": "Unverified witness statements",
+      "key_findings": ["Nora: Only visited east corridor and left - consistent with V03",
+      "Eli: Did not approach lab after 18:00 - contradicts Service Door entry at 18:14",
+      "Maya: Carried cardboard box at 18:11 - consistent with V08",
+      "Theo: Remained in cafeteria from 18:12 - consistent with V06",
+      "Ada: Staffed reception - consistent with V07"],
+      "limitations": "Statements are unverified; Eli's statement contradicts access log"
+    },
+    {
+      "id": "D03_messages.md",
+      "type": "document",
+      "description": "Internal messages and security notes",
+      "key_findings": ["Eli requested prototype at 17:00 - establishes motive",
+      "Maya requested box move at 17:10 - explains V08 activity",
+      "Security note: Coat descriptions unreliable; Service corridor is blind spot"],
+      "limitations": "Messages may not be complete or accurate"
+    }
+  ],
+  "cross_evidence_findings": [
+    {
+      "finding": "Eli Stone's alibi contradicted",
+      "evidence": ["D01_access.csv shows Eli entered Service Door at 18:14", "D02_witnesses.md states Eli did not approach lab after 18:00"],
+      "significance": "Eli's statement is false; he was present at critical time"
+    },
+    {
+      "finding": "Maya Reed's movements consistent",
+      "evidence": ["D01_access.csv shows Maya entered Service Door at 18:14", "V08 shows her in Loading Bay at 18:11 with box", "D02_witnesses.md confirms she carried box at 18:11"],
+      "significance": "Maya's timeline is consistent; likely not responsible"
+    },
+    {
+      "finding": "Service Door entry enables Lab access",
+      "evidence": ["V01 shows Service Corridor has unmonitored link to Lab", "V04 shows two people at Service Door at 18:14", "V05 shows prototype missing by 18:18"],
+      "significance": "Service Door provides means for prototype removal"
+    },
+    {
+      "finding": "Coat colors unreliable for identification",
+      "evidence": ["D03_messages.md states coat descriptions are from shift assignments", "V04 shows grey coats at Service Door despite D01 showing Eli and Maya entered"],
+      "significance": "Cannot identify who actually entered Lab via Service Door"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "case_id": "CASE_02",
+  "responsible_person": null,
+  "confidence": 0.15,
+  "conclusion": "The prototype was removed from the LAB between 18:00 and 18:14. A person wearing an orange work coat (consistent with Eli Stone's shift assignment) was observed with the prototype at SERVICE DOOR at corrected time 18:14 (V04). However, due to identity limitations (coat colors from shift assignments, not biometric ID; badge records log credentials), definitive attribution is not possible. Alternative explanations include coat swapping or credential sharing.",
+  "exhibits": [
+    "V02",
+    "V04",
+    "V05",
+    "V10",
+    "D03"
+  ]
+}

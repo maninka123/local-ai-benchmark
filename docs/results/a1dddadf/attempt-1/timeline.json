@@ -1,0 +1,15 @@
+{
+  "timeline": [
+    {"time":"18:10","event":"Nora Vale entered EAST_CORRIDOR","source":"D01"},
+    {"time":"18:12","event":"Theo Park entered CAFETERIA","source":"D01"},
+    {"time":"18:13","event":"Ada Finch entered RECEPTION","source":"D01"},
+    {"time":"18:14","event":"Eli Stone entered SERVICE_DOOR","source":"D01"},
+    {"time":"18:14","event":"Maya Reed entered SERVICE_DOOR","source":"D01"},
+    {"time":"18:18","event":"Prototype missing reported","source":"D01 (implied)"}
+  ],
+  "confirmed_events": ["18:10","18:12","18:13","18:14"],
+  "probable_events": ["18:14-18:18 exit from SERVICE_DOOR"],
+  "contradictions": ["Witness statements conflict with access log"],
+  "missing_intervals": ["18:14-18:18"],
+  "unexplained_movements": ["No exit log for SERVICE_DOOR"]
+}

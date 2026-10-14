@@ -1,0 +1,40 @@
+{
+  "evidence_analysis": [
+    {
+      "exhibit_id": "V04",
+      "description": "Service Door camera at 18:14 shows two figures in grey coats.",
+      "analysis": "Critical discrepancy. D01 identifies entrants as Eli Stone (Orange) and Maya Reed (Purple). The grey coats suggest either coat swapping, impersonation, or a visual representation error. However, the timing aligns perfectly with the theft window.",
+      "reliability": "Medium - Visual evidence contradicts known color assignments."
+    },
+    {
+      "exhibit_id": "D01",
+      "description": "Access log shows Eli Stone and Maya Reed entering Service Door at 18:14.",
+      "analysis": "Strong evidence of opportunity. Both individuals had badge access to the unmonitored service corridor leading to the lab. The simultaneous entry suggests a coordinated effort or close proximity.",
+      "reliability": "High - System logs are generally reliable for access events."
+    },
+    {
+      "exhibit_id": "D03",
+      "description": "Eli Stone messages about needing the prototype tomorrow.",
+      "analysis": "Establishes clear motive for Eli Stone. No similar motive is documented for Maya Reed, though she was moving supplies which could be a cover.",
+      "reliability": "High - Direct communication evidence."
+    },
+    {
+      "exhibit_id": "V02",
+      "description": "Lab camera at 18:00 shows prototype present.",
+      "analysis": "Establishes the baseline state of the object before the incident window.",
+      "reliability": "High"
+    },
+    {
+      "exhibit_id": "V05",
+      "description": "Lab camera at 18:18 shows prototype missing.",
+      "analysis": "Confirms the loss occurred between 18:00 and 18:18. The 4-minute gap after the service door entry allows time for retrieval and exit.",
+      "reliability": "High"
+    },
+    {
+      "exhibit_id": "V08",
+      "description": "Loading Bay camera at 18:11 shows Maya Reed (Purple) with a box.",
+      "analysis": "Maya was in the loading bay before entering the service door. This could be consistent with her statement about moving supplies, or it could be a cover for transporting the prototype if she moved it to the loading bay first (though V08 shows a cardboard box, not the prototype).",
+      "reliability": "Medium - Does not rule out Maya, but doesn't directly implicate her in the theft."
+    }
+  ]
+}

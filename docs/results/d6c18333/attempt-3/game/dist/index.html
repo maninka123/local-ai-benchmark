@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Turbo Racer 3D</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva 'Arial', sans-serif; background: #000; }
+        #ui, #menu, #results {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            pointer-events: none;
+        }
+        #ui { pointer-events: none; display: none; align-items: flex-start; padding: 20px; }
+        #hud-top { width: 100%; display: flex; justify-content: space-between; box-sizing: border-box; }
+        .hud-item { background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 5px; font-size: 24px; }
+        #menu { pointer-events: auto; background: rgba(0,0,0,0.7); }
+        #results { pointer-events: auto; background: rgba(0,0,0,0.8); display: none; }
+        h1 { font-size: 64px; margin-bottom: 20px; color: #ffcc00; }
+        .car-selection { display: flex; gap: 20px; margin-bottom: 30px; }
+        .car-btn {
+            padding: 20px 40px; font-size: 24px; cursor: pointer;
+            border: none; border-radius: 10px; transition: transform 0.2s;
+            color: white; font-weight: bold;
+        }
+        .car-btn:hover { transform: scale(1.1); }
+        .start-btn { padding: 15px 30px; font-size: 24px; cursor: pointer; background: #228B22; color: white; border: none; border-radius: 5px; }
+        .results-list { list-style: none; padding: 0; font-size: 24px; text-align: left; }
+        .results-list li { margin: 10px 0; }
+        .controls-hint { margin-top: 30px; font-size: 16px; color: #aaa; }
+    </style>
+  <script type="module" crossorigin src="./assets/index-B5Qt9EMX.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="ui">
+            <div id="hud-top">
+                <div class="hud-item" id="speed">0 KM/H</div>
+                <div class="hud-item" id="lap">Lap: 1/3</div>
+                <div class="hud-item" id="timer">0.00s</div>
+            </div>
+        </div>
+
+        <div id="menu">
+            <h1>TURBO RACER 3D</h1>
+            <p>Select Your Vehicle</p>
+            <div class="car-selection" id="car-selection"></div>
+            <div class="controls-hint">
+                WASD / Arrows: Drive | C: Camera | P: Pause | R: Restart
+            </div>
+        </div>
+
+        <div id="results">
+            <h1>RACE FINISHED</h1>
+            <ul class="results-list" id="results-list"></ul>
+            <button class="start-btn" onclick="location.reload()">Race Again</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arcade Racing Game</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { overflow: hidden; background: #000; font-family: 'Segoe UI', Arial, sans-serif; }
+canvas { display: block; }
+#ui-layer {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 10;
+}
+#ui-layer > * { pointer-events: auto; }
+
+/* Main Menu */
+#main-menu {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #0a0a2e 0%, #1a1a4e 50%, #0a0a2e 100%);
+  z-index: 100;
+}
+#main-menu h1 {
+  font-size: 72px; color: #ff4444; text-shadow: 0 0 30px #ff0000, 0 0 60px #ff000088;
+  margin-bottom: 10px; letter-spacing: 8px;
+}
+#main-menu .subtitle {
+  font-size: 24px; color: #aaa; margin-bottom: 50px;
+}
+.menu-btn {
+  padding: 16px 60px; font-size: 22px; border: 2px solid #ff4444;
+  background: transparent; color: #fff; cursor: pointer;
+  margin: 8px; transition: all 0.3s; letter-spacing: 2px;
+}
+.menu-btn:hover { background: #ff4444; color: #fff; }
+
+/* Car Selection */
+#car-select {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  display: none; flex-direction: column; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #0a0a2e 0%, #1a1a4e 50%, #0a0a2e 100%);
+  z-index: 100;
+}
+#car-select h2 { font-size: 48px; color: #ff4444; margin-bottom: 30px; }
+.car-options {
+  display: flex; gap: 30px; margin-bottom: 30px;
+}
+.car-card {
+  width: 220px; padding: 20px; border: 2px solid #444;
+  background: rgba(255,255,255,0.05); cursor: pointer;
+  transition: all 0.3s; text-align: center;
+}
+.car-card:hover { border-color: #ff4444; transform: scale(1.05); }
+.car-card.selected { border-color: #ff4444; background: rgba(255,68,68,0.15); }
+.car-card .car-name { font-size: 20px; color: #fff; margin-bottom: 10px; }
+.car-card .car-stats { text-align: left; }
+.stat-row { display: flex; justify-content: space-between; margin: 4px 0; font-size: 13px; color: #ccc; }
+.stat-bar { height: 6px; background: #333; border-radius: 3px; overflow: hidden; margin-top: 2px; }
+.stat-fill { height: 100%; border-radius: 3px; }
+
+/* HUD */
+#hud {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  display: none;
+}
+#speed-display {
+  position: absolute; bottom: 30px; right: 30px;
+  text-align: right;
+}
+#speed-value { font-size: 64px; color: #fff; font-weight: bold; }
+#speed-unit { font-size: 18px; color: #aaa; }
+#lap-display {
+  position: absolute; top: 30px; left: 50%; transform: translateX(-50%);
+  text-align: center;
+}
+#lap-text { font-size: 24px; color: #fff; }
+#timer-display { font-size: 36px; color: #ffcc00; margin-top: 5px; }
+#position-display {
+  position: absolute; top: 30px; right: 30px;
+  font-size: 48px; color: #fff; font-weight: bold;
+}
+#camera-indicator {
+  position: absolute; top: 30px; left: 30px;
+  font-size: 16px; color: #aaa;
+}
+#minimap {
+  position: absolute; bottom: 30px; left: 30px;
+  width: 180px; height: 180px; border: 2px solid #555;
+  background: rgba(0,0,0,0.7); border-radius: 10px;
+}
+#countdown {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-size: 120px; color: #ff4444; font-weight: bold;
+  text-shadow: 0 0 40px #ff0000;
+}
+#pause-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.7);
+}
+#pause-overlay h2 { font-size: 60px; color: #fff; }
+
+/* Results */
+#results-screen {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  display: none; flex-direction: column; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #0a0a2e 0%, #1a1a4e 50%, #0a0a2e 100%);
+  z-index: 100;
+}
+#results-screen h2 { font-size: 60px; color: #ffcc00; margin-bottom: 30px; }
+.results-table { width: 500px; }
+.result-row {
+  display: flex; justify-content: space-between; padding: 12px 20px;
+  border-bottom: 1px solid #333; font-size: 20px; color: #fff;
+}
+.result-row:first-child { background: rgba(255,204,0,0.2); }
+
+/* Controls */
+#controls-info {
+  position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+  font-size: 13px; color: #666; text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<div id="ui-layer">
+  <!-- Main Menu -->
+  <div id="main-menu">
+    <h1>ARCADE RACING</h1>
+    <div class="subtitle">High Speed Championship</div>
+    <button class="menu-btn" onclick="showCarSelect()">START RACE</button>
+    <button class="menu-btn" onclick="showControls()">CONTROLS</button>
+  </div>
+
+  <!-- Car Selection -->
+  <div id="car-select">
+    <h2>SELECT YOUR CAR</h2>
+    <div class="car-options" id="car-options"></div>
+    <button class="menu-btn" onclick="startRace()">START RACE</button>
+    <button class="menu-btn" onclick="showMainMenu()">BACK</button>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div id="camera-indicator">CAM: Chase</div>
+    <div id="lap-display">
+      <div id="lap-text">LAP 1 / 3</div>
+      <div id="timer-display">0:00.000</div>
+    </div>
+    <div id="position-display">1st</div>
+    <div id="speed-display">
+      <div id="speed-value">0</div>
+      <div id="speed-unit">KM/H</div>
+    </div>
+    <canvas id="minimap"></canvas>
+    <div id="countdown"></div>
+    <div id="pause-overlay"><h2>PAUSED</h2></div>
+  </div>
+
+  <!-- Results -->
+  <div id="results-screen">
+    <h2>RACE RESULTS</h2>
+    <div class="results-table" id="results-table"></div>
+    <button class="menu-btn" onclick="showMainMenu()">MAIN MENU</button>
+    <button class="menu-btn" onclick="restartRace()">RACE AGAIN</button>
+  </div>
+
+  <!-- Controls -->
+  <div id="controls-overlay" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:200;align-items:center;justify-content:center;flex-direction:column;">
+    <h2 style="color:#ff4444;font-size:48px;margin-bottom:30px;">CONTROLS</h2>
+    <div style="color:#fff;font-size:20px;line-height:2;text-align:center;">
+      <p><b>W / Up Arrow</b> - Accelerate</p>
+      <p><b>S / Down Arrow</b> - Brake / Reverse</p>
+      <p><b>A / Left Arrow</b> - Steer Left</p>
+      <p><b>D / Right Arrow</b> - Steer Right</p>
+      <p><b>C</b> - Change Camera</p>
+      <p><b>P / Escape</b> - Pause / Resume</p>
+      <p><b>R</b> - Restart Race</p>
+    </div>
+    <button class="menu-btn" onclick="hideControls()" style="margin-top:30px;">BACK</button>
+  </div>
+
+  <div id="controls-info">WASD: Drive | C: Camera | P: Pause | R: Restart</div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

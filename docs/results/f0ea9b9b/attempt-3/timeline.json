@@ -1,0 +1,96 @@
+{
+  "events": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone message: My project needs that prototype tomorrow",
+      "source": "D03_messages.md",
+      "type": "confirmed"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed message: Please move the cardboard consumables box to the loading bay",
+      "source": "D03_messages.md",
+      "type": "confirmed"
+    },
+    {
+      "time": "17:20",
+      "event": "Security note: Coat descriptions unreliable; Service corridor is blind spot",
+      "source": "D03_messages.md",
+      "type": "confirmed"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype visible in Lab on camera",
+      "source": "V02",
+      "type": "confirmed"
+    },
+    {
+      "time": "18:10",
+      "event": "Nora Vale (teal coat) in East Corridor",
+      "source": [
+        "V03",
+        "D01_access.csv"
+      ],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:11",
+      "event": "Maya Reed (purple coat) with cardboard box in Loading Bay",
+      "source": [
+        "V08",
+        "D02_witnesses.md"
+      ],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park (blue coat) in Cafeteria",
+      "source": [
+        "V06",
+        "D01_access.csv"
+      ],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch (red coat) at Reception",
+      "source": [
+        "V07",
+        "D01_access.csv"
+      ],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:14",
+      "event": "Two figures enter through Service Door",
+      "source": [
+        "V04",
+        "D01_access.csv"
+      ],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype missing from Lab",
+      "source": "V05",
+      "type": "confirmed"
+    }
+  ],
+  "missing_intervals": [
+    {
+      "start": "18:14",
+      "end": "18:18",
+      "description": "Critical window for prototype removal with no camera coverage of service corridor",
+      "source": [
+        "V04",
+        "V05",
+        "V10"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Access log entries represent actual door usage",
+    "Visual exhibits capture representative moments, not continuous surveillance",
+    "Coat colors in visual exhibits may not match shift assignment descriptions"
+  ]
+}

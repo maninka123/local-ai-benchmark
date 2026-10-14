@@ -1,0 +1,5 @@
+time,name,door,direction
+18:10,Nora Vale,EAST_CORRIDOR,ENTRY
+18:12,Theo Park,CAFETERIA,ENTRY
+18:13,Ada Finch,RECEPTION,ENTRY
+18:14,Nora Vale,EAST_EXIT,EXIT

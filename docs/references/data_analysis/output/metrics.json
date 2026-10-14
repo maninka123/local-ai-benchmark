@@ -1,0 +1,1151 @@
+{
+  "totals": {
+    "transactions": 24963,
+    "customers": 1200,
+    "revenue": 17355447.830000002,
+    "cost": 12307512.0,
+    "gross_profit": 5047935.83,
+    "margin": 0.29085598248143846,
+    "units": 114758,
+    "on_time_rate": 0.7634899651484197
+  },
+  "cleaning": {
+    "raw_rows": 25000,
+    "raw_revenue": 19351814.96,
+    "duplicate_copies": 20,
+    "duplicate_revenue": 14718.41,
+    "dedup_revenue": 19337096.55,
+    "invalid_quantity_rows": 12,
+    "invalid_quantity_revenue": -3301.2799999999997,
+    "extreme_price_rows": 5,
+    "extreme_price_revenue": 1984950.0,
+    "min_extreme_price_to_list": 512.8205128205128,
+    "max_extreme_price_to_list": 1500.0,
+    "missing_cost_rows": 30,
+    "imputed_cost": 17438.0,
+    "imputed_rows_revenue": 24128.83,
+    "known_cost_margin": 0.2908748607073703,
+    "revenue_formula_max_error": 0.005000000000109139,
+    "home_region_disagreements": 0
+  },
+  "year_over_year": {
+    "revenue_change": -0.018631279753720476,
+    "profit_change": -0.016806828962630416,
+    "transactions_change": -0.012499999999999956,
+    "units_change": -0.01463617175876264,
+    "without_large_orders_revenue_change": -0.02066103470971936
+  },
+  "seasonal": {
+    "2024": {
+      "december_revenue": 1238795.61,
+      "jan_nov_mean_revenue": 683684.2727272727,
+      "december_transactions": 1784,
+      "jan_nov_mean_transactions": 979.6363636363636,
+      "december_uplift": 0.8119410660981605
+    },
+    "2025": {
+      "december_revenue": 1290220.47,
+      "jan_nov_mean_revenue": 664173.1590909092,
+      "december_transactions": 1805,
+      "jan_nov_mean_transactions": 963.4545454545455,
+      "december_uplift": 0.9425965237228144
+    }
+  },
+  "premium_pair": {
+    "transactions": 2442,
+    "revenue": 3476822.05,
+    "gross_profit": -6027.949999999993,
+    "margin": -0.0017337528102710905,
+    "revenue_share": 0.20033029882352504,
+    "loss_making_transactions": 1519,
+    "all_loss_making_transactions": 1519,
+    "catalog_break_even_discount": 0.0461538461538461
+  },
+  "region_pricing": {
+    "north_mean_price_to_list": 1.1199991532117355,
+    "other_mean_price_to_list": 1.0,
+    "north_discount": 0.07389038066656137,
+    "other_discount": 0.07498389866895663,
+    "north_margin_without_12pct_price_premium_scenario": 0.2628487721399038
+  },
+  "supplier": {
+    "common_service_weights": {
+      "express": 0.5015823418659616,
+      "standard": 0.4984176581340384
+    },
+    "standardized_on_time_rates": {
+      "A": 0.7950096101960995,
+      "B": 0.7191090820564212
+    },
+    "express_shares": {
+      "A": 0.8540362702615952,
+      "B": 0.15022798176145907
+    }
+  },
+  "delivery": {
+    "2025_half_year": [
+      {
+        "period": "Before July 2025",
+        "transactions": 5721,
+        "revenue": 3925925.36,
+        "cost": 2787678.0,
+        "gross_profit": 1138247.36,
+        "units": 25892,
+        "on_time_count": 4335,
+        "mean_delivery_days": 3.7465932529,
+        "margin": 0.2899309731,
+        "on_time_rate": 0.7577346618
+      },
+      {
+        "period": "July–December 2025",
+        "transactions": 6682,
+        "revenue": 4670199.86,
+        "cost": 3305869.0,
+        "gross_profit": 1364330.86,
+        "units": 31064,
+        "on_time_count": 5109,
+        "mean_delivery_days": 2.5121071535,
+        "margin": 0.2921354334,
+        "on_time_rate": 0.7645914397
+      }
+    ],
+    "pre_post_mean_difference": -1.1823193001482504,
+    "pre_post_on_time_difference": 0.0015040812291130523
+  },
+  "customer": {
+    "top10_revenue_share": 0.02923292357360046,
+    "top120_revenue_share": 0.17081777831600903,
+    "largest_customer": "C0620",
+    "largest_customer_share": 0.004495847687959084,
+    "negative_profit_customers": 1
+  },
+  "large_orders": {
+    "rows": 10,
+    "revenue": 345980.4,
+    "revenue_share": 0.019934973928010705,
+    "gross_profit": 69780.4
+  },
+  "inventory": {
+    "product_months": 480,
+    "stockout_count": 1590,
+    "positive_stockout_months": 408,
+    "units_stockouts_pearson": -0.010739726584707067,
+    "stock_stockouts_pearson": -0.022825251298661982
+  },
+  "advertising": {
+    "transaction_ad_revenue_pearson": -0.0066462303325366635
+  },
+  "groups": {
+    "annual": [
+      {
+        "year": "2024",
+        "transactions": 12560,
+        "revenue": 8759322.61,
+        "cost": 6213965.0,
+        "gross_profit": 2545357.61,
+        "units": 57802,
+        "on_time_count": 9615,
+        "mean_delivery_days": 3.6706648089,
+        "margin": 0.2905884077,
+        "on_time_rate": 0.7655254777
+      },
+      {
+        "year": "2025",
+        "transactions": 12403,
+        "revenue": 8596125.22,
+        "cost": 6093547.0,
+        "gross_profit": 2502578.22,
+        "units": 56956,
+        "on_time_count": 9444,
+        "mean_delivery_days": 3.0815254374,
+        "margin": 0.2911286371,
+        "on_time_rate": 0.7614286866
+      }
+    ],
+    "monthly": [
+      {
+        "month": "2024-01",
+        "transactions": 982,
+        "revenue": 686477.31,
+        "cost": 481592.0,
+        "gross_profit": 204885.31,
+        "units": 4509,
+        "on_time_count": 745,
+        "mean_delivery_days": 3.7763034623,
+        "margin": 0.2984589687,
+        "on_time_rate": 0.7586558045
+      },
+      {
+        "month": "2024-02",
+        "transactions": 985,
+        "revenue": 633479.15,
+        "cost": 449994.0,
+        "gross_profit": 183485.15,
+        "units": 4342,
+        "on_time_count": 746,
+        "mean_delivery_days": 3.5984162437,
+        "margin": 0.2896467074,
+        "on_time_rate": 0.7573604061
+      },
+      {
+        "month": "2024-03",
+        "transactions": 1007,
+        "revenue": 716033.57,
+        "cost": 500776.0,
+        "gross_profit": 215257.57,
+        "units": 4808,
+        "on_time_count": 781,
+        "mean_delivery_days": 3.5696921549,
+        "margin": 0.3006249693,
+        "on_time_rate": 0.775571003
+      },
+      {
+        "month": "2024-04",
+        "transactions": 984,
+        "revenue": 678711.91,
+        "cost": 483940.0,
+        "gross_profit": 194771.91,
+        "units": 4483,
+        "on_time_count": 763,
+        "mean_delivery_days": 3.6614227642,
+        "margin": 0.2869728778,
+        "on_time_rate": 0.7754065041
+      },
+      {
+        "month": "2024-05",
+        "transactions": 968,
+        "revenue": 741341.79,
+        "cost": 532750.0,
+        "gross_profit": 208591.79,
+        "units": 4858,
+        "on_time_count": 737,
+        "mean_delivery_days": 3.7056095041,
+        "margin": 0.2813706077,
+        "on_time_rate": 0.7613636364
+      },
+      {
+        "month": "2024-06",
+        "transactions": 960,
+        "revenue": 661180.37,
+        "cost": 477110.0,
+        "gross_profit": 184070.37,
+        "units": 4303,
+        "on_time_count": 738,
+        "mean_delivery_days": 3.6918020833,
+        "margin": 0.2783966045,
+        "on_time_rate": 0.76875
+      },
+      {
+        "month": "2024-07",
+        "transactions": 991,
+        "revenue": 679956.8,
+        "cost": 477388.0,
+        "gross_profit": 202568.8,
+        "units": 4599,
+        "on_time_count": 759,
+        "mean_delivery_days": 3.6378405651,
+        "margin": 0.2979142204,
+        "on_time_rate": 0.7658930373
+      },
+      {
+        "month": "2024-08",
+        "transactions": 949,
+        "revenue": 650741.54,
+        "cost": 461445.0,
+        "gross_profit": 189296.54,
+        "units": 4240,
+        "on_time_count": 708,
+        "mean_delivery_days": 3.7872286617,
+        "margin": 0.2908935858,
+        "on_time_rate": 0.7460484721
+      },
+      {
+        "month": "2024-09",
+        "transactions": 985,
+        "revenue": 688307.84,
+        "cost": 485599.0,
+        "gross_profit": 202708.84,
+        "units": 4595,
+        "on_time_count": 752,
+        "mean_delivery_days": 3.6962030457,
+        "margin": 0.2945031688,
+        "on_time_rate": 0.7634517766
+      },
+      {
+        "month": "2024-10",
+        "transactions": 972,
+        "revenue": 687937.07,
+        "cost": 490382.0,
+        "gross_profit": 197555.07,
+        "units": 4500,
+        "on_time_count": 754,
+        "mean_delivery_days": 3.6144753086,
+        "margin": 0.287170264,
+        "on_time_rate": 0.7757201646
+      },
+      {
+        "month": "2024-11",
+        "transactions": 993,
+        "revenue": 696359.65,
+        "cost": 501135.0,
+        "gross_profit": 195224.65,
+        "units": 4459,
+        "on_time_count": 768,
+        "mean_delivery_days": 3.6095266868,
+        "margin": 0.280350319,
+        "on_time_rate": 0.7734138973
+      },
+      {
+        "month": "2024-12",
+        "transactions": 1784,
+        "revenue": 1238795.61,
+        "cost": 871854.0,
+        "gross_profit": 366941.61,
+        "units": 8106,
+        "on_time_count": 1364,
+        "mean_delivery_days": 3.6909360987,
+        "margin": 0.2962083551,
+        "on_time_rate": 0.764573991
+      },
+      {
+        "month": "2025-01",
+        "transactions": 963,
+        "revenue": 667122.13,
+        "cost": 466954.0,
+        "gross_profit": 200168.13,
+        "units": 4508,
+        "on_time_count": 720,
+        "mean_delivery_days": 3.7754620976,
+        "margin": 0.3000472043,
+        "on_time_rate": 0.7476635514
+      },
+      {
+        "month": "2025-02",
+        "transactions": 862,
+        "revenue": 619648.91,
+        "cost": 440679.0,
+        "gross_profit": 178969.91,
+        "units": 3948,
+        "on_time_count": 654,
+        "mean_delivery_days": 3.7755220418,
+        "margin": 0.2888246991,
+        "on_time_rate": 0.7587006961
+      },
+      {
+        "month": "2025-03",
+        "transactions": 1017,
+        "revenue": 685863.43,
+        "cost": 481903.0,
+        "gross_profit": 203960.43,
+        "units": 4651,
+        "on_time_count": 777,
+        "mean_delivery_days": 3.7467453294,
+        "margin": 0.2973776135,
+        "on_time_rate": 0.7640117994
+      },
+      {
+        "month": "2025-04",
+        "transactions": 943,
+        "revenue": 644471.06,
+        "cost": 458061.0,
+        "gross_profit": 186410.06,
+        "units": 4256,
+        "on_time_count": 738,
+        "mean_delivery_days": 3.604369035,
+        "margin": 0.2892450438,
+        "on_time_rate": 0.7826086957
+      },
+      {
+        "month": "2025-05",
+        "transactions": 924,
+        "revenue": 619970.62,
+        "cost": 443062.0,
+        "gross_profit": 176908.62,
+        "units": 4043,
+        "on_time_count": 675,
+        "mean_delivery_days": 3.8785064935,
+        "margin": 0.2853500058,
+        "on_time_rate": 0.7305194805
+      },
+      {
+        "month": "2025-06",
+        "transactions": 1012,
+        "revenue": 688849.21,
+        "cost": 497019.0,
+        "gross_profit": 191830.21,
+        "units": 4486,
+        "on_time_count": 771,
+        "mean_delivery_days": 3.7064130435,
+        "margin": 0.278479248,
+        "on_time_rate": 0.7618577075
+      },
+      {
+        "month": "2025-07",
+        "transactions": 953,
+        "revenue": 735201.06,
+        "cost": 515042.0,
+        "gross_profit": 220159.06,
+        "units": 4860,
+        "on_time_count": 731,
+        "mean_delivery_days": 2.5042287513,
+        "margin": 0.29945422,
+        "on_time_rate": 0.7670514166
+      },
+      {
+        "month": "2025-08",
+        "transactions": 1012,
+        "revenue": 705950.29,
+        "cost": 493452.0,
+        "gross_profit": 212498.29,
+        "units": 4785,
+        "on_time_count": 789,
+        "mean_delivery_days": 2.4472332016,
+        "margin": 0.3010102737,
+        "on_time_rate": 0.7796442688
+      },
+      {
+        "month": "2025-09",
+        "transactions": 964,
+        "revenue": 654345.61,
+        "cost": 457560.0,
+        "gross_profit": 196785.61,
+        "units": 4374,
+        "on_time_count": 736,
+        "mean_delivery_days": 2.5353319502,
+        "margin": 0.3007365022,
+        "on_time_rate": 0.7634854772
+      },
+      {
+        "month": "2025-10",
+        "transactions": 1041,
+        "revenue": 689182.76,
+        "cost": 484529.0,
+        "gross_profit": 204653.76,
+        "units": 4646,
+        "on_time_count": 813,
+        "mean_delivery_days": 2.4593563881,
+        "margin": 0.2969513631,
+        "on_time_rate": 0.7809798271
+      },
+      {
+        "month": "2025-11",
+        "transactions": 907,
+        "revenue": 595299.67,
+        "cost": 418692.0,
+        "gross_profit": 176607.67,
+        "units": 4047,
+        "on_time_count": 654,
+        "mean_delivery_days": 2.6830319735,
+        "margin": 0.2966701964,
+        "on_time_rate": 0.7210584344
+      },
+      {
+        "month": "2025-12",
+        "transactions": 1805,
+        "revenue": 1290220.47,
+        "cost": 936594.0,
+        "gross_profit": 353626.47,
+        "units": 8352,
+        "on_time_count": 1386,
+        "mean_delivery_days": 2.4847700831,
+        "margin": 0.274082204,
+        "on_time_rate": 0.767867036
+      }
+    ],
+    "category": [
+      {
+        "category": "Accessories",
+        "transactions": 6171,
+        "revenue": 5889764.59,
+        "cost": 3745456.0,
+        "gross_profit": 2144308.59,
+        "units": 28605,
+        "on_time_count": 4683,
+        "mean_delivery_days": 3.4006562956,
+        "margin": 0.3640737346,
+        "on_time_rate": 0.7588721439
+      },
+      {
+        "category": "Consumables",
+        "transactions": 6161,
+        "revenue": 4275740.49,
+        "cost": 2718008.0,
+        "gross_profit": 1557732.49,
+        "units": 28277,
+        "on_time_count": 4746,
+        "mean_delivery_days": 3.3291770816,
+        "margin": 0.3643187639,
+        "on_time_rate": 0.770329492
+      },
+      {
+        "category": "Hardware",
+        "transactions": 6379,
+        "revenue": 2806264.55,
+        "cost": 1783441.0,
+        "gross_profit": 1022823.55,
+        "units": 29126,
+        "on_time_count": 4866,
+        "mean_delivery_days": 3.3823498981,
+        "margin": 0.3644786626,
+        "on_time_rate": 0.7628154883
+      },
+      {
+        "category": "Premium",
+        "transactions": 6252,
+        "revenue": 4383678.2,
+        "cost": 4060607.0,
+        "gross_profit": 323071.2,
+        "units": 28750,
+        "on_time_count": 4764,
+        "mean_delivery_days": 3.3991026871,
+        "margin": 0.0736986579,
+        "on_time_rate": 0.7619961612
+      }
+    ],
+    "product": [
+      {
+        "product_id": "P00",
+        "transactions": 1215,
+        "revenue": 1680219.45,
+        "cost": 1674930.0,
+        "gross_profit": 5289.45,
+        "units": 5403,
+        "on_time_count": 919,
+        "mean_delivery_days": 3.4497695473,
+        "margin": 0.0031480709,
+        "on_time_rate": 0.7563786008
+      },
+      {
+        "product_id": "P01",
+        "transactions": 1227,
+        "revenue": 1796602.6,
+        "cost": 1807920.0,
+        "gross_profit": -11317.4,
+        "units": 5832,
+        "on_time_count": 923,
+        "mean_delivery_days": 3.4618500407,
+        "margin": -0.0062993341,
+        "on_time_rate": 0.7522412388
+      },
+      {
+        "product_id": "P02",
+        "transactions": 1242,
+        "revenue": 236974.09,
+        "cost": 150540.0,
+        "gross_profit": 86434.09,
+        "units": 5790,
+        "on_time_count": 958,
+        "mean_delivery_days": 3.330668277,
+        "margin": 0.3647406769,
+        "on_time_rate": 0.7713365539
+      },
+      {
+        "product_id": "P03",
+        "transactions": 1290,
+        "revenue": 308933.34,
+        "cost": 196977.0,
+        "gross_profit": 111956.34,
+        "units": 5969,
+        "on_time_count": 965,
+        "mean_delivery_days": 3.4667131783,
+        "margin": 0.3623964315,
+        "on_time_rate": 0.7480620155
+      },
+      {
+        "product_id": "P04",
+        "transactions": 1278,
+        "revenue": 360948.72,
+        "cost": 230240.0,
+        "gross_profit": 130708.72,
+        "units": 5756,
+        "on_time_count": 999,
+        "mean_delivery_days": 3.2889514867,
+        "margin": 0.3621254565,
+        "on_time_rate": 0.7816901408
+      },
+      {
+        "product_id": "P05",
+        "transactions": 1272,
+        "revenue": 418954.36,
+        "cost": 267054.0,
+        "gross_profit": 151900.36,
+        "units": 5682,
+        "on_time_count": 960,
+        "mean_delivery_days": 3.4151493711,
+        "margin": 0.3625701854,
+        "on_time_rate": 0.7547169811
+      },
+      {
+        "product_id": "P06",
+        "transactions": 1295,
+        "revenue": 495370.66,
+        "cost": 314496.0,
+        "gross_profit": 180874.66,
+        "units": 5824,
+        "on_time_count": 1022,
+        "mean_delivery_days": 3.2668494208,
+        "margin": 0.3651299413,
+        "on_time_rate": 0.7891891892
+      },
+      {
+        "product_id": "P07",
+        "transactions": 1210,
+        "revenue": 537685.45,
+        "cost": 341783.0,
+        "gross_profit": 195902.45,
+        "units": 5603,
+        "on_time_count": 895,
+        "mean_delivery_days": 3.5144380165,
+        "margin": 0.3643439673,
+        "on_time_rate": 0.7396694215
+      },
+      {
+        "product_id": "P08",
+        "transactions": 1299,
+        "revenue": 627728.99,
+        "cost": 399908.0,
+        "gross_profit": 227820.99,
+        "units": 5881,
+        "on_time_count": 1015,
+        "mean_delivery_days": 3.2676135489,
+        "margin": 0.3629288971,
+        "on_time_rate": 0.7813702848
+      },
+      {
+        "product_id": "P09",
+        "transactions": 1303,
+        "revenue": 726525.09,
+        "cost": 460200.0,
+        "gross_profit": 266325.09,
+        "units": 6136,
+        "on_time_count": 974,
+        "mean_delivery_days": 3.4568457406,
+        "margin": 0.3665738371,
+        "on_time_rate": 0.7475057559
+      },
+      {
+        "product_id": "P10",
+        "transactions": 1232,
+        "revenue": 693071.63,
+        "cost": 440340.0,
+        "gross_profit": 252731.63,
+        "units": 5370,
+        "on_time_count": 948,
+        "mean_delivery_days": 3.3253977273,
+        "margin": 0.3646544153,
+        "on_time_rate": 0.7694805195
+      },
+      {
+        "product_id": "P11",
+        "transactions": 1213,
+        "revenue": 793053.43,
+        "cost": 504363.0,
+        "gross_profit": 288690.43,
+        "units": 5667,
+        "on_time_count": 930,
+        "mean_delivery_days": 3.3097032152,
+        "margin": 0.3640239347,
+        "on_time_rate": 0.7666941467
+      },
+      {
+        "product_id": "P12",
+        "transactions": 1250,
+        "revenue": 872183.36,
+        "cost": 554592.0,
+        "gross_profit": 317591.36,
+        "units": 5777,
+        "on_time_count": 975,
+        "mean_delivery_days": 3.298704,
+        "margin": 0.3641337069,
+        "on_time_rate": 0.78
+      },
+      {
+        "product_id": "P13",
+        "transactions": 1250,
+        "revenue": 976704.76,
+        "cost": 621193.0,
+        "gross_profit": 355511.76,
+        "units": 6031,
+        "on_time_count": 977,
+        "mean_delivery_days": 3.288504,
+        "margin": 0.3639910181,
+        "on_time_rate": 0.7816
+      },
+      {
+        "product_id": "P14",
+        "transactions": 1216,
+        "revenue": 940727.31,
+        "cost": 597520.0,
+        "gross_profit": 343207.31,
+        "units": 5432,
+        "on_time_count": 916,
+        "mean_delivery_days": 3.4255674342,
+        "margin": 0.3648318767,
+        "on_time_rate": 0.7532894737
+      },
+      {
+        "product_id": "P15",
+        "transactions": 1169,
+        "revenue": 1046332.66,
+        "cost": 667368.0,
+        "gross_profit": 378964.66,
+        "units": 5704,
+        "on_time_count": 891,
+        "mean_delivery_days": 3.3420444825,
+        "margin": 0.3621837246,
+        "on_time_rate": 0.7621899059
+      },
+      {
+        "product_id": "P16",
+        "transactions": 1250,
+        "revenue": 1114055.97,
+        "cost": 707172.0,
+        "gross_profit": 406883.97,
+        "units": 5703,
+        "on_time_count": 926,
+        "mean_delivery_days": 3.527488,
+        "margin": 0.3652275837,
+        "on_time_rate": 0.7408
+      },
+      {
+        "product_id": "P17",
+        "transactions": 1288,
+        "revenue": 1201729.62,
+        "cost": 763992.0,
+        "gross_profit": 437737.62,
+        "units": 5832,
+        "on_time_count": 986,
+        "mean_delivery_days": 3.3755201863,
+        "margin": 0.3642563291,
+        "on_time_rate": 0.7655279503
+      },
+      {
+        "product_id": "P18",
+        "transactions": 1265,
+        "revenue": 1275634.03,
+        "cost": 811164.0,
+        "gross_profit": 464470.03,
+        "units": 5878,
+        "on_time_count": 964,
+        "mean_delivery_days": 3.3875335968,
+        "margin": 0.364109156,
+        "on_time_rate": 0.762055336
+      },
+      {
+        "product_id": "P19",
+        "transactions": 1199,
+        "revenue": 1252012.31,
+        "cost": 795760.0,
+        "gross_profit": 456252.31,
+        "units": 5488,
+        "on_time_count": 916,
+        "mean_delivery_days": 3.3664220183,
+        "margin": 0.3644151949,
+        "on_time_rate": 0.763969975
+      }
+    ],
+    "region": [
+      {
+        "region_name": "East",
+        "transactions": 6213,
+        "revenue": 4196601.58,
+        "cost": 3048331.0,
+        "gross_profit": 1148270.58,
+        "units": 28715,
+        "on_time_count": 4762,
+        "mean_delivery_days": 3.3720585868,
+        "margin": 0.2736191554,
+        "on_time_rate": 0.766457428
+      },
+      {
+        "region_name": "North",
+        "transactions": 6331,
+        "revenue": 4781853.42,
+        "cost": 3147276.0,
+        "gross_profit": 1634577.42,
+        "units": 28731,
+        "on_time_count": 4808,
+        "mean_delivery_days": 3.4110867162,
+        "margin": 0.3418292608,
+        "on_time_rate": 0.7594376876
+      },
+      {
+        "region_name": "South",
+        "transactions": 6201,
+        "revenue": 4288830.1,
+        "cost": 3142700.0,
+        "gross_profit": 1146130.1,
+        "units": 29186,
+        "on_time_count": 4734,
+        "mean_delivery_days": 3.3815029834,
+        "margin": 0.2672360698,
+        "on_time_rate": 0.763425254
+      },
+      {
+        "region_name": "West",
+        "transactions": 6218,
+        "revenue": 4088162.73,
+        "cost": 2969205.0,
+        "gross_profit": 1118957.73,
+        "units": 28126,
+        "on_time_count": 4755,
+        "mean_delivery_days": 3.346545513,
+        "margin": 0.2737067489,
+        "on_time_rate": 0.7647153426
+      }
+    ],
+    "segment": [
+      {
+        "segment": "Consumer",
+        "transactions": 8320,
+        "revenue": 5833882.16,
+        "cost": 4133254.0,
+        "gross_profit": 1700628.16,
+        "units": 38692,
+        "on_time_count": 6347,
+        "mean_delivery_days": 3.3871454327,
+        "margin": 0.2915088295,
+        "on_time_rate": 0.7628605769
+      },
+      {
+        "segment": "Enterprise",
+        "transactions": 8358,
+        "revenue": 5887341.83,
+        "cost": 4189231.0,
+        "gross_profit": 1698110.83,
+        "units": 38610,
+        "on_time_count": 6346,
+        "mean_delivery_days": 3.3920124432,
+        "margin": 0.2884342168,
+        "on_time_rate": 0.7592725532
+      },
+      {
+        "segment": "SMB",
+        "transactions": 8285,
+        "revenue": 5634223.84,
+        "cost": 3985027.0,
+        "gross_profit": 1649196.84,
+        "units": 37456,
+        "on_time_count": 6366,
+        "mean_delivery_days": 3.3545226313,
+        "margin": 0.2927105644,
+        "on_time_rate": 0.7683765842
+      }
+    ],
+    "supplier": [
+      {
+        "supplier_id": "A",
+        "transactions": 12462,
+        "revenue": 8836372.34,
+        "cost": 6302348.0,
+        "gross_profit": 2534024.34,
+        "units": 58076,
+        "on_time_count": 8406,
+        "mean_delivery_days": 3.8180805649,
+        "margin": 0.2867720194,
+        "on_time_rate": 0.6745305729
+      },
+      {
+        "supplier_id": "B",
+        "transactions": 12501,
+        "revenue": 8519075.49,
+        "cost": 6005164.0,
+        "gross_profit": 2513911.49,
+        "units": 56682,
+        "on_time_count": 10653,
+        "mean_delivery_days": 2.939188065,
+        "margin": 0.2950920546,
+        "on_time_rate": 0.8521718263
+      }
+    ],
+    "service": [
+      {
+        "service_class": "express",
+        "transactions": 12521,
+        "revenue": 8839852.49,
+        "cost": 6311839.0,
+        "gross_profit": 2528013.49,
+        "units": 57918,
+        "on_time_count": 7644,
+        "mean_delivery_days": 4.1421300216,
+        "margin": 0.2859791487,
+        "on_time_rate": 0.6104943695
+      },
+      {
+        "service_class": "standard",
+        "transactions": 12442,
+        "revenue": 8515595.34,
+        "cost": 5995673.0,
+        "gross_profit": 2519922.34,
+        "units": 56840,
+        "on_time_count": 11415,
+        "mean_delivery_days": 2.608913358,
+        "margin": 0.2959185165,
+        "on_time_rate": 0.9174570005
+      }
+    ],
+    "supplier_service": [
+      {
+        "supplier_id": "A",
+        "service_class": "express",
+        "transactions": 10643,
+        "revenue": 7571375.59,
+        "cost": 5417620.0,
+        "gross_profit": 2153755.59,
+        "units": 49568,
+        "on_time_count": 6648,
+        "mean_delivery_days": 4.06771493,
+        "margin": 0.284460276,
+        "on_time_rate": 0.6246359109
+      },
+      {
+        "supplier_id": "A",
+        "service_class": "standard",
+        "transactions": 1819,
+        "revenue": 1264996.75,
+        "cost": 884728.0,
+        "gross_profit": 380268.75,
+        "units": 8508,
+        "on_time_count": 1758,
+        "mean_delivery_days": 2.3574656405,
+        "margin": 0.3006084798,
+        "on_time_rate": 0.9664650907
+      },
+      {
+        "supplier_id": "B",
+        "service_class": "express",
+        "transactions": 1878,
+        "revenue": 1268476.9,
+        "cost": 894219.0,
+        "gross_profit": 374257.9,
+        "units": 8350,
+        "on_time_count": 996,
+        "mean_delivery_days": 4.5638551651,
+        "margin": 0.2950451049,
+        "on_time_rate": 0.5303514377
+      },
+      {
+        "supplier_id": "B",
+        "service_class": "standard",
+        "transactions": 10623,
+        "revenue": 7250598.59,
+        "cost": 5110945.0,
+        "gross_profit": 2139653.59,
+        "units": 48332,
+        "on_time_count": 9657,
+        "mean_delivery_days": 2.6519693119,
+        "margin": 0.2951002684,
+        "on_time_rate": 0.9090652358
+      }
+    ],
+    "period": [
+      {
+        "period": "Before July 2025",
+        "transactions": 18281,
+        "revenue": 12685247.97,
+        "cost": 9001643.0,
+        "gross_profit": 3683604.97,
+        "units": 83694,
+        "on_time_count": 13950,
+        "mean_delivery_days": 3.6944264537,
+        "margin": 0.2903849399,
+        "on_time_rate": 0.7630873585
+      },
+      {
+        "period": "July–December 2025",
+        "transactions": 6682,
+        "revenue": 4670199.86,
+        "cost": 3305869.0,
+        "gross_profit": 1364330.86,
+        "units": 31064,
+        "on_time_count": 5109,
+        "mean_delivery_days": 2.5121071535,
+        "margin": 0.2921354334,
+        "on_time_rate": 0.7645914397
+      }
+    ],
+    "period_region": [
+      {
+        "period": "Before July 2025",
+        "region_name": "East",
+        "transactions": 4524,
+        "revenue": 3072597.43,
+        "cost": 2239830.0,
+        "gross_profit": 832767.43,
+        "units": 20897,
+        "on_time_count": 3473,
+        "mean_delivery_days": 3.6842528736,
+        "margin": 0.2710304389,
+        "on_time_rate": 0.767683466
+      },
+      {
+        "period": "Before July 2025",
+        "region_name": "North",
+        "transactions": 4667,
+        "revenue": 3497862.39,
+        "cost": 2307965.0,
+        "gross_profit": 1189897.39,
+        "units": 21062,
+        "on_time_count": 3533,
+        "mean_delivery_days": 3.7245768159,
+        "margin": 0.3401784454,
+        "on_time_rate": 0.7570173559
+      },
+      {
+        "period": "Before July 2025",
+        "region_name": "South",
+        "transactions": 4541,
+        "revenue": 3094569.37,
+        "cost": 2258026.0,
+        "gross_profit": 836543.37,
+        "units": 21136,
+        "on_time_count": 3457,
+        "mean_delivery_days": 3.7126690156,
+        "margin": 0.2703262619,
+        "on_time_rate": 0.7612860603
+      },
+      {
+        "period": "Before July 2025",
+        "region_name": "West",
+        "transactions": 4549,
+        "revenue": 3020218.78,
+        "cost": 2195822.0,
+        "gross_profit": 824396.78,
+        "units": 20599,
+        "on_time_count": 3487,
+        "mean_delivery_days": 3.6554011871,
+        "margin": 0.272959292,
+        "on_time_rate": 0.7665420972
+      },
+      {
+        "period": "July–December 2025",
+        "region_name": "East",
+        "transactions": 1689,
+        "revenue": 1124004.15,
+        "cost": 808501.0,
+        "gross_profit": 315503.15,
+        "units": 7818,
+        "on_time_count": 1289,
+        "mean_delivery_days": 2.5358436945,
+        "margin": 0.2806957163,
+        "on_time_rate": 0.7631734754
+      },
+      {
+        "period": "July–December 2025",
+        "region_name": "North",
+        "transactions": 1664,
+        "revenue": 1283991.03,
+        "cost": 839311.0,
+        "gross_profit": 444680.03,
+        "units": 7669,
+        "on_time_count": 1275,
+        "mean_delivery_days": 2.5318449519,
+        "margin": 0.3463264303,
+        "on_time_rate": 0.7662259615
+      },
+      {
+        "period": "July–December 2025",
+        "region_name": "South",
+        "transactions": 1660,
+        "revenue": 1194260.73,
+        "cost": 884674.0,
+        "gross_profit": 309586.73,
+        "units": 8050,
+        "on_time_count": 1277,
+        "mean_delivery_days": 2.4755843373,
+        "margin": 0.2592287615,
+        "on_time_rate": 0.7692771084
+      },
+      {
+        "period": "July–December 2025",
+        "region_name": "West",
+        "transactions": 1669,
+        "revenue": 1067943.95,
+        "cost": 773383.0,
+        "gross_profit": 294560.95,
+        "units": 7527,
+        "on_time_count": 1268,
+        "mean_delivery_days": 2.5047333733,
+        "margin": 0.2758206084,
+        "on_time_rate": 0.7597363691
+      }
+    ],
+    "period_service": [
+      {
+        "period": "Before July 2025",
+        "service_class": "express",
+        "transactions": 9201,
+        "revenue": 6452623.75,
+        "cost": 4598051.0,
+        "gross_profit": 1854572.75,
+        "units": 42223,
+        "on_time_count": 5601,
+        "mean_delivery_days": 4.4628018694,
+        "margin": 0.2874137439,
+        "on_time_rate": 0.6087381806
+      },
+      {
+        "period": "Before July 2025",
+        "service_class": "standard",
+        "transactions": 9080,
+        "revenue": 6232624.22,
+        "cost": 4403592.0,
+        "gross_profit": 1829032.22,
+        "units": 41471,
+        "on_time_count": 8349,
+        "mean_delivery_days": 2.915811674,
+        "margin": 0.2934610134,
+        "on_time_rate": 0.9194933921
+      },
+      {
+        "period": "July–December 2025",
+        "service_class": "express",
+        "transactions": 3320,
+        "revenue": 2387228.74,
+        "cost": 1713788.0,
+        "gross_profit": 673440.74,
+        "units": 15695,
+        "on_time_count": 2043,
+        "mean_delivery_days": 3.2534246988,
+        "margin": 0.2821014713,
+        "on_time_rate": 0.6153614458
+      },
+      {
+        "period": "July–December 2025",
+        "service_class": "standard",
+        "transactions": 3362,
+        "revenue": 2282971.12,
+        "cost": 1592081.0,
+        "gross_profit": 690890.12,
+        "units": 15369,
+        "on_time_count": 3066,
+        "mean_delivery_days": 1.7800505651,
+        "margin": 0.3026276215,
+        "on_time_rate": 0.9119571684
+      }
+    ]
+  },
+  "events": [
+    {
+      "event_id": "E01",
+      "event_date": "2025-07-01",
+      "region_id": "ALL",
+      "event_type": "dispatch_policy",
+      "description": "New dispatch workflow introduced; monitor deliveries"
+    },
+    {
+      "event_id": "E02",
+      "event_date": "2024-12-01",
+      "region_id": "ALL",
+      "event_type": "holiday_campaign",
+      "description": "Year-end promotional campaign"
+    },
+    {
+      "event_id": "E03",
+      "event_date": "2025-05-01",
+      "region_id": "R2",
+      "event_type": "brand_refresh",
+      "description": "Brand palette updated; no logistics changes"
+    }
+  ]
+}

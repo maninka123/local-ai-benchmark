@@ -1,0 +1,239 @@
+{
+  "run_id": "2026-10-09T220550-339541+0000--be2db84d",
+  "model": "nemotron3:33b-q4_K_M",
+  "task": "detective",
+  "case": "case_02",
+  "track": "native_multimodal",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 0,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          }
+        ],
+        "summary": "Direct saved-output and activity review against public case inputs finds missing deliverables or material unsupported/inaccurate evidence claims. Supported work: The saved activity shows examination of public documents and several visual exhibits.",
+        "evidence_files": [
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/artifacts",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/case_brief.md",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/documents/D01_access.csv",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/documents/D02_witnesses.md",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/documents/D03_messages.md",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/images/V01.png",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/images/V02.png",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/images/V03.png",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/images/V04.png",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/images/V05.png",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/images/V06.png",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/images/V07.png",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/images/V08.png",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/images/V09.png",
+          "models/nemotron3-33b-q4_K_M--767c4367ff03/03_detective/2026-10-09T220550-339541+0000--be2db84d/input/images/V10.png",
+          "results/improvement_campaign/detective_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable.",
+          "A zero is a judgment of absent delivered output, not an inference about latent model capability or the cause of failure."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/be2db84d/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 0,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          }
+        ],
+        "summary": "The immutable evaluated artifacts directory is empty. None of the four required investigation deliverables was saved, so there is no after-pass investigation to independently assess or label complete. Supported work: ",
+        "evidence_files": [
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-f39a880ee8/artifacts",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-f39a880ee8/input/case_brief.md",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-f39a880ee8/input/documents/D01_access.csv",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-f39a880ee8/input/documents/D02_witnesses.md",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-f39a880ee8/input/documents/D03_messages.md",
+          "results/improvement_campaign/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable.",
+          "A zero is a judgment of absent delivered output, not an inference about latent model capability or the cause of failure.",
+          "The four required artifacts are byte-identical in content to the prior judged attempt; equal raw points preserve output-only fairness."
+        ],
+        "score": null,
+        "is_final": false
+      },
+      "files": [],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/be2db84d/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 0,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "Evidence examination and source fidelity",
+            "max_points": 25,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Timeline reconstruction",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Defensible conclusion, alternatives and follow-up",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Balanced suspect analysis",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Required deliverables and valid structure",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          },
+          {
+            "name": "Clarity and cross-file consistency",
+            "max_points": 10,
+            "points": 0,
+            "reason": "No saved required artifact supplies reviewable work for this criterion; attempted tool calls and conversational claims do not satisfy the deliverable."
+          }
+        ],
+        "summary": "Needs revision: the current immutable artifacts directory is empty. None of the four required investigation deliverables was saved, so there is no completed reconstruction, exhibit examination, staff comparison or defensible conclusion to review. Supported work: The exact current snapshot and public evidence are available, but no required output file has been delivered.",
+        "evidence_files": [
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/artifacts",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/case_brief.md",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/documents/D01_access.csv",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/documents/D02_witnesses.md",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/documents/D03_messages.md",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/images/V01.png",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/images/V02.png",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/images/V03.png",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/images/V04.png",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/images/V05.png",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/images/V06.png",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/images/V07.png",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/images/V08.png",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/images/V09.png",
+          "results/further-work/nemotron3-33b-q4_K_M/detective-case_02/2026-10-09T220550-339541-0000--be2db84d/evaluations/eval-40dc982564/input/images/V10.png",
+          "results/improvement_campaign/pass_2/detective_after_reviews.json",
+          "benchmark/prompts/detective_prompt.md"
+        ],
+        "limitations": [
+          "Independent output-only rubric judgment; no time, token, hardware, automatic score, private answer or assisted-repair quality contributes to points.",
+          "Evidence review combines actual saved artifacts/public written materials and existing independent exhibit reviews; decisive public images were visually checked.",
+          "Attempt 1 is the initial artifact set; attempts 2 and 3 use immutable local improvement evaluation snapshots. Setup/manual updates and assisted repairs are excluded.",
+          "Native multimodal track: thirteen public visual/documentary exhibits are expected. Scores are comparable within this track; written-only cases have less supplied evidence and are not directly comparable.",
+          "A zero is a judgment of absent delivered output, not an inference about latent model capability or the cause of failure.",
+          "The four required artifacts are byte-identical in content to the prior judged attempt; equal raw points preserve output-only fairness."
+        ],
+        "score": 0.0,
+        "is_final": true
+      },
+      "files": [],
+      "game_url": null,
+      "readiness": "Inspect the saved report and evidence files",
+      "prompt_url": "./results/be2db84d/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

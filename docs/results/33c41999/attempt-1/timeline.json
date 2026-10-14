@@ -1,0 +1,75 @@
+{
+  "timeline": [
+    {
+      "time": "17:00",
+      "event": "Eli sends message about needing prototype for his project",
+      "evidence": ["D03"],
+      "type": "confirmed"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya receives instruction to move cardboard box to loading bay",
+      "evidence": ["D03"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed present in LAB on table",
+      "evidence": ["V02", "V09"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:10",
+      "event": "Nora Vale (teal coat) enters EAST_CORRIDOR",
+      "evidence": ["D01", "V03"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:11",
+      "event": "Maya Reed (purple coat) at LOADING_BAY with cardboard box",
+      "evidence": ["D02", "V08"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park (blue coat) enters CAFETERIA",
+      "evidence": ["D01", "V06"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch (red coat) enters RECEPTION",
+      "evidence": ["D01", "V07"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:14",
+      "event": "Eli Stone (orange coat) enters via SERVICE_DOOR",
+      "evidence": ["D01"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:14-18:18",
+      "event": "Probable window: Eli uses unmonitored service corridor link to LAB, removes prototype. No camera coverage.",
+      "evidence": ["V01"],
+      "type": "probable"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype missing from LAB table",
+      "evidence": ["V05"],
+      "type": "confirmed"
+    },
+    {
+      "time": "18:19 (actual 18:14)",
+      "event": "Eli Stone seen at SERVICE_DOOR with prototype box. Camera offset +5 min.",
+      "evidence": ["V04", "V10"],
+      "type": "confirmed"
+    }
+  ],
+  "assumptions": [
+    "Service camera timestamp of 18:19 is corrected to actual time 18:14 using +5 minute offset (V10, D03).",
+    "Coat colors correspond to shift assignments as noted in D03.",
+    "Access log entries represent actual entry times."
+  ]
+}

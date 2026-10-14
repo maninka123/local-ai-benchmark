@@ -1,0 +1,169 @@
+{
+  "transactions": {
+    "rows": 25000,
+    "columns": 15,
+    "dtypes": {
+      "transaction_id": "object",
+      "customer_id": "object",
+      "product_id": "object",
+      "transaction_date": "object",
+      "quantity": "int64",
+      "selling_price": "float64",
+      "discount": "float64",
+      "unit_cost": "float64",
+      "revenue": "float64",
+      "region_id": "object",
+      "supplier_id": "object",
+      "service_class": "object",
+      "delivery_days": "float64",
+      "on_time": "int64",
+      "ad_index": "float64"
+    },
+    "missing": {
+      "transaction_id": 0,
+      "customer_id": 0,
+      "product_id": 0,
+      "transaction_date": 0,
+      "quantity": 0,
+      "selling_price": 0,
+      "discount": 0,
+      "unit_cost": 30,
+      "revenue": 0,
+      "region_id": 0,
+      "supplier_id": 0,
+      "service_class": 0,
+      "delivery_days": 0,
+      "on_time": 0,
+      "ad_index": 0
+    },
+    "exact_duplicate_rows": 20,
+    "duplicate_key_rows": 20,
+    "key": [
+      "transaction_id"
+    ],
+    "transaction_date_invalid": 0,
+    "transaction_date_min": "2024-01-01",
+    "transaction_date_max": "2025-12-31"
+  },
+  "products": {
+    "rows": 20,
+    "columns": 5,
+    "dtypes": {
+      "product_id": "object",
+      "name": "object",
+      "category": "object",
+      "unit_cost": "int64",
+      "list_price": "float64"
+    },
+    "missing": {
+      "product_id": 0,
+      "name": 0,
+      "category": 0,
+      "unit_cost": 0,
+      "list_price": 0
+    },
+    "exact_duplicate_rows": 0,
+    "duplicate_key_rows": 0,
+    "key": [
+      "product_id"
+    ]
+  },
+  "customers": {
+    "rows": 1200,
+    "columns": 5,
+    "dtypes": {
+      "customer_id": "object",
+      "segment": "object",
+      "region_id": "object",
+      "joined_date": "object",
+      "marketing_group": "int64"
+    },
+    "missing": {
+      "customer_id": 0,
+      "segment": 0,
+      "region_id": 0,
+      "joined_date": 0,
+      "marketing_group": 0
+    },
+    "exact_duplicate_rows": 0,
+    "duplicate_key_rows": 0,
+    "key": [
+      "customer_id"
+    ],
+    "joined_date_invalid": 0,
+    "joined_date_min": "2023-01-01",
+    "joined_date_max": "2023-12-01"
+  },
+  "regions": {
+    "rows": 4,
+    "columns": 4,
+    "dtypes": {
+      "region_id": "object",
+      "name": "object",
+      "timezone": "object",
+      "shipping_distance_km": "int64"
+    },
+    "missing": {
+      "region_id": 0,
+      "name": 0,
+      "timezone": 0,
+      "shipping_distance_km": 0
+    },
+    "exact_duplicate_rows": 0,
+    "duplicate_key_rows": 0,
+    "key": [
+      "region_id"
+    ]
+  },
+  "inventory": {
+    "rows": 480,
+    "columns": 4,
+    "dtypes": {
+      "month": "object",
+      "product_id": "object",
+      "stock_units": "int64",
+      "stockouts": "int64"
+    },
+    "missing": {
+      "month": 0,
+      "product_id": 0,
+      "stock_units": 0,
+      "stockouts": 0
+    },
+    "exact_duplicate_rows": 0,
+    "duplicate_key_rows": 0,
+    "key": [
+      "month",
+      "product_id"
+    ],
+    "month_invalid": 0,
+    "month_min": "2024-01-01",
+    "month_max": "2025-12-01"
+  },
+  "operational_events": {
+    "rows": 3,
+    "columns": 5,
+    "dtypes": {
+      "event_id": "object",
+      "event_date": "object",
+      "region_id": "object",
+      "event_type": "object",
+      "description": "object"
+    },
+    "missing": {
+      "event_id": 0,
+      "event_date": 0,
+      "region_id": 0,
+      "event_type": 0,
+      "description": 0
+    },
+    "exact_duplicate_rows": 0,
+    "duplicate_key_rows": 0,
+    "key": [
+      "event_id"
+    ],
+    "event_date_invalid": 0,
+    "event_date_min": "2024-12-01",
+    "event_date_max": "2025-07-01"
+  }
+}

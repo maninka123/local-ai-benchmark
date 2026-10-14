@@ -1,0 +1,99 @@
+{
+  "confirmed_events": [
+    {
+      "timestamp": "17:00",
+      "event": "Eli sends message requesting prototype for tomorrow",
+      "source": "D03_messages"
+    },
+    {
+      "timestamp": "17:10",
+      "event": "Maya receives request to move cardboard box to loading bay",
+      "source": "D03_messages"
+    },
+    {
+      "timestamp": "17:20",
+      "event": "Security notes SERVICE_CORRIDOR is camera blind spot",
+      "source": "D03_messages"
+    },
+    {
+      "timestamp": "18:00",
+      "event": "Prototype last confirmed present",
+      "source": "case_brief"
+    },
+    {
+      "timestamp": "18:10",
+      "event": "Nora Vale enters EAST_CORRIDOR",
+      "source": "D01_access"
+    },
+    {
+      "timestamp": "18:12",
+      "event": "Theo Park enters CAFETERIA",
+      "source": "D01_access"
+    },
+    {
+      "timestamp": "18:13",
+      "event": "Ada Finch enters RECEPTION",
+      "source": "D01_access"
+    },
+    {
+      "timestamp": "18:14",
+      "event": "Badge credential used at SERVICE_DOOR (direction: ENTRY)",
+      "source": "D01_access"
+    },
+    {
+      "timestamp": "18:14",
+      "event": "Badge credential used at SERVICE_DOOR (direction: ENTRY)",
+      "source": "D01_access"
+    },
+    {
+      "timestamp": "18:18",
+      "event": "Prototype discovered missing",
+      "source": "case_brief"
+    }
+  ],
+  "probable_events": [
+    {
+      "timestamp": "18:00-18:10",
+      "event": "Incident window opens - no access log entries recorded",
+      "source": "D01_access"
+    },
+    {
+      "timestamp": "18:14-18:18",
+      "event": "Incident window closes - no exit log entries recorded",
+      "source": "D01_access"
+    }
+  ],
+  "contradictions": [
+    {
+      "witness": "Eli Stone",
+      "statement": "I did not approach the lab after 18:00",
+      "evidence": "SERVICE_DOOR entry at 18:14",
+      "source": ["D02_witnesses", "D01_access"],
+      "note": "Access log confirms SERVICE_DOOR entry; witness denies lab proximity"
+    },
+    {
+      "witness": "Maya Reed",
+      "statement": "I carried a cardboard supply box at 18:11",
+      "evidence": "SERVICE_DOOR entry at 18:14",
+      "source": ["D02_witnesses", "D01_access"],
+      "note": "Timeline compatible: box handling at 18:11, entry at 18:14"
+    }
+  ],
+  "missing_intervals": [
+    {
+      "start": "18:00",
+      "end": "18:10",
+      "description": "No access log entries before first recorded entry; staff may have been present before 18:00"
+    },
+    {
+      "start": "18:18",
+      "end": "end_of_shift",
+      "description": "No exit records available"
+    }
+  ],
+  "assumptions": [
+    "Access badge use required for door entry",
+    "SERVICE_CORRIDOR is a camera blind spot per D03_messages",
+    "Badge entries record credential use, not necessarily identity (per D03_messages)"
+  ]
+}

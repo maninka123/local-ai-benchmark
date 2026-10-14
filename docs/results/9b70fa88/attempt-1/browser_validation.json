@@ -1,0 +1,40 @@
+{
+  "build": true,
+  "loads": true,
+  "errors": [],
+  "checks": {
+    "canvas": true,
+    "selection": false,
+    "movement": false,
+    "timer": false,
+    "hud": false,
+    "camera": false,
+    "pause": false,
+    "npc_laps": false,
+    "restart": false
+  },
+  "states": [
+    {
+      "label": "menu",
+      "value": null
+    },
+    {
+      "label": "race",
+      "value": null
+    },
+    {
+      "label": "moved",
+      "value": null
+    },
+    {
+      "label": "simulation",
+      "value": null
+    }
+  ],
+  "notes": [
+    "Hooks are candidate supplied. Snapshot claims alone do not prove collisions, valid checkpoints, or NPC intelligence; these require manual review. No credit awarded for hooks alone."
+  ],
+  "build_log": "vite v7.3.7 building client environment for production...\ntransforming...\n✓ 5 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                  0.20 kB │ gzip:   0.17 kB\ndist/assets/index-P6li0wMN.js  498.52 kB │ gzip: 126.16 kB\n✓ built in 1.79s\n",
+  "menu_text": "",
+  "npc_observations": null
+}

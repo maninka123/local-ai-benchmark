@@ -1,0 +1,16 @@
+{
+  "confirmed": [
+    {"time":"18:00","event":"Eli requests prototype","source":"D03_messages.md"},
+    {"time":"18:10","event":"Nora enters east corridor","source":"D01_access.csv"},
+    {"time":"18:12","event":"Theo enters cafeteria","source":"D01_access.csv"},
+    {"time":"18:13","event":"Ada enters reception","source":"D01_access.csv"},
+    {"time":"18:14","event":"Eli and Maya enter service door","source":"D01_access.csv"},
+    {"time":"18:18","event":"Prototype reported missing","source":"N/A"}
+  ],
+  "probable": [],
+  "contradictions": [
+    {"event":"Eli's alibi","conflict":"Claims not to approach lab after 18:00 but logged entry at 18:14 to service door"}
+  ],
+  "missing_intervals": ["18:00-18:18"],
+  "unexplained_movements": []
+}

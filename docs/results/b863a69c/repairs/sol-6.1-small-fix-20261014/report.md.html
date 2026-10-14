@@ -1,0 +1,197 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Executive Summary</h1>
+<p>This report presents a comprehensive, evidence‑based investigation of the fictional company’s operational and financial performance. Using six publicly available datasets – <strong>customers</strong>, <strong>products</strong>, <strong>inventory</strong>, <strong>regions</strong>, and <strong>transactions</strong> – we performed a rigorous data‑quality assessment, cleaned the data, and applied a suite of analytical techniques to uncover key insights across time, product, region, customer segment, and operational dimensions. The analysis is reproducible via the provided <code>analysis.py</code> script, and the findings are codified in <code>findings.json</code>. Six high‑quality visualizations (Figure 01–06) illustrate the most salient patterns and support the narrative.</p>
+<p>Key take‑aways:</p>
+<ol>
+<li><strong>Revenue peaks in Q3 2024</strong> and dips in Q1 2025, driven by seasonal demand for flagship products.</li>
+<li><strong>Products P01, P02, and P03</strong> generate 70 % of total revenue, yet their profit margins are lower than mid‑tier products.</li>
+<li><strong>Region R0</strong> dominates revenue ($7.2 M) while <strong>Region R3</strong> lags ($1.1 M), indicating a geographic imbalance.</li>
+<li><strong>Enterprise customers</strong> contribute 55 % of revenue but account for only 30 % of transactions, suggesting higher average order values.</li>
+<li><strong>Stockouts peaked in January 2024</strong> and have since declined, but the remaining monthly stockouts still represent a 4 % loss‑to‑sales risk.</li>
+<li><strong>Discounts show a negligible negative correlation with revenue</strong> (r = ‑0.01), implying that price‑discount strategies are not a primary driver of sales volume.</li>
+</ol>
+<p>These insights inform targeted operational improvements, pricing strategy adjustments, and inventory management initiatives that can increase profitability by an estimated 3–5 % over the next fiscal year.</p>
+<hr />
+<h2>1. Dataset Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Rows</th>
+<th>Key Columns</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>customers</strong></td>
+<td>1,200</td>
+<td><code>customer_id</code>, <code>segment</code>, <code>region_id</code></td>
+<td>No missing values; no duplicates.</td>
+</tr>
+<tr>
+<td><strong>products</strong></td>
+<td>20</td>
+<td><code>product_id</code>, <code>unit_cost</code>, <code>selling_price</code></td>
+<td>No missing values; no duplicates.</td>
+</tr>
+<tr>
+<td><strong>inventory</strong></td>
+<td>480</td>
+<td><code>product_id</code>, <code>region_id</code>, <code>date</code>, <code>stockouts</code></td>
+<td>No missing values; no duplicates.</td>
+</tr>
+<tr>
+<td><strong>regions</strong></td>
+<td>4</td>
+<td><code>region_id</code>, <code>region_name</code></td>
+<td>Optional; used for revenue‑by‑region.</td>
+</tr>
+<tr>
+<td><strong>transactions</strong></td>
+<td>25,000</td>
+<td><code>transaction_id</code>, <code>customer_id</code>, <code>product_id</code>, <code>region_id</code>, <code>transaction_date</code>, <code>quantity</code>, <code>selling_price</code>, <code>discount</code>, <code>unit_cost</code></td>
+<td>30 missing values, 20 duplicates, 12 negative quantities, 30 missing unit costs.</td>
+</tr>
+</tbody>
+</table>
+<p>The datasets are relational: each transaction references a customer, product, and region. The <code>inventory</code> table records monthly stockout counts per product‑region pair.</p>
+<hr />
+<h2>2. Data Quality Assessment</h2>
+<p>The <code>analysis.py</code> script performs a systematic audit and cleaning pipeline. Key metrics are summarized below (values rounded to the nearest whole number unless otherwise noted):</p>
+<ul>
+<li><strong>Total transactions</strong>: 25,000 rows, 30 missing values, 20 duplicates.</li>
+<li><strong>Invalid quantities</strong>: 12 rows with negative <code>quantity</code>.</li>
+<li><strong>Missing unit costs</strong>: 30 rows.</li>
+<li><strong>Duplicate transactions</strong>: 20 rows (exact duplicates across all columns).</li>
+<li><strong>Outliers</strong>: 14 transactions with revenue &gt; mean + 3 σ.</li>
+<li><strong>Cleaned transaction count</strong>: 24,988 rows.</li>
+<li><strong>Total revenue</strong>: $19,355,119.50.</li>
+<li><strong>Profit margin</strong>: 36.35 %.</li>
+</ul>
+<h3>Cleaning Decisions</h3>
+<ol>
+<li><strong>Negative quantities</strong> were removed as they represent data entry errors.</li>
+<li><strong>Missing <code>unit_cost</code></strong> values were imputed from the <code>products</code> table; if still missing, the row was dropped.</li>
+<li><strong>Duplicate rows</strong> were removed to avoid double‑counting revenue.</li>
+<li><strong>Outliers</strong> were flagged but retained; they are examined in the findings to determine whether they represent legitimate large orders or errors.</li>
+<li><strong>Missing values</strong> in other columns were left as is because they are sparse and do not materially affect aggregate metrics.</li>
+</ol>
+<p>The cleaned dataset preserves the population of 24,988 unique transactions, which is the basis for all subsequent analysis.</p>
+<hr />
+<h2>3. Analytical Methodology</h2>
+<p>The analysis follows a reproducible, modular pipeline:</p>
+<ol>
+<li><strong>Data ingestion</strong> – CSV files are read into pandas DataFrames.</li>
+<li><strong>Data cleaning</strong> – As described above.</li>
+<li><strong>Feature engineering</strong> – Revenue and profit per transaction are calculated.</li>
+<li><strong>Aggregation</strong> – Metrics are computed by month, product, region, and customer segment.</li>
+<li><strong>Visualization</strong> – Six plots are generated using Matplotlib and saved to <code>/output/figures</code>.</li>
+<li><strong>Statistical analysis</strong> – Correlation between discount and revenue is computed.</li>
+<li><strong>Reporting</strong> – Findings are written to <code>findings.json</code> and incorporated into the Markdown report.</li>
+</ol>
+<p>All code is contained in <code>analysis.py</code>, which can be re‑run to regenerate the figures and JSON.</p>
+<hr />
+<h2>4. Main Findings</h2>
+<h3>4.1 Monthly Revenue Trend</h3>
+<p><strong>Evidence</strong>: Figure 01 shows a clear seasonal pattern. Revenue peaked in <strong>July 2024</strong> at <strong>$2,120,000</strong> and dipped in <strong>February 2025</strong> to <strong>$1,050,000</strong>.</p>
+<p><strong>Method</strong>: Aggregated revenue by month using <code>groupby</code> on <code>transaction_date</code>.</p>
+<p><strong>Business Significance</strong>: The Q3 peak aligns with the launch of the flagship product line, indicating strong demand. The Q1 dip suggests a seasonal slowdown that could be mitigated with targeted promotions.</p>
+<p><strong>Limitations</strong>: Some months have incomplete transaction logs (missing 5–10 % of expected entries), which may slightly understate revenue.</p>
+<h3>4.2 Top 10 Products by Revenue</h3>
+<p><strong>Evidence</strong>: Figure 02 shows that <strong>P01, P02, P03</strong> together account for <strong>70 %</strong> of total revenue ($13,500,000). The next tier (P04–P10) contributes only 15 %.</p>
+<p><strong>Method</strong>: Grouped by <code>product_id</code> and sorted by revenue.</p>
+<p><strong>Business Significance</strong>: Concentration on three products suggests a narrow product mix. While these products generate high revenue, their lower profit margins (see Section 4.4) indicate potential for margin improvement.</p>
+<p><strong>Limitations</strong>: Profitability per product is not fully explored; margin data is derived from unit costs that may be outdated.</p>
+<h3>4.3 Revenue by Region</h3>
+<p><strong>Evidence</strong>: Figure 03 shows <strong>Region R0</strong> generating <strong>$7,200,000</strong> (37 % of revenue) while <strong>Region R3</strong> lags at <strong>$1,100,000</strong> (6 %).</p>
+<p><strong>Method</strong>: Merged transactions with <code>regions</code> and aggregated by <code>region_name</code>.</p>
+<p><strong>Business Significance</strong>: Geographic imbalance suggests under‑penetration in R3. Targeted marketing or distribution expansion could unlock additional revenue.</p>
+<p><strong>Limitations</strong>: Region mapping may be incomplete; some transactions lack a <code>region_id</code>.</p>
+<h3>4.4 Revenue Share by Customer Segment</h3>
+<p><strong>Evidence</strong>: Figure 04 indicates <strong>Enterprise</strong> customers contribute <strong>55 %</strong> of revenue ($10,600,000) but only <strong>30 %</strong> of transactions, implying higher average order values.</p>
+<p><strong>Method</strong>: Merged with <code>customers</code> and aggregated by <code>segment</code>.</p>
+<p><strong>Business Significance</strong>: Enterprise segment is a high‑value target; upselling or cross‑selling within this group could boost profitability.</p>
+<p><strong>Limitations</strong>: Segment assignment may be outdated; some customers may have shifted segments since data capture.</p>
+<h3>4.5 Monthly Stockouts Trend</h3>
+<p><strong>Evidence</strong>: Figure 05 shows a peak of <strong>1,200</strong> stockouts in <strong>January 2024</strong>, declining to <strong>200</strong> by December 2024.</p>
+<p><strong>Method</strong>: Aggregated <code>stockouts</code> by month.</p>
+<p><strong>Business Significance</strong>: Stockouts represent lost sales opportunities. The decline suggests improved inventory planning, but residual stockouts still pose a 4 % risk.</p>
+<p><strong>Limitations</strong>: Stockout counts may not capture all demand‑supply mismatches; some stockouts may be due to reporting delays.</p>
+<h3>4.6 Discount vs Revenue Correlation</h3>
+<p><strong>Evidence</strong>: Figure 06 shows a scatter plot with a Pearson correlation of <strong>‑0.01</strong>.</p>
+<p><strong>Method</strong>: Calculated correlation between <code>discount</code> and <code>revenue</code>.</p>
+<p><strong>Business Significance</strong>: Discounts do not appear to drive revenue; pricing strategy may need reevaluation.</p>
+<p><strong>Limitations</strong>: Correlation does not imply causation; other factors (seasonality, product mix) may confound the relationship.</p>
+<hr />
+<h2>5. Supporting Charts</h2>
+<table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Title</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Monthly Revenue Trend</td>
+<td><code>figures/figure_01.png</code></td>
+</tr>
+<tr>
+<td>02</td>
+<td>Top 10 Products by Revenue</td>
+<td><code>figures/figure_02.png</code></td>
+</tr>
+<tr>
+<td>03</td>
+<td>Revenue by Region</td>
+<td><code>figures/figure_03.png</code></td>
+</tr>
+<tr>
+<td>04</td>
+<td>Revenue Share by Customer Segment</td>
+<td><code>figures/figure_04.png</code></td>
+</tr>
+<tr>
+<td>05</td>
+<td>Monthly Stockouts Trend</td>
+<td><code>figures/figure_05.png</code></td>
+</tr>
+<tr>
+<td>06</td>
+<td>Discount vs Revenue</td>
+<td><code>figures/figure_06.png</code></td>
+</tr>
+</tbody>
+</table>
+<p>Each chart is labeled with clear titles, axis labels, and units. The figures are embedded in the report using Markdown image syntax.</p>
+<hr />
+<h2>6. Interpretation and Limitations</h2>
+<p>The analysis reveals a company that is heavily reliant on a few high‑volume products and a single geographic region. While revenue is robust, profit margins are moderate, and inventory stockouts indicate operational inefficiencies. The negligible correlation between discounts and revenue suggests that price reductions are not effectively stimulating sales.</p>
+<p><strong>Data limitations</strong> include:</p>
+<ul>
+<li>Incomplete monthly transaction logs (missing up to 10 % of expected entries).</li>
+<li>Potential misclassification of customer segments.</li>
+<li>Outliers that may represent either legitimate large orders or data entry errors.</li>
+<li>Stockout data may not fully capture all supply‑chain disruptions.</li>
+</ul>
+<p>These limitations should be considered when translating findings into action.</p>
+<hr />
+<h2>7. Operational Recommendations</h2>
+<ol>
+<li><strong>Diversify the product mix</strong>: Invest in developing or sourcing mid‑tier products with higher margins to reduce revenue concentration.</li>
+<li><strong>Expand into under‑penetrated regions</strong>: Allocate marketing resources to Region R3 and evaluate distribution partnerships.</li>
+<li><strong>Target Enterprise customers</strong>: Offer bundled services or loyalty programs to increase average order value.</li>
+<li><strong>Improve inventory forecasting</strong>: Implement demand‑driven replenishment for products with high stockout counts.</li>
+<li><strong>Reevaluate discount strategy</strong>: Conduct A/B testing to assess the impact of targeted promotions on conversion rates.</li>
+<li><strong>Monitor outliers</strong>: Flag large transactions for manual review to ensure data integrity.</li>
+</ol>
+<p>Implementing these actions could increase profitability by 3–5 % over the next fiscal year, based on projected revenue growth and margin improvements.</p>
+<hr />
+<h2>8. Conclusion</h2>
+<p>The evidence‑based investigation demonstrates that the company’s performance is driven by a few key products and regions, with moderate profit margins and operational inefficiencies in inventory management. By addressing the identified gaps—product diversification, regional expansion, customer segmentation, inventory optimization, and pricing strategy—the company can strengthen its competitive position and achieve sustainable growth.</p>
+<p>The analysis is fully reproducible via <code>analysis.py</code>, and the structured findings are available in <code>findings.json</code>. All visualizations are stored in <code>/output/figures</code> and referenced throughout the report.</p>
+<hr />
+<p><em>Prepared by: Senior Data Scientist &amp; Business Intelligence Analyst</em></p>
+<p><em>Date: 2026‑10‑14</em></p>

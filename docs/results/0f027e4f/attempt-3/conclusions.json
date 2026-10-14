@@ -1,0 +1,6 @@
+{
+  "responsible_person": null,
+  "confidence": 0.45,
+  "conclusion": "The prototype was last confirmed present at 18:00 (D03) and discovered missing at 18:18. Door entry logs show several staff entering service and east corridor doors around that time, but no log identifies a specific removal route. No single individual can be definitively linked to the removal; the most plausible scenario involves an unrecorded movement during the 18:18‑18:30 gap.",
+  "exhibits": ["D03","time,door records"]
+}

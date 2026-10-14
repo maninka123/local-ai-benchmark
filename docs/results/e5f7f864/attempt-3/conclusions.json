@@ -1,0 +1,11 @@
+{
+  "responsible_person": null,
+  "confidence": 0.0,
+  "conclusion": "The available written evidence does not support identification of a responsible individual. While Eli Stone expressed motive (needs prototype for tomorrow's project) and both Eli and Maya Reed entered via SERVICE_CORRIDOR (a camera blind spot) at 18:14, the access log records badge credential use, not biometric identity (per D03_messages). The 18:11 box statement and 18:14 entry are temporally compatible, not contradictory. No evidence confirms who removed the prototype, and the 18:00-18:10 interval has no access log entries, leaving the window of removal unobserved. Without visual evidence (V01-V10 unavailable in text-only track) or exit records, attribution is speculative.",
+  "exhibits": [
+    "D01_access (two SERVICE_DOOR entries at 18:14, credential-based only)",
+    "D02_witnesses (all statements unverified)",
+    "D03_messages (motive for Eli, box task for Maya, SERVICE_CORRIDOR blind spot)",
+    "case_brief (18:00 presence confirmed, 18:18 discovery, no exit records)"
+  ]
+}

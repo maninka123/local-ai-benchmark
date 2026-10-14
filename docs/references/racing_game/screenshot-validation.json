@@ -1,0 +1,252 @@
+{
+  "verified_at_utc": "2026-10-13T07:26:36.567171+00:00",
+  "required_screenshots": [
+    "menu.png",
+    "race_chase.png",
+    "race_hood.png",
+    "race_overhead.png"
+  ],
+  "required_screenshots_valid": true,
+  "method": "Pillow full PNG decode; required views and completed-results capture visually inspected",
+  "interruption_evidence_policy": "Damaged original captures retained with .interrupted.png suffix; excluded from successful visual evidence.",
+  "files": [
+    {
+      "path": "output/screenshots/barrier_collision.interrupted.png",
+      "bytes": 532953,
+      "sha256": "828ac1f0af38562cd33a9ac7f8dde4d65e7e5b5a2026c9d9fc226d5bc9898a69",
+      "interruption_evidence": true,
+      "valid_png": false,
+      "error": "cannot identify image file 'C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\references\\\\gpt-6-astra-high\\\\racing_game\\\\output\\\\screenshots\\\\barrier_collision.interrupted.png'"
+    },
+    {
+      "path": "output/screenshots/barrier_collision.png",
+      "bytes": 285603,
+      "sha256": "b4026e8ce00fee27d4c4952a5bfe5bd847bfc562805678a0ee55e83657d9c75e",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    {
+      "path": "output/screenshots/continuation_barrier_collision.png",
+      "bytes": 285603,
+      "sha256": "b4026e8ce00fee27d4c4952a5bfe5bd847bfc562805678a0ee55e83657d9c75e",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    {
+      "path": "output/screenshots/continuation_lap_1.png",
+      "bytes": 269509,
+      "sha256": "2b2fed077e494f90a02a0558cc2349f2c20ce8fe7868b92b899bd11a559403b3",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    {
+      "path": "output/screenshots/continuation_lap_2.png",
+      "bytes": 282502,
+      "sha256": "91abd0d71c93ef66fbcd1146bc61bca7daf3ad6dc48f157eee26f89bef9cb73f",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    {
+      "path": "output/screenshots/continuation_menu.png",
+      "bytes": 305437,
+      "sha256": "78166e96f312247b4a1c4943a1cca3db9527acf7ecd59df4e9e224ae41f1246d",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    {
+      "path": "output/screenshots/continuation_race_chase.png",
+      "bytes": 291445,
+      "sha256": "1f0133a59507c5cc1fcc933c999b00230a21b0a88509da5983c7bcc372deb675",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    {
+      "path": "output/screenshots/continuation_race_hood.png",
+      "bytes": 113292,
+      "sha256": "8055f6db0755b57551337b1c598facc66a035b08ecd16eed939fc438fe04f123",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    {
+      "path": "output/screenshots/continuation_race_overhead.png",
+      "bytes": 177534,
+      "sha256": "3c15a1c801850c94c7da172b345f08a18129b431e9ea1adbf4495e3073c0b3c0",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    {
+      "path": "output/screenshots/continuation_results.png",
+      "bytes": 134368,
+      "sha256": "7ddbc1a6ab09f850c4221d5900df9d489ab789ad061b6c5353ee72c66e1b5d4d",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    {
+      "path": "output/screenshots/lap_1.png",
+      "bytes": 323334,
+      "sha256": "a6256346bd1f52e5f0d7d2e250f9165007e7fa5bde1752e8644fd82d73c0f77b",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "output/screenshots/menu.interrupted.png",
+      "bytes": 610819,
+      "sha256": "6eb3cbd6897dc41e9d1b10acc5041086b9657fe31a04bc36dc41d95fd275710a",
+      "interruption_evidence": true,
+      "valid_png": false,
+      "error": "cannot identify image file 'C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\references\\\\gpt-6-astra-high\\\\racing_game\\\\output\\\\screenshots\\\\menu.interrupted.png'"
+    },
+    {
+      "path": "output/screenshots/menu.png",
+      "bytes": 636681,
+      "sha256": "72fb37788648049c867d9a8a4ef1b4c3de43b0050e78c2380b3f44da9f336da7",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "output/screenshots/production_menu.png",
+      "bytes": 404326,
+      "sha256": "a160480e0d034b34888dc4ebe79311ec938c4e45f5fa2a8691c34278f5d48bbf",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "output/screenshots/production_race_chase.png",
+      "bytes": 229187,
+      "sha256": "160f056c7ce316a3a8e21db943791ac4dadb40897a71370e047086a56ea555d0",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "output/screenshots/production_race_hood.png",
+      "bytes": 190993,
+      "sha256": "fe3726ec7fb06791e50ac745cfe83996e745868fce90893464462821fc8edda3",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "output/screenshots/production_race_overhead.png",
+      "bytes": 212891,
+      "sha256": "56b6c0381c6ec72e1395e071e81e55cb648bb20e03e3ba36a02bd60f7d4f73ba",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "output/screenshots/race_chase.interrupted.png",
+      "bytes": 472463,
+      "sha256": "e7bb33cd18e1e8a1fd608a4bb570c92c7f0d0f9dcea23ecc1baf5ddd52d5b08b",
+      "interruption_evidence": true,
+      "valid_png": false,
+      "error": "cannot identify image file 'C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\references\\\\gpt-6-astra-high\\\\racing_game\\\\output\\\\screenshots\\\\race_chase.interrupted.png'"
+    },
+    {
+      "path": "output/screenshots/race_chase.png",
+      "bytes": 261954,
+      "sha256": "01680ba8d7f9e69bad7753220862a7d7e185da2f1003da759dccb38b390ce3e1",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "output/screenshots/race_hood.interrupted.png",
+      "bytes": 183263,
+      "sha256": "04cf04bb3cb8c019227da32f9ac3fc292b50952e1cca29702f9583b20335fc42",
+      "interruption_evidence": true,
+      "valid_png": false,
+      "error": "cannot identify image file 'C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\references\\\\gpt-6-astra-high\\\\racing_game\\\\output\\\\screenshots\\\\race_hood.interrupted.png'"
+    },
+    {
+      "path": "output/screenshots/race_hood.png",
+      "bytes": 187613,
+      "sha256": "bbf922b1a03b01c6fafab9c16f801cb4ce952a257f2bcc66531ff72173119fce",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "output/screenshots/race_overhead.interrupted.png",
+      "bytes": 256956,
+      "sha256": "cd2c5b1e01a236392062017638d78b81408af9bb94d688b35dfdee14f965d47c",
+      "interruption_evidence": true,
+      "valid_png": false,
+      "error": "cannot identify image file 'C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\references\\\\gpt-6-astra-high\\\\racing_game\\\\output\\\\screenshots\\\\race_overhead.interrupted.png'"
+    },
+    {
+      "path": "output/screenshots/race_overhead.png",
+      "bytes": 228175,
+      "sha256": "00377e0af4fe89dbbecfde453e224b5a7a07f6f7f907c7d6839bdad030bf124f",
+      "interruption_evidence": false,
+      "valid_png": true,
+      "dimensions": [
+        1440,
+        900
+      ]
+    }
+  ]
+}

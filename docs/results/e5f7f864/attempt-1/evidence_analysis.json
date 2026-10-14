@@ -1,0 +1,33 @@
+{
+  "exhibit_D01_access": {
+    "description": "Access log showing 5 staff entries between 18:10-18:14",
+    "key_findings": [
+      "Nora Vale entered EAST_CORRIDOR at 18:10",
+      "Theo Park entered CAFETERIA at 18:12",
+      "Ada Finch entered RECEPTION at 18:13",
+      "Eli Stone entered SERVICE_DOOR at 18:14",
+      "Maya Reed entered SERVICE_DOOR at 18:14"
+    ],
+    "limitations": "No exit records; SERVICE_DOOR is a camera blind spot per D03_messages"
+  },
+  "exhibit_D02_witnesses": {
+    "description": "Unverified witness statements",
+    "key_findings": [
+      "Nora claims only visited east corridor",
+      "Eli claims did not approach lab after 18:00",
+      "Maya claims carried cardboard box at 18:11",
+      "Theo claims remained in cafeteria from 18:12",
+      "Ada claims staffed reception"
+    ],
+    "limitations": "Statements are unverified and may be false"
+  },
+  "exhibit_D03_messages": {
+    "description": "Internal messages",
+    "key_findings": [
+      "Eli needs prototype tomorrow (motive)",
+      "Maya asked to move cardboard box to loading bay",
+      "Security notes: coat descriptions not biometric, SERVICE_DOOR is blind spot"
+    ],
+    "limitations": "Messages do not directly link to incident timing"
+  }
+}

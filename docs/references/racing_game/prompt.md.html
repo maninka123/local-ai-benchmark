@@ -1,0 +1,148 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><p>You are an experienced professional game developer.</p>
+<p>Create a complete, visually polished and playable 3D arcade racing game that runs in a modern desktop browser.</p>
+<p>The finished game must allow a human player to select a car and race against computer-controlled opponents.</p>
+<p>You are responsible for implementation, testing and debugging.</p>
+<p><strong>A. Racing environment</strong></p>
+<p>Create a complete closed-loop 3D circuit.</p>
+<p>The track must contain:</p>
+<ul>
+<li>Multiple corners</li>
+<li>Straight sections</li>
+<li>Track boundaries</li>
+<li>Visible road surfaces</li>
+<li>Barriers</li>
+<li>Environmental scenery</li>
+<li>Starting and finishing line</li>
+<li>Checkpoints</li>
+</ul>
+<p>Design the track so that cars can complete full laps.</p>
+<p><strong>B. Car selection</strong></p>
+<p>Implement a vehicle selection menu.</p>
+<p>Provide at least three visually distinct cars.</p>
+<p>Each car must have different:</p>
+<ul>
+<li>Maximum speed</li>
+<li>Acceleration</li>
+<li>Braking behavior</li>
+<li>Handling characteristics</li>
+</ul>
+<p>The selected vehicle must be used during the race.</p>
+<p><strong>C. Driving controls</strong></p>
+<p>Implement keyboard controls:</p>
+<ul>
+<li>W / Up Arrow: Accelerate</li>
+<li>S / Down Arrow: Brake or reverse</li>
+<li>A / Left Arrow: Steer left</li>
+<li>D / Right Arrow: Steer right</li>
+<li>C: Change camera</li>
+<li>P or Escape: Pause/resume</li>
+<li>R: Restart</li>
+</ul>
+<p>Driving must include acceleration, deceleration, steering response, friction and speed-dependent handling.</p>
+<p><strong>D. NPC opponents</strong></p>
+<p>Implement at least four computer-controlled vehicles.</p>
+<p>NPC vehicles must:</p>
+<ul>
+<li>Follow the track.</li>
+<li>Navigate corners.</li>
+<li>Adjust speed.</li>
+<li>Avoid obstacles where feasible.</li>
+<li>Attempt overtaking when possible.</li>
+<li>Handle collisions.</li>
+<li>Recover from being blocked or displaced.</li>
+<li>Complete laps independently.</li>
+</ul>
+<p>Do not simply animate NPC cars along a fixed path without meaningful interaction with the race environment.</p>
+<p><strong>E. Collision detection</strong></p>
+<p>Implement functional collision behavior.</p>
+<p>Cars must not pass freely through:</p>
+<ul>
+<li>Other vehicles</li>
+<li>Track barriers</li>
+<li>Major environmental obstacles</li>
+</ul>
+<p>Collisions should produce a visible arcade-style response.</p>
+<p>Prevent cars from becoming permanently stuck wherever reasonably possible.</p>
+<p><strong>F. Camera system</strong></p>
+<p>Implement at least three camera views:</p>
+<ol>
+<li>Third-person chase camera</li>
+<li>First-person cockpit or hood camera</li>
+<li>Overhead camera</li>
+</ol>
+<p>Allow the player to switch views during a race.</p>
+<p>Camera transitions should be usable and avoid clipping where practical.</p>
+<p><strong>G. Race mechanics</strong></p>
+<p>Implement:</p>
+<ul>
+<li>Starting countdown</li>
+<li>Three-lap races</li>
+<li>Checkpoint validation</li>
+<li>Lap timing</li>
+<li>Race positioning</li>
+<li>Finish detection</li>
+<li>Final standings</li>
+<li>Restart functionality</li>
+</ul>
+<p>Prevent shortcuts from counting as valid laps.</p>
+<p><strong>H. User interface</strong></p>
+<p>Include:</p>
+<ul>
+<li>Main menu</li>
+<li>Car selection</li>
+<li>Race HUD</li>
+<li>Current speed</li>
+<li>Current lap</li>
+<li>Player position</li>
+<li>Race timer</li>
+<li>Camera indicator</li>
+<li>Pause/resume</li>
+<li>Results screen</li>
+<li>Control instructions</li>
+</ul>
+<p><strong>I. Visual design</strong></p>
+<p>Create a visually appealing game.</p>
+<p>Use:</p>
+<ul>
+<li>3D vehicle geometry</li>
+<li>Suitable materials</li>
+<li>Lighting and shadows</li>
+<li>Attractive environmental colors</li>
+<li>Road markings</li>
+<li>Trackside details</li>
+<li>Clear UI hierarchy</li>
+</ul>
+<p>The game should look like a deliberate arcade racing experience, not a primitive technical demo.</p>
+<p>Do not depend on externally downloaded proprietary assets.</p>
+<p>You may create procedural geometry, textures and other original assets.</p>
+<p><strong>J. Verification</strong></p>
+<p>Before submitting:</p>
+<ul>
+<li>Run the development build.</li>
+<li>Fix compilation errors.</li>
+<li>Test the game in a browser.</li>
+<li>Verify movement controls.</li>
+<li>Verify car selection.</li>
+<li>Verify camera switching.</li>
+<li>Verify collisions.</li>
+<li>Verify lap tracking.</li>
+<li>Verify that NPCs can complete laps.</li>
+</ul>
+<p><strong>K. Final outputs</strong></p>
+<p>Provide:</p>
+<pre><code class="language-text">output/
+├── game/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── ...
+├── screenshots/
+│   ├── menu.png
+│   ├── race_chase.png
+│   ├── race_hood.png
+│   └── race_overhead.png
+└── implementation_report.md
+</code></pre>
+<p>The implementation report should explain the game architecture, controls, implemented features, known limitations and verification results.</p>
+<p>The game must be runnable using the documented local commands.</p>
+<p>Deliver the working application, not merely a design proposal.</p>

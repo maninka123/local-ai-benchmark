@@ -1,0 +1,56 @@
+{
+  "exhibits": [
+    {
+      "id": "V01",
+      "description": "Floor plan showing unmonitored link from Service Corridor to Lab"
+    },
+    {
+      "id": "V02",
+      "description": "Lab camera at 18:00; prototype present"
+    },
+    {
+      "id": "V03",
+      "description": "East Corridor camera at 18:10; Nora Vale (teal) visible"
+    },
+    {
+      "id": "V04",
+      "description": "Service Door camera at 18:19 (Actual 18:14); Eli Stone (orange) visible"
+    },
+    {
+      "id": "V05",
+      "description": "Lab camera at 18:18; prototype missing"
+    },
+    {
+      "id": "V06",
+      "description": "Cafeteria camera at 18:12; Theo Park (blue) visible"
+    },
+    {
+      "id": "V07",
+      "description": "Reception camera at 18:13; Ada Finch (red) visible"
+    },
+    {
+      "id": "V08",
+      "description": "Loading Bay camera at 18:11; Maya Reed (purple) with box visible"
+    },
+    {
+      "id": "V09",
+      "description": "Object detail reference"
+    },
+    {
+      "id": "V10",
+      "description": "Maintenance note: Service Camera has +5 minute clock offset"
+    },
+    {
+      "id": "D01",
+      "description": "Access logs for Nora (18:10), Theo (18:12), Ada (18:13), Eli (18:14)"
+    },
+    {
+      "id": "D02",
+      "description": "Witness statements; Eli claims no lab approach after 18:00"
+    },
+    {
+      "id": "D03",
+      "description": "Internal messages; Eli (17:00), Maya (17:10), Security (17:20)"
+    }
+  ]
+}

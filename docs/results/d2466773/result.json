@@ -1,0 +1,239 @@
+{
+  "run_id": "2026-10-09T201048-163726+0000--d2466773",
+  "model": "qwen3.6:35b-a3b-q4_K_M",
+  "task": "data_analysis",
+  "case": null,
+  "track": "text_and_tools",
+  "attempts": [
+    {
+      "number": 1,
+      "judgment": {
+        "number": 1,
+        "raw_score": 0,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved analytical output establishes dataset understanding or cleaning."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No submitted calculations, numerical evidence or reproducible analysis."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No saved investigated findings."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved figures."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved report."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved recommendations."
+          }
+        ],
+        "summary": "Needs revision: No saved deliverables.; Data quality observations are not explained or reproduced in submitted files.; Financial consistency exploration and merging had unresolved errors; no supported business findings or charts exist.",
+        "evidence_files": [
+          "results/improvement_campaign/data_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "models/qwen3.6-35b-a3b-q4_K_M--b52ca43760e9/01_data_analysis/2026-10-09T201048-163726+0000--d2466773/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": null,
+        "is_final": false
+      },
+      "files": [],
+      "game_url": null,
+      "readiness": "Analysis did not reproduce successfully",
+      "prompt_url": "./results/d2466773/attempt-1/prompt.md"
+    },
+    {
+      "number": 2,
+      "judgment": {
+        "number": 2,
+        "raw_score": 0,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved analytical output establishes dataset understanding or cleaning."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No submitted calculations, numerical evidence or reproducible analysis."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 0,
+            "reason": "No saved investigated findings."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved figures."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved report."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved recommendations."
+          }
+        ],
+        "summary": "Incomplete after improvement iteration 1: Required deliverable is missing or empty: analysis.py",
+        "evidence_files": [
+          "results/improvement_campaign/data_after_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "results/further-work/qwen3.6-35b-a3b-q4_K_M/data_analysis/2026-10-09T201048-163726-0000--d2466773/evaluations/eval-54b17a9ce6/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": null,
+        "is_final": false
+      },
+      "files": [],
+      "game_url": null,
+      "readiness": "Analysis did not reproduce successfully",
+      "prompt_url": "./results/d2466773/attempt-2/prompt.md"
+    },
+    {
+      "number": 3,
+      "judgment": {
+        "number": 3,
+        "raw_score": 16,
+        "completed": false,
+        "criteria": [
+          {
+            "name": "data_understanding",
+            "max_points": 15,
+            "points": 3,
+            "reason": "Five summary CSVs preserve actual categories, regions, segments, months/service dimensions and consistent cleaned row counts; no all-table overview, dtypes, documented cleaning or quality decisions."
+          },
+          {
+            "name": "numerical_accuracy",
+            "max_points": 20,
+            "points": 8,
+            "reason": "Actual numerical revenue/cost/count/service summaries earn partial credit; totals match public deduplicated-positive population. Margin column differs from financial margin implied by saved revenue/cost totals, no executable provenance and extreme prices retained."
+          },
+          {
+            "name": "hidden_patterns",
+            "max_points": 20,
+            "points": 5,
+            "reason": "Cross-dimension numerical comparisons allow seeing Premium margin/service reliability/time differences; no five interpreted findings with method, business meaning, limitations or event/anomaly investigation."
+          },
+          {
+            "name": "visualization",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No saved figures."
+          },
+          {
+            "name": "report_quality",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No report."
+          },
+          {
+            "name": "recommendations",
+            "max_points": 15,
+            "points": 0,
+            "reason": "No recommendations."
+          }
+        ],
+        "summary": "Incomplete after improvement 2: five numerical summary CSVs exist, but none of the requested final report, reproducible script, structured findings or six saved figures was delivered.",
+        "evidence_files": [
+          "results/further-work/qwen3.6-35b-a3b-q4_K_M/data_analysis/2026-10-09T201048-163726-0000--d2466773/evaluations/eval-ce866c53f5/artifacts/cat_stats.csv",
+          "results/further-work/qwen3.6-35b-a3b-q4_K_M/data_analysis/2026-10-09T201048-163726-0000--d2466773/evaluations/eval-ce866c53f5/artifacts/monthly_rev.csv",
+          "results/further-work/qwen3.6-35b-a3b-q4_K_M/data_analysis/2026-10-09T201048-163726-0000--d2466773/evaluations/eval-ce866c53f5/artifacts/reg_stats.csv",
+          "results/further-work/qwen3.6-35b-a3b-q4_K_M/data_analysis/2026-10-09T201048-163726-0000--d2466773/evaluations/eval-ce866c53f5/artifacts/seg_stats.csv",
+          "results/further-work/qwen3.6-35b-a3b-q4_K_M/data_analysis/2026-10-09T201048-163726-0000--d2466773/evaluations/eval-ce866c53f5/artifacts/service_stats.csv",
+          "results/improvement_campaign/pass_2/data_after_reviews.json",
+          "benchmark/prompts/data_analysis_prompt.md",
+          "datasets/data_analysis/data_dictionary.md"
+        ],
+        "limitations": [
+          "Output-only judgment; no runtime/speed/efficiency points and no GPT-assisted repairs or Astra output included.",
+          "Candidate code never executed or imported on host. Saved original/snapshot outputs and independent public-source completion reviews used; automatic quality scores and private expected-answer matching not used.",
+          "Large prepared CSVs examined by complete row/column/missingness/key-validity scans plus samples; consequential public-source recomputations reused from documented independent reviews.",
+          "Visualization scope: direct all-six contact-sheet review for Qwen9, Gemma12 attempt3 and Coder Next; public full visual evidence reused for Qwen27 and GPT-OSS attempts1/3, sampled visual evidence plus generator inspection for GPT-OSS attempt2. No claim that every plotted point was verified."
+        ],
+        "artifact_path": "results/further-work/qwen3.6-35b-a3b-q4_K_M/data_analysis/2026-10-09T201048-163726-0000--d2466773/evaluations/eval-ce866c53f5/artifacts",
+        "rubric_basis": "Same public-prompt output rubric, weights 15/20/20/15/15/15. hidden_patterns means substantive unexpected-pattern investigation, without a private answer checklist; incomplete outputs earn only demonstrated partial credit.",
+        "score": 4.8,
+        "is_final": true
+      },
+      "files": [
+        {
+          "name": "cat_stats.csv",
+          "url": "./results/d2466773/attempt-3/cat_stats.csv",
+          "bytes": 352
+        },
+        {
+          "name": "monthly_rev.csv",
+          "url": "./results/d2466773/attempt-3/monthly_rev.csv",
+          "bytes": 652
+        },
+        {
+          "name": "reg_stats.csv",
+          "url": "./results/d2466773/attempt-3/reg_stats.csv",
+          "bytes": 194
+        },
+        {
+          "name": "seg_stats.csv",
+          "url": "./results/d2466773/attempt-3/seg_stats.csv",
+          "bytes": 171
+        },
+        {
+          "name": "service_stats.csv",
+          "url": "./results/d2466773/attempt-3/service_stats.csv",
+          "bytes": 191
+        }
+      ],
+      "game_url": null,
+      "readiness": "Analysis did not reproduce successfully",
+      "prompt_url": "./results/d2466773/attempt-3/prompt.md"
+    }
+  ],
+  "repairs": []
+}

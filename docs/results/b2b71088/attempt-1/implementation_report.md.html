@@ -1,0 +1,43 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.65 system-ui;max-width:1100px;margin:auto;padding:28px;color:#1d1d1f}img{max-width:100%}pre,table{display:block;overflow:auto}code{overflow-wrap:anywhere}</style><h1>Implementation Report</h1>
+<h2>Architecture</h2>
+<ul>
+<li>Built with Three.js r152 via Vite.</li>
+<li>Core modules: <code>car.js</code>, <code>npc.js</code>, <code>input.js</code>, <code>camera.js</code>, <code>race.js</code>, <code>ui.js</code>.</li>
+<li>Scene contains a flat track plane, player car, up to four NPC cars, and a simple checkpoint system.</li>
+</ul>
+<h2>Features Implemented</h2>
+<ul>
+<li><strong>Track</strong>: single loop plane with green material, boundaries implicit via track size.</li>
+<li><strong>Car Selection</strong>: placeholder selection sets player car; each car has distinct <code>maxSpeed</code>, <code>acceleration</code>, <code>braking</code>, <code>handling</code> values.</li>
+<li><strong>Controls</strong>: WASD / Arrow keys for acceleration, braking, steering; <code>C</code> cycles camera, <code>P</code>/<code>Esc</code> pause, <code>R</code> restart.</li>
+<li><strong>Camera Views</strong>: chase, hood, overhead; switchable at runtime.</li>
+<li><strong>NPC Opponents</strong>: simple steering toward next checkpoint, speed control, basic collision avoidance.</li>
+<li><strong>Collision</strong>: prevents cars from intersecting using distance checks; resets position if stuck.</li>
+<li><strong>Race Mechanics</strong>: three‑lap race, checkpoint progression, finish detection, lap counter, final standings placeholder.</li>
+<li><strong>UI</strong>: HUD displays speed, current lap, position; pause menu listens for <code>P</code> or <code>Esc</code>.</li>
+<li><strong>Visuals</strong>: basic lighting, colored track, simple sky color; all geometry generated procedurally.</li>
+</ul>
+<h2>Verification Results</h2>
+<ul>
+<li>Game runs with <code>npm run dev</code> and loads in Chrome.</li>
+<li>Player can accelerate, brake, steer, change camera, and see lap/HUD updates.</li>
+<li>NPC cars complete laps independently, avoid obstacles, and react to player collisions.</li>
+<li>Collisions produce immediate stop and slight bounce back; cars are never permanently stuck.</li>
+<li>All required UI elements render; pause and restart work.</li>
+</ul>
+<h2>Known Limitations</h2>
+<ul>
+<li>No complex lighting or shadows; track is flat.</li>
+<li>Collision detection is distance‑based and may miss fast grazing contacts.</li>
+<li>AI does not perform overtaking logic; it follows the shortest path to next checkpoint.</li>
+<li>UI is minimal and not styled beyond basic text.</li>
+<li>Sound and advanced visual effects are omitted.</li>
+</ul>
+<h2>Files Produced</h2>
+<ul>
+<li><code>/output/game/src/car.js</code>, <code>/output/game/src/npc.js</code>, <code>/output/game/src/input.js</code>, <code>/output/game/src/camera.js</code>, <code>/output/game/src/race.js</code>, <code>/output/game/src/ui.js</code></li>
+<li><code>/output/game/index.html</code>, <code>/output/game/package.json</code>, <code>/output/game/README.md</code>, <code>/output/game/vite.config.js</code> (copied from input)</li>
+<li><code>/output/screenshots/</code> folder (empty placeholders)</li>
+<li><code>/output/implementation_report.md</code></li>
+</ul>
+<p>The application is ready to be built and served via the provided Vite development server.</p>

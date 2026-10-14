@@ -1,0 +1,75 @@
+{
+  "repair_id": "sol-6.1-small-fix-20261014",
+  "run_id": "2026-10-09T213021-860593+0000--80971a2f",
+  "source_update_id": "update-349403b443",
+  "source_evaluation_id": "eval-3469ef64be",
+  "configured_model": "gpt-6.1-sol",
+  "source_changed_lines": 27,
+  "source_files": [
+    {
+      "path": "game/src/main.js",
+      "added": 14,
+      "removed": 11
+    },
+    {
+      "path": "game/index.html",
+      "added": 1,
+      "removed": 1
+    }
+  ],
+  "source_hashes": {
+    "game/src/main.js": "11b33eb89fb066ca3e71e9da675b6bd4647d208562ff73eac2bc68ee33c22f6d",
+    "game/index.html": "1a09a6e66430109246e482ae7f0d96e07df8e127a0323db76535b4fec5f0d430"
+  },
+  "changes_summary": "Repair WASD codes, connect steering to vehicle rotation, scale movement/friction by elapsed time, and prevent orbit updates overriding the existing chase camera. Remove default page margins and fit the canvas to the iframe viewport.",
+  "status": "validated_partial",
+  "runnable": true,
+  "completion": false,
+  "limitations": [
+    "No road/circuit, ground, boundaries, barriers, scenery, markings, start/finish line, checkpoints or environmental collision response exists in the complete 86-line entry source.",
+    "Only one red box vehicle is created; no three-car selection, distinct vehicle geometry/statistics, four NPCs, traffic interaction, overtaking/recovery or independent laps exist.",
+    "Keyboard state uses e.code but WASD checks use lowercase w/s/a/d rather than KeyW/KeyS/KeyA/KeyD, so those required controls do not activate. Arrow steering only changes carDirection, which is never applied to the car quaternion used for movement.",
+    "Movement/turn values are frame-dependent rather than time-scaled; braking clamps speed at zero. C, P/Escape and R, three usable camera views, pause/resume and restart are absent.",
+    "No countdown, ordered checkpoint validation, three-lap race, lap timing, positioning, finish detection, standings, menu/selection/results UI or HUD is implemented.",
+    "All four screenshot files are byte-identical and show the same lone red box against blue with no track or UI. The report describes nonexistent modules/features and claims comprehensive gameplay verification and 30-60 FPS without supporting measurements.",
+    "Original benchmark scores and completeness are unchanged. This is an assisted partial preview, with original report claims retained and potentially inaccurate."
+  ],
+  "verification": [
+    {
+      "check": "git diff --no-index --numstat",
+      "source_changed_lines": 27,
+      "numstat": [
+        "14\t11\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\nemotron3-33b-q4_K_M\\\\racing_game\\\\2026-10-09T213021-860593-0000--80971a2f\\\\evaluations\\\\eval-3469ef64be\\\\artifacts\\\\game\\\\src\\\\main.js\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\nemotron3-33b-q4_K_M\\\\racing_game\\\\2026-10-09T213021-860593-0000--80971a2f\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\game\\\\src\\\\main.js\"",
+        "1\t1\t\"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\nemotron3-33b-q4_K_M\\\\racing_game\\\\2026-10-09T213021-860593-0000--80971a2f\\\\evaluations\\\\eval-3469ef64be\\\\artifacts\\\\game\\\\index.html\" => \"C:\\\\Users\\\\Pasindu\\\\OneDrive - UNSW\\\\Misc Project\\\\Local LLM run\\\\Local-LLM-Benchmark\\\\results\\\\further-work\\\\nemotron3-33b-q4_K_M\\\\racing_game\\\\2026-10-09T213021-860593-0000--80971a2f\\\\repairs\\\\sol-6.1-small-fix-20261014\\\\artifacts\\\\game\\\\index.html\""
+      ]
+    },
+    {
+      "check": "source SHA256 unchanged",
+      "passed": true
+    },
+    {
+      "check": "Docker network none isolated execution",
+      "exit_code": 0,
+      "runnable": true,
+      "log": "validation.log"
+    },
+    {
+      "check": "Isolated real WASD movement and steering",
+      "passed": true,
+      "evidence": "artifacts/keyboard_validation.json",
+      "validation_only_instrumentation": true
+    },
+    {
+      "check": "Canvas fits browser viewport without page overflow",
+      "passed": true,
+      "evidence": "artifacts/keyboard_validation.json"
+    }
+  ],
+  "artifacts_path": ".\\results\\further-work\\nemotron3-33b-q4_K_M\\racing_game\\2026-10-09T213021-860593-0000--80971a2f\\repairs\\sol-6.1-small-fix-20261014\\artifacts",
+  "source_artifacts_path": ".\\results\\further-work\\nemotron3-33b-q4_K_M\\racing_game\\2026-10-09T213021-860593-0000--80971a2f\\evaluations\\eval-3469ef64be\\artifacts",
+  "model": "nemotron3:33b-q4_K_M",
+  "task": "racing_game",
+  "generated_outputs_disclosure": "Existing analysis script may regenerate figures/findings/profiles; report prose is unchanged.",
+  "keyboard_movement_verified": true,
+  "keyboard_steering_verified": true
+}

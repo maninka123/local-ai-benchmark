@@ -1,0 +1,42 @@
+{
+  "build": true,
+  "loads": true,
+  "errors": [
+    "ReferenceError: Car is not defined"
+  ],
+  "checks": {
+    "canvas": true,
+    "selection": false,
+    "movement": false,
+    "timer": false,
+    "hud": false,
+    "camera": false,
+    "pause": false,
+    "npc_laps": false,
+    "restart": false
+  },
+  "states": [
+    {
+      "label": "menu",
+      "value": null
+    },
+    {
+      "label": "race",
+      "value": null
+    },
+    {
+      "label": "moved",
+      "value": null
+    },
+    {
+      "label": "simulation",
+      "value": null
+    }
+  ],
+  "notes": [
+    "Hooks are candidate supplied. Snapshot claims alone do not prove collisions, valid checkpoints, or NPC intelligence; these require manual review. No credit awarded for hooks alone."
+  ],
+  "build_log": "vite v7.3.7 building client environment for production...\ntransforming...\nsrc/main.js (59:27): \"OrbitControls\" is not exported by \"../../opt/lab/node_modules/three/build/three.module.js\", imported by \"src/main.js\".\n✓ 8 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                  0.20 kB │ gzip:   0.17 kB\ndist/assets/index-mpRpqGfe.js  508.26 kB │ gzip: 128.48 kB\n\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n✓ built in 836ms\n",
+  "menu_text": "",
+  "npc_observations": null
+}

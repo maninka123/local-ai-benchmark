@@ -1,0 +1,243 @@
+{
+  "case_id": "CASE_03",
+  "exhibits": [
+    {
+      "exhibit_id": "V01.png",
+      "type": "visual",
+      "description": "Synthetic schematic floor plan showing building layout",
+      "observations": [
+        "LAB connected to EAST CORRIDOR via teal line",
+        "EAST CORRIDOR connects to EAST EXIT",
+        "SERVICE CORRIDOR labeled as 'UNMONITORED LINK TO LAB' with orange connection",
+        "CAFETERIA shown separately",
+        "Service corridor provides unmonitored access to lab"
+      ],
+      "relevance": "Establishes spatial layout and identifies service corridor as unmonitored route to lab",
+      "uncertainties": [
+        "Schematic is synthetic, not actual floor plan"
+      ]
+    },
+    {
+      "exhibit_id": "V02.png",
+      "type": "visual",
+      "description": "LAB camera view at 18:00",
+      "observations": [
+        "Brown table visible on right side",
+        "Gray rectangular object with black triangle (prototype) on table",
+        "No persons visible in frame"
+      ],
+      "relevance": "Last confirmed visual evidence of prototype presence",
+      "uncertainties": [
+        "Single snapshot, not continuous footage"
+      ]
+    },
+    {
+      "exhibit_id": "V03.png",
+      "type": "visual",
+      "description": "EAST CORRIDOR camera view at 18:10",
+      "observations": [
+        "Single person visible with teal coat",
+        "Gray head, black legs (schematic representation)",
+        "Brown table on right side"
+      ],
+      "relevance": "Matches Nora Vale's assigned coat color (teal) and badge event at 18:10",
+      "uncertainties": [
+        "Coat color alone does not confirm biometric identity"
+      ]
+    },
+    {
+      "exhibit_id": "V04.png",
+      "type": "visual",
+      "description": "SERVICE DOOR camera view at 18:14",
+      "observations": [
+        "Two persons visible, both wearing gray coats",
+        "Gray heads, black legs (schematic representation)",
+        "Brown table on right side",
+        "Coat colors do NOT match any assigned staff member (Eli=orange, Maya=purple)"
+      ],
+      "relevance": "Critical evidence - shows persons at unmonitored route entrance but coat colors don't match badge holders",
+      "uncertainties": [
+        "Cannot confirm identity of gray-coated individuals",
+        "Badge logs show Eli Stone and Maya Reed credentials at same time"
+      ]
+    },
+    {
+      "exhibit_id": "V05.png",
+      "type": "visual",
+      "description": "LAB camera view at 18:18",
+      "observations": [
+        "Brown table visible on right side",
+        "No gray rectangular object or black triangle (prototype missing)",
+        "No persons visible in frame"
+      ],
+      "relevance": "Confirms prototype discovered missing at 18:18",
+      "uncertainties": [
+        "Single snapshot, not continuous footage"
+      ]
+    },
+    {
+      "exhibit_id": "V06.png",
+      "type": "visual",
+      "description": "CAFETERIA camera view at 18:12",
+      "observations": [
+        "Single person visible with blue coat",
+        "Gray head, black legs (schematic representation)",
+        "Brown table on right side"
+      ],
+      "relevance": "Matches Theo Park's assigned coat color (blue) and badge event at 18:12",
+      "uncertainties": [
+        "Coat color alone does not confirm biometric identity"
+      ]
+    },
+    {
+      "exhibit_id": "V07.png",
+      "type": "visual",
+      "description": "RECEPTION camera view at 18:13",
+      "observations": [
+        "Single person visible with red coat",
+        "Gray head, black legs (schematic representation)",
+        "Brown table on right side"
+      ],
+      "relevance": "Matches Ada Finch's assigned coat color (red) and badge event at 18:13",
+      "uncertainties": [
+        "Coat color alone does not confirm biometric identity"
+      ]
+    },
+    {
+      "exhibit_id": "V08.png",
+      "type": "visual",
+      "description": "LOADING BAY camera view at 18:11",
+      "observations": [
+        "Single person visible with purple coat",
+        "Person holding brown rectangular box (cardboard box)",
+        "Gray head, black legs (schematic representation)",
+        "Brown table on right side"
+      ],
+      "relevance": "Matches Maya Reed's assigned coat color (purple) and statement about carrying cardboard box; consistent with D03 message about moving consumables",
+      "uncertainties": [
+        "Brief snapshot at 18:11 cannot account for entire incident window",
+        "Maya's badge used at Service Door 18:14"
+      ]
+    },
+    {
+      "exhibit_id": "V09.png",
+      "type": "visual",
+      "description": "OBJECT DETAIL camera reference showing prototype",
+      "observations": [
+        "Gray rectangular object with black triangle on brown table",
+        "Reference image for identifying the prototype"
+      ],
+      "relevance": "Confirms appearance of missing prototype for comparison with V02 and V05",
+      "uncertainties": [
+        "Static reference image, not time-stamped observation"
+      ]
+    },
+    {
+      "exhibit_id": "V10.png",
+      "type": "visual",
+      "description": "SERVICE CAMERA showing camera maintenance notice",
+      "observations": [
+        "Text: 'BLIND SPOT: SERVICE CORRIDOR'",
+        "Brown table visible on right side",
+        "No persons or objects visible"
+      ],
+      "relevance": "Confirms service corridor is unmonitored - explains lack of visual evidence for prototype removal",
+      "uncertainties": [
+        "None - this is a system limitation confirmation"
+      ]
+    },
+    {
+      "exhibit_id": "D01_access.csv",
+      "type": "document",
+      "description": "Badge access log",
+      "observations": [
+        "18:10 Nora Vale EAST_CORRIDOR ENTRY",
+        "18:12 Theo Park CAFETERIA ENTRY",
+        "18:13 Ada Finch RECEPTION ENTRY",
+        "18:14 Eli Stone SERVICE_DOOR ENTRY",
+        "18:14 Maya Reed SERVICE_DOOR ENTRY"
+      ],
+      "relevance": "Records badge credential use at various locations during incident window",
+      "uncertainties": [
+        "Per D03, badges log credentials not biometric identity - cannot confirm who physically used badges"
+      ]
+    },
+    {
+      "exhibit_id": "D02_statements.md",
+      "type": "document",
+      "description": "Witness statements (unverified)",
+      "observations": [
+        "Nora: 'I only visited the east corridor and left'",
+        "Eli: 'I did not approach the lab after 18:00'",
+        "Maya: 'I carried a cardboard supply box at 18:11'",
+        "Theo: 'I remained in the cafeteria from 18:12'",
+        "Ada: 'I staffed reception'"
+      ],
+      "relevance": "Self-reported accounts of activities during incident window",
+      "uncertainties": [
+        "Statements are unverified and potentially unreliable",
+        "Eli's statement contradicted by badge log at Service Door"
+      ]
+    },
+    {
+      "exhibit_id": "D03_messages.md",
+      "type": "document",
+      "description": "Internal messages",
+      "observations": [
+        "17:00 Eli: 'My project needs that prototype tomorrow'",
+        "17:10 Maya: 'Please move the cardboard consumables box to the loading bay'",
+        "17:20 Security: 'Coat descriptions are from shift assignments; doors log badge credentials, not biometric identity. Service corridor is a camera blind spot.'"
+      ],
+      "relevance": "Provides context for staff activities and critical security system limitations",
+      "uncertainties": [
+        "Eli's message indicates motive but not action",
+        "Security clarification limits evidentiary value of badge logs"
+      ]
+    }
+  ],
+  "key_findings": [
+    {
+      "finding": "Prototype removed between 18:00 and 18:18",
+      "evidence_ids": [
+        "V02.png",
+        "V05.png"
+      ]
+    },
+    {
+      "finding": "Service corridor is unmonitored blind spot",
+      "evidence_ids": [
+        "V01.png",
+        "V10.png",
+        "D03_messages.md"
+      ]
+    },
+    {
+      "finding": "Badge credentials do not confirm biometric identity",
+      "evidence_ids": [
+        "D03_messages.md"
+      ]
+    },
+    {
+      "finding": "Two persons in gray coats at Service Door 18:14 - colors don't match assigned staff",
+      "evidence_ids": [
+        "V04.png",
+        "D01_access.csv"
+      ]
+    },
+    {
+      "finding": "Eli Stone badge used at Service Door contradicts his statement",
+      "evidence_ids": [
+        "D01_access.csv",
+        "D02_statements.md"
+      ]
+    }
+  ],
+  "critical_limitations": [
+    "Badge access logs record credentials, not biometric identity (D03_messages.md)",
+    "Service corridor is camera blind spot - no visual evidence of who entered lab or removed prototype (V10.png)",
+    "Coat colors in V04 do not match any assigned staff member",
+    "No camera footage captures actual prototype removal",
+    "Brief location snapshots cannot account for entire incident window",
+    "Cannot distinguish between personal badge use and badge misuse"
+  ]
+}

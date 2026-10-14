@@ -1,0 +1,11 @@
+{
+  "responsible_person": "Eli Stone",
+  "confidence": 0.72,
+  "conclusion": "Eli Stone is the most likely responsible individual. He had motive (message at 17:00 stating 'My project needs that prototype tomorrow') and opportunity (accessed SERVICE_DOOR at 18:14, a camera blind spot near the lab). His witness statement ('I did not approach the lab after 18:00') directly contradicts his access log entry at SERVICE_DOOR at 18:14. The prototype was missing by 18:18, and the 4-minute window between Eli's entry and discovery aligns with the timeline. While Maya Reed also entered via SERVICE_DOOR at 18:14, there is no evidence of motive linking her to the theft, and her statement about carrying a cardboard box at 18:11 is inconsistent with her 18:14 entry but does not directly implicate her in the theft.",
+  "exhibits": [
+    "D01_access (Eli Stone SERVICE_DOOR entry at 18:14)",
+    "D02_witnesses (Eli's denial of approaching lab)",
+    "D03_messages (Eli's motive message at 17:00)",
+    "D03_messages (SERVICE_DOOR is camera blind spot)"
+  ]
+}

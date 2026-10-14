@@ -1,0 +1,54 @@
+{
+  "timeline": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone expresses need for the prototype (D03).",
+      "status": "Confirmed"
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed tasked to move cardboard consumables box (D03).",
+      "status": "Confirmed"
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed present in Lab (V02).",
+      "status": "Confirmed"
+    },
+    {
+      "time": "18:10",
+      "event": "Nora Vale enters East Corridor (D01, V03).",
+      "status": "Confirmed"
+    },
+    {
+      "time": "18:11",
+      "event": "Maya Reed seen at Loading Bay with a cardboard box (V08).",
+      "status": "Confirmed"
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park enters Cafeteria (D01, V06).",
+      "status": "Confirmed"
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch enters Reception (D01, V07).",
+      "status": "Confirmed"
+    },
+    {
+      "time": "18:14",
+      "event": "Eli Stone enters Service Door (D01).",
+      "status": "Confirmed"
+    },
+    {
+      "time": "18:14",
+      "event": "Eli Stone seen at Service Door with a small box (V04, adjusted for +5 min offset from V10).",
+      "status": "Probable"
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype confirmed missing from Lab (V05).",
+      "status": "Confirmed"
+    }
+  ]
+}

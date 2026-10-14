@@ -1,0 +1,134 @@
+{
+  "case_id": "CASE_02",
+  "incident_summary": "Laboratory prototype last confirmed present at 18:00 (V02) and discovered missing at 18:18 (V05). A person wearing an orange work coat was observed with the prototype at SERVICE DOOR at corrected time 18:14 (V04, V10).",
+  "timeline": [
+    {
+      "time": "17:00",
+      "event": "Eli Stone sends internal message indicating project need for prototype tomorrow",
+      "evidence": [
+        "D03"
+      ],
+      "type": "confirmed",
+      "notes": "Establishes motive context before incident window. Message from D03, not D02."
+    },
+    {
+      "time": "17:10",
+      "event": "Maya Reed sends message requesting cardboard consumables box moved to loading bay",
+      "evidence": [
+        "D03"
+      ],
+      "type": "confirmed",
+      "notes": "Unrelated to prototype; establishes Maya's activity context."
+    },
+    {
+      "time": "17:20",
+      "event": "Security message clarifies coat descriptions from shift assignments, badge credentials vs biometric identity, and service camera +5 minute offset",
+      "evidence": [
+        "D03"
+      ],
+      "type": "confirmed",
+      "notes": "Critical for interpreting all visual evidence and identity limitations."
+    },
+    {
+      "time": "18:00",
+      "event": "Prototype confirmed present on table in LAB",
+      "evidence": [
+        "V02"
+      ],
+      "type": "confirmed",
+      "notes": "Start of incident window; prototype visible. No person visible."
+    },
+    {
+      "time": "18:00-18:14",
+      "event": "UNOBSERVED INTERVAL - Prototype removed from LAB",
+      "evidence": [],
+      "type": "unobserved",
+      "notes": "Critical gap; prototype present at 18:00 (V02), with orange-coated figure at SERVICE DOOR at corrected 18:14 (V04). No evidence of reverse movement."
+    },
+    {
+      "time": "18:10",
+      "event": "Nora Vale badge entry at EAST_CORRIDOR; teal coat figure observed in EAST CORRIDOR",
+      "evidence": [
+        "D01",
+        "V03"
+      ],
+      "type": "confirmed",
+      "notes": "LAB connects to EAST CORRIDOR per V01. Identity uncertain (coat color from shift assignment)."
+    },
+    {
+      "time": "18:11",
+      "event": "Maya Reed observed with cardboard box at LOADING BAY",
+      "evidence": [
+        "V08"
+      ],
+      "type": "confirmed",
+      "notes": "No badge entry for Maya in D01. Consistent with D03 message about cardboard box. Identity uncertain."
+    },
+    {
+      "time": "18:12",
+      "event": "Theo Park badge entry at CAFETERIA; blue coat figure observed in CAFETERIA",
+      "evidence": [
+        "D01",
+        "V06"
+      ],
+      "type": "confirmed",
+      "notes": "Identity uncertain. No prototype visible."
+    },
+    {
+      "time": "18:13",
+      "event": "Ada Finch badge entry at RECEPTION; red coat figure observed at RECEPTION",
+      "evidence": [
+        "D01",
+        "V07"
+      ],
+      "type": "confirmed",
+      "notes": "Identity uncertain. No prototype visible."
+    },
+    {
+      "time": "18:14",
+      "event": "Eli Stone badge entry at SERVICE_DOOR; orange coat figure observed with prototype beside him",
+      "evidence": [
+        "D01",
+        "V04"
+      ],
+      "type": "confirmed",
+      "notes": "V04 displayed time 18:19 corrected to 18:14 per V10 offset. Eli's statement contradicts this. Identity uncertain (coat color)."
+    },
+    {
+      "time": "18:14-18:18",
+      "event": "UNOBSERVED INTERVAL - Prototype transported from SERVICE DOOR to unknown location",
+      "evidence": [],
+      "type": "unobserved",
+      "notes": "Prototype present at 18:14 (V04), absent from LAB at 18:18 (V05). No evidence of return to lab."
+    },
+    {
+      "time": "18:18",
+      "event": "Prototype confirmed absent from LAB; table empty",
+      "evidence": [
+        "V05"
+      ],
+      "type": "confirmed",
+      "notes": "End of incident window; prototype missing. No person visible."
+    }
+  ],
+  "unobserved_intervals": [
+    {
+      "period": "18:00-18:14",
+      "description": "Prototype removed from LAB; no camera coverage of LAB during this period",
+      "significance": "Critical gap when prototype left confirmed location"
+    },
+    {
+      "period": "18:14-18:18",
+      "description": "Prototype transported from SERVICE DOOR to unknown destination",
+      "significance": "Post-possession movement unobserved"
+    }
+  ],
+  "timestamp_corrections": [
+    {
+      "camera": "SERVICE_DOOR (V04)",
+      "displayed_time": "18:19",
+      "corrected_time": "18:14",
+      "basis": "V10 documents +5 minute clock offset on service camera"
+    }
+  ]
+}

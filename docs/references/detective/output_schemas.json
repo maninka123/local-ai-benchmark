@@ -1,0 +1,386 @@
+{
+  "timeline": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$defs": {
+      "refs": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "enum": [
+            "V01",
+            "V02",
+            "V03",
+            "V04",
+            "V05",
+            "V06",
+            "V07",
+            "V08",
+            "V09",
+            "V10",
+            "D01",
+            "D02",
+            "D03"
+          ]
+        }
+      },
+      "claim": {
+        "type": "object",
+        "required": [
+          "text",
+          "exhibit_ids"
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exhibit_ids": {
+            "$ref": "#/$defs/refs"
+          }
+        }
+      }
+    },
+    "type": "object",
+    "required": [
+      "schema_version",
+      "case_id",
+      "time_basis",
+      "events",
+      "assumptions",
+      "missing_intervals_and_movements"
+    ],
+    "properties": {
+      "schema_version": {
+        "const": "1.0"
+      },
+      "case_id": {
+        "enum": [
+          "case_01",
+          "case_02",
+          "case_03"
+        ]
+      },
+      "events": {
+        "type": "array",
+        "minItems": 10,
+        "items": {
+          "type": "object",
+          "required": [
+            "time",
+            "raw_time",
+            "status",
+            "description",
+            "exhibit_ids"
+          ],
+          "properties": {
+            "time": {
+              "type": "string",
+              "pattern": "^[0-2][0-9]:[0-5][0-9]$"
+            },
+            "raw_time": {
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "confirmed_record",
+                "corrected_record",
+                "probable_inference"
+              ]
+            },
+            "description": {
+              "type": "string"
+            },
+            "exhibit_ids": {
+              "$ref": "#/$defs/refs"
+            }
+          }
+        }
+      },
+      "assumptions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/claim"
+        }
+      },
+      "missing_intervals_and_movements": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/claim"
+        }
+      }
+    }
+  },
+  "evidence_analysis": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$defs": {
+      "refs": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "enum": [
+            "V01",
+            "V02",
+            "V03",
+            "V04",
+            "V05",
+            "V06",
+            "V07",
+            "V08",
+            "V09",
+            "V10",
+            "D01",
+            "D02",
+            "D03"
+          ]
+        }
+      },
+      "claim": {
+        "type": "object",
+        "required": [
+          "text",
+          "exhibit_ids"
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exhibit_ids": {
+            "$ref": "#/$defs/refs"
+          }
+        }
+      }
+    },
+    "type": "object",
+    "required": [
+      "schema_version",
+      "case_id",
+      "context_source",
+      "context_observations",
+      "exhibits"
+    ],
+    "properties": {
+      "schema_version": {
+        "const": "1.0"
+      },
+      "case_id": {
+        "enum": [
+          "case_01",
+          "case_02",
+          "case_03"
+        ]
+      },
+      "exhibits": {
+        "type": "array",
+        "minItems": 13,
+        "maxItems": 13,
+        "items": {
+          "type": "object",
+          "required": [
+            "exhibit_id",
+            "title",
+            "source_path",
+            "timestamp",
+            "direct_observation",
+            "interpretation",
+            "uncertainty"
+          ],
+          "properties": {
+            "exhibit_id": {
+              "enum": [
+                "V01",
+                "V02",
+                "V03",
+                "V04",
+                "V05",
+                "V06",
+                "V07",
+                "V08",
+                "V09",
+                "V10",
+                "D01",
+                "D02",
+                "D03"
+              ]
+            },
+            "title": {
+              "type": "string"
+            },
+            "source_path": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "direct_observation": {
+              "type": "string"
+            },
+            "interpretation": {
+              "type": "string"
+            },
+            "uncertainty": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "conclusions": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$defs": {
+      "refs": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "enum": [
+            "V01",
+            "V02",
+            "V03",
+            "V04",
+            "V05",
+            "V06",
+            "V07",
+            "V08",
+            "V09",
+            "V10",
+            "D01",
+            "D02",
+            "D03"
+          ]
+        }
+      },
+      "claim": {
+        "type": "object",
+        "required": [
+          "text",
+          "exhibit_ids"
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exhibit_ids": {
+            "$ref": "#/$defs/refs"
+          }
+        }
+      }
+    },
+    "type": "object",
+    "required": [
+      "schema_version",
+      "case_id",
+      "most_likely_account",
+      "exhibit_ids",
+      "leading_suspect",
+      "responsible_individual_definitively_identified",
+      "confidence",
+      "alternatives",
+      "limitations",
+      "recommended_next_steps",
+      "suspects",
+      "key_deductions",
+      "contradictions"
+    ],
+    "properties": {
+      "schema_version": {
+        "const": "1.0"
+      },
+      "case_id": {
+        "enum": [
+          "case_01",
+          "case_02",
+          "case_03"
+        ]
+      },
+      "most_likely_account": {
+        "type": "string"
+      },
+      "exhibit_ids": {
+        "$ref": "#/$defs/refs"
+      },
+      "leading_suspect": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "responsible_individual_definitively_identified": {
+        "type": "boolean"
+      },
+      "confidence": {
+        "type": "object",
+        "minProperties": 4,
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "suspects": {
+        "type": "array",
+        "minItems": 5,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "required": [
+            "name",
+            "assessment",
+            "opportunity",
+            "access",
+            "timeline_consistency",
+            "supporting_evidence",
+            "exculpatory_evidence",
+            "uncertainty",
+            "exhibit_ids"
+          ],
+          "properties": {
+            "exhibit_ids": {
+              "$ref": "#/$defs/refs"
+            }
+          }
+        }
+      },
+      "alternatives": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "$ref": "#/$defs/claim"
+        }
+      },
+      "limitations": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "$ref": "#/$defs/claim"
+        }
+      },
+      "recommended_next_steps": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "$ref": "#/$defs/claim"
+        }
+      },
+      "key_deductions": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "$ref": "#/$defs/claim"
+        }
+      },
+      "contradictions": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "$ref": "#/$defs/claim"
+        }
+      }
+    }
+  }
+}

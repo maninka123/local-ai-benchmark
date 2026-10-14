@@ -1,0 +1,163 @@
+{
+  "case_id": "CASE_02",
+  "incident_type": "Missing Laboratory Prototype",
+  "theft_window": {
+    "start": "18:00",
+    "end": "18:18"
+  },
+  "clock_correction_note": "Service camera (V04, V10) has +5 minute offset per D03. Displayed times must be corrected by subtracting 5 minutes.",
+  "events": [
+    {
+      "time": "17:00",
+      "type": "documentary",
+      "description": "Eli Stone sends message: 'My project needs that prototype tomorrow'",
+      "evidence": [
+        "D03"
+      ],
+      "certainty": "confirmed"
+    },
+    {
+      "time": "17:10",
+      "type": "documentary",
+      "description": "Maya Reed sends message about moving cardboard consumables box to loading bay",
+      "evidence": [
+        "D03"
+      ],
+      "certainty": "confirmed"
+    },
+    {
+      "time": "17:20",
+      "type": "documentary",
+      "description": "Security note: coat descriptions from shift assignments; badge credentials not biometric; service camera +5 min offset",
+      "evidence": [
+        "D03"
+      ],
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:00",
+      "type": "observation",
+      "description": "Prototype visible in Lab on brown surface (black triangle in gray container)",
+      "evidence": [
+        "V02"
+      ],
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:10",
+      "type": "observation",
+      "description": "Nora Vale (teal coat) observed in East Corridor; badge entry logged",
+      "evidence": [
+        "V03",
+        "D01"
+      ],
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:11",
+      "type": "observation",
+      "description": "Maya Reed (purple coat) observed in Loading Bay with cardboard box; no prototype visible",
+      "evidence": [
+        "V08"
+      ],
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:12",
+      "type": "observation",
+      "description": "Theo Park (blue coat) observed in Cafeteria; badge entry logged",
+      "evidence": [
+        "V06",
+        "D01"
+      ],
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:13",
+      "type": "observation",
+      "description": "Ada Finch (red coat) observed at Reception; badge entry logged",
+      "evidence": [
+        "V07",
+        "D01"
+      ],
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:14",
+      "type": "observation",
+      "description": "Eli Stone badge credential used for Service Door entry (D01)",
+      "evidence": [
+        "D01"
+      ],
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:14",
+      "type": "observation",
+      "description": "Person in orange coat (Eli Stone's assigned color) observed at Service Door with prototype. Displayed time 18:19 corrected to 18:14 per V10/D03.",
+      "evidence": [
+        "V04",
+        "V10",
+        "D03"
+      ],
+      "certainty": "confirmed"
+    },
+    {
+      "time": "18:14-18:18",
+      "type": "inference",
+      "description": "Unobserved interval: prototype removal from Lab to Service Door via unmonitored Service Corridor (V01). Actual theft moment not captured.",
+      "evidence": [
+        "V01",
+        "V02",
+        "V04",
+        "V05"
+      ],
+      "certainty": "inferred"
+    },
+    {
+      "time": "18:18",
+      "type": "observation",
+      "description": "Prototype missing from Lab; brown surface empty",
+      "evidence": [
+        "V05"
+      ],
+      "certainty": "confirmed"
+    }
+  ],
+  "gaps_and_uncertainties": [
+    {
+      "gap": "18:00-18:14",
+      "description": "No visual evidence of prototype removal from Lab. Theft occurred during this window but exact moment unobserved.",
+      "implication": "Cannot determine when theft actually began"
+    },
+    {
+      "gap": "Service Corridor movement",
+      "description": "V01 shows Service Corridor is unmonitored link to Lab. Movement through this route not captured on camera.",
+      "implication": "Cannot confirm which route was used for removal"
+    },
+    {
+      "gap": "Identity confirmation",
+      "description": "D03 states badge credentials are not biometric and coat colors are appearance-based only.",
+      "implication": "Orange coat wearer may not be Eli Stone; badge could have been used by another person"
+    }
+  ],
+  "contradictions_resolved": [
+    {
+      "issue": "V04 displayed time (18:19) vs theft window end (18:18)",
+      "resolution": "V10/D03 confirms +5 minute clock offset on service camera. Corrected V04 time is 18:14, within theft window.",
+      "evidence": [
+        "V04",
+        "V10",
+        "D03"
+      ]
+    },
+    {
+      "issue": "Eli Stone statement vs visual evidence",
+      "resolution": "Eli claimed no lab approach after 18:00 (D02), but V04 shows orange coat with prototype at Service Door at 18:14.",
+      "evidence": [
+        "V04",
+        "D02"
+      ]
+    }
+  ]
+}
