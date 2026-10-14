@@ -14,8 +14,10 @@
   "reviewed_results": 53,
   "models": 13,
   "complete_results": 1,
-  "raw_scores_finite": true,
+  "final_scores_finite": true,
   "all_figures_nonempty": true,
+  "font": "Segoe UI; SVG glyphs converted to paths to preserve the installed font on GitHub",
+  "png_export_dpi": 200,
   "notes": [
     "No model weights, personal environment paths, process lists or private expected answers exported.",
     "AI rubric judgments are distinct from human ratings and preserved automatic scores.",

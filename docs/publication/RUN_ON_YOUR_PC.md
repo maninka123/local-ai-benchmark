@@ -88,7 +88,3 @@ npm.cmd run dashboard:build
 ```
 
 Frontend browser checks live in `dashboard/frontend/tests`; Docker isolation checks run during setup. Candidate output can be incorrect even when infrastructure checks pass. Keep execution checks, output-quality judgments and completion separate.
-
-## Rebuild the public dashboard
-
-The public dashboard reads the included saved snapshot and needs no inference server. Install the frontend dependencies with `npm run dashboard:install`, then run `npm run pages:build`. This rebuilds `docs/index.html` and its assets without changing the published result snapshot. GitHub Pages serves branch `main`, folder `/docs`.

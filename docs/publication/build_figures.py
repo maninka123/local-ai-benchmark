@@ -23,10 +23,10 @@ LABELS = {
  'qwen3.6:35b-a3b-q4_K_M':'Qwen 3.6 35B', 'gpt-oss:20b':'GPT-OSS 20B',
  'qwen3-coder-next:q4_K_M':'Qwen 3 Coder Next', 'qwen3-next:80b-a3b-thinking-q4_K_M':'Qwen 3 Next 80B',
  'qwen3-vl:30b-a3b-instruct':'Qwen 3 VL 30B'}
-plt.rcParams.update({'font.family':'DejaVu Sans', 'font.size':10, 'axes.titlesize':15,
- 'axes.labelsize':10, 'figure.facecolor':'#fff', 'axes.facecolor':'#fff', 'text.color':'#172033',
+plt.rcParams.update({'font.family':'Segoe UI', 'font.size':12, 'axes.titlesize':17,
+ 'axes.labelsize':12, 'figure.facecolor':'#fff', 'axes.facecolor':'#fff', 'text.color':'#172033',
  'axes.labelcolor':'#475569', 'xtick.color':'#475569', 'ytick.color':'#172033',
- 'svg.fonttype':'none', 'axes.spines.top':False, 'axes.spines.right':False,
+ 'svg.fonttype':'path', 'axes.spines.top':False, 'axes.spines.right':False,
  'axes.spines.left':False, 'axes.spines.bottom':False})
 
 def finite(x):
@@ -82,9 +82,10 @@ def aggregate(rows):
 def finish(fig, ax, filename, title, note):
     ax.set_title(title,loc='left',fontweight='bold',pad=22)
     ax.grid(axis='x',color='#e2e8f0',linewidth=.7);ax.set_axisbelow(True)
-    fig.text(.03,.025,note,fontsize=8.2,color='#64748b',wrap=True)
-    fig.subplots_adjust(left=.32,right=.94,top=.89,bottom=.13)
+    # Interpretation belongs in the surrounding README, rather than tiny chart footnotes.
+    fig.subplots_adjust(left=.36,right=.94,top=.88,bottom=.12)
     fig.savefig(OUT/filename,format='svg',metadata={'Creator':'Pasindu / local-ai-benchmark'})
+    fig.savefig(OUT/filename.replace('.svg','.png'),dpi=200)
     plt.close(fig)
 
 def plot_all(payload):
@@ -95,7 +96,7 @@ def plot_all(payload):
         y=np.arange(len(data));fig,ax=plt.subplots(figsize=(8.3,6.8))
         b=np.array([p['final_score'] for p in data])
         ax.barh(y,b,height=.5,color=COLORS[task],alpha=.88)
-        for i,v in enumerate(b):ax.text(v+1.8,i,f'{v:.1f}',va='center',fontsize=9)
+        for i,v in enumerate(b):ax.text(v+1.1,i,f'{v:.1f}',va='center',fontsize=12)
         labels=[LABELS[p['model']]+(' [W]' if task=='detective' and p['track']=='text_only_detective' else ' [V]' if task=='detective' else '') for p in data]
         ax.set_yticks(y,labels);ax.set_xlim(0,35);ax.set_xlabel('Final completion-aware score / 100')
         note='One final score per task result. Unfinished after prompt 3: final rubric quality × 0.3. Time/repairs excluded.'
@@ -114,7 +115,7 @@ def plot_all(payload):
             values=[v for v in vs if finite(v)]
             ax.barh(ys,values,height=.2,color=COLORS[task],label=NAMES[task],alpha=.88)
         ax.set_yticks(y,[LABELS[m]+(' [W]' if lookup.get((m,'detective'),{}).get('track')=='text_only_detective' else ' [V]') for m in order]);ax.invert_yaxis()
-        ax.set_xlabel(xlabel);ax.legend(loc='lower right',frameon=False,fontsize=8.5)
+        ax.set_xlabel(xlabel);ax.legend(loc='lower right',frameon=False,fontsize=11)
         if key=='final_score':ax.set_xlim(0,35)
         finish(fig,ax,filename,title,note)
 
@@ -125,17 +126,19 @@ def plot_all(payload):
         data=sorted(unique.values(),key=lambda p:p[keys[0]] or 0);y=np.arange(len(data));fig,ax=plt.subplots(figsize=(8.3,6.8))
         for i,key in enumerate(keys):
             vals=[p[key] for p in data];offset=(i-.5)*.3 if len(keys)>1 else 0
-            ax.barh(y+offset,[v or 0 for v in vals],height=.28 if len(keys)>1 else .5,color='#2563eb' if i==0 else '#14b8a6',label='Total' if key=='total_b' else 'Calculated active' if key=='active_b' else 'Installed package')
+            available=[n for n,v in enumerate(vals) if finite(v)]
+            ax.barh(y[available]+offset,[vals[n] for n in available],height=.28 if len(keys)>1 else .5,color='#2563eb' if i==0 else '#14b8a6',label='Total' if key=='total_b' else 'Calculated active' if key=='active_b' else 'Installed package')
             for n,v in enumerate(vals):
-                if finite(v):ax.text(v+max(vals or [1])*.025,n+offset,f'{v:.1f}',fontsize=9,va='center')
+                if finite(v):ax.text(v+max([x for x in vals if finite(x)] or [1])*.025,n+offset,f'{v:.1f}',fontsize=12,va='center')
+                else:ax.text(0,n+offset,'Unavailable',fontsize=11,va='center',color='#64748b')
         ax.set_yticks(y,[LABELS[p['model']] for p in data]);ax.set_xlabel(xlabel);ax.margins(x=.18)
-        if len(keys)>1:ax.legend(frameon=False,loc='lower right',fontsize=9)
+        if len(keys)>1:ax.legend(frameon=False,loc='lower right',fontsize=11)
         finish(fig,ax,filename,title,note)
 
     # One final score per task; earlier failed prompts have no awarded score.
     matrix=np.array([[lookup[(m,task)]['final_score'] for task in TASKS] for m in order])
     fig,ax=plt.subplots(figsize=(8.3,6.8));ax.imshow(matrix,cmap='Blues',vmin=0,vmax=100,aspect='auto')
-    ax.set_yticks(range(len(order)),[LABELS[m] for m in order]);ax.set_xticks(range(3),['Data','Racing','Detective']);ax.tick_params(length=0)
+    ax.set_yticks(range(len(order)),[LABELS[m]+(' [W]' if lookup.get((m,'detective'),{}).get('track')=='text_only_detective' else ' [V]') for m in order]);ax.set_xticks(range(3),['Data','Racing','Detective']);ax.tick_params(length=0)
     for i in range(len(order)):
         for j in range(3):ax.text(j,i,f'{matrix[i,j]:.1f}',ha='center',va='center',color='white' if matrix[i,j]>60 else '#172033')
     finish(fig,ax,'quality-progress.svg','Final score by task','One final awarded score per result; Detective case means. Visual/written evidence differs; earlier failures have no score.')
@@ -143,17 +146,22 @@ def plot_all(payload):
     fig,ax=plt.subplots(figsize=(8.3,6.8))
     for i,m in enumerate(order):
         p=unique[m];q=average([x['final_score'] for x in points if x['model']==m]);ax.scatter(p['size_gb'],q,s=85,color='#2563eb',marker='o',edgecolor='white',lw=1)
-        ax.annotate(f'M{i+1}',(p['size_gb'],q),xytext=(5,5),textcoords='offset points',fontsize=9)
+        ax.annotate(f'M{i+1}',(p['size_gb'],q),xytext=(5,5),textcoords='offset points',fontsize=12)
     ax.set_xlabel('Installed package size · GB');ax.set_ylabel('Mean final task score / 100');ax.set_ylim(0,35)
-    legend='   '.join(f'M{i+1} {LABELS[m]}' for i,m in enumerate(order))
-    import textwrap
-    fig.text(.03,.025,'\n'.join(textwrap.wrap(legend,105)),fontsize=7.2,color='#64748b')
+    # Two columns of readable model keys avoid a miniature footnote-style legend.
+    for i,m in enumerate(order):
+        column=i//7;row=i%7
+        track=' [W]' if lookup.get((m,'detective'),{}).get('track')=='text_only_detective' else ' [V]'
+        fig.text(.10+column*.46,.205-row*.024,f'M{i+1}  {LABELS[m]}{track}',fontsize=11,color='#475569')
     ax.set_title('Capacity vs final task score',loc='left',fontweight='bold',pad=22);ax.grid(color='#e2e8f0');ax.set_axisbelow(True)
-    fig.subplots_adjust(left=.13,right=.94,top=.89,bottom=.23)
-    fig.savefig(OUT/'quality-vs-storage.svg',metadata={'Creator':'Pasindu / local-ai-benchmark'});plt.close(fig)
+    fig.subplots_adjust(left=.13,right=.94,top=.88,bottom=.32)
+    fig.savefig(OUT/'quality-vs-storage.svg',metadata={'Creator':'Pasindu / local-ai-benchmark'})
+    fig.savefig(OUT/'quality-vs-storage.png',dpi=200);plt.close(fig)
     report={'figures':sorted(p.name for p in OUT.glob('*.svg')), 'reviewed_results':len(payload['rows']),
       'models':len(unique),'complete_results':sum(r['first_completed_attempt'] is not None for r in payload['rows']),
-      'raw_scores_finite':bool(np.isfinite(matrix).all()),'all_figures_nonempty':all(p.stat().st_size>1000 for p in OUT.glob('*.svg')),
+      'final_scores_finite':bool(np.isfinite(matrix).all()),'all_figures_nonempty':all(p.stat().st_size>1000 for p in OUT.glob('*.svg')),
+      'font':'Segoe UI; SVG glyphs converted to paths to preserve the installed font on GitHub',
+      'png_export_dpi':200,
       'notes':['No model weights, personal environment paths, process lists or private expected answers exported.',
                'AI rubric judgments are distinct from human ratings and preserved automatic scores.',
                'No throughput or time contribution to rubric scores; repaired outputs excluded.']}

@@ -1,6 +1,14 @@
 # Local AI Benchmark
 
-**What can local AI models actually finish on a powerful desktop?** Explore 13 installed models across data analysis, a 3D racing game and evidence-based detective investigations. Compare their saved outputs, output-only rubric judgments, token speed and memory-related model sizes in an interactive dashboard.
+[![Qwen](https://img.shields.io/badge/Qwen-2563eb?style=flat-square)](https://github.com/topics/qwen)
+[![Gemma](https://img.shields.io/badge/Gemma_%C2%B7_Google-4285f4?style=flat-square)](https://github.com/topics/gemma)
+[![Nemotron](https://img.shields.io/badge/Nemotron_%C2%B7_NVIDIA-76b900?style=flat-square)](https://github.com/topics/nemotron)
+[![GLM](https://img.shields.io/badge/GLM_%C2%B7_Z.ai-7c3aed?style=flat-square)](https://github.com/topics/glm)
+[![GPT-OSS](https://img.shields.io/badge/GPT--OSS_%C2%B7_OpenAI-172033?style=flat-square)](https://github.com/topics/gpt-oss)
+[![DeepSeek OCR](https://img.shields.io/badge/DeepSeek_OCR_%C2%B7_related-2563eb?style=flat-square)](https://github.com/topics/deepseek)
+[![Ollama](https://img.shields.io/badge/Ollama-374151?style=flat-square)](https://github.com/topics/ollama)
+
+**What can local AI models actually finish on a powerful desktop?** Explore 13 locally benchmarked models across data analysis, a 3D racing game and evidence-based detective investigations. Compare their saved outputs, output-only rubric judgments, token speed and memory-related model sizes in an interactive dashboard.
 
 [**Explore the dashboard →**](https://maninka123.github.io/local-ai-benchmark/) · [Results guide](docs/publication/RESULTS.md) · [Methodology](docs/publication/METHODOLOGY.md) · [Run on your PC](docs/publication/RUN_ON_YOUR_PC.md)
 
@@ -8,49 +16,75 @@
 | :-- | :-- | :-- | :-- | :-- |
 | **13** | **3** | **53** | **159**, across three prompts | **RTX 4080 16 GB · i9-13900K · 64 GB RAM** |
 
-This repository publishes the benchmark software, compact measurements, task prompts, review evidence and saved outputs. **Model weights are not included.** The public dashboard lets you explore results and open available reports and game builds without installing an AI model. Local reruns and further prompting require your own Ollama installation and model downloads.
+Includes the software, prompts, scores and saved outputs. **Model weights are excluded.** Browse reports and game builds in the dashboard, or follow the [rerun guide](docs/publication/RUN_ON_YOUR_PC.md) to test models on your own PC.
 
 ## Read the results correctly
 
-**Only 1 of 53 task results met the full completion requirements:** Qwen 3.5 27B, Detective case 3, on its third benchmark prompt. Many other outputs demonstrate useful partial work, but an opening page or an executable script does not mean the full challenge was completed.
-
-Each task result has **exactly one final score**. Fully completed on prompt 1: **100**; prompt 2: **60**; prompt 3: **30**. If still incomplete after prompt 3, the final output's rubric quality determines **0–30 partial credit**. Earlier failed attempts show their status and review notes, without an awarded score.
-
-These are **AI rubric judgments, not human ratings**. Time, token speed and separately assisted repairs do not influence the score. Original automatic results remain separate and preserved. Visual and written Detective tracks supply different evidence and have different case coverage; their case averages are labelled and should not be treated as one common ranking. The AI review uses the same category weights for both tracks; preserved automatic rubrics remain separate.
+- **Completion:** 1/53 results fully complete: Qwen 3.5 27B, Detective case 3, on prompt 3.
+- **One final score:** completion on prompts 1 / 2 / 3 earns **100 / 60 / 30**. An unfinished third attempt earns **0–30 partial credit**; earlier failures are unscored.
+- **AI review:** time and assisted repairs are excluded. Compare Detective results within the labelled visual or written track. [Full scoring method](docs/publication/METHODOLOGY.md).
 
 ## Results at a glance
 
-Compact figures are generated from the [published chart data](docs/publication/chart-data.json). Open the dashboard to change task, chart axes, metric, model selection and initial/latest result scope, or inspect exact values and rubric reasons.
+Full-width figures use the dashboard's sans-serif font. Exact values and interactive comparisons are in the [dashboard](https://maninka123.github.io/local-ai-benchmark/); [chart data](docs/publication/chart-data.json) records the sources.
 
-| Data analysis final scores | Final scores by task |
-| :--: | :--: |
-| ![Data analysis final task scores](docs/assets/quality-data_analysis.svg) | ![Final scores for all three tasks](docs/assets/quality-progress.svg) |
-| **Data analysis:** useful findings are different from a correct, reproducible investigation. | **Final scores:** one awarded score per task result; earlier failures retain notes. |
+### Final scores by task
 
-| Racing game | Detective investigations |
-| :--: | :--: |
-| ![Racing game final task scores](docs/assets/quality-racing_game.svg) | ![Detective final task scores](docs/assets/quality-detective.svg) |
-| **Gameplay:** a compiled page can still lack driving, opponents, checkpoints or a complete race. | **Evidence:** [V] = visual exhibits; [W] = written evidence. Cases averaged equally. |
+![Final scores by task](docs/assets/quality-progress.svg)
 
-| Completion-aware review scores | Recorded token speed |
-| :--: | :--: |
-| ![Final completion-aware task scores](docs/assets/review-scores.svg) | ![Recorded initial output token speed](docs/assets/token-speed.svg) |
-| **Scores:** incomplete work stays within the 0–30 partial-credit band. | **Throughput:** recorded initial generation tokens/s, kept independent of quality. |
+One awarded score per result. Detective values are case means; **[V] visual / [W] written** inputs remain distinct.
+
+### Recorded generation speed
+
+![Initial generation speed](docs/assets/token-speed.svg)
+
+Initial output tokens/s on the tested desktop. Speed is separate from task quality.
 
 <details>
-<summary><strong>More comparisons: storage, active parameters, total time and capacity</strong></summary>
+<summary><strong>Task-by-task scores · four more figures</strong></summary>
 
-| Installed model storage | Total vs calculated active parameters |
-| :--: | :--: |
-| ![Installed model package size](docs/assets/model-storage.svg) | ![Total and calculated active parameters](docs/assets/model-parameters.svg) |
-| Decimal GB of downloaded packages; quantization differs. | Structural estimates from installed GGUF tensors; not measured routing. |
+### Data analysis
 
-| Total time invested | Capacity and output quality |
-| :--: | :--: |
-| ![Total time including updates and re-evaluations](docs/assets/total-time.svg) | ![Final task scores versus installed storage](docs/assets/quality-vs-storage.svg) |
-| Initial work + saved updates + re-evaluations. Detective shown per case. | A larger package does not guarantee a more complete output. |
+![Data analysis final scores](docs/assets/quality-data_analysis.svg)
 
-All charts omit unavailable measurements rather than inventing zeros. This is a single-PC, predominantly single-run capability study, with mixed model quantization, historical task budgets and distinct Detective tracks. It is not a universal intelligence leaderboard. See [measurement definitions and limitations](docs/publication/METHODOLOGY.md).
+### Racing game
+
+![Racing game final scores](docs/assets/quality-racing_game.svg)
+
+### Detective investigations
+
+![Detective final scores](docs/assets/quality-detective.svg)
+
+### Completion-aware score comparison
+
+![Final task scores](docs/assets/review-scores.svg)
+
+</details>
+
+<details>
+<summary><strong>Storage, active parameters, time and capacity · four more figures</strong></summary>
+
+### Installed model storage
+
+![Installed model storage](docs/assets/model-storage.svg)
+
+### Total and calculated active parameters
+
+![Total and active parameters](docs/assets/model-parameters.svg)
+
+Structural estimates, not measured routing or memory use. Unavailable values are omitted.
+
+### Total time invested
+
+![Total time](docs/assets/total-time.svg)
+
+Initial work + saved updates + evaluations; Detective shown per case.
+
+### Capacity and final task score
+
+![Final scores versus storage](docs/assets/quality-vs-storage.svg)
+
+One-PC pilot; model quantization and Detective input tracks differ. [Definitions and limits](docs/publication/METHODOLOGY.md).
 
 </details>
 
@@ -75,8 +109,6 @@ The dashboard separates **initial results**, **further model work**, **rubric re
 | Inference | Local Ollama; installed package identity and quantization retained |
 | Candidate execution | Docker Linux containers, isolated per task: 6 GiB memory, 4 CPUs, no network |
 
-The GPU runs inference; sandboxed game rendering is a separate workload and does not represent native RTX 4080 gaming performance. Large MoE models may need CPU/RAM offload even when their active parameter count is small.
-
 ## Models included
 
 Qwen 3.5 9B · Gemma 4 12B · Qwen 3.5 27B · Gemma 4 26B A4B · GLM 4.7 Flash · Qwen 3.6 35B A3B · Nemotron 3 Nano 30B · Nemotron 3 Nano Omni · Laguna XS.2 · GPT-OSS 20B · Qwen 3 Coder Next · Qwen 3 Next 80B A3B Thinking · Qwen 3 VL 30B A3B Instruct.
@@ -92,12 +124,12 @@ Display names are shortened for readability. Exact installed IDs, measured packa
 
 Want help choosing a model that fits your hardware before running a benchmark? See [**local-llm-fit**](https://github.com/maninka123/local-llm-fit), a separate project for exploring model fit on your own PC. Fit estimates and this benchmark's output-quality scores answer different questions.
 
-## What this experiment shows
+## What you can learn from these results
 
-- **Local models can produce useful partial work:** code, charts, reports and investigations are worth inspecting, even when the entire challenge remains unfinished. The [task score gallery](docs/assets/quality-progress.svg) distinguishes their strengths.
-- **Presentation can hide missing substance:** a polished report can contain incorrect conclusions; a compiled game can still lack driving or a complete race. Read the rubric evidence alongside the output.
-- **Completion is the harder standard:** only **1/53** local results was fully complete after up to three benchmark prompts. The [final scores](docs/assets/review-scores.svg) preserve partial credit without presenting unfinished work as success.
-- **Speed and size are different from quality:** compare [generation speed](docs/assets/token-speed.svg), [storage](docs/assets/model-storage.svg) and [task scores](docs/assets/quality-vs-storage.svg). Larger packages and faster responses did not guarantee more complete work in this desktop study.
-- **Frontier references show a richer target output:** GPT-6 Astra's three consolidated examples include analysis and investigation reports plus a racing game with verified keyboard gameplay and completed laps. Their tools and execution environment differ, so there is **no directly comparable local quality or speed score**. Open them in the dashboard to compare the deliverables, not claim a controlled model ranking.
+- **🟦 Local strengths:** fast drafts, preliminary analysis and evidence organisation. These saved outputs offer useful starting points for work you can check and refine.
+- **🟩 Strongest local showing:** Qwen 3.5 27B led data analysis, racing and the visual Detective track on this PC. Its Detective case 3 reached full completion on the third prompt.
+- **🟨 Speed and quality are separate:** Gemma 4 12B led initial data-analysis generation at **158.2 tokens/s**; Qwen 3.5 27B led that task's final quality score. Choose for the work, not just the speed.
+- **🟪 When frontier support helps:** demanding tasks need sustained reasoning, verification and many coordinated features. Astra's consolidated reports and playable race provide a strong reference for that end-to-end finish—an ambitious target for compact local models.
+- **🟧 Practical takeaway:** use local models for quick, inspectable iterations; consider frontier support when a complex task needs a complete deliverable. The different execution environments make the Astra comparison qualitative.
 
 Created and maintained by **[Pasindu · @maninka123](https://github.com/maninka123)**. Model names belong to their respective publishers; this is an independent benchmark project.
